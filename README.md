@@ -1,5 +1,7 @@
 # Design Foundations Manual
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 A practitioner library for product managers, developers, and platform teams. Not a design course — a reference for the design judgment you already need to do your job.
 
 Every piece delivers **one applicable thing** and takes **under five minutes** to read.
@@ -170,3 +172,7 @@ Each piece follows a consistent template for its tier. Here's what you'll find:
 ## What this isn't
 
 This library doesn't teach you to be a designer. It teaches the design judgment that practitioners in every role need to make better decisions with or without a designer in the room. Leadership content is explicitly out of scope — if acting on something requires organizational authority you don't have, it doesn't belong here.
+
+---
+
+&copy; 2026 Eric Pearson. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free to use, share, and adapt with attribution.
