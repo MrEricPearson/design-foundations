@@ -1,0 +1,20 @@
+# Anchoring
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 247, 248 | **Cluster:** J — Cognitive Science
+
+**Goal:** Recognize when an anchor — the first number, option, or reference point introduced — is shaping a decision or estimate in ways the people in the room haven't noticed.
+
+**Concept:** The working assumption is that the first number mentioned is just a starting point — that people adjust from it appropriately and arrive at an independent judgment. The correction: adjustment from an anchor is systematically and reliably insufficient. System 1 uses the initial value as a reference point and all subsequent reasoning happens in relation to it, not in relation to some objective baseline. What makes anchoring particularly powerful is that it works even when the anchor is explicitly irrelevant — even when people know the first number was random, their estimates remain biased toward it. The anchor doesn't have to be credible to work.
+
+The mechanism: when S1 encounters a quantity or comparison question, it anchors to whatever number is most available and generates adjustments from there. The adjustments feel complete, but they are systematically too small. S2 would need to deliberately reconstruct the question from scratch to escape the anchor — which requires both the awareness that an anchor is present and the effort to override S1's reference. This almost never happens without explicit prompting.
+
+Anchoring operates across domains: the first estimate given in a planning meeting becomes the gravity field for all subsequent estimates; the first option shown in a decision becomes the implicit baseline; the first price mentioned in a negotiation becomes the frame for the range of acceptable outcomes.
+
+**You'll see it when:** Planning estimates cluster close to the first number anyone mentioned, regardless of how that number was generated. A presentation of Option A before Option B produces a different evaluation of Option B than would occur if B were evaluated first. Discussions about budget, timeline, or priority spend most of their time comparing to an initial figure rather than building from first principles.
+
+**The signal:** The first number or option in a discussion receives substantially more attention and counterargument than later ones. When you ask why a number was chosen, the answer refers to the first number rather than an independent rationale ("we thought it would take about 4 weeks based on the 6 weeks Jake mentioned"). Estimates bunch around a value that appeared early in the conversation.
+
+**Don't confuse this with:** Updating beliefs appropriately in response to new information. Anchoring is distinguishable from rational Bayesian updating: in legitimate updating, the initial value is informative — it comes from a credible source or relevant evidence. In anchoring, the initial value influences judgment even when it's known to be uninformative. The false positive: if the first number in a meeting was a subject-matter estimate from someone with relevant knowledge, convergence toward it might be appropriate updating, not anchoring. The test is whether the first number was anchored on independently or provided as uninformed speculation; the reasoning backward from that number reveals which is operating.
+
+**Try Noticing:** In the next planning meeting, note the first number that gets mentioned — timeline, effort, or quantity — and then observe whether subsequent estimates are generated independently or explicitly relative to that first figure. How often does someone say "I think it's actually more like X" vs. "I think that might be a bit low/high"? The framing of the comparison reveals whether independent reconstruction or anchored adjustment is happening.
+
+**What Next:** 248 (Framing Effect) for the related mechanism — framing determines which anchor S1 encounters first. 314 (How People Actually Decide) Part 2 for the arc-level method on structuring decision contexts to reduce accidental anchoring in product and planning meetings.

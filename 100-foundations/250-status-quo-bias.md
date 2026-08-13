@@ -1,0 +1,18 @@
+# Status Quo Bias
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 247, 249 | **Cluster:** J — Cognitive Science
+
+**Goal:** Recognize when status quo bias — not objective preference for the current option — is driving resistance to change, so you can address the mechanism rather than the stated objection.
+
+**Concept:** The working assumption is that if a new option is objectively better, people will prefer it — that rational evaluation produces the outcome that serves them best. The correction: System 1 treats the current state as the reference point and assigns it a "free" baseline value. Any change requires justifying the cost of switching against a baseline that feels costless — even when the current state is actively costing something. The asymmetry is not about the options; it's about how S1 encodes status quo vs. change.
+
+The mechanism: changing from a current state imposes three costs that staying doesn't — evaluating the new option (cognitive cost), transitioning to it (switching cost), and accepting uncertainty about outcomes (uncertainty cost). The current state requires none of these. S1 registers this asymmetry as the current state being "free" relative to any alternative. This means objectively better options require more justification than their objective advantage would suggest — not because people are unreasonable, but because their advantage has to overcome costs that are real but invisible in any explicit cost-benefit calculation. The current state isn't free; its costs just don't appear in the evaluation.
+
+**You'll see it when:** A team rejects a clearly superior tool because "the current one works." Users continue a workaround they know is inefficient rather than learn a new flow. A stakeholder prefers the current design after agreeing the proposed version is better on every stated criterion. Any situation where "why change?" feels like a stronger argument than the evidence suggests it should be.
+
+**The signal:** The defense of the current state centers on the costs of changing rather than the merits of the current state. "We're used to this," "it would take time to switch," and "the team would need to be retrained" as the primary arguments for the current option — not "the current option is better because X." The argument is about transition costs, not value.
+
+**Don't confuse this with:** 249 (Loss Aversion), which is about the emotional weight of what's being given up. Status Quo Bias is about the cognitive encoding of change itself as the costly option — it operates even when nothing is being given up, just changed. The false positive: someone who has genuinely evaluated both options and prefers the current one for specific reasons. The test: can they name what's better about the current option beyond "we know it" or "switching would be hard"? If not, they're evaluating transition costs, not option merits.
+
+**Try Noticing:** In the next discussion about replacing something — a tool, a process, a design pattern — notice what proportion of the arguments are about the merits of the current option vs. the costs of switching. Arguments about switching costs are Status Quo Bias signals: they're real costs, but they're not evaluations of whether the current option is actually good. How much of the resistance is about what's being replaced vs. the fact of replacing it?
+
+**What Next:** 249 (Loss Aversion) for the related mechanism — losses from leaving the current state are weighted more heavily than gains from the new one. 315 (Psychology of Resistance) for the arc that applies both mechanisms to change management and adoption strategy. 313 (UX in a Product You Didn't Build) for the non-custom dev application — adoption resistance in tool migration.

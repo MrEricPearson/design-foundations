@@ -1,0 +1,1313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design Foundations Library</title>
+<style>
+:root {
+  --bg:#F4F3EF; --bg-card:#FFFFFF; --bg-alt:#ECEAE6;
+  --text-1:#1B1A18; --text-2:#5C5852; --text-3:#908C85;
+  --accent:#1D4E9A; --accent-dim:#3870C2; --accent-bg:#E9EFF8;
+  --border:#D8D4CE; --border-strong:#B0AB9F;
+  --t100:#3A7A50; --t100-bg:#E6F2EC;
+  --t200:#6845A0; --t200-bg:#EFE9FA;
+  --t300:#9B3F30; --t300-bg:#F5E9E7;
+  --sa:#3B6E82; --sa-bg:#E4EEF3;
+  --bloom-u:#1D4E9A; --bloom-u-bg:#E9EFF8;
+  --bloom-ap:#3A7A50; --bloom-ap-bg:#E6F2EC;
+  --bloom-an:#6845A0; --bloom-an-bg:#EFE9FA;
+  --bloom-ev:#A05C1A; --bloom-ev-bg:#F5EDDE;
+  --bloom-cr:#9B3F30; --bloom-cr-bg:#F5E9E7;
+  --pending:#7A5C00; --pending-bg:#FDF3D8;
+  --drafted:#2A6040; --drafted-bg:#E2F2E8;
+  --ff-serif:Georgia,"Times New Roman",serif;
+  --ff-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --ff-mono:"SF Mono",ui-monospace,"Fira Code",Menlo,Consolas,monospace;
+  --r:3px;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#191820; --bg-card:#211F2C; --bg-alt:#1D1B27;
+  --text-1:#E4E2DC; --text-2:#9C9890; --text-3:#6A6660;
+  --accent:#6096E0; --accent-dim:#4A7CC8; --accent-bg:#1A2240;
+  --border:#2E2C3C; --border-strong:#44405A;
+  --t100:#5BAA70; --t100-bg:#192A20;
+  --t200:#9878D8; --t200-bg:#201A38;
+  --t300:#D06050; --t300-bg:#2E1A18;
+  --sa:#5A9AAE; --sa-bg:#112028;
+  --bloom-u:#6096E0; --bloom-u-bg:#1A2240;
+  --bloom-ap:#5BAA70; --bloom-ap-bg:#192A20;
+  --bloom-an:#9878D8; --bloom-an-bg:#201A38;
+  --bloom-ev:#D09050; --bloom-ev-bg:#302010;
+  --bloom-cr:#D06050; --bloom-cr-bg:#2E1A18;
+  --pending:#C8A840; --pending-bg:#2C2400;
+  --drafted:#5BAA70; --drafted-bg:#192A20;
+}}
+:root[data-theme="dark"]{
+  --bg:#191820; --bg-card:#211F2C; --bg-alt:#1D1B27;
+  --text-1:#E4E2DC; --text-2:#9C9890; --text-3:#6A6660;
+  --accent:#6096E0; --accent-dim:#4A7CC8; --accent-bg:#1A2240;
+  --border:#2E2C3C; --border-strong:#44405A;
+  --t100:#5BAA70; --t100-bg:#192A20;
+  --t200:#9878D8; --t200-bg:#201A38;
+  --t300:#D06050; --t300-bg:#2E1A18;
+  --sa:#5A9AAE; --sa-bg:#112028;
+  --bloom-u:#6096E0; --bloom-u-bg:#1A2240;
+  --bloom-ap:#5BAA70; --bloom-ap-bg:#192A20;
+  --bloom-an:#9878D8; --bloom-an-bg:#201A38;
+  --bloom-ev:#D09050; --bloom-ev-bg:#302010;
+  --bloom-cr:#D06050; --bloom-cr-bg:#2E1A18;
+  --pending:#C8A840; --pending-bg:#2C2400;
+  --drafted:#5BAA70; --drafted-bg:#192A20;
+}
+:root[data-theme="light"]{
+  --bg:#F4F3EF; --bg-card:#FFFFFF; --bg-alt:#ECEAE6;
+  --text-1:#1B1A18; --text-2:#5C5852; --text-3:#908C85;
+  --accent:#1D4E9A; --accent-dim:#3870C2; --accent-bg:#E9EFF8;
+  --border:#D8D4CE; --border-strong:#B0AB9F;
+  --t100:#3A7A50; --t100-bg:#E6F2EC;
+  --t200:#6845A0; --t200-bg:#EFE9FA;
+  --t300:#9B3F30; --t300-bg:#F5E9E7;
+  --bloom-u:#1D4E9A; --bloom-u-bg:#E9EFF8;
+  --bloom-ap:#3A7A50; --bloom-ap-bg:#E6F2EC;
+  --bloom-an:#6845A0; --bloom-an-bg:#EFE9FA;
+  --bloom-ev:#A05C1A; --bloom-ev-bg:#F5EDDE;
+  --bloom-cr:#9B3F30; --bloom-cr-bg:#F5E9E7;
+  --pending:#7A5C00; --pending-bg:#FDF3D8;
+  --drafted:#2A6040; --drafted-bg:#E2F2E8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:15px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
+body{font-family:var(--ff-sans);background:var(--bg);color:var(--text-1);line-height:1.6;}
+
+/* ── TOP BAR ── */
+#top-bar{
+  position:sticky;top:0;z-index:100;
+  background:var(--bg);
+  border-bottom:1px solid var(--border);
+  display:flex;flex-direction:column;
+}
+#tab-row{
+  display:flex;align-items:center;gap:0;
+  padding:0 24px;
+  border-bottom:1px solid var(--border);
+}
+.tab-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 18px;
+  font-family:var(--ff-mono);font-size:0.78rem;letter-spacing:0.05em;
+  background:none;border:none;border-bottom:2px solid transparent;
+  color:var(--text-3);cursor:pointer;white-space:nowrap;
+  margin-bottom:-1px;transition:color .15s,border-color .15s;
+}
+.tab-btn:hover{color:var(--text-1);}
+.tab-btn.active{color:var(--accent);border-color:var(--accent);}
+.tab-sep{color:var(--border-strong);padding:0 4px;font-size:0.8rem;line-height:2.8;}
+.tab-count{
+  background:var(--bg-alt);color:var(--text-3);
+  border-radius:10px;font-size:0.62rem;
+  min-width:20px;height:16px;padding:0 5px;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+
+#filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:10px 24px;}
+.filter-group{display:flex;align-items:center;gap:5px;}
+.filter-label{font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-right:2px;}
+.chip{
+  padding:3px 10px;border-radius:20px;border:1px solid var(--border);
+  font-family:var(--ff-mono);font-size:0.68rem;
+  background:var(--bg-card);color:var(--text-2);cursor:pointer;
+  transition:background .12s,color .12s,border-color .12s;
+}
+.chip:hover{border-color:var(--border-strong);}
+.chip.active{background:var(--accent-bg);color:var(--accent);border-color:var(--accent-dim);}
+
+/* map tier nav lives in filter-row when map is active */
+.tier-link{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 12px;border-radius:20px;border:1px solid var(--border);
+  font-family:var(--ff-mono);font-size:0.68rem;
+  background:var(--bg-card);color:var(--text-2);
+  text-decoration:none;transition:border-color .12s,color .12s;
+}
+.tier-link:hover{border-color:var(--border-strong);}
+.tier-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+
+/* ── VIEWS ── */
+.view{display:none;}
+.view.active{display:block;}
+.doc{max-width:920px;margin:0 auto;padding:0 24px 96px;}
+
+/* ── PAGE HEADERS ── */
+.page-header{padding:56px 0 44px;border-bottom:2px solid var(--text-1);margin-bottom:0;}
+.page-eyebrow{font-family:var(--ff-mono);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px;}
+.page-title{font-family:var(--ff-serif);font-size:2.1rem;font-weight:normal;line-height:1.18;text-wrap:balance;margin-bottom:10px;}
+.page-subtitle{font-size:0.93rem;color:var(--text-2);max-width:66ch;line-height:1.65;margin-bottom:30px;}
+.legend{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:16px 20px;display:flex;flex-wrap:wrap;gap:16px 32px;}
+.legend-group{display:flex;flex-direction:column;gap:7px;}
+.legend-label{font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.11em;text-transform:uppercase;color:var(--text-3);}
+.legend-items{display:flex;flex-wrap:wrap;gap:5px;}
+
+/* ── BADGES ── */
+.badge{display:inline-flex;align-items:center;padding:1px 7px 2px;border-radius:var(--r);font-family:var(--ff-mono);font-size:0.67rem;font-weight:500;line-height:1.5;white-space:nowrap;}
+.t100{background:var(--t100-bg);color:var(--t100);}
+.t200{background:var(--t200-bg);color:var(--t200);}
+.t300{background:var(--t300-bg);color:var(--t300);}
+.bl-u{background:var(--bloom-u-bg);color:var(--bloom-u);}
+.bl-ap{background:var(--bloom-ap-bg);color:var(--bloom-ap);}
+.bl-an{background:var(--bloom-an-bg);color:var(--bloom-an);}
+.bl-ev{background:var(--bloom-ev-bg);color:var(--bloom-ev);}
+.bl-cr{background:var(--bloom-cr-bg);color:var(--bloom-cr);}
+.st-pending{background:var(--pending-bg);color:var(--pending);}
+.st-drafted{background:var(--drafted-bg);color:var(--drafted);}
+
+/* ── ACT ── */
+.act{margin-bottom:60px;}
+.act-header{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px 20px;padding:22px 0 18px;border-top:1px solid var(--border-strong);margin-bottom:24px;}
+.act-label{font-family:var(--ff-serif);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);flex-shrink:0;}
+.act-divider{color:var(--border-strong);font-size:0.8rem;}
+.act-title{font-family:var(--ff-serif);font-size:1.2rem;font-weight:normal;color:var(--text-1);flex:1;}
+.act-ep-count{font-family:var(--ff-mono);font-size:0.67rem;color:var(--text-3);flex-shrink:0;margin-left:auto;}
+.act-purpose{width:100%;font-size:0.83rem;color:var(--text-2);max-width:72ch;line-height:1.55;}
+
+/* ── EPISODE CARD ── */
+.episode{background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--r);margin-bottom:20px;overflow:hidden;}
+.episode.is-new{border-left-color:var(--pending);}
+.ep-head{padding:18px 22px 14px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:34px 1fr auto;gap:0 14px;align-items:start;}
+.ep-num{font-family:var(--ff-serif);font-size:1.35rem;color:var(--text-3);line-height:1;padding-top:3px;font-variant-numeric:tabular-nums;}
+.ep-title{font-family:var(--ff-serif);font-size:1.02rem;font-weight:normal;line-height:1.3;text-wrap:balance;margin-bottom:9px;}
+.ep-pieces{display:flex;flex-wrap:wrap;gap:4px;}
+.ep-bloom-col{display:flex;flex-direction:column;gap:4px;align-items:flex-end;padding-top:2px;}
+
+/* fields */
+.field-row-3{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border);}
+.field-row-3:last-child{border-bottom:none;}
+.field{padding:14px 18px 15px;border-right:1px solid var(--border);}
+.field:last-child{border-right:none;}
+.field-full{padding:14px 18px 15px;border-bottom:1px solid var(--border);}
+.field-full:last-child{border-bottom:none;}
+.fl{font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.11em;text-transform:uppercase;color:var(--text-3);margin-bottom:5px;}
+.fb{font-size:0.845rem;color:var(--text-2);line-height:1.57;}
+.field-full .fb{color:var(--text-1);font-size:0.875rem;}
+.fb strong{color:var(--text-1);font-weight:600;}
+
+/* load pips */
+.load-pips{display:flex;gap:3px;margin-bottom:6px;}
+.pip{width:20px;height:3px;border-radius:1px;background:var(--border);}
+.pip.on{background:var(--accent-dim);}
+
+/* pending notice */
+.pending-notice{background:var(--pending-bg);color:var(--pending);font-family:var(--ff-mono);font-size:0.72rem;padding:8px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+
+/* lib link at bottom of each episode */
+.ep-lib-row{display:flex;justify-content:flex-end;padding:8px 18px;border-top:1px solid var(--border);background:var(--bg-alt);}
+.ep-lib-link{font-family:var(--ff-mono);font-size:0.65rem;color:var(--text-3);background:none;border:none;cursor:pointer;letter-spacing:0.04em;padding:2px 0;}
+.ep-lib-link:hover{color:var(--accent);}
+
+/* ── LIBRARY MAP STYLES ── */
+.tier-stats{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--border);border-radius:var(--r);overflow:hidden;width:fit-content;margin-top:4px;}
+.stat-cell{padding:14px 24px;border-right:1px solid var(--border);text-align:center;}
+.stat-cell:last-child{border-right:none;}
+.stat-n{font-family:var(--ff-serif);font-size:1.7rem;line-height:1;margin-bottom:3px;}
+.stat-l{font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);}
+.stat-cell.s-t100 .stat-n{color:var(--t100);}
+.stat-cell.s-t200 .stat-n{color:var(--t200);}
+.stat-cell.s-t300 .stat-n{color:var(--t300);}
+.stat-cell.s-sa .stat-n{color:var(--sa);}
+
+.tier-section{padding-top:56px;}
+.tier-header{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px 24px;padding-bottom:18px;border-bottom:1px solid var(--border-strong);margin-bottom:8px;}
+.tier-lbl{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-mono);font-size:0.67rem;letter-spacing:0.12em;text-transform:uppercase;}
+.tier-dot-lg{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.tier-title-lg{font-family:var(--ff-serif);font-size:1.3rem;font-weight:normal;}
+.tier-desc{font-size:0.855rem;color:var(--text-2);max-width:72ch;line-height:1.6;margin:14px 0 0;}
+
+.cluster{margin-top:36px;}
+.cluster-header{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;}
+.cluster-name{font-family:var(--ff-serif);font-size:0.95rem;font-weight:normal;}
+.cluster-range{font-family:var(--ff-mono);font-size:0.63rem;color:var(--text-3);letter-spacing:0.06em;}
+
+.atom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.atom{background:var(--bg-card);padding:11px 14px 12px;display:grid;grid-template-columns:36px 1fr;gap:0 8px;align-items:start;}
+.atom-n{font-family:var(--ff-serif);font-size:0.82rem;color:var(--t100);line-height:1.5;font-variant-numeric:tabular-nums;padding-top:1px;opacity:0.8;}
+.atom-body{}
+.atom-t{font-size:0.81rem;color:var(--text-1);line-height:1.42;}
+.ep-tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;}
+.ep-tag{font-family:var(--ff-mono);font-size:0.6rem;padding:1px 5px;border-radius:2px;background:var(--accent-bg);color:var(--accent-dim);cursor:pointer;border:none;}
+.ep-tag:hover{background:var(--accent);color:#fff;}
+
+.method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.method{background:var(--bg-card);padding:13px 16px 14px;display:grid;grid-template-columns:40px 1fr;gap:0 8px;}
+.method-n{font-family:var(--ff-serif);font-size:0.78rem;color:var(--t200);line-height:1.5;font-variant-numeric:tabular-nums;padding-top:2px;opacity:0.85;}
+.method-body{}
+.method-t{font-size:0.83rem;color:var(--text-1);line-height:1.4;margin-bottom:4px;}
+.method-out{font-size:0.72rem;color:var(--text-3);line-height:1.35;}
+
+.arc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.arc-card{background:var(--bg-card);padding:14px 16px 15px;display:grid;grid-template-columns:40px 1fr;gap:0 8px;}
+.arc-n{font-family:var(--ff-serif);font-size:0.82rem;color:var(--t300);line-height:1.5;font-variant-numeric:tabular-nums;padding-top:2px;opacity:0.85;}
+.arc-body{}
+.arc-t{font-size:0.845rem;color:var(--text-1);line-height:1.38;margin-bottom:4px;}
+.arc-desc{font-size:0.73rem;color:var(--text-2);line-height:1.45;}
+
+.audience-block{margin-top:36px;}
+.audience-label{display:inline-flex;align-items:center;gap:7px;font-family:var(--ff-mono);font-size:0.63rem;letter-spacing:0.11em;text-transform:uppercase;color:var(--text-3);margin-bottom:12px;}
+
+.sa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:20px;}
+.sa-card{background:var(--bg-card);padding:14px 18px;border-left:3px solid var(--sa);}
+.sa-t{font-size:0.85rem;color:var(--text-1);margin-bottom:4px;line-height:1.4;}
+.sa-frame{font-size:0.73rem;color:var(--text-3);}
+
+.b-pm{background:#EDF1F9;color:#1E4B92;}
+.b-cd{background:#EDF4EE;color:#2A6040;}
+.b-nc{background:#F3EDE8;color:#7A4020;}
+.b-xa{background:var(--bg-alt);color:var(--text-2);}
+@media (prefers-color-scheme:dark){
+  .b-pm{background:#182140;color:#6096E0;}
+  .b-cd{background:#152218;color:#5BAA70;}
+  .b-nc{background:#281810;color:#D06050;}
+}
+:root[data-theme="dark"] .b-pm{background:#182140;color:#6096E0;}
+:root[data-theme="dark"] .b-cd{background:#152218;color:#5BAA70;}
+:root[data-theme="dark"] .b-nc{background:#281810;color:#D06050;}
+:root[data-theme="light"] .b-pm{background:#EDF1F9;color:#1E4B92;}
+:root[data-theme="light"] .b-cd{background:#EDF4EE;color:#2A6040;}
+:root[data-theme="light"] .b-nc{background:#F3EDE8;color:#7A4020;}
+
+.page-footer{margin-top:80px;padding-top:24px;border-top:1px solid var(--border);font-family:var(--ff-mono);font-size:0.65rem;letter-spacing:0.08em;color:var(--text-3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+
+@media(max-width:680px){
+  .field-row-3{grid-template-columns:1fr;}
+  .field{border-right:none;border-bottom:1px solid var(--border);}
+  .ep-bloom-col{display:none;}
+  .ep-head{grid-template-columns:28px 1fr;}
+  .atom-grid{grid-template-columns:repeat(2,1fr);}
+  .method-grid,.arc-grid,.sa-grid{grid-template-columns:1fr;}
+  .page-title{font-size:1.6rem;}
+  .tier-stats{width:100%;}
+  .stat-cell{flex:1;padding:12px 10px;}
+}
+@media(max-width:420px){.atom-grid{grid-template-columns:1fr;}}
+
+/* ── AUDIENCE TRACKS SECTION ── */
+.tracks-section{margin-top:60px;background:var(--bg-alt);border:1px solid var(--border-strong);border-radius:var(--r);padding:28px 28px 32px;}
+.tracks-eyebrow{font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;}
+.tracks-title{font-family:var(--ff-serif);font-size:1.12rem;margin-bottom:8px;color:var(--text-1);}
+.tracks-note{font-size:0.845rem;color:var(--text-2);max-width:72ch;line-height:1.55;margin-bottom:24px;}
+.track-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.track-col{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.track-col-head{padding:16px 18px 14px;border-bottom:1px solid var(--border);}
+.track-col-audience{font-family:var(--ff-serif);font-size:0.97rem;line-height:1.3;margin-top:7px;}
+.track-arc-list{padding:14px 18px 16px;display:flex;flex-direction:column;gap:10px;}
+.track-arc-item{display:grid;grid-template-columns:40px 1fr;gap:0 8px;align-items:start;}
+.track-arc-n{font-family:var(--ff-serif);font-size:0.78rem;color:var(--t300);opacity:0.85;padding-top:2px;font-variant-numeric:tabular-nums;}
+.track-arc-t{font-size:0.81rem;color:var(--text-1);line-height:1.38;}
+.track-tension{font-size:0.795rem;color:var(--text-2);line-height:1.5;margin-top:8px;font-style:italic;}
+.track-prereq{font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-3);padding:7px 18px;background:var(--bg);border-bottom:1px solid var(--border);}
+.track-section-head{font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);padding:8px 0 3px;}
+.track-arc-body{display:flex;flex-direction:column;}
+.track-arc-hook{font-size:0.74rem;color:var(--text-3);line-height:1.38;margin-top:2px;}
+.track-divider{height:1px;background:var(--border);margin:6px 0;}
+.track-main-ref{font-family:var(--ff-mono);font-size:0.61rem;color:var(--text-3);padding:6px 0 0;letter-spacing:0.02em;}
+.track-foot{font-family:var(--ff-mono);font-size:0.60rem;color:var(--text-3);text-align:right;padding:9px 18px 0;border-top:1px solid var(--border);margin-top:4px;}
+@media(max-width:680px){.track-cols{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ TOP BAR ═══════════════════ -->
+<div id="top-bar">
+  <div id="tab-row">
+    <button class="tab-btn active" id="tab-path" onclick="switchView('path')">
+      Learning Path <span class="tab-count">28 episodes</span>
+    </button>
+    <span class="tab-sep">·</span>
+    <button class="tab-btn" id="tab-map" onclick="switchView('map')">
+      Library Map <span class="tab-count">217 pieces</span>
+    </button>
+  </div>
+  <div id="filter-row">
+    <!-- Path filters (shown in path view) -->
+    <div id="path-filters" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;width:100%;">
+      <div class="filter-group">
+        <span class="filter-label">Act</span>
+        <button class="chip chip-act active" data-val="all" onclick="setActFilter(null,this)">All</button>
+        <button class="chip chip-act" data-val="1" onclick="setActFilter(1,this)">I</button>
+        <button class="chip chip-act" data-val="2" onclick="setActFilter(2,this)">II</button>
+        <button class="chip chip-act" data-val="3" onclick="setActFilter(3,this)">III</button>
+        <button class="chip chip-act" data-val="4" onclick="setActFilter(4,this)">IV</button>
+        <button class="chip chip-act" data-val="5" onclick="setActFilter(5,this)">V</button>
+        <button class="chip chip-act" data-val="6" onclick="setActFilter(6,this)">VI</button>
+        <button class="chip chip-act" data-val="7" onclick="setActFilter(7,this)">VII</button>
+        <button class="chip chip-act" data-val="track" onclick="setActFilter('track',this)">Tracks</button>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Bloom's</span>
+        <button class="chip chip-bloom active" data-val="all" onclick="setBloomFilter(null,this)">All</button>
+        <button class="chip chip-bloom" data-val="understand" onclick="setBloomFilter('understand',this)">Understand</button>
+        <button class="chip chip-bloom" data-val="apply" onclick="setBloomFilter('apply',this)">Apply</button>
+        <button class="chip chip-bloom" data-val="analyze" onclick="setBloomFilter('analyze',this)">Analyze</button>
+        <button class="chip chip-bloom" data-val="evaluate" onclick="setBloomFilter('evaluate',this)">Evaluate</button>
+        <button class="chip chip-bloom" data-val="create" onclick="setBloomFilter('create',this)">Create</button>
+      </div>
+    </div>
+    <!-- Map tier nav (shown in map view) -->
+    <div id="map-filters" style="display:none;flex-wrap:wrap;align-items:center;gap:8px;width:100%;">
+      <a class="tier-link" href="#t100"><span class="tier-dot" style="background:var(--t100)"></span>T100 Recognize <span class="tab-count">134</span></a>
+      <a class="tier-link" href="#t200"><span class="tier-dot" style="background:var(--t200)"></span>T200 Practice <span class="tab-count">42</span></a>
+      <a class="tier-link" href="#t300"><span class="tier-dot" style="background:var(--t300)"></span>T300 Orchestrate <span class="tab-count">37</span></a>
+      <a class="tier-link" href="#standalone"><span class="tier-dot" style="background:var(--sa)"></span>Standalone <span class="tab-count">4</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ LEARNING PATH VIEW ═══════════════════ -->
+<div id="view-path" class="view active">
+<div class="doc">
+
+<header class="page-header">
+  <div class="page-eyebrow">Curriculum Architecture Reference · Design Foundations Library</div>
+  <h1 class="page-title">Episodic Learning Path<br>Educational Design Rationale</h1>
+  <p class="page-subtitle">28-episode practitioner series across 7 acts plus 3 role-specific parallel tracks. For each episode: prior knowledge activated, schema disrupted, cognitive load, capability transfer, and sequencing rationale. Switch to Library Map to browse all 217 pieces by tier.</p>
+  <div class="legend">
+    <div class="legend-group">
+      <div class="legend-label">Content tier</div>
+      <div class="legend-items">
+        <span class="badge t100">T100 Recognize</span>
+        <span class="badge t200">T200 Practice</span>
+        <span class="badge t300">T300 Orchestrate</span>
+      </div>
+    </div>
+    <div class="legend-group">
+      <div class="legend-label">Bloom's level</div>
+      <div class="legend-items">
+        <span class="badge bl-u">Understand</span>
+        <span class="badge bl-ap">Apply</span>
+        <span class="badge bl-an">Analyze</span>
+        <span class="badge bl-ev">Evaluate</span>
+        <span class="badge bl-cr">Create</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ACT I -->
+<section class="act" data-act="1">
+<div class="act-header"><span class="act-label">Act I</span><span class="act-divider">—</span><span class="act-title">The Frame</span><span class="act-ep-count">3 episodes</span><p class="act-purpose">Establishes the organizing argument before any method content: where risk lives, what to do before starting, and who you're building for. Every subsequent episode is a tool in the derisking toolkit introduced here.</p></div>
+
+<article class="episode" data-act="1" data-bloom="understand" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">01</div><div><div class="ep-title">The Risk in What You Assume</div><div class="ep-pieces"><span class="badge t100">100 What an assumption is</span><span class="badge t100">101 Assumption vs. fact</span><span class="badge t100">102 When assumptions harden</span><span class="badge t100">103 What an experiment is</span><span class="badge t100">104 Your derisking toolkit</span><span class="badge t100">105 What iteration is</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners hold a thoroughness model: more planning before starting = less risk. They've seen rushing go wrong and treat "slow down and think it through" as the fix.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">The problem isn't where you start — it's <strong>emotional attachment before you've tested anything</strong>. You can start anywhere. Risk accumulates when you can no longer afford to be wrong.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — new frame requires restructuring. <strong>Extraneous: low</strong> — no procedure. <strong>Germane: high</strong> — four-tool overview scaffolds the entire series.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can name which decisions in any current work item are tested vs. untested; can identify when emotional attachment to a direction has arrived before any testing has; can use the four derisking tools as a selection menu when deciding what piece to read next. Without this frame, every subsequent episode reads as an isolated technique — with it, each one is immediately recognizable as a tool for a specific risk.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Must be first. Without it, all other episodes read as isolated techniques. With it, every subsequent episode is immediately recognizable as a tool for a specific kind of derisking.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Core Thinking Tools</button></div>
+</article>
+
+<article class="episode is-new" data-act="1" data-bloom="apply" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">02</div><div><div class="ep-title">Before You Begin</div><div class="ep-pieces"><span class="badge t100">137 The quality ladder</span><span class="badge t100">138 Delight as behavioral trust</span><span class="badge t100">106 Sketching / quick visualization</span><span class="badge t100">113 Defining success before you start</span><span class="badge t100">114 Time-boxing as constraint-setting</span><span class="badge t100">122 Starting questions</span><span class="badge t200">207 Premortem</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners start work by opening tools — Figma, a doc, Jira. Pre-work feels like ceremony that slows things down. The implicit model: starting is how you find out what you need to know.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">Five minutes before anything is opened, there's a set of checks that determine the quality of every decision that follows. <strong>Skipping them doesn't accelerate work — it defers a cost that shows up later at higher effort.</strong></div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: low</strong> — 5 named checks in a familiar format. <strong>Germane: high</strong> — the premortem pairs directly with Ep3 to close the assumption-awareness loop before work opens.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Has a consistent pre-work protocol: name the quality level being targeted on this iteration, sketch the goal, define success in advance, name the assumptions being made, time-box the first pass, run the premortem to surface likely failure modes. Every subsequent episode in this series is a tool for crossing one of the quality thresholds named here.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Second — Ep1 established where risk lives. This episode establishes what you're derisking <em>toward</em>: a specific quality level, not just "done." The quality ladder (137) and trust frame (138) answer the question Ep1 opens but doesn't close: what does good actually look like?</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Core Thinking Tools / T200 Synthesis (207)</button></div>
+</article>
+
+<article class="episode" data-act="1" data-bloom="apply analyze" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">03</div><div><div class="ep-title">The Person You're Building For</div><div class="ep-pieces"><span class="badge t100">107 Framing the problem</span><span class="badge t100">123 What usability testing is</span><span class="badge t100">125 Jobs-to-be-done</span><span class="badge t100">126 Mental models</span><span class="badge t100">173 Empathy as cognitive simulation</span><span class="badge t200">301c Assumption-first proto-persona</span><span class="badge t300">301 Arc: Vague ask → real persona</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners already think in terms of "users" — a demographic model: enterprise PMs, mid-market, 35–50. Functional but so low-resolution that design decisions built on it rest almost entirely on assumption.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">Users aren't demographics — they're <strong>people in situations with specific jobs</strong>. "Our users" hides the variation design decisions need to navigate. A persona is a testable proposition, not a statistical average.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — JTBD requires shifting from "who" to "what they're trying to accomplish." <strong>Germane: high</strong> — the 301 arc produces a proto-persona with every assumption made explicit.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can move from "our users want X" to "a person in [situation] is trying to [job], and we haven't tested [specific assumption] about them." The persona artifact carries explicit confidence levels.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Third — closing Act I. The derisking frame and pre-work checks are established. Apply them immediately to the most fundamental question: who is this for? Act II follows to interrogate what kind of evidence that answer rests on.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Core Thinking / T300 Arc 301</button></div>
+</article>
+</section>
+
+<!-- ACT II -->
+<section class="act" data-act="2">
+<div class="act-header"><span class="act-label">Act II</span><span class="act-divider">—</span><span class="act-title">Behavior and Ethics</span><span class="act-ep-count">4 episodes</span><p class="act-purpose">Builds the behavioral science and ethical foundations every design decision rests on. Every interface is a claim about how people behave; these four episodes provide the vocabulary for making that claim responsibly.</p></div>
+
+<article class="episode is-new" data-act="2" data-bloom="understand analyze" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">04</div><div><div class="ep-title">What Kind of Evidence Is This?</div><div class="ep-pieces"><span class="badge t100">148 Primary vs. secondary research</span><span class="badge t100">149 Research vs. anecdote</span><span class="badge t100">150 Pattern vs. data point</span><span class="badge t100">151 Self-report vs. observed behavior</span><span class="badge t100">152 Behavior vs. attitude</span><span class="badge t100">155 Synthesis vs. analysis</span><span class="badge t100">156 Name what people do, not what they think</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners treat "research" as a single category — user interviews. The question is scheduling, not methodology. A PM's call notes and 12 structured behavioral interviews carry equal decision weight.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Evidence comes in types, and each type answers a different question.</strong> Using behavioral evidence to answer an attitudinal question produces the right-shaped answer to the wrong question.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — 7 distinction pairs. <strong>Germane: high</strong> — the classification framework applies retroactively to every piece of evidence the practitioner has ever cited.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can classify any evidence type, state what question it answers, and name what it cannot tell you. Can point to the gap in an evidence base before committing to a direction.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Fourth — before the bias episodes. Understanding what kind of evidence exists is prerequisite to understanding how biases contaminate each type differently. The contamination map only works with a typed evidence model.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Research and Evidence (148–156)</button></div>
+</article>
+
+<article class="episode is-new" data-act="2" data-bloom="understand analyze" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">05</div><div><div class="ep-title">Why People Do What They Do</div><div class="ep-pieces"><span class="badge t100">225 Self-report vs. observed behavior (bias lens)</span><span class="badge t100">226 Confirmation bias</span><span class="badge t100">227 Availability heuristic</span><span class="badge t100">228 Anchoring effect</span><span class="badge t100">229 Loss aversion</span><span class="badge t100">230 Social proof</span><span class="badge t100">231 Status quo bias</span><span class="badge t100">232 Cognitive dissonance</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners treat user self-report as authoritative: "they told us they want X" is used as design evidence. They know interviews are useful but have no model for when and why interview data is systematically wrong.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">What people say and what people do are <strong>predictably, systematically different</strong> — not randomly. The patterns of divergence are knowable in advance. Bias applies to everyone, including the design team.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: high</strong> — 8 distinct bias types. <strong>Germane: high</strong> — each connects to a failure mode the practitioner has seen and misattributed.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can predict common divergences between stated preference and observed behavior; can identify which biases are active in a given research or design context; can apply bias knowledge as both a research hazard and a design input.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Fifth — after evidence typing (Ep4). Now that practitioners can classify evidence types, they learn which biases contaminate each type. Episode 6 follows to explain the mechanistic reasons behind these patterns.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Psychology and Bias (225–232)</button></div>
+</article>
+
+<article class="episode is-new" data-act="2" data-bloom="understand apply analyze" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">06</div><div><div class="ep-title">Applied Cognitive Science</div><div class="ep-pieces"><span class="badge t100">247 Dual process theory</span><span class="badge t100">248 Framing effect</span><span class="badge t100">249 Loss aversion (behavioral econ)</span><span class="badge t100">250 Status quo bias</span><span class="badge t100">251 Social proof</span><span class="badge t100">252 Anchoring</span><span class="badge t100">253 Sunk cost fallacy</span><span class="badge t100">254 Mode errors</span><span class="badge t100">255 Jakob's Law</span><span class="badge t100">256 Hick's Law</span><span class="badge t100">257 Authority bias</span><span class="badge t100">258 Reciprocity</span><span class="badge t100">259 Cognitive dissonance</span><span class="badge t100">260 Decision fatigue</span><span class="badge t300">314 Arc: How People Actually Decide</span><span class="badge t300">315 Arc: Psychology of Resistance</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span><span class="badge bl-ap">Apply</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Behavioral science is for marketers — pricing anchors, FOMO triggers. Practitioners building enterprise software treat it as irrelevant or ethically suspicious. Every interface is functionally neutral information delivery.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Every interface is a decision context.</strong> Dual process theory explains why the same information, presented differently, produces different choices. These are the mechanisms behind every layout, labeling, and sequencing decision practitioners already make.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: high</strong> — 14 mechanisms, grouped by design domain: decision design, attention design, social design. <strong>Germane: high</strong> — arcs 314 and 315 require applying the full taxonomy to a real product decision.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can identify which cognitive mechanism is active in a given design context; can apply the taxonomy to interface decisions; can distinguish legitimate design application from exploitation — setting up the ethics episode directly.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Sixth — after behavioral biases. Ep5 established that stated preferences don't predict behavior; this episode explains the mechanistic reasons why, and what that means for every interface decision. Episode 7 follows with the ethical frame.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Cognitive Science (247–260) / T300 Arcs 314, 315</button></div>
+</article>
+
+<article class="episode is-new" data-act="2" data-bloom="analyze evaluate" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">07</div><div><div class="ep-title">The Ethics of Knowing</div><div class="ep-pieces"><span class="badge t100">233 Dark patterns</span><span class="badge t100">234 Persuasion vs. manipulation</span><span class="badge t100">235 Gamification principles</span><span class="badge t100">236 Intrinsic vs. extrinsic motivation</span><span class="badge t200">222 Reward loop design</span><span class="badge t300">307 Arc: Dark Pattern Awareness</span></div></div><div class="ep-bloom-col"><span class="badge bl-an">Analyze</span><span class="badge bl-ev">Evaluate</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners know "dark patterns" as a term. Ethical design is treated as a separate compliance layer — something legal or accessibility teams worry about, distinct from everyday design decisions.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">The same cognitive mechanisms that make you a better designer also enable exploitation. <strong>Ethics isn't separate from the psychology — it's the flip side of the same coin.</strong> The mechanism is identical; the intent and design goal differ.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — the persuasion/manipulation distinction requires a definitional line, not a spectrum. <strong>Germane: moderate</strong> — Arc 307 requires applying the ethical frame to a current product or feature.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can distinguish dark patterns from legitimate persuasion at the mechanism level — not based on intent but on whether the design works against the user's own goals. Can evaluate a gamification design for genuine engagement vs. compulsion loops.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Seventh — closing Act II. The cognitive science in Ep6 is the direct referent for this ethical frame. The persuasion/manipulation line only makes sense after the mechanisms are understood. Acts I–II now form a complete behavioral foundation.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Ethics and Persuasion (233–236) / T300 Arc 307</button></div>
+</article>
+</section>
+
+<!-- ACT III -->
+<section class="act" data-act="3">
+<div class="act-header"><span class="act-label">Act III</span><span class="act-divider">—</span><span class="act-title">Structure</span><span class="act-ep-count">4 episodes</span><p class="act-purpose">Establishes what the practitioner is working within and building toward before any visual design begins: decisions already made, structural content the system knows about, how users navigate to it, and how to write about it.</p></div>
+
+<article class="episode" data-act="3" data-bloom="analyze" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">08</div><div><div class="ep-title">What the System Already Decided</div><div class="ep-pieces"><span class="badge t100">110 Constraints as design input</span><span class="badge t100">166 Default as a design decision</span><span class="badge t100">193 Decision inventory</span><span class="badge t100">194 Three constraint types</span><span class="badge t100">195 Design system as encoded model</span><span class="badge t100">196 Where design systems fail</span></div></div><div class="ep-bloom-col"><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners experience constraints as friction — the design system won't let them do what they need. Constraints read as limits on the ideal design rather than as design material.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">The system has already made decisions — from vendors, platforms, prior teams — before the practitioner touches a file. <strong>Constraints are design material. Defaults are design decisions too.</strong> The question is which type each constraint is and what response that requires.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — three constraint types require three distinct responses. <strong>Extraneous: moderate</strong> — decision inventory has structure. <strong>Germane: lower</strong> — no arc-level artifact required here.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can audit a design context before starting and classify constraints as inherited (review it), configurable (test the boundary), or immovable (design clearly within it). Constraint discovery shifts from reactive to proactive.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Eighth — opening Act III after behavioral science. The human dimension and ethical frame are established. Now establish the system dimension: what has already been decided, what the defaults are.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Core Thinking / Content Architecture</button></div>
+</article>
+
+<article class="episode" data-act="3" data-bloom="understand apply" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">09</div><div><div class="ep-title">What the System Knows</div><div class="ep-pieces"><span class="badge t100">179 What a content model is</span><span class="badge t100">180 Content types and attributes</span><span class="badge t100">181 Structured vs. unstructured content</span><span class="badge t100">182 The bolt-on cost</span><span class="badge t100">183 Classification decisions compound</span><span class="badge t100">184 Labeling systems in IA</span><span class="badge t100">185 Metadata as design</span><span class="badge t100">186 Taxonomy design basics</span><span class="badge t100">197 Naming as model design</span><span class="badge t200">221 Content modeling method</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span><span class="badge bl-ap">Apply</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners think in screens and features. They have implicit content models but have never named them. They've encountered the failure mode — a platform that can't do what the design assumes — without knowing its structural cause.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">You don't design screens — you design a <strong>content model that generates screens</strong>. Every attribute is a capability decision. What you don't define as a type, you can never filter, sort, relate, or surface.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: high</strong> — genuinely new discipline with no prior referent. Load is relieved by ending with method 221: vocabulary is applied before it decays.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can identify a product's content types, attributes, and the gaps where the model doesn't support the claimed capabilities. Can run the 5-step content modeling method before screen design begins. The content model is the artifact through which users' mental models either do or don't match the product — when the taxonomy doesn't match how users categorize their domain, no amount of navigation design compensates because the mismatch is structural.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Ninth — after constraint mapping. Here's what's been decided (Ep8) → here's what the content model underneath looks like, and why changing it later costs what it costs (Ep9). Information architecture (Ep10) follows: you must know what content exists before designing how users navigate to it.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Content Architecture (179–200b)</button></div>
+</article>
+
+<article class="episode is-new" data-act="3" data-bloom="understand apply" data-status="drafted" data-lib="#t200">
+<div class="ep-head"><div class="ep-num">10</div><div><div class="ep-title">Information Architecture</div><div class="ep-pieces"><span class="badge t100">172 Browse vs. search</span><span class="badge t200">204a Task-based IA</span><span class="badge t200">204b Content-based IA</span><span class="badge t200">218 Card sorting</span><span class="badge t200">220 Working in vendor software</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span><span class="badge bl-ap">Apply</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Navigation is designed last — after screens exist and someone asks "how do users find this?" IA is a sitemap: a tree organized by what the product contains rather than what users arrive to do.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Browse vs. search isn't a UI pattern choice — it's a claim about how users form intent.</strong> Task-based and content-based IA express different mental models. Getting the wrong one means reorganizing the entire navigation after users fail in production.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — two IA strategy types plus four methods. <strong>Germane: high</strong> — card sorting directly tests the assumed IA against real user categorizations.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can choose an IA strategy based on user intent rather than content inventory; can run a card sort to validate the navigation structure; can evaluate vendor platform IA against the same criteria. IA that doesn't match users' mental models produces navigation that works for the designer and fails in production — card sorting's value is in where participants' groupings diverge from the planned structure, not where they confirm it.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Tenth — immediately after content modeling. You must know what content exists before designing how users navigate to it. Content model precedes IA; IA precedes interface copy (Ep11). This three-episode sequence closes before any visual design begins.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t200')">→ View in Library Map: T200 Journey and Architecture / T100 Research (172)</button></div>
+</article>
+
+<article class="episode is-new" data-act="3" data-bloom="understand apply" data-status="drafted" data-lib="#t200">
+<div class="ep-head"><div class="ep-num">11</div><div><div class="ep-title">Content Design and Narrative</div><div class="ep-pieces"><span class="badge t100">127 Storyboarding</span><span class="badge t100">130 Scenario writing</span><span class="badge t100">171 Interface copy vs. marketing copy</span><span class="badge t200">205 Content design / UX writing method</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span><span class="badge bl-ap">Apply</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Copy is marketing — punchy, branded, voice-forward. Interface copy is either obvious (buttons say what they do) or handled by whoever writes the ticket description. Storyboards are for advertising agencies.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Interface copy is instruction, not description.</strong> Every label is a prediction about what the user does next. Storyboarding is seeing your design as a sequence of human moments before committing to screens — scenario thinking in visual form.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — storyboard, scenario, and copy each require separate mental models. <strong>Germane: high</strong> — method 205 closes the loop by producing real interface copy from the scenarios written during the episode.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can storyboard before wireframing; can write a scenario that reveals design decisions the wireframe hides; can write interface copy as instruction rather than description; can identify the gap between what copy promises and what the interaction delivers.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Eleventh — closing Act III. Content types are modeled (Ep9), navigation structure is designed (Ep10), now the words. The three-episode structural sequence closes before perception and visual design begins in Act IV.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t200')">→ View in Library Map: T200 Craft / T100 Core (127, 130, 171)</button></div>
+</article>
+</section>
+
+<!-- ACT IV -->
+<section class="act" data-act="4">
+<div class="act-header"><span class="act-label">Act IV</span><span class="act-divider">—</span><span class="act-title">Perception</span><span class="act-ep-count">4 episodes</span><p class="act-purpose">Builds the perceptual and cognitive vocabulary practitioners need to evaluate, prototype, or improve anything visual. Moves from pre-attentive processing through attention capacity and interface states, closing with data literacy.</p></div>
+
+<article class="episode" data-act="4" data-bloom="understand" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">12</div><div><div class="ep-title">Visual Hierarchy and Perception</div><div class="ep-pieces"><span class="badge t100">133 Visual hierarchy</span><span class="badge t100">187 Layout principles (PARC)</span><span class="badge t100">188 Gestalt principles</span><span class="badge t100">189 Whitespace as signal</span><span class="badge t100">190 Reading patterns</span><span class="badge t100">191 Typography as hierarchy</span><span class="badge t100">192 Color as communication</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners have aesthetic intuitions — "this doesn't feel right" or "this looks cluttered" — but no vocabulary for diagnosing why or prescribing a fix. Visual feedback from stakeholders arrives in the same vocabulary: preferences, not principles.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">The eye processes information <strong>before cognition begins</strong>. Pre-attentive features — proximity, contrast, alignment, grouping — determine what gets seen and in what order. Visual hierarchy is not aesthetic preference; it is a claim about the sequence of attention.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — multiple principles unified by one claim (pre-attentive processing). <strong>Germane: high</strong> — the principles convert immediately into diagnostic questions practitioners can apply to any interface.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can audit any interface for hierarchy failures using five named principles; can explain visual decisions using a shared vocabulary rather than aesthetic preference; can give and receive design feedback that is diagnostic rather than evaluative.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twelfth — opening Act IV. Structure (Acts I–III) is complete. Now build perceptual vocabulary. Visual hierarchy first because it underlies every subsequent perception concept: progressive disclosure (Ep13) and states (Ep14) both rely on hierarchy as their substrate.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Content Architecture (187–192) / Core (133)</button></div>
+</article>
+
+<article class="episode is-new" data-act="4" data-bloom="understand analyze" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">13</div><div><div class="ep-title">Progressive Systems and Accessibility</div><div class="ep-pieces"><span class="badge t100">119 Progressive disclosure</span><span class="badge t100">120 Performance and perceived speed</span><span class="badge t100">237 Cognitive overload</span><span class="badge t100">238 Progressive disclosure (canonical)</span><span class="badge t100">239 Accessibility as design principle</span></div></div><div class="ep-bloom-col"><span class="badge bl-u">Understand</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Accessibility is a compliance checklist. Progressive disclosure is a UI pattern some products use. Performance is an engineering problem. Each is treated as a separate domain with a separate owner.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">Progressive disclosure, perceived performance, cognitive overload management, and accessibility are all expressions of <strong>one principle: matching information density to user capacity in context.</strong> One decision heuristic applies across all four.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — 5 concepts unified by a single frame. <strong>Germane: high</strong> — practitioners apply one decision heuristic across four previously-separate domains in their current work.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can apply progressive disclosure, perceived performance design, cognitive load management, and accessibility as expressions of one principle; can audit any interface using a single diagnostic: does this match information density to user capacity?</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Thirteenth — after visual hierarchy. You know how the eye processes hierarchy; now apply that to interface moments where complexity threatens to overwhelm it. Same perceptual principles applied to temporal and contextual dimensions.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Core (119, 120) / Cognitive Interface (237–239)</button></div>
+</article>
+
+<article class="episode is-new" data-act="4" data-bloom="apply analyze" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">14</div><div><div class="ep-title">States, Forms, and Onboarding</div><div class="ep-pieces"><span class="badge t100">116 Error states as a trust system</span><span class="badge t100">117 Empty states</span><span class="badge t100">118 Edge and boundary states</span><span class="badge t100">240 Form design principles</span><span class="badge t100">241 Empty states (canonical)</span><span class="badge t100">242 Error states and messages (canonical)</span><span class="badge t100">243 Onboarding design patterns</span><span class="badge t200">213 Accessibility checklist for forms</span><span class="badge t200">223 Form design method</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Error states are edge cases — something went wrong, show a message. Empty states are filler. Forms are fields arranged by database schema. Each is treated as a separate UI concern handled late in the design process.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>States are the full experience of the system — not edge cases.</strong> Every state is either a trust-building or trust-destroying moment. Forms sequence user willingness, not database schema. Onboarding reveals whether the first-run experience closes the intent-disclosure gap.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: high</strong> — 9 pieces across atomic concepts and methods. Managed by the state taxonomy (error/empty/edge) as the organizing frame. <strong>Germane: high</strong> — form design method (223) produces a real form during the episode.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can audit any interface for state coverage using the error/empty/edge taxonomy; can sequence form fields by user willingness rather than database structure; can evaluate onboarding against the intent-disclosure gap; can apply the accessibility checklist to any enterprise form. State design is the primary layer at which usable products become trusted ones — every error and empty state is either a trust deposit or a trust withdrawal.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Fourteenth — states are the application of progressive disclosure to real interface conditions. The three perception episodes (12, 13, 14) form a closed system: how vision works, how to manage capacity, and how to design every state the user encounters.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Core (116–118) / Cognitive Interface (240–243) / T200 Eval + Craft</button></div>
+</article>
+
+<article class="episode is-new" data-act="4" data-bloom="analyze evaluate" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">15</div><div><div class="ep-title">Reading Data Clearly</div><div class="ep-pieces"><span class="badge t100">170 Exploratory vs. explanatory visualization</span><span class="badge t100">261 Correlation vs. causation</span><span class="badge t100">262 Statistical vs. practical significance</span><span class="badge t100">263 Selection bias</span><span class="badge t100">264 Survivorship bias</span><span class="badge t200">212 Data visualization for decision-makers</span><span class="badge t300">316 Arc: Reading Data Without Getting Fooled</span></div></div><div class="ep-bloom-col"><span class="badge bl-an">Analyze</span><span class="badge bl-ev">Evaluate</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Data means charts. A chart in a dashboard review is treated as evidence. "The data shows X" is treated as equivalent to "X is true." Practitioners accept the chart's authority without examining its construction.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>The chart is not evidence — it's a representation of a sample</strong> with selection criteria, collection timing, and visualization choices that determine what it can and cannot show. Most dashboard reads are more authoritative than the underlying data warrants.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — 4 data bias types plus 2 visualization modes. <strong>Germane: high</strong> — Arc 316 requires applying the skeptic's frame to a real analytics dashboard during the session.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can identify correlation/causation conflation, selection bias, survivorship bias, and the statistical/practical significance gap in any data claim; can choose between exploratory and explanatory visualization based on the audience's decision state.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Fifteenth — closing Act IV. Visual hierarchy (Ep12), progressive systems (Ep13), and interface states (Ep14) addressed how we see and interpret visual interfaces. This episode addresses the data dimension of perception, completing the perceptual vocabulary before the evidence act begins.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Research (170) / Data Literacy (261–264) / T300 Arc 316</button></div>
+</article>
+</section>
+
+<!-- ACT V -->
+<section class="act" data-act="5">
+<div class="act-header"><span class="act-label">Act V</span><span class="act-divider">—</span><span class="act-title">Evidence</span><span class="act-ep-count">3 episodes</span><p class="act-purpose">Bridges understanding (Acts I–IV) and production (Act VI). Behavioral concepts and data literacy are established; these three episodes apply them by running real research methods, mapping user journeys, and evaluating the quality of what was gathered.</p></div>
+
+<article class="episode is-new" data-act="5" data-bloom="apply" data-status="drafted" data-lib="#t200">
+<div class="ep-head"><div class="ep-num">16</div><div><div class="ep-title">Research in Practice</div><div class="ep-pieces"><span class="badge t100">159 Observation effect</span><span class="badge t200">202a Conversational interview</span><span class="badge t200">202b Remote / async research</span><span class="badge t200">202c Observational research</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Interviews are about asking good questions. The researcher sits across from someone and asks about their experience. Remote interviews are the same thing on video. Observation is watching someone use a product.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>The researcher's presence and behavior contaminate results in predictable, preventable ways.</strong> Observation effect is not a philosophical concern — it is a systematic bias you can design out by changing what you do before and during the session.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — observation effect as a frame plus 3 method types. <strong>Extraneous: low</strong> — method steps live in the T200 pieces. <strong>Germane: high</strong> — each method type is practiced during the episode.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can run a conversational interview, remote/async research session, or observational research session without the most common contamination patterns; can select the right method for the question being asked. Each research method is a mechanism for converting assumptions into evidence — the contamination patterns this episode addresses are precisely how anecdote replaces evidence: a leading question produces the interviewer's beliefs, not the participant's experience.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Sixteenth — first episode of Act V. The behavioral concepts (Act II) and data literacy (Act IV close) are established; now run real methods. Episode 17 follows immediately to apply the observational output to journey mapping.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t200')">→ View in Library Map: T200 Research / T100 Research (159)</button></div>
+</article>
+
+<article class="episode" data-act="5" data-bloom="apply analyze" data-status="drafted" data-lib="#t200">
+<div class="ep-head"><div class="ep-num">17</div><div><div class="ep-title">Journey Maps — Three Ways</div><div class="ep-pieces"><span class="badge t100">153 Experience vs. process</span><span class="badge t100">154 What a pain point is</span><span class="badge t100">165 Frontstage and backstage</span><span class="badge t100">175 What a journey map is</span><span class="badge t100">176 Swimlanes as a comparison tool</span><span class="badge t200">206a Discovery-driven journey map</span><span class="badge t200">206b Co-creative journey map</span><span class="badge t200">206c Assumption-first proto-map</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners think of journey maps as a single thing: a linear timeline of user steps with pain points. The question they bring is "when do we make the journey map?" rather than "which version serves this question?"</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">A journey map is not a format — it's a research or collaboration artifact, and there are <strong>three fundamentally different kinds</strong> depending on what you already know. The frontstage/backstage distinction reveals what the map cannot show without it: the systems that make the experience possible.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: high</strong> — 3 distinct methods with different inputs, processes, and outputs. Managed by a decision-tree format: what do you already know? That question routes to the right method.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can select and run the right journey map type for the question being asked; can map both frontstage and backstage; can use swimlanes to compare multiple user types on the same journey; can identify which map type is appropriate at the current project phase. The assumption-first proto-map surfaces the team's starting assumptions before any observation — its real value isn't the map itself but the list of assumptions the observed journey will either confirm or contradict.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Seventeenth — after research in practice (Ep16). Journey maps are built from research output. Placing this episode immediately after the methods episode means practitioners apply what they just gathered. Episode 18 follows to evaluate the rigor of what was gathered.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t200')">→ View in Library Map: T200 Journey / T100 Research (153–176)</button></div>
+</article>
+
+<article class="episode is-new" data-act="5" data-bloom="analyze evaluate" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">18</div><div><div class="ep-title">Research Rigor and Measurement</div><div class="ep-pieces"><span class="badge t100">131 Question design / question bias</span><span class="badge t100">160 What a baseline is</span><span class="badge t100">161 Metric vs. measure</span><span class="badge t100">162 The interpretation gap</span><span class="badge t100">244 Qualitative vs. quantitative research</span><span class="badge t100">245 Mixed methods</span><span class="badge t100">246 Sample size and what it means</span></div></div><div class="ep-bloom-col"><span class="badge bl-an">Analyze</span><span class="badge bl-ev">Evaluate</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Qualitative means opinions; quantitative means numbers. Sample size is how many people you talked to. Research is evaluated by whether the team felt confident afterward.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Question design is a research contamination risk — how you ask changes what you hear.</strong> The interpretation gap is the space between what data says and what it means. A baseline is the level from which change is measured, not the current state.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: high</strong> — 7 interconnected concepts. Managed by sequencing: methodology classification (qual/quant/mixed) first, then the four quality evaluators (question bias, baseline, metric, interpretation gap).</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can design research questions that don't contaminate responses; can distinguish qualitative, quantitative, and mixed evidence types; can set a true baseline and identify the interpretation gap; can evaluate sample size claims at the right level of precision.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Eighteenth — closing Act V. The methods (Ep16) and journey maps (Ep17) have been run. This episode establishes the evaluative frame for assessing the quality of what was gathered. Act VI (Production) begins with the practitioner holding both research output and tools to evaluate it.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Core (131) / Research (160–162) / Research Methods (244–246)</button></div>
+</article>
+</section>
+
+<!-- ACT VI -->
+<section class="act" data-act="6">
+<div class="act-header"><span class="act-label">Act VI</span><span class="act-divider">—</span><span class="act-title">Production</span><span class="act-ep-count">5 episodes</span><p class="act-purpose">The practitioner now makes things. Explore options before committing; use AI as a production accelerator; choose and sequence prototypes; test what was built; synthesize with others. The full derisking toolkit is in active use.</p></div>
+
+<article class="episode is-new" data-act="6" data-bloom="apply analyze" data-status="drafted" data-lib="#t100">
+<div class="ep-head"><div class="ep-num">19</div><div><div class="ep-title">Exploring Options Before Committing</div><div class="ep-pieces"><span class="badge t200">224 Quality audit</span><span class="badge t100">108 Five Whys</span><span class="badge t200">211 Quick competitive scan</span><span class="badge t300">334 Arc: Solution-first rapid ideation</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">You start with a solution in mind. Five Whys is for post-mortems. Competitive analysis is for the product roadmap. Ideation means brainstorming, which teams skip because everyone already knows what they're building.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Ideation tools aren't for creativity — they're for preventing attachment to the first direction.</strong> Starting with a solution is fine; the risk is never checking whether other solutions exist. Solution-first rapid ideation uses the current solution as the starting point, not something to avoid.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: low</strong> — 3 short, observable methods. <strong>Germane: high</strong> — all three methods are run against the same current work item during the episode, producing immediate comparative output.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can use 3 option-expansion methods before committing to any direction; can check a solution against its underlying problem using Five Whys; can generate comparative options rapidly without losing judgment authority over the result. Option expansion breaks anchoring (252) — the first solution considered becomes the implicit standard all alternatives are measured against; generating alternatives before evaluating any of them prevents the first-option anchor from filtering what gets considered.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Nineteenth — opening Act VI. The foundations, behavioral science, structure, perception, and evidence are established. Now make things — but explore options before committing. Episode 20 follows: once a direction is chosen, use AI to accelerate production.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t100')">→ View in Library Map: Core (108) / T200 Evaluation (211) / T300 Arc 334</button></div>
+</article>
+
+<article class="episode is-new" data-act="6" data-bloom="apply" data-status="drafted" data-lib="#t200">
+<div class="ep-head"><div class="ep-num">20</div><div><div class="ep-title">AI-Assisted Production</div><div class="ep-pieces"><span class="badge t100">121 Environment setup for discovery in Cursor</span><span class="badge t200">200 Story mapping in Cursor</span><span class="badge t200">201 Grooming with AI</span><span class="badge t200">219 AI for design work</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">AI helps produce things faster. Better prompt = better output. AI is the tool; the practitioner is the requester. Using AI means generating artifacts more quickly than doing it manually.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>AI accelerates production; the bottleneck shifts to judgment clarity.</strong> You must know what you're asking for before AI can help produce it. Setup and framing quality determine output quality far more than prompt technique. AI does not close the judgment gap — it exposes it.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — environment setup plus 3 AI-assisted methods. <strong>Extraneous: moderate</strong> — Cursor setup requires following steps. <strong>Germane: high</strong> — story mapping in Cursor produces a real artifact during the episode.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can set up a Cursor environment for design discovery work; can use AI for story mapping, backlog grooming, and design work with explicit judgment boundaries defined upfront; can identify where AI accelerates vs. where judgment must stay with the practitioner. AI as execution partner (147, deepened in Ep27) decouples execution complexity from judgment complexity — the methods here are the first application of that principle: AI produces artifacts at scale, the practitioner's role shifts entirely to what to produce, not how.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twentieth — after option exploration. AI tools operate on a direction already chosen; using them before exploring options compounds attachment. Prototyping (Ep21) follows because the AI-produced artifacts are inputs to the prototype decision.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t200')">→ View in Library Map: T200 AI-Assisted Work / T100 Core (121)</button></div>
+</article>
+
+<article class="episode" data-act="6" data-bloom="apply analyze" data-status="drafted" data-lib="#t200">
+<div class="ep-head"><div class="ep-num">21</div><div><div class="ep-title">Prototyping — Choose and Sequence</div><div class="ep-pieces"><span class="badge t100">132 Prototype fidelity</span><span class="badge t100">177 What a prototype is</span><span class="badge t100">178 Prototype vs. MVP</span><span class="badge t300">309 Arc: Prototyping selection and sequencing</span><span class="badge t200">309a Paper / sketch</span><span class="badge t200">309b Lo-fi wireframe</span><span class="badge t200">309c AI-generated</span><span class="badge t200">309d Wizard of Oz</span><span class="badge t200">309e Conversational</span><span class="badge t200">309f High-fidelity</span><span class="badge t200">309g Service prototype</span><span class="badge t200">309h Parallel prototyping</span><span class="badge t200">309i Build to think</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners treat prototyping as a single activity — a clickable mockup in Figma. Higher fidelity reads as more professional and thorough. The question is when to make it, not which kind to make.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">A prototype is a question, not a deliverable. <strong>Fidelity should match the question being tested</strong>, not the practitioner's confidence or the stakeholder's preference. High fidelity early destroys the signal it was supposed to generate.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: high</strong> — 9 distinct methods with different questions, audiences, and fidelity levels. Managed by the 309 arc's selection flowchart: what question are you testing? That routes to the right method.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can select a prototype type matched to the question being tested; can articulate why low-fidelity earlier is more informative than high-fidelity early; can sequence prototype types as a project progresses from concept to execution. Fidelity is attachment management — high-fidelity prototypes produce richer feedback and higher emotional investment in the direction. Sequencing lower-fidelity types earlier isn't just about efficiency; it preserves the willingness to abandon a direction when evidence warrants it.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twenty-first — after AI-assisted production. The direction is chosen and initial artifacts exist; now choose the right prototype type to test the assumptions that remain. Episode 22 follows immediately to close the prototype/test loop.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t200')">→ View in Library Map: T200 Prototyping / T300 Arc 309</button></div>
+</article>
+
+<article class="episode" data-act="6" data-bloom="apply evaluate" data-status="drafted" data-lib="#t200">
+<div class="ep-head"><div class="ep-num">22</div><div><div class="ep-title">Testing What You Built</div><div class="ep-pieces"><span class="badge t100">124 Nielsen's 10 heuristics</span><span class="badge t100">157 Why you don't help during testing</span><span class="badge t100">158 Task statement design</span><span class="badge t100">174 Think-aloud protocol</span><span class="badge t100">200a A/B testing basics</span><span class="badge t100">200b Iteration rhythm</span><span class="badge t200">208 Five-second / first-click test</span><span class="badge t200">215a Moderated usability session</span><span class="badge t200">215b Unmoderated usability testing</span><span class="badge t200">216 Heuristic evaluation</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span><span class="badge bl-ev">Evaluate</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners know roughly what usability testing is and often conflate "people reacted to it" with "we learned something." They may treat iteration as a continuous improvement loop without explicit exit conditions.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Feedback is not evidence.</strong> A reaction tells you what someone felt; a task completion tells you what someone can do. Heuristics (Nielsen's 10) give expert evaluation a shared vocabulary — violation identification, not preference reporting.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Extraneous: high</strong> — 5 distinct test methods. Managed by the evidence-type frame from Ep4: each method maps to a question type practitioners already know how to classify.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can select and run an appropriate test matched to the question; can interpret results at the right level of abstraction; can make a confident iterate/ship/pivot call with explicit evidence-based rationale. Heuristic evaluation can be run solo without participants. Testing reveals which quality threshold has been crossed: task completion signals usable, time-on-task signals efficient, unsolicited advocacy and workflow integration signal trusted. Every test is a designed encounter with a specific assumption — the practitioner who can name which assumption a result addresses before the test runs interprets it more accurately than one who enters testing hoping for validation.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twenty-second — immediately following prototyping to close the prototype/test loop. These two episodes (21–22) form the series' core production unit. The research rigor frame (Ep18) means practitioners arrive already knowing how to evaluate the quality of what they gather.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t200')">→ View in Library Map: T200 Evaluation / T100 Research (157–174)</button></div>
+</article>
+
+<article class="episode" data-act="6" data-bloom="apply analyze" data-status="drafted" data-lib="#t300">
+<div class="ep-head"><div class="ep-num">23</div><div><div class="ep-title">Facilitation and Synthesis</div><div class="ep-pieces"><span class="badge t100">111 Self-critique without another person</span><span class="badge t100">112 Knowing when it's good enough</span><span class="badge t100">115 Giving and receiving feedback</span><span class="badge t100">128 How Might We questions</span><span class="badge t100">129 Stakeholder mapping</span><span class="badge t100">136 Critique vs. feedback</span><span class="badge t100">163 Alignment vs. consensus</span><span class="badge t100">164 Generative vs. convergent thinking</span><span class="badge t200">203 Structured ideation / Crazy 8s</span><span class="badge t200">214 Affinity mapping</span><span class="badge t300">304 Arc: Running one workshop, start to finish</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners have attended many meetings and know what brainstorming is. They think of facilitation as managing group dynamics — keeping energy up, managing the loudest voice. Self-critique feels like admitting something isn't done.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">The output of a working session is determined by <strong>the design of the session</strong>, not by who's in the room. Alignment (shared understanding of the same thing) is different from consensus (everyone agrees to avoid conflict). Self-critique is a skill, not a character trait.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — alignment/consensus and generative/convergent are two independent axes. <strong>Germane: high</strong> — Arc 304 requires designing an actual workshop structure and running it before the episode is complete.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can design and run a working session with a clear purpose, achieving genuine alignment rather than consensus; can facilitate structured ideation, affinity mapping, and HMW reframing; can give and receive diagnostic feedback; can self-critique a design without an external reviewer.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twenty-third — closing Act VI. Solo production capability (Ep19–22) is established; now bring others in. The workshop arc (304) produces inputs to work the practitioner will prototype and test again — creating the iterative loop the earlier production episodes describe.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t300')">→ View in Library Map: T300 Arc 304 / T200 Synthesis / T100 Core (111–136)</button></div>
+</article>
+</section>
+
+<!-- ACT VII -->
+<section class="act" data-act="7">
+<div class="act-header"><span class="act-label">Act VII</span><span class="act-divider">—</span><span class="act-title">Systems</span><span class="act-ep-count">5 episodes</span><p class="act-purpose">Operates above individual methods: what happens at the seams between teams, when patterns stop working, when evidence is sufficient to decide, how to design for AI as a system component, and how to sustain the derisking posture after work ships.</p></div>
+
+<article class="episode is-new" data-act="7" data-bloom="analyze apply" data-status="drafted" data-lib="#t300">
+<div class="ep-head"><div class="ep-num">24</div><div><div class="ep-title">Service Design and Handoffs</div><div class="ep-pieces"><span class="badge t300">303 Arc: One Feature, Three Handoffs</span><span class="badge t300">306 Arc: Service Blueprint</span><span class="badge t300">333 Arc: Designing Handoffs That Don't Lose Information</span></div></div><div class="ep-bloom-col"><span class="badge bl-an">Analyze</span><span class="badge bl-ap">Apply</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Handoffs are documentation problems — the spec wasn't clear enough. Service design is for hospitality companies with frontline staff. Context loss at handoffs reads as a people problem, not a design problem.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Handoffs lose information because the mental model producing a decision doesn't transfer with the decision itself.</strong> Service blueprints make the backstage visible — the systems, people, and policies users never see but experience through the front stage.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — frontstage/backstage plus 3 arc structures. <strong>Germane: high</strong> — all three arcs apply to handoff situations the practitioner is currently in, producing real outputs.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can run a service blueprint against a real product; can diagnose which seam in a multi-team handoff is losing information; can design handoff artifacts that carry context (the reasoning behind decisions) rather than just instructions (what to build).</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twenty-fourth — opening Act VII. Production has made things; this episode addresses what happens at the seams between phases, teams, and touchpoints. The systemic view is now available because the practitioner has run the full production arc.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t300')">→ View in Library Map: T300 Arcs 303, 306, 333</button></div>
+</article>
+
+<article class="episode" data-act="7" data-bloom="evaluate create" data-status="drafted" data-lib="#t300">
+<div class="ep-head"><div class="ep-num">25</div><div><div class="ep-title">When the System Itself Is Wrong</div><div class="ep-pieces"><span class="badge t100">198 Pattern vs. model problem</span><span class="badge t100">199 Transformation within constraints</span><span class="badge t300">310 Arc: Strategic Design Judgment (4 parts)</span></div></div><div class="ep-bloom-col"><span class="badge bl-ev">Evaluate</span><span class="badge bl-cr">Create</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners have internalized the pattern-level toolkit from Acts I–VI. They may be applying those tools repeatedly to a problem that isn't resolving — attributing the failure to execution quality rather than problem structure.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">Some problems don't respond to better implementation. <strong>The model is wrong.</strong> The diagnostic signal: "we keep fixing things and the problem keeps expressing itself differently." Iteration cannot resolve a structural problem.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div><div class="fb"><strong>Intrinsic: highest in series</strong> — requires integrating all prior episodes as the referent for "what pattern-level work looks like." Cannot be skipped to; all of Acts I–VI must be live as context.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can distinguish pattern problems (need better implementation — reach for a method from Acts III–VI) from model problems (need a different structure — run the 4-part arc: diagnose the level, find the unifying concept, design the minimum viable structural change, calibrate the just-enough threshold).</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twenty-fifth — deliberately late. The pattern/model distinction only has meaning relative to a practitioner who has run pattern-level methods and hit their limits. Arrives here after Acts I–VI carrying the full toolkit; recognizes it as the diagnostic for something already experienced.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t300')">→ View in Library Map: T300 Arc 310 / T100 Content Architecture (198–199)</button></div>
+</article>
+
+<article class="episode is-new" data-act="7" data-bloom="analyze evaluate" data-status="drafted" data-lib="#t300">
+<div class="ep-head"><div class="ep-num">26</div><div><div class="ep-title">Evidence into Decisions</div><div class="ep-pieces"><span class="badge t100">109 Weighing trade-offs</span><span class="badge t300">330 Arc: From Findings to Decisions</span><span class="badge t300">331 Arc: The Good-Enough Evidence Problem</span><span class="badge t300">332 Arc: Scope as a Design Decision</span></div></div><div class="ep-bloom-col"><span class="badge bl-an">Analyze</span><span class="badge bl-ev">Evaluate</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">More evidence is always better. Research should precede every decision. "We need more research before we can move forward" is treated as a responsible, defensible position.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb"><strong>Evidence costs time; the real question is never "do we have enough?" — it's "would more evidence change this decision?"</strong> When the answer is no, more research delays rather than improves. Scope and trade-off decisions are made on incomplete evidence by design.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: low</strong> — 4 decision-making concepts. <strong>Germane: high</strong> — arcs 330, 331, 332 require making a real evidence-sufficiency call on a current decision during the session.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can make explicit trade-off decisions with named confidence levels; can identify when evidence is sufficient vs. when more would change the outcome; can make scope decisions based on user impact rather than convenience; can convert research findings into actionable decisions.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twenty-sixth — after service design and strategic transformation. The systems picture is complete. The remaining work is judgment under constraints: decisions made with incomplete but sufficient evidence. Episodes 27 and 28 close the series.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t300')">→ View in Library Map: T100 Core (109) / T300 Arcs 330, 331, 332</button></div>
+</article>
+
+<article class="episode" data-act="7" data-bloom="apply analyze" data-status="drafted" data-lib="#t300">
+<div class="ep-head"><div class="ep-num">27</div><div><div class="ep-title">Designing with AI</div><div class="ep-pieces"><span class="badge t100">147 AI as execution partner</span><span class="badge t100">167 Automation bias and calibrated trust</span><span class="badge t100">168 Explainability vs. transparency in AI</span><span class="badge t100">169 Affordance</span><span class="badge t300">302 Arc: Spotting AI Surprises and Agent Handoff</span><span class="badge t300">308 Arc: Designing for AI Trust</span></div></div><div class="ep-bloom-col"><span class="badge bl-ap">Apply</span><span class="badge bl-an">Analyze</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners have used AI tools and may have designed features that include AI. They approach "AI design" as optimizing outputs — more accurate prompts, faster generation cycles.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">AI design is about designing the <strong>human experience of a system with uncertain, probabilistic outputs</strong>. A system right 95% of the time but communicating no uncertainty signal has a trust design failure, not an accuracy failure.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: moderate</strong> — three frames: automation bias, explainability requirements, handoff seams. <strong>Germane: moderate</strong> — both arcs require applying all three to a real AI-assisted workflow.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Can evaluate an AI-assisted product's experience at three levels: trust (does the user know when and why to rely on this output?), explainability (can the user understand why the system produced this?), and handoff (where does the human take back control?).</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Twenty-seventh — after strategic judgment because designing for AI trust requires the same diagnostic posture. Also late because AI design amplifies existing design judgment rather than replacing it — the full prior toolkit is the referent.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t300')">→ View in Library Map: T300 Arcs 302, 308 / T100 AI Foundations (147)</button></div>
+</article>
+
+<article class="episode" data-act="7" data-bloom="analyze evaluate" data-status="drafted" data-lib="#t300">
+<div class="ep-head"><div class="ep-num">28</div><div><div class="ep-title">Measurement, Debt, and Continuity</div><div class="ep-pieces"><span class="badge t100">134 Design debt (the concept)</span><span class="badge t100">135 Leading vs. lagging indicators</span><span class="badge t200">209 Design decision records</span><span class="badge t200">210 Retrospective for design decisions</span><span class="badge t200">217 UX metrics</span><span class="badge t300">300 Arc: The Cost You Don't See — Design Debt</span><span class="badge t200">305 Did-it-work follow-up</span></div></div><div class="ep-bloom-col"><span class="badge bl-an">Analyze</span><span class="badge bl-ev">Evaluate</span></div></div>
+<div class="field-row-3"><div class="field"><div class="fl">Prior knowledge activated</div><div class="fb">Practitioners have shipped things and watched them degrade. They have a retrospective habit but apply it at project close — treating quality maintenance as an event with a defined end rather than a continuous discipline.</div></div><div class="field"><div class="fl">Schema disrupted</div><div class="fb">Design debt accrues <strong>continuously</strong>, not at project close. Every deviation from the intended model — however justified — is a debt entry. The question is not whether you took on debt but whether you know what, why, and when you plan to address it.</div></div><div class="field"><div class="fl">Cognitive load</div><div class="load-pips"><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div><div class="fb"><strong>Intrinsic: lower</strong> — concepts are familiar in principle. <strong>Germane: moderate</strong> — the habit loop requires setting up a lightweight decision record practice during or immediately after the episode while context is fresh.</div></div></div>
+<div class="field-full"><div class="fl">After this episode</div><div class="fb">Has a habit loop: capture design decisions with rationale at the time they're made, surface design debt before it becomes unmanageable, run lightweight did-it-work follow-up after shipping, apply a continuous retrospective posture. The decision record practice survives team turnover in a way tribal knowledge doesn't. Design debt is the mechanism by which trusted products drift back down the quality ladder — a product doesn't have to get worse to lose trust; it just has to stop getting better while the world around it does.</div></div>
+<div class="field-full"><div class="fl">Sequencing rationale</div><div class="fb">Last — deliberately so. The entire series teaches derisking through assumption-awareness. This episode teaches how to sustain that posture after the work ships, when there is no curriculum, no deadline, and no external prompt to examine assumptions. It is the capstone not because it is the hardest material but because it is the meta-skill.</div></div>
+<div class="ep-lib-row"><button class="ep-lib-link" onclick="goToLib('#t300')">→ View in Library Map: T300 Arc 300 / T200 Measurement</button></div>
+</article>
+</section>
+
+<!-- AUDIENCE TRACKS -->
+<section id="tracks-section">
+<div class="tracks-section">
+<div class="tracks-eyebrow">Parallel Tracks — Role-Specific</div>
+<h2 class="tracks-title">Three Audience Tracks</h2>
+<p class="tracks-note">These tracks run alongside the main series — not after it. Complete Act I (Ep1–3) first to establish the shared frame, then use your track in parallel. Each track is a curated set of T300 arcs that go deeper into the decisions and situations specific to your role — the places where the shared foundation is necessary but not sufficient.</p>
+<div class="track-cols">
+
+  <!-- ── TRACK A: PRODUCT MANAGERS ── -->
+  <div class="track-col">
+    <div class="track-col-head">
+      <span class="badge b-pm">Track A</span>
+      <div class="track-col-audience">Product Managers</div>
+      <p class="track-tension">You're the connective tissue between stakeholders and builders. This track gives you the diagnostic tools to turn incoming asks into something worth building — before anyone starts.</p>
+    </div>
+    <div class="track-prereq">Foundation first: Act I (Ep1–3) · Ep5 Behavioral Hooks</div>
+    <div class="track-arc-list">
+      <div class="track-section-head">Core</div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">311</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Psychology of Stakeholder Decisions</span>
+          <span class="track-arc-hook">Diagnose which mechanism — Reactance, Loss Aversion, genuine concern — is driving resistance, then respond to the mechanism rather than the argument</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">317</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">From a Vague Ask to a Solvable Problem</span>
+          <span class="track-arc-hook">Convert incoming asks into testable problem statements before committing to a solution direction</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">318</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Writing Requirements That Survive the Build</span>
+          <span class="track-arc-hook">Surface the hidden UX decisions in a spec before implementation; answer the four questions a developer will actually face</span>
+        </div>
+      </div>
+      <div class="track-divider"></div>
+      <div class="track-section-head">Extended</div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">319</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Lightweight Validation Without a Research Team</span>
+          <span class="track-arc-hook">Run a concept test or one-task session yourself — fast enough to get signal before the next decision point</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">320</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Prioritizing Without False Precision</span>
+          <span class="track-arc-hook">Use RICE/ICE with explicit assumptions rather than false confidence — make uncertainty visible, not hidden in the inputs</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">321</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Managing the Design Feedback Loop</span>
+          <span class="track-arc-hook">Run design reviews that produce named decisions rather than more rounds of feedback</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">335</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Evaluating a Design You Didn't Create</span>
+          <span class="track-arc-hook">Judge whether a design solves the problem you defined — and name concerns in a way that preserves the designer's domain rather than prescribing the fix</span>
+        </div>
+      </div>
+      <div class="track-divider"></div>
+      <div class="track-main-ref">From the main series: 216 Heuristic Evaluation (Ep22) · 314 How People Actually Decide (Ep6) · 316 Reading Data Without Getting Fooled (Ep15)</div>
+    </div>
+    <div class="track-foot">7 arcs · ~3.5 hr</div>
+  </div>
+
+  <!-- ── TRACK B: CUSTOM DEV ── -->
+  <div class="track-col">
+    <div class="track-col-head">
+      <span class="badge b-cd">Track B</span>
+      <div class="track-col-audience">Custom Dev Teams</div>
+      <p class="track-tension">You can build anything — this track addresses the gap between "it works" and "people use it," at the exact decision points where that gap opens during a build.</p>
+    </div>
+    <div class="track-prereq">Foundation first: Ep1 Assumption · Ep22 Testing What You Built</div>
+    <div class="track-arc-list">
+      <div class="track-section-head">Core</div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">312</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Designing What You're Building</span>
+          <span class="track-arc-hook">Apply evaluative distance methods at build time — self-critique, mental model mapping, unmoderated testing — when no designer is in the loop</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">322</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">What's Missing From Your Spec</span>
+          <span class="track-arc-hook">Read an incoming spec for what it doesn't say: silent assumptions, undefined edge states, decisions left to implementation</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">323</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Technical Decisions as UX Decisions</span>
+          <span class="track-arc-hook">Recognize when data model choices and async patterns become experience decisions — make them with the user in front of mind</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">336</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Code Review as UX Review</span>
+          <span class="track-arc-hook">Review a PR for experience implications — vocabulary, wait states, error states, dead ends — before they ship, at the moment they're cheapest to change</span>
+        </div>
+      </div>
+      <div class="track-divider"></div>
+      <div class="track-section-head">Extended</div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">324</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Ship / Patch / Hold Decision</span>
+          <span class="track-arc-hook">Make confident launch decisions by defining quality threshold before testing and evaluating known issues by user impact</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">325</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">When Things Break in Production</span>
+          <span class="track-arc-hook">Respond to incidents in a way that protects users, communicates transparently, and produces learning through blameless retrospect</span>
+        </div>
+      </div>
+      <div class="track-divider"></div>
+      <div class="track-main-ref">From the main series: 309i Build to Think (Ep21) · 302 Spotting AI Surprises (Ep27) · 308 Designing for AI Trust (Ep27)</div>
+    </div>
+    <div class="track-foot">6 arcs · ~3 hr</div>
+  </div>
+
+  <!-- ── TRACK C: PLATFORM / NON-CUSTOM DEV ── -->
+  <div class="track-col">
+    <div class="track-col-head">
+      <span class="badge b-nc">Track C</span>
+      <div class="track-col-audience">Platform · Non-Custom Dev</div>
+      <p class="track-tension">You implement tools you didn't build and live with how well people use them. This track applies design judgment to the decisions you actually control: configuration, documentation, and adoption.</p>
+    </div>
+    <div class="track-prereq">Foundation first: Ep1 Assumption · Ep12 States, Forms, Onboarding</div>
+    <div class="track-arc-list">
+      <div class="track-section-head">Core</div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">313</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">UX in a Product You Didn't Build</span>
+          <span class="track-arc-hook">Apply design judgment to vendor and SaaS implementations — configuration grounded in user mental models, pre-implementation evaluation, adoption strategy</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">326</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Evaluating Vendor Products Before You're Locked In</span>
+          <span class="track-arc-hook">Run heuristic review and mental model fit assessment before configuration investment begins — before commitment forecloses options</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">337</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">When Adoption Fails</span>
+          <span class="track-arc-hook">Diagnose which of four root causes — awareness, friction, trust, credibility — is driving low adoption, and apply the response that matches that specific failure mode</span>
+        </div>
+      </div>
+      <div class="track-divider"></div>
+      <div class="track-section-head">Extended</div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">327</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Documentation as Experience Design</span>
+          <span class="track-arc-hook">Write task-organized documentation that closes the support loop; test it before publishing; maintain it so it doesn't become a trap</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">328</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Running the Platform Like a Product</span>
+          <span class="track-arc-hook">Apply product thinking to platform management: outcome-level success metrics, systematic signal, configuration decisions made with the same rigor as product decisions</span>
+        </div>
+      </div>
+      <div class="track-arc-item">
+        <span class="track-arc-n">329</span>
+        <div class="track-arc-body">
+          <span class="track-arc-t">Platform Migration as a UX Project</span>
+          <span class="track-arc-hook">Design migrations as user experience transitions: map what users are losing, design the transition period, communicate in a way that builds trust not anxiety</span>
+        </div>
+      </div>
+      <div class="track-divider"></div>
+      <div class="track-main-ref">From the main series: 216 Heuristic Evaluation (Ep22) · 303 One Feature, Three Handoffs (Ep24) · 315 Psychology of Resistance (Ep25)</div>
+    </div>
+    <div class="track-foot">6 arcs · ~3 hr</div>
+  </div>
+
+</div>
+</div>
+</section>
+
+</div><!-- /doc -->
+</div><!-- /view-path -->
+
+<!-- ═══════════════════ LIBRARY MAP VIEW ═══════════════════ -->
+<div id="view-map" class="view">
+<div class="doc">
+
+<header class="page-header">
+  <div class="page-eyebrow">Design Foundations Library · Complete Reference Map</div>
+  <h1 class="page-title">Every Piece,<br>Every Tier</h1>
+  <p class="page-subtitle">All 217 pieces organized by what you need to do: recognize a concept, run a method, or navigate a complex situation. Episode tags (E1–E28, Track A/B/C) show which learning path episode each piece appears in — click to jump there.</p>
+  <div class="tier-stats">
+    <div class="stat-cell s-t100"><div class="stat-n">134</div><div class="stat-l">T100 · Recognize</div></div>
+    <div class="stat-cell s-t200"><div class="stat-n">42</div><div class="stat-l">T200 · Practice</div></div>
+    <div class="stat-cell s-t300"><div class="stat-n">37</div><div class="stat-l">T300 · Orchestrate</div></div>
+    <div class="stat-cell s-sa"><div class="stat-n">4</div><div class="stat-l">Standalone</div></div>
+  </div>
+</header>
+
+<section class="tier-section" id="t100">
+  <div class="tier-header">
+    <span class="tier-lbl"><span class="tier-dot-lg" style="background:var(--t100)"></span>Tier 100</span>
+    <span class="tier-title-lg">Recognize</span>
+  </div>
+  <p class="tier-desc">Atomic concepts. No prerequisites. After reading, you can notice this concept in real situations. One thing to understand — usually in under three minutes.</p>
+  <div id="t100-clusters"></div>
+</section>
+
+<section class="tier-section" id="t200">
+  <div class="tier-header">
+    <span class="tier-lbl"><span class="tier-dot-lg" style="background:var(--t200)"></span>Tier 200</span>
+    <span class="tier-title-lg">Practice</span>
+  </div>
+  <p class="tier-desc">Methods with named steps and a concrete output. Builds on Tier 100 foundations. After reading, you can run this method with something you're working on today.</p>
+  <div id="t200-categories"></div>
+</section>
+
+<section class="tier-section" id="t300">
+  <div class="tier-header">
+    <span class="tier-lbl"><span class="tier-dot-lg" style="background:var(--t300)"></span>Tier 300</span>
+    <span class="tier-title-lg">Orchestrate</span>
+  </div>
+  <p class="tier-desc">Multi-part arcs for judgment-heavy, multi-method situations. Each closes with a Judgment Exercise — a specific failure case where the arc's key assumption doesn't hold.</p>
+  <div id="t300-groups"></div>
+</section>
+
+<section class="tier-section" id="standalone">
+  <div class="tier-header">
+    <span class="tier-lbl"><span class="tier-dot-lg" style="background:var(--sa)"></span>Standalone</span>
+    <span class="tier-title-lg">Conceptual Pieces</span>
+  </div>
+  <p class="tier-desc">Four pieces that don't fit the tier progression. Each borrows a frame from elsewhere and applies it to design decisions practitioners make inside organizations.</p>
+  <div class="sa-grid">
+    <div class="sa-card"><div class="sa-t">Desire Paths — User Research</div><div class="sa-frame">Frame: urban design · The gap between the path you designed and the path people actually take</div></div>
+    <div class="sa-card"><div class="sa-t">Broken Windows</div><div class="sa-frame">Frame: criminology · How one unfixed thing changes what people believe is acceptable in a shared space</div></div>
+    <div class="sa-card"><div class="sa-t">Tragedy of the Commons</div><div class="sa-frame">Frame: economics · Why shared design systems degrade without explicit stewardship</div></div>
+    <div class="sa-card"><div class="sa-t">Film Review and Critique Culture</div><div class="sa-frame">Frame: criticism · What critique looks like when it's taken seriously as a discipline</div></div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <span>Design Foundations Library · Q3 Prototyping Enablement</span>
+  <span>217 pieces · 3 tiers · 28-episode learning path · 37 arcs</span>
+</footer>
+
+</div><!-- /doc -->
+</div><!-- /view-map -->
+
+<script>
+/* ── EPISODE-PIECE REVERSE MAP ── */
+const PIECE_EPS = {
+  '100':[1],'101':[1],'102':[1],'103':[1],'104':[1],'105':[1],
+  '106':[2],'113':[2],'114':[2],'122':[2],'207':[2],'137':[2],'138':[2],
+  '107':[3],'123':[3],'125':[3],'126':[3],'173':[3],'301c':[3],'301':[3],
+  '148':[4],'149':[4],'150':[4],'151':[4],'152':[4],'155':[4],'156':[4],
+  '225':[5],'226':[5],'227':[5],'228':[5],'229':[5],'230':[5],'231':[5],'232':[5],
+  '247':[6],'248':[6],'249':[6],'250':[6],'251':[6],'252':[6],'253':[6],'254':[6],'255':[6],'256':[6],'257':[6],'258':[6],'259':[6],'260':[6],'314':[6],'315':[6],
+  '233':[7],'234':[7],'235':[7],'236':[7],'222':[7],'307':[7],
+  '110':[8],'166':[8],'193':[8],'194':[8],'195':[8],'196':[8],
+  '179':[9],'180':[9],'181':[9],'182':[9],'183':[9],'184':[9],'185':[9],'186':[9],'197':[9],'221':[9],
+  '172':[10],'204a':[10],'204b':[10],'218':[10],'220':[10],
+  '127':[11],'130':[11],'171':[11],'205':[11],
+  '133':[12],'187':[12],'188':[12],'189':[12],'190':[12],'191':[12],'192':[12],
+  '119':[13],'120':[13],'237':[13],'238':[13],'239':[13],
+  '116':[14],'117':[14],'118':[14],'240':[14],'241':[14],'242':[14],'243':[14],'213':[14],'223':[14],
+  '170':[15],'212':[15],'261':[15],'262':[15],'263':[15],'264':[15],'316':[15],
+  '159':[16],'202a':[16],'202b':[16],'202c':[16],
+  '153':[17],'154':[17],'165':[17],'175':[17],'176':[17],'206a':[17],'206b':[17],'206c':[17],
+  '131':[18],'160':[18],'161':[18],'162':[18],'244':[18],'245':[18],'246':[18],
+  '108':[19],'211':[19],'334':[19],'224':[19],
+  '121':[20],'200':[20],'201':[20],'219':[20],
+  '132':[21],'177':[21],'178':[21],'309':[21],'309a':[21],'309b':[21],'309c':[21],'309d':[21],'309e':[21],'309f':[21],'309g':[21],'309h':[21],'309i':[21],
+  '124':[22],'157':[22],'158':[22],'174':[22],'200a':[22],'200b':[22],'208':[22],'215a':[22],'215b':[22],'216':[22],
+  '111':[23],'112':[23],'115':[23],'128':[23],'129':[23],'136':[23],'163':[23],'164':[23],'203':[23],'214':[23],'304':[23],
+  '303':[24],'306':[24],'333':[24],
+  '198':[25],'199':[25],'310':[25],
+  '109':[26],'330':[26],'331':[26],'332':[26],
+  '147':[27],'167':[27],'168':[27],'169':[27],'302':[27],'308':[27],
+  '134':[28],'135':[28],'209':[28],'210':[28],'217':[28],'300':[28],'305':[28],
+  '311':['A'],'317':['A'],'318':['A'],'319':['A'],'320':['A'],'321':['A'],'335':['A'],
+  '312':['B'],'322':['B'],'323':['B'],'324':['B'],'325':['B'],'336':['B'],
+  '313':['C'],'326':['C'],'327':['C'],'328':['C'],'329':['C'],'337':['C'],
+};
+
+/* ── T100 DATA ── */
+const T100 = [
+  { id:'core', label:'Core Thinking Tools', range:'100–138', atoms:[
+    {n:'100',t:'Assumption vs. fact'},{n:'101',t:'Not all assumptions are equal'},{n:'102',t:'Bias as assumption'},
+    {n:'103',t:'Attachment is the real risk'},{n:'104',t:'The derisking toolkit (preview)'},{n:'105',t:'Iteration — why the first version isn\'t the point'},
+    {n:'106',t:'Sketching / quick visualization'},{n:'107',t:'Framing the problem'},{n:'108',t:'Five Whys'},
+    {n:'109',t:'Weighing trade-offs'},{n:'110',t:'Constraints as design input'},{n:'111',t:'Self-critique without another person'},
+    {n:'112',t:'Knowing when it\'s good enough'},{n:'113',t:'Defining success before you start'},{n:'114',t:'Time-boxing as constraint-setting'},
+    {n:'115',t:'Giving and receiving feedback'},{n:'116',t:'Error states as a trust system'},{n:'117',t:'Empty states'},
+    {n:'118',t:'Edge and boundary states'},{n:'119',t:'Progressive disclosure'},{n:'120',t:'Performance and perceived speed'},
+    {n:'121',t:'Environment setup for discovery work in Cursor'},{n:'122',t:'Starting questions'},{n:'123',t:'What usability testing is'},
+    {n:'124',t:'Nielsen\'s 10 heuristics'},{n:'125',t:'Jobs-to-be-done'},{n:'126',t:'Mental models'},
+    {n:'127',t:'Storyboarding'},{n:'128',t:'How Might We questions'},{n:'129',t:'Stakeholder mapping'},
+    {n:'130',t:'Scenario writing'},{n:'131',t:'Question design / question bias'},{n:'132',t:'Prototype fidelity'},
+    {n:'133',t:'Visual hierarchy'},{n:'134',t:'Design debt (the concept)'},{n:'135',t:'Leading vs. lagging indicators'},
+    {n:'136',t:'Critique vs. feedback'},{n:'137',t:'The quality ladder'},{n:'138',t:'Delight as behavioral trust'},
+  ]},
+  { id:'ai', label:'AI Foundations', range:'147', atoms:[
+    {n:'147',t:'AI as execution partner — the judgment / production split'},
+  ]},
+  { id:'research', label:'Research and Evidence', range:'148–176', atoms:[
+    {n:'148',t:'Primary vs. secondary research'},{n:'149',t:'Research vs. anecdote'},{n:'150',t:'Pattern vs. data point'},
+    {n:'151',t:'Self-report vs. observed behavior'},{n:'152',t:'Behavior vs. attitude'},{n:'153',t:'Experience vs. process'},
+    {n:'154',t:'What a pain point is'},{n:'155',t:'Synthesis vs. analysis'},{n:'156',t:'Name what people do, not what they think'},
+    {n:'157',t:'Why you don\'t help during testing'},{n:'158',t:'Task statement design'},{n:'159',t:'Observation effect'},
+    {n:'160',t:'What a baseline is'},{n:'161',t:'Metric vs. measure'},{n:'162',t:'The interpretation gap'},
+    {n:'163',t:'Alignment vs. consensus'},{n:'164',t:'Generative vs. convergent thinking'},{n:'165',t:'Frontstage and backstage'},
+    {n:'166',t:'Default as a design decision'},{n:'167',t:'Automation bias and calibrated trust'},{n:'168',t:'Explainability vs. transparency in AI'},
+    {n:'169',t:'Affordance'},{n:'170',t:'Exploratory vs. explanatory visualization'},{n:'171',t:'Interface copy vs. marketing copy'},
+    {n:'172',t:'Browse vs. search'},{n:'173',t:'Empathy as cognitive simulation'},{n:'174',t:'Think-aloud protocol'},
+    {n:'175',t:'What a journey map is'},{n:'176',t:'Swimlanes as a comparison tool'},
+  ]},
+  { id:'proto-concepts', label:'Prototyping Concepts', range:'177–178', atoms:[
+    {n:'177',t:'What a prototype is'},{n:'178',t:'Prototype vs. MVP'},
+  ]},
+  { id:'content', label:'Content Architecture', range:'179–200b', atoms:[
+    {n:'179',t:'What a content model is'},{n:'180',t:'Content types and attributes'},{n:'181',t:'Structured vs. unstructured content'},
+    {n:'182',t:'The bolt-on cost'},{n:'183',t:'Classification decisions compound'},{n:'184',t:'Labeling systems in IA'},
+    {n:'185',t:'Metadata as design'},{n:'186',t:'Taxonomy design basics'},{n:'187',t:'Layout principles (proximity, alignment, repetition, contrast)'},
+    {n:'188',t:'Gestalt principles'},{n:'189',t:'Whitespace as signal'},{n:'190',t:'Reading patterns (F-pattern, Z-pattern)'},
+    {n:'191',t:'Typography as hierarchy'},{n:'192',t:'Color as communication'},{n:'193',t:'Decision inventory'},
+    {n:'194',t:'Three constraint types'},{n:'195',t:'Design system as encoded model'},{n:'196',t:'Where design systems fail'},
+    {n:'197',t:'Naming as model design'},{n:'198',t:'Pattern vs. model problem'},{n:'199',t:'Transformation within constraints'},
+    {n:'200a',t:'A/B testing basics'},{n:'200b',t:'Iteration rhythm'},
+  ]},
+  { id:'psych', label:'Psychology and Bias', range:'225–232', atoms:[
+    {n:'225',t:'Self-report vs. observed behavior (bias lens)'},{n:'226',t:'Confirmation bias'},{n:'227',t:'Availability heuristic'},
+    {n:'228',t:'Anchoring effect'},{n:'229',t:'Loss aversion'},{n:'230',t:'Social proof'},
+    {n:'231',t:'Status quo bias'},{n:'232',t:'Cognitive dissonance'},
+  ]},
+  { id:'ethics', label:'Ethics and Persuasion', range:'233–236', atoms:[
+    {n:'233',t:'Dark patterns'},{n:'234',t:'Persuasion vs. manipulation'},{n:'235',t:'Gamification principles'},{n:'236',t:'Intrinsic vs. extrinsic motivation'},
+  ]},
+  { id:'cogui', label:'Cognitive Interface', range:'237–243', atoms:[
+    {n:'237',t:'Cognitive overload'},{n:'238',t:'Progressive disclosure (canonical)'},{n:'239',t:'Accessibility as design principle'},
+    {n:'240',t:'Form design principles'},{n:'241',t:'Empty states (canonical)'},{n:'242',t:'Error states and messages (canonical)'},
+    {n:'243',t:'Onboarding design patterns'},
+  ]},
+  { id:'rmethods', label:'Research Methods', range:'244–246', atoms:[
+    {n:'244',t:'Qualitative vs. quantitative research'},{n:'245',t:'Mixed methods'},{n:'246',t:'Sample size and what it means'},
+  ]},
+  { id:'cogsc', label:'Cognitive Science and Behavioral Economics', range:'247–260', atoms:[
+    {n:'247',t:'Dual process theory (System 1 / System 2)'},{n:'248',t:'Framing effect'},{n:'249',t:'Loss aversion (behavioral economics)'},
+    {n:'250',t:'Status quo bias'},{n:'251',t:'Social proof'},{n:'252',t:'Anchoring'},
+    {n:'253',t:'Sunk cost fallacy'},{n:'254',t:'Mode errors'},{n:'255',t:'Jakob\'s Law'},
+    {n:'256',t:'Hick\'s Law'},{n:'257',t:'Authority bias'},{n:'258',t:'Reciprocity'},
+    {n:'259',t:'Cognitive dissonance'},{n:'260',t:'Decision fatigue'},
+  ]},
+  { id:'data', label:'Data Literacy', range:'261–264', atoms:[
+    {n:'261',t:'Correlation vs. causation'},{n:'262',t:'Statistical vs. practical significance'},{n:'263',t:'Selection bias'},{n:'264',t:'Survivorship bias'},
+  ]},
+];
+
+/* ── T200 DATA ── */
+const T200 = [
+  { id:'ai', label:'AI-Assisted Work', methods:[
+    {n:'200',t:'Story mapping in Cursor',out:'User story map grounded in Cursor-assisted discovery'},
+    {n:'201',t:'Grooming with AI',out:'Refined backlog items with AI-surfaced edge cases'},
+    {n:'219',t:'AI for design work',out:'Judgment boundary for one project: what AI produces, where practitioner decides'},
+  ]},
+  { id:'research', label:'Research', methods:[
+    {n:'202a',t:'Conversational interview',out:'Interview findings: what the participant said vs. did, with 3–5 named patterns'},
+    {n:'202b',t:'Remote / async research',out:'Research data gathered without a live moderator — suited to distributed or time-shifted participation'},
+    {n:'202c',t:'Observational research',out:'What people actually do, recorded without interpretation'},
+  ]},
+  { id:'synth', label:'Synthesis and Ideation', methods:[
+    {n:'203',t:'Structured ideation / Crazy 8s',out:'8 distinct directions in 8 minutes; breaks anchoring to first idea'},
+    {n:'207',t:'Premortem',out:'Named failure modes before resources are committed'},
+    {n:'214',t:'Affinity mapping',out:'Grouped themes from raw research data'},
+  ]},
+  { id:'journey', label:'Journey and Architecture', methods:[
+    {n:'206a',t:'Discovery-driven journey map',out:'Map of what users actually do, where they stall, and what they say at each stage — built from research'},
+    {n:'206b',t:'Co-creative journey map',out:'Journey map built in session — surfaces gaps between team assumptions and user-reported experience'},
+    {n:'206c',t:'Assumption-first proto-map',out:'Team\'s assumed journey made visible — value is the assumption list it surfaces, not the map itself'},
+    {n:'204a',t:'Task-based IA',out:'Information architecture organized by what users need to do'},
+    {n:'204b',t:'Content-based IA',out:'Information architecture organized by what exists'},
+    {n:'221',t:'Content modeling',out:'Content types, attributes, and relationships defined before build'},
+  ]},
+  { id:'eval', label:'Evaluation', methods:[
+    {n:'215a',t:'Moderated usability session',out:'Task-by-task behavioral record — moments of hesitation, failure, and confusion logged per task'},
+    {n:'215b',t:'Unmoderated usability testing',out:'Session recordings and task completion data — failure moments visible without moderator intervention'},
+    {n:'216',t:'Heuristic evaluation',out:'Expert-identified usability violations'},
+    {n:'208',t:'Five-second / first-click test',out:'First-impression evidence and attention allocation'},
+    {n:'211',t:'Quick competitive scan',out:'Usability findings from analogous products used as a performance baseline'},
+    {n:'220',t:'Working in vendor software',out:'Documented assessment of which vendor UX gaps are configurable and which are permanent'},
+  ]},
+  { id:'measure', label:'Measurement and Decision Tracking', methods:[
+    {n:'209',t:'Design decision records',out:'Documented rationale for decisions so they can be revisited'},
+    {n:'210',t:'Retrospective for design decisions',out:'Learning from past decisions — what the evidence turned out to mean'},
+    {n:'217',t:'UX metrics',out:'One leading and one lagging indicator per UX goal, with measurement method for each'},
+    {n:'213',t:'Accessibility checklist for forms',out:'Go/no-go on an enterprise form before it ships'},
+  ]},
+  { id:'craft', label:'Craft Methods', methods:[
+    {n:'205',t:'Content design / UX writing',out:'Interface copy that instructs rather than decorates'},
+    {n:'212',t:'Data visualization for decision-makers',out:'Charts that close a decision loop, not just display data'},
+    {n:'218',t:'Card sorting',out:'Card sort results showing where user groupings match or diverge from the planned architecture'},
+    {n:'222',t:'Reward loop design',out:'Ethical engagement loops grounded in intrinsic motivation'},
+    {n:'223',t:'Form design method',out:'Forms sequenced by user willingness, not database schema'},
+    {n:'224',t:'Quality audit',out:'Quality placement statement: current level, evidence, one action to climb'},
+  ]},
+  { id:'proto', label:'Prototyping — 9 Approaches', methods:[
+    {n:'309a',t:'Paper / sketch prototype',out:'Concept-level sketch testable before any screen or tool investment'},
+    {n:'309b',t:'Lo-fi wireframe prototype',out:'Wire flows showing structure and sequencing without visual design committed'},
+    {n:'309c',t:'AI-generated prototype',out:'Working prototype generated at speed — before manual production is feasible'},
+    {n:'309d',t:'Wizard of Oz prototype',out:'Human-operated simulation — tests whether users find value in behavior that isn\'t yet built'},
+    {n:'309e',t:'Conversational prototype',out:'Dialogue flow tested with real participants — validates AI logic before implementation'},
+    {n:'309f',t:'High-fidelity prototype',out:'Execution-quality prototype — for final direction confirmation after visual design is settled'},
+    {n:'309g',t:'Service prototype',out:'Full service walkthrough — maps where people, systems, and physical moments connect'},
+    {n:'309h',t:'Parallel prototyping',out:'Two live alternatives tested on the same task — comparative evidence, not preference data'},
+    {n:'309i',t:'Build to think',out:'Working code used as a design artifact — reveals implementation constraints low-fidelity tools miss'},
+  ]},
+  { id:'companion', label:'Companion Piece', methods:[
+    {n:'301c',t:'Assumption-first proto-persona',out:'Persona built from explicit assumptions before research is available'},
+    {n:'305',t:'Did-it-work follow-up',out:'Named signal for one shipped assumption — confirmation it worked or trigger to revisit'},
+  ]},
+];
+
+/* ── T300 DATA ── */
+const T300 = [
+  { id:'foundation', label:'Foundational Arcs', audience:'All roles', badge:'xa', arcs:[
+    {n:'300',t:'The Cost You Don\'t See — Design Debt',desc:'Naming, flagging, and deciding when to pay design debt'},
+    {n:'301',t:'From Vague Ask to Real Persona',desc:'Building a credible user model from a vague brief'},
+    {n:'302',t:'Spotting AI Surprises and Agent Handoff',desc:'Identifying AI failure modes and testing agent handoffs'},
+    {n:'303',t:'One Feature, Three Handoffs',desc:'Managing context and vocabulary across multi-team handoffs'},
+    {n:'304',t:'Running One Workshop, Start to Finish',desc:'Running a workshop from scratch — structure, facilitation, and what happens after'},
+    {n:'306',t:'Service Blueprint',desc:'Mapping the full service including backstage and dependencies'},
+    {n:'307',t:'Dark Pattern Awareness',desc:'Recognizing and avoiding manipulative design at the practitioner level'},
+    {n:'308',t:'Designing for AI Trust',desc:'Designing agentic and AI-assisted experiences for calibrated trust'},
+    {n:'309',t:'Prototyping Arc — Selection and Sequencing',desc:'Choosing the right prototyping approach for the question being tested'},
+    {n:'310',t:'Strategic Design Judgment',desc:'Diagnosing structural design problems and designing transformation within constraints'},
+  ]},
+  { id:'pm', label:'For Product Managers', audience:'PM', badge:'pm', arcs:[
+    {n:'311',t:'Psychology of Stakeholder Decisions',desc:'Diagnosing stakeholder resistance — Reactance vs. Loss Aversion vs. Genuine Concern'},
+    {n:'317',t:'From Vague Ask to Solvable Problem',desc:'Converting incoming asks into testable problem statements'},
+    {n:'318',t:'Writing Requirements That Survive the Build',desc:'Writing specs that don\'t leave the hard decisions to implementation'},
+    {n:'319',t:'Lightweight Validation Without a Research Team',desc:'Getting behavioral signal before a decision point without dedicated research'},
+    {n:'320',t:'Prioritizing Without False Precision',desc:'Prioritizing with explicit confidence levels rather than manufactured certainty'},
+    {n:'321',t:'Managing the Design Feedback Loop',desc:'Running design reviews that produce decisions, not deferrals'},
+  ]},
+  { id:'cd', label:'For Custom Dev Teams', audience:'Custom Dev', badge:'cd', arcs:[
+    {n:'312',t:'Designing What You\'re Building',desc:'Self-evaluating UX quality without a designer in the loop'},
+    {n:'322',t:'What\'s Missing From Your Spec',desc:'Reading a spec for what it doesn\'t say before implementation starts'},
+    {n:'323',t:'Technical Decisions as UX Decisions',desc:'Recognizing when data models, async patterns, and error handling become experience decisions'},
+    {n:'324',t:'Ship / Patch / Hold Decision',desc:'Making confident launch decisions with known issues on the table'},
+    {n:'325',t:'When Things Break in Production',desc:'Responding to production failures in a way that protects users and produces learning'},
+  ]},
+  { id:'nc', label:'For Platform / Non-Custom Dev Teams', audience:'Platform · Non-Custom Dev', badge:'nc', arcs:[
+    {n:'313',t:'UX in a Product You Didn\'t Build',desc:'Applying design judgment to the decisions you actually control in a vendor implementation'},
+    {n:'326',t:'Evaluating Vendor Products Before You\'re Locked In',desc:'Structured evaluation before configuration investment begins'},
+    {n:'327',t:'Documentation as Experience Design',desc:'Writing documentation that closes the support loop rather than adding to it'},
+    {n:'328',t:'Running the Platform Like a Product',desc:'Managing a platform with product thinking: outcome metrics, systematic signal, proactive improvement'},
+    {n:'329',t:'Platform Migration as a UX Project',desc:'Treating platform migrations as user experience transitions, not technical cutovers'},
+  ]},
+  { id:'cog', label:'Cross-Audience — Cognitive Science', audience:'All roles', badge:'xa', arcs:[
+    {n:'314',t:'How People Actually Decide',desc:'Designing decision contexts — not just options — to support genuine deliberation'},
+    {n:'315',t:'The Psychology of Resistance',desc:'Identifying the source of resistance accurately and responding to the mechanism, not the surface'},
+  ]},
+  { id:'evidence', label:'Cross-Audience — Evidence and Scope', audience:'All roles', badge:'xa', arcs:[
+    {n:'316',t:'Reading Data Without Getting Fooled',desc:'Reading analytics findings at a skeptical practitioner level'},
+    {n:'330',t:'From Findings to Decisions',desc:'Converting research and data into actionable decisions'},
+    {n:'331',t:'The Good-Enough Evidence Problem',desc:'Deciding when more evidence would change a decision, and when it wouldn\'t'},
+    {n:'332',t:'Scope as a Design Decision',desc:'Making scope decisions based on user impact, not convenience'},
+    {n:'333',t:'Designing Handoffs That Don\'t Lose Information',desc:'Designing handoff moments so context transfers between phases'},
+    {n:'334',t:'Solution-First Rapid Ideation',desc:'Using creation as a discovery tool when generation cost is near zero'},
+  ]},
+];
+
+/* ── HELPERS ── */
+function epTags(n) {
+  const eps = PIECE_EPS[n];
+  if (!eps || !eps.length) return '';
+  return '<div class="ep-tags">' + eps.map(e => {
+    if (e === 'A' || e === 'B' || e === 'C')
+      return `<button class="ep-tag" onclick="goToEp('${e}')">Track ${e}</button>`;
+    return `<button class="ep-tag" onclick="goToEp(${e})">E${e}</button>`;
+  }).join('') + '</div>';
+}
+
+function mkBadge(cls, text) {
+  return `<span class="badge" style="background:var(--${cls}-bg);color:var(--${cls})">${text}</span>`;
+}
+
+/* ── RENDER T100 ── */
+const t100Root = document.getElementById('t100-clusters');
+T100.forEach(cluster => {
+  const wrap = document.createElement('div');
+  wrap.className = 'cluster';
+  wrap.innerHTML = `<div class="cluster-header"><span class="cluster-name">${cluster.label}</span><span class="cluster-range">${cluster.range}</span></div>`;
+  const grid = document.createElement('div');
+  grid.className = 'atom-grid';
+  cluster.atoms.forEach(a => {
+    const card = document.createElement('div');
+    card.className = 'atom';
+    card.innerHTML = `<span class="atom-n">${a.n}</span><div class="atom-body"><div class="atom-t">${a.t}</div>${epTags(a.n)}</div>`;
+    grid.appendChild(card);
+  });
+  wrap.appendChild(grid);
+  t100Root.appendChild(wrap);
+});
+
+/* ── RENDER T200 ── */
+const t200Root = document.getElementById('t200-categories');
+T200.forEach(cat => {
+  const wrap = document.createElement('div');
+  wrap.className = 'cluster';
+  wrap.innerHTML = `<div class="cluster-header"><span class="cluster-name">${cat.label}</span></div>`;
+  const grid = document.createElement('div');
+  grid.className = 'method-grid';
+  cat.methods.forEach(m => {
+    const card = document.createElement('div');
+    card.className = 'method';
+    card.innerHTML = `<span class="method-n">${m.n}</span><div class="method-body"><div class="method-t">${m.t}</div><div class="method-out">${m.out}</div>${epTags(m.n)}</div>`;
+    grid.appendChild(card);
+  });
+  wrap.appendChild(grid);
+  t200Root.appendChild(wrap);
+});
+
+/* ── RENDER T300 ── */
+const t300Root = document.getElementById('t300-groups');
+T300.forEach(grp => {
+  const wrap = document.createElement('div');
+  wrap.className = 'audience-block';
+  const audienceEl = document.createElement('div');
+  audienceEl.className = 'audience-label';
+  audienceEl.innerHTML = `<span class="badge b-${grp.badge}">${grp.audience}</span> ${grp.label}`;
+  wrap.appendChild(audienceEl);
+  const grid = document.createElement('div');
+  grid.className = 'arc-grid';
+  grp.arcs.forEach(a => {
+    const card = document.createElement('div');
+    card.className = 'arc-card';
+    card.innerHTML = `<span class="arc-n">${a.n}</span><div class="arc-body"><div class="arc-t">${a.t}</div><div class="arc-desc">${a.desc}</div>${epTags(a.n)}</div>`;
+    grid.appendChild(card);
+  });
+  wrap.appendChild(grid);
+  t300Root.appendChild(wrap);
+});
+
+/* ── VIEW SWITCHING ── */
+let activeView = 'path';
+function switchView(v) {
+  activeView = v;
+  document.getElementById('view-path').classList.toggle('active', v === 'path');
+  document.getElementById('view-map').classList.toggle('active', v === 'map');
+  document.getElementById('tab-path').classList.toggle('active', v === 'path');
+  document.getElementById('tab-map').classList.toggle('active', v === 'map');
+  document.getElementById('path-filters').style.display = v === 'path' ? 'flex' : 'none';
+  document.getElementById('map-filters').style.display = v === 'map' ? 'flex' : 'none';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/* ── CROSS-REFERENCE NAVIGATION ── */
+function goToLib(hash) {
+  switchView('map');
+  setTimeout(() => {
+    const el = document.querySelector(hash);
+    if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }, 80);
+}
+
+function goToEp(n) {
+  switchView('path');
+  setTimeout(() => {
+    if (n === 'A' || n === 'B' || n === 'C') {
+      setActFilter(null, document.querySelector('.chip-act[data-val="all"]'));
+      const tracksEl = document.getElementById('tracks-section');
+      if (tracksEl) tracksEl.scrollIntoView({behavior:'smooth', block:'start'});
+      return;
+    }
+    setActFilter(null, document.querySelector('.chip-act[data-val="all"]'));
+    const eps = document.querySelectorAll('#view-path .episode');
+    let target = null;
+    eps.forEach(ep => {
+      const num = parseInt(ep.querySelector('.ep-num')?.textContent);
+      if (num === n) target = ep;
+    });
+    if (target) {
+      const act = target.closest('.act');
+      if (act) act.style.display = '';
+      target.style.display = '';
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  }, 80);
+}
+
+/* ── PATH FILTERS ── */
+let fAct = null, fBloom = null, fStatus = null;
+
+function setActFilter(val, btn) {
+  fAct = val;
+  document.querySelectorAll('.chip-act').forEach(c => c.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  applyFilters();
+}
+function setBloomFilter(val, btn) {
+  fBloom = val;
+  document.querySelectorAll('.chip-bloom').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+function setStatusFilter(val, btn) {
+  fStatus = val;
+  document.querySelectorAll('.chip-status').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+function applyFilters() {
+  const showTracks = fAct === null || fAct === 'track';
+  const tracksEl = document.getElementById('tracks-section');
+  if (tracksEl) tracksEl.style.display = showTracks ? '' : 'none';
+
+  if (fAct === 'track') {
+    document.querySelectorAll('#view-path .act').forEach(act => act.style.display = 'none');
+    return;
+  }
+
+  document.querySelectorAll('#view-path .episode').forEach(ep => {
+    const actEl = ep.closest('.act');
+    if (!actEl) return;
+    const epAct = parseInt(actEl.dataset.act);
+    const epBloom = (ep.dataset.bloom || '');
+    const epStatus = ep.dataset.status || '';
+    let show = true;
+    if (fAct !== null && epAct !== fAct) show = false;
+    if (fBloom !== null && !epBloom.includes(fBloom)) show = false;
+    if (fStatus !== null && epStatus !== fStatus) show = false;
+    ep.style.display = show ? '' : 'none';
+  });
+  document.querySelectorAll('#view-path .act').forEach(act => {
+    const any = [...act.querySelectorAll('.episode')].some(ep => ep.style.display !== 'none');
+    act.style.display = any ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

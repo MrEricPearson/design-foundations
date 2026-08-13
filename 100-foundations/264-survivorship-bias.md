@@ -1,0 +1,20 @@
+# Survivorship Bias
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 100, 263 (Selection Bias) | **Cluster:** K — Data Literacy
+
+**Goal:** Recognize when what you're studying is a population that survived a filter — and notice what the filter removed and what conclusions that absence prevents.
+
+**Concept:** The working assumption is that studying successful examples tells you what made them successful. The correction: you're studying the outcomes that survived the filter long enough to be visible — successful products, retained users, completed tasks, published research. Everything that failed the filter is absent. The survivors are not a random sample of what was attempted; they are the tail end of a distribution that included many failures you never see. Lessons from the survivors may be the opposite of the truth about the full distribution, because the full distribution is unobservable from within the surviving group.
+
+The mechanism: survivorship bias is a specific form of Selection Bias (263) where the selection mechanism is failure. Only things that didn't fail appear in the sample. This is structurally different from other forms of selection bias because the filter is often invisible — the failures aren't present to indicate that a filter operated. Analytics data about retained users doesn't contain a column labeled "users who churned and are absent." Research on successful products doesn't include a chapter on the identical products that failed for unrelated reasons. The absence is silent, and System 1 treats the visible data as the complete picture.
+
+In product analytics, survivorship bias appears most often in retention data and feature usage data. Users visible in month-3 analytics are users who didn't churn before month 3. Their behavior describes retained users; it may be systematically different from the behavior of the users who left, which is exactly the population where understanding behavior would be most valuable.
+
+**You'll see it when:** Usage patterns are reported from active users and used to inform features for the full user base. Successful workflows are documented without studying the failed attempts at the same workflow. A "what do our best customers do?" analysis is used to design onboarding without asking why the customers who left didn't stay to become best customers.
+
+**The signal:** The data source describes what happened to people who completed something, survived something, or stayed around long enough to appear in the dataset. The population of people who didn't — who quit, churned, failed, or never appeared — is absent. A question like "what would the data look like if we could also see the people who aren't here?" produces a meaningful, different picture.
+
+**Don't confuse this with:** Studying successful cases intentionally to understand what works. Sometimes you specifically want to study the survivors — understanding what retained users do is valuable if you're trying to support retained users. The false positive: survivorship bias becomes a problem when conclusions about survivors are applied to the full population as if the full population were visible in the data. Studying retained users to understand retained users is valid; studying them to infer what would have retained the churned users is survivorship bias.
+
+**Try Noticing:** The next time you see a feature usage report or a retention analysis, ask: who is in this data, and who completed the process that let them appear here? What would a user who left at the step before entering this dataset have looked like? If there's meaningful data missing — churned users, incomplete sessions, features that users tried once and abandoned — notice whether the conclusions apply to the visible group or are being extended to the absent one.
+
+**What Next:** 263 (Selection Bias) for the broader framework of which this survivorship bias is a specific case. 316 (Reading Data Without Getting Fooled) Part 2 for the arc-level method that uses selection and survivorship questions together as a systematic check on analytics findings.

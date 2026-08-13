@@ -1,0 +1,18 @@
+# Loss Aversion
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 247, 103 | **Cluster:** J — Cognitive Science
+
+**Goal:** Recognize when loss aversion — not the objective value of what's at stake — is driving resistance to a change, in yourself or in others.
+
+**Concept:** The working assumption is that gains and losses of equal magnitude feel equally significant — that a gain of X and a loss of X have the same emotional weight, just in opposite directions. The correction: losses register approximately 2–2.5x more strongly than equivalent gains in System 1 processing. A loss of $100 feels roughly twice as bad as a gain of $100 feels good. This asymmetry is not irrational — it is calibrated to a world where losses are genuinely harder to recover from than gains are to achieve. But it operates regardless of whether the specific loss in front of you is actually difficult to recover from.
+
+The mechanism: S1 encodes change as loss or gain relative to the current reference point — whatever the current state is. Any design change, feature removal, workflow change, or tool migration triggers loss evaluation before gain evaluation, automatically, before deliberation. The loss signal is weighted more heavily, which means the same change generates stronger resistance than the equivalent gain would generate enthusiasm. This is why "we're replacing X with Y" produces more pushback than "Y does everything X does plus Z" — even when both sentences describe the same change.
+
+**You'll see it when:** A proposal to remove or change something generates pushback disproportionate to the actual value of what's being given up. Users continue a workflow they know is inefficient because the learning cost of switching feels larger than the efficiency gain, even when the arithmetic clearly favors changing. A stakeholder defends a feature with low usage because removing it feels like giving up something they championed.
+
+**The signal:** Resistance centers on what's being lost rather than a specific argument for the current state's merits. Phrases like "we'll be taking something away," "users expect this to be here," or "we've invested a lot in this" appearing before any analysis of what's gained are loss aversion signatures — the loss is being registered before the gain enters the conversation.
+
+**Don't confuse this with:** 103 (Attachment), which describes emotional identification with a direction you built or championed. Loss Aversion activates automatically even for things you have no personal stake in — it's a structural feature of how change is processed, not a personal failing. The false positive: strong resistance that looks like loss aversion but is actually a legitimate concern about real costs. The test: ask "what specifically would be lost?" A loss aversion response produces vague or disproportionate answers; a genuine concern produces specific, named, verifiable costs.
+
+**Try Noticing:** In the next conversation about a change — a product change, a process change, a tool migration — notice the order in which losses and gains are named. Who names the loss first? Does the loss get more airtime than the gain even when the gain is larger? Is the resistance proportionate to what's actually being given up, or does it feel larger than that?
+
+**What Next:** 248 (Framing Effect) for how message framing can present the same change in loss or gain terms — making the framing a design choice. 250 (Status Quo Bias) for the related mechanism that makes the current state feel "free" even when it has real costs. 311 (Psychology of Stakeholder Decisions) for applying this in alignment conversations.

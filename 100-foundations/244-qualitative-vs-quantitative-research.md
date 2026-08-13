@@ -1,0 +1,22 @@
+# Qualitative vs. Quantitative Research
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 103, 225 | **Episode:** 11
+
+**Goal:** Recognize whether a research question requires qualitative or quantitative methods — so you can stop applying the wrong evidential standard to your findings and start selecting methods that can actually answer the question you're asking.
+
+**Concept:** The working assumption is that quantitative research is more rigorous than qualitative research — it has larger samples, statistical controls, and numbers that feel certain. The correction: quantitative and qualitative research are rigorous for different things, and applying the wrong type to a question produces results that are statistically sound but epistemically useless. The question determines which type is appropriate, not a preference for certainty.
+
+The mechanism: qualitative research accesses meaning, mechanism, and context — it answers why and how. It works by depth rather than breadth, revealing the structure of experience in ways that aren't countable but are transferable. A researcher asking five users why they abandoned a checkout flow can identify the mechanism driving abandonment — the field sequence, the unexpected delivery cost, the trust signal that was missing — and design a direct fix. No amount of quantitative data can produce that finding, because quantitative data can only say that abandonment happened, not why.
+
+Quantitative research accesses frequency, magnitude, and statistical pattern — it answers how many and how much. It works by breadth rather than depth, measuring signals across a population large enough to be representative. Quantitative data can confirm that the abandonment rate is 47%, that it's concentrated in users who reach the payment screen, and that it's higher on mobile than desktop — all of which are essential for prioritization but none of which tells you what to do.
+
+The most expensive mistake is applying quantitative reasoning to qualitative findings: treating a common theme in ten interviews as statistically representative of the full user population. Ten is not a representative sample for frequency claims. Ten is a sufficient sample for mechanism claims: if eight of ten users independently encountered the same confusion at the same point, the mechanism producing that confusion is real and worth addressing, even though you cannot responsibly say "80% of users experience this."
+
+**You'll see it when:** A team asks "how many users experience this?" when what they have is qualitative data, producing a frequency claim that the data cannot support. Or when a team uses A/B test results to explain why one version performed better — using quantitative data to answer a mechanism question that only qualitative research can address.
+
+**The signal:** The research question contains "how many," "what percentage," or "how often" — these are quantitative questions. The research question contains "why," "how," "what is the experience of," or "what would need to change" — these are qualitative questions.
+
+**Don't confuse this with:** The idea that qualitative research is preliminary and quantitative is definitive. They are sequentially complementary: qualitative research identifies what to measure (the mechanism and the variables that matter); quantitative research confirms how much it matters (the frequency and magnitude). Skipping qualitative to go straight to quantitative means measuring things you've assumed matter. A false positive: a research report with rich quotes and a large interview sample feels substantial. But if those quotes are being used to claim "most users experience X," the sample size doesn't make that claim valid — the claim requires quantitative data regardless of how many interviews were conducted.
+
+**Try Noticing:** Look at the last research findings shared in your current project. For each finding: is it a claim about mechanism (why something happens) or frequency (how often something happens)? Now look at the research method used — was it qualitative or quantitative? Does the method match the claim type? Where they don't match, identify what method would have been needed to support the claim being made.
+
+**What Next:** Read 245 (Mixed Methods) for how qualitative and quantitative research are used together in sequence. Read 215a (Moderated Usability Session) for the qualitative method most commonly misused for frequency claims.

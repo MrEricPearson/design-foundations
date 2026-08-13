@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Companion assets — internal reference files, not for publishing
+assets/
+
+# CLAUDE.md is project-specific AI context — it describes the content model
+# in detail and is intentionally included in this repo.

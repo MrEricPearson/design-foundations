@@ -1,0 +1,18 @@
+# Dual Process Theory
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 103, 126 | **Cluster:** J — Cognitive Science
+
+**Goal:** Recognize when a decision is being made by System 1 (fast, automatic, pattern-matching) rather than System 2 (slow, deliberate) — so you can design interactions and conversations that engage the right kind of thinking.
+
+**Concept:** The working assumption in most professional contexts is that people deliberate before deciding — that they gather information, weigh options, and reach a conclusion. The correction: human cognition operates on two parallel systems that are almost never both fully active. System 1 is associative, automatic, and effortless; it runs continuously, pattern-matches against prior experience, and produces verdicts that feel like the output of deliberation even when no deliberation occurred. System 2 is slow, effortful, and unreliable — it activates only when S1 flags something as uncertain or unfamiliar, and even then S2 often rationalizes S1's verdict rather than auditing it.
+
+The mechanism: every product interaction and most professional decisions are primarily S1 events. A user clicking a button, a stakeholder reacting to a design, a team member agreeing in a meeting — in each case, S1 produced a verdict before S2 was consulted. That verdict arrived with subjective certainty ("this feels wrong," "this looks right," "obviously we should do X"), and that certainty is indistinguishable from the certainty produced by genuine deliberation. S1's verdicts are shaped by framing, familiarity, prior exposure, and emotional state — not by the quality of the argument. Knowing this changes what you design for: the interaction or presentation that reaches S1 is doing more work than the one that only makes a case to S2.
+
+**You'll see it when:** Someone makes a quick decision and produces a justification that could not have preceded it — the reason references information they only had access to *after* the choice was visible. Or: someone uses a feature fluently but cannot accurately describe what they did when asked immediately after. Or: a well-reasoned argument fails to move a stakeholder who agrees with every premise but not the conclusion.
+
+**The signal:** The explanation follows the action rather than preceding it. Listen for "it just felt right," "I don't know, it was obvious," or confident accounts of choices made in under two seconds. When pressed on *why*, the reason arrives but couldn't have been formulated before the decision.
+
+**Don't confuse this with:** Irrationality or poor thinking. System 1 processing is fast, usually accurate, and well-calibrated — it is not a failure mode. The false positive: someone articulates a clear reason for a decision and this feels like evidence of deliberation. It isn't — S2 rationalization and S2 evaluation look identical from outside. The test is whether the reason could have been formulated *before* the decision, not after. If it couldn't, S1 decided.
+
+**Try Noticing:** In the next meeting where someone makes a quick decision, notice the sequence: does the explanation precede the choice or explain it retrospectively? Listen for "I realized" or "it occurred to me" (retrospective S1) vs. "I need to think through" (prospective S2 engagement). Notice also your own quick decisions today — how many do you make in an hour that you don't notice making?
+
+**What Next:** 248 (Framing Effect) — S1 anchors on the first frame it encounters, making presentation order a decision variable. 249 (Loss Aversion) — the specific S1 asymmetry that matters most in stakeholder communication and product change. 226 (Confirmation Bias) — why S1's initial verdict shapes what information gets noticed afterward.

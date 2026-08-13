@@ -1,0 +1,18 @@
+# What a Content Model Is
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** None | **Note:** Foundational for all content architecture work; prereq for 180, 182, 221 (content modeling method)
+
+**Goal:** After this piece, you will be able to recognize when a design problem is actually a content model problem in disguise — and stop trying to solve it at the screen level.
+
+**Concept:** Most practitioners approach design by asking: what should this screen look like? The question that should come first is: what *things* exist in this system, what do we know about each thing, and how do things relate to each other? The answers to those questions are the content model. Every screen is just a view into the content model — a particular way of displaying what the model contains. When the content model is wrong, every screen built from it is wrong in the same structural way, and no amount of layout refinement will fix it.
+
+The content model is not the CMS. It is not a spreadsheet of content. It is the underlying ontology — the set of thing-types, their attributes, and their relationships that the system can express. A product has a price, a description, and an inventory count. An article has an author, a publish date, and a set of categories. A user has a role, a history, and a set of permissions. These are content types with attributes. When you build a screen without knowing what the model contains, you are designing a container for content you haven't yet looked at.
+
+**You'll see it when:** A design goes through multiple rounds of revision because the content keeps "not fitting" — the headline is too long, there's no image, the description needs to show in two places with different truncation. Every revision is a screen-level response to a model-level mismatch. If you're adjusting the layout to accommodate the content rather than expressing the content's structure, the model wasn't designed before the screen was.
+
+**The signal:** Someone describes a design problem as: "sometimes there's an image, sometimes there isn't" or "the name can be short or very long" or "we need to show this field in three different places but it only exists in one." These are content attribute problems presenting as layout problems. The layout appears to be the variable; the content model is the actual variable.
+
+**Don't confuse this with a style guide** — a style guide defines how things look; a content model defines what things are. You can have a beautifully consistent style guide applied to a broken content model, and the result is a visually polished product that can't do what it's supposed to do. The style guide governs containers. The content model determines whether the right things exist to put in them.
+
+**Try Noticing:** Look at a product or interface you use regularly. Pick one screen and ask: what *types of things* is this screen showing? Not "what does the screen look like" — what are the named things with their own attributes? A tweet has an author, a timestamp, content, a reply count. A product listing has a title, a price, images, a rating. If you can name the types and their attributes from what you see, the content model is visible in the design. If the screen feels inconsistent or unpredictable, look for attributes that sometimes appear and sometimes don't — that's the content model's inconsistency showing through.
+
+**What Next:** Once you can recognize a content model, read 180 (Content Types and Attributes) to understand the vocabulary for describing one precisely. If you're working on a system where things keep breaking when content changes, read 182 (The Bolt-On Cost) to understand why.

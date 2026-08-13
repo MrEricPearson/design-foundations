@@ -1,0 +1,24 @@
+# Three Constraint Types: Inherited, Configurable, Immovable
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 193 | **Note:** One of the most practically useful atoms; prereq for 195, 196, 198, 199
+
+**Goal:** After this piece, you will be able to recognize which type of constraint you're working with — and stop applying the wrong response to each.
+
+**Concept:** Not all constraints are the same. There are three distinct types, and each requires a different response. The mistake that costs the most: treating all constraints as the same type — either accepting everything as immovable (giving up on things you could change) or challenging everything as moveable (wasting effort on things you can't change).
+
+**Inherited decisions** are things that were decided before you arrived — by another team, a previous version of the product, an earlier phase of the project, or a vendor during procurement. They are real decisions that shape your work. They may have been made for good reasons that still apply, or for reasons that no longer hold. The correct response is: review. Find out why the decision was made. Assess whether the rationale still applies to the current problem. If it does, accept it as informed context. If it doesn't, treat it as a configurable or immovable constraint and assess accordingly.
+
+**Configurable constraints** look fixed but aren't. The design system has a card component — you might assume it's locked. It may be: the component can be extended, overridden, or swapped. The vendor's navigation might seem like a given — you might be able to configure it, just not build from scratch. AI-generated structures can almost always be modified. Configuration costs effort, but it costs less than building from scratch, and it costs less than accepting a poor fit. The correct response is: test the boundary. Is this actually unchangeable, or does it just require effort to change? If it requires effort, what is the cost and is it worth the benefit?
+
+**Immovable constraints** genuinely cannot change without changing the system — switching platforms, replacing the vendor, rebuilding the database. These are real limits on the current design space. They are not arguments to accept a poor outcome; they are the actual boundary within which the best possible outcome must be found. The correct response is: acknowledge clearly. Name it as an immovable constraint, be specific about why (not "because that's just how it works"), and design with full awareness of it rather than around it.
+
+The mechanism of the most common error: practitioners apply the response for immovable constraints to configurable ones. They see a design system component or a vendor UI element and assume it's immovable — they design around it as if it cannot change — when in fact it can be configured, overridden, or extended. The cost of this error is a design that accepted worse outcomes for users in exchange for a constraint that wasn't real.
+
+**You'll see it when:** A design conversation contains the phrase "we can't change that" — and nobody asks "why not specifically?" The constraint is named as a category (vendor software, design system, existing architecture) rather than a precise description of what specifically cannot change and why.
+
+**The signal:** A constraint is described without a reason. "We can't change the navigation" is a statement that could be true for any of the three constraint types. "We can't change the top-level navigation because it's set by the enterprise platform and requires a six-month change management process" is an immovable constraint, clearly described. Without the specificity, you don't know which type you're dealing with.
+
+**Don't confuse constraint type with constraint legitimacy** — immovable constraints are not failures; they are the real boundary of the design space. Recognizing them clearly is useful. Treating configurable or inherited constraints as immovable is the error — because it shrinks the design space unnecessarily.
+
+**Try Noticing:** List the constraints on something you're currently working on. For each constraint, apply the three-type test: Is this inherited (made by someone before you)? Do you know why? Configurable (appears fixed but can be changed with effort)? Have you actually tested the boundary? Immovable (truly cannot change without switching systems)? Can you name precisely why? The constraints that resist this classification — that you can't clearly place in one category — are the ones worth examining most carefully.
+
+**What Next:** The most frequently encountered configurable constraint in design work is the design system — read 195 (Design System as Encoded Model) to understand what exactly a design system constrains and why that constraint is actually valuable most of the time. For how to respond when the design space seems too constrained for a good outcome, read 199 (Transformation Within Constraints).

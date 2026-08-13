@@ -1,0 +1,20 @@
+# Metadata as Design
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 180, 182 | **Note:** Connects content attributes to design capability; particularly important for any system with filtering, search, or multi-context display
+
+**Goal:** After this piece, you will be able to recognize when a design decision depends on metadata that may not exist — so you stop designing features on a foundation that hasn't been laid.
+
+**Concept:** Metadata is the attributes that describe content rather than constitute it. A document's publish date is metadata. A product's category is metadata. An article's author is metadata. These attributes do not appear inside the content itself — they exist alongside it, describing what it is, when it was created, who made it, what it belongs to.
+
+The reason metadata is a design concern, not a developer concern: every design decision that involves filtering, searching, sorting, surfacing related content, displaying content in multiple contexts, or personalizing content depends on the existence of specific metadata attributes. When a designer specifies "show related articles in the sidebar," that specification assumes a mechanism for determining relatedness. If the mechanism is "articles tagged with the same category," then there must be a category attribute, populated on every article, with a controlled vocabulary of valid categories. If that metadata doesn't exist, the feature doesn't work — regardless of how well the UI is designed.
+
+The failure mode is invisible to everyone during design. The wireframe shows related articles in the sidebar. It looks right. No one asks "do we have a category attribute with consistent values?" The answer might be "we have a category field but nobody fills it in" or "each team uses different values so there's no consistency" or "we never built that field." The design specified a capability the metadata doesn't support.
+
+**You'll see it when:** A feature that seems straightforward in design becomes a "data quality" or "data migration" problem in implementation. "Show the five most recent articles by this author" requires an author attribute, populated consistently. "Filter products by feature" requires a features attribute with controlled values. "Recommend similar items" requires some attribute shared across similar items. When the data doesn't support the feature, the feature either gets cut, delayed, or shipped in a degraded form — and the design phase didn't surface the problem because nobody examined the metadata.
+
+**The signal:** A design review or sprint planning meeting includes a conversation about "do we have the data for this?" that runs long or gets deferred. The design exists. The metadata required to implement it is uncertain. That gap should have been surfaced before the design was finalized.
+
+**Don't confuse metadata with content** — content is what the thing says or shows; metadata is what the system knows about the thing. The body of an article is content. The article's tags are metadata. You can remove the content and the metadata still exists. You can change the metadata and the content is unchanged. Conflating the two leads to situations where critical metadata gets embedded in content (dates written in body text, categories mentioned in titles) — which looks fine and is functionally broken.
+
+**Try Noticing:** Take a design you're looking at or working on that involves filtering, searching, sorting, or surfacing related content. Identify the specific metadata attributes required for each of those features to work. Then ask: do those attributes exist in the system today? Are they populated consistently? If the honest answer to either question is "I don't know," you've found a design specification sitting on an unverified foundation.
+
+**What Next:** For how to define the metadata a system needs before designing against it, read 221 (Content Modeling Method). For what happens when metadata is missing and someone tries to bolt it on after the content already exists, read 182 (The Bolt-On Cost).

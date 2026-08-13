@@ -1,0 +1,18 @@
+# Jakob's Law
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 126 | **Cluster:** J — Cognitive Science
+
+**Goal:** Recognize when user confusion is caused by your product deviating from platform conventions users already know — so you can distinguish a mental model gap from a labeling or instruction problem.
+
+**Concept:** The working assumption is that users who can't find something in a product need better onboarding, clearer labels, or more training. The correction: users spend most of their time in other products — not yours. Their mental model of "how software works" was built there, from years of interaction with the tools they use most. When your product's navigation, terminology, affordances, or interaction patterns deviate from those conventions, confusion is the automatic and expected result. Jakob's Law is 126 (Mental Models) applied to the specific case of platform conventions: users don't arrive as blank slates; they arrive with a working model of software that they expect to apply here.
+
+The mechanism: System 1 pattern-matches new interfaces against prior experience. When a pattern matches, the interaction feels intuitive. When it doesn't, the user experiences friction — not because the interface is objectively wrong, but because it violated a prediction S1 made based on other software. The longer a user has operated other software with a different pattern, the stronger that S1 prediction is. Training addresses the conscious level; it doesn't replace the S1 pattern that fires first. Every new user starts fresh from their prior software experience, not from your training materials.
+
+**You'll see it when:** Users consistently look for a feature in the place it would be in a different product they already use. Users call a feature by a different name than the product uses — the name from the software they know. Users say "in [other product], you'd just…" and describe doing the same action differently. New users fail while experienced users of analogous products succeed faster than experienced users of your own product.
+
+**The signal:** The confusion is directional, not random — users look in a specific wrong place, and that wrong place is the right place in the software they know best. The confusion resolves immediately when told "in this product it's called X" rather than requiring users to build a new mental model.
+
+**Don't confuse this with:** 126 (Mental Models) generally, which covers any mismatch between a user's internal model and a system's behavior — the mental model could have come from anywhere. Jakob's Law is the specific case where the model came from another product and the expected behavior is a platform convention. The false positive: a user who was confused and successfully found a feature after training appears to have "learned" the product. The mental model gap is still present and will produce the same friction for every new user — training addressed a symptom, not the gap.
+
+**Try Noticing:** Think of a product or feature you encountered for the first time recently. Where did you look first for the main navigation or primary action? Was that location based on where it is in this product — or where it is in software you already use daily? Apply the same question to users of a product you work on: what software do they use most? Where would they look *there* for what you've built?
+
+**What Next:** 126 (Mental Models) for the foundational concept — users arrive with a model regardless of where it came from. 313 (UX in a Product You Didn't Build) for applying Jakob's Law to vendor product evaluation. 312 (Designing What You're Building) for applying it to evaluate your own custom software through users' existing mental models.

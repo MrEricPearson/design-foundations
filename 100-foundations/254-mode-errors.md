@@ -1,0 +1,18 @@
+# Mode Errors
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 126, 247 | **Cluster:** J — Cognitive Science
+
+**Goal:** Recognize when a user failure is a mode error — caused by an interface state change the user didn't register — so you can distinguish a design failure from a user error.
+
+**Concept:** The working assumption is that when a user performs the wrong action, the problem is labeling, instructions, or user familiarity — that better communication will prevent the error. The correction: mode errors occur when the interface's current state changes what an action does, but the signal of that state change is invisible or easily missed. The user's System 1 pattern — "this action produces this result" — was learned in mode A. In mode B, the same action produces a different result. The user didn't notice the mode switch, so the S1 pattern fires against the wrong context.
+
+The mechanism: S1 learns interaction patterns associatively and applies them automatically. When a mode changes (editing vs. viewing, insert vs. command, filters active vs. inactive, a toggle that changes context), S1 continues to apply the pattern from the previous mode until something breaks the association. The signal required to break that association must be salient enough to reach S1 — not just present in the interface as a small indicator. Modes that change on an action the user is focused on completing are especially prone to this, because attentional focus is narrow and the mode indicator is peripheral.
+
+**You'll see it when:** A user performs an action they've performed correctly many times before and is surprised by the result. The error is consistent — the "wrong" action would have been correct in a different state of the same interface. Users describe the product as "glitchy" or "inconsistent" when its behavior has changed because the mode changed. The error rate is higher for users under time pressure or cognitive load, when attentional resources for monitoring mode are reduced.
+
+**The signal:** The error makes no sense as a user knowledge problem — the user clearly knows how to use this feature, because they use it correctly in other contexts. The error is directional — users consistently fail in the same specific way, in conditions that correspond to a particular mode.
+
+**Don't confuse this with:** General usability problems, which affect users regardless of their experience level. Mode errors specifically affect users who have learned the product and are using it correctly in the wrong mode. The false positive: labeling improvements that reduce mode error frequency look like they solved the problem; they may have only increased mode visibility for attentive users, leaving the same error pattern for users operating under load or in flow.
+
+**Try Noticing:** Think of a product or tool you use regularly where you've made a surprising error — something that felt like the product did the wrong thing. Now consider: was there an active mode or state that changed what your action would do? Was the indicator of that mode visible to you when you were focused on completing the task? If you needed to look for it, the mode was there but not salient.
+
+**What Next:** 126 (Mental Models) for the foundational concept — mode errors are a specific case of a model mismatch between user expectation and system behavior. 118 (Edge and Boundary States) for designing state transitions that are explicitly visible rather than implied. 312 (Designing What You're Building) for the arc where mode errors appear as part of edge state design in custom development contexts.
