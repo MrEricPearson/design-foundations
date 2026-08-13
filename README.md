@@ -4,7 +4,7 @@ A practitioner library for product managers, developers, and platform teams. Not
 
 Every piece delivers **one applicable thing** and takes **under five minutes** to read.
 
-**→ [Browse the full library interactively](LIBRARY-MAP.html)** — all 213 pieces, every tier, every cluster, organized for navigation. Open this file in any browser.
+**→ [Browse the full library interactively](https://claude.ai/code/artifact/9717a242-e5d9-480f-a988-b8355fbc6d43)** — all 217 pieces, every tier, every cluster, organized for navigation.
 
 ---
 
