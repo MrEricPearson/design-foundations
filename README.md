@@ -71,7 +71,7 @@ meta/                Navigation guides, reading paths, master outline
 assets/              Chapter Talk reference materials (internal)
 ```
 
-**Total: 210+ pieces** across all tiers.
+**Total: 217 pieces** across all tiers.
 
 ---
 
@@ -134,6 +134,8 @@ Arcs within `300-systems/`:
 | [`meta/17-start-here-custom-dev.md`](meta/17-start-here-custom-dev.md) | Full custom dev reading path |
 | [`meta/18-start-here-noncustom-dev.md`](meta/18-start-here-noncustom-dev.md) | Full non-custom dev reading path |
 | [`STATUS.md`](STATUS.md) | Per-piece publish-readiness tracking |
+| [`meta/content-strategy-spec.html`](meta/content-strategy-spec.html) | Governing voice, tone, and content craft ruleset — 12 modules with research backing; reference for authors |
+| [`meta/layout-system.md`](meta/layout-system.md) | SharePoint layout pattern library — 12 patterns, white space system, image spec format, mobile rules, and publish doc template |
 
 ---
 
