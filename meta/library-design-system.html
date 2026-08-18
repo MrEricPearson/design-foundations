@@ -1,0 +1,789 @@
+<title>Library Design System</title>
+<style>
+:root {
+  --bg:          #F5F3EE;
+  --bg-2:        #ECEAE4;
+  --bg-3:        #E2DFD8;
+  --text-1:      #1C1B18;
+  --text-2:      #5A5750;
+  --text-3:      #9A9690;
+  --accent:      #3B5A9A;
+  --accent-bg:   #EBF0FA;
+  --accent-dim:  #5A78B8;
+  --amber:       #E8A835;
+  --amber-bg:    #FEF6E4;
+  --amber-text:  #7A5010;
+  --rust:        #C4522A;
+  --rust-bg:     #FBF0EC;
+  --rust-text:   #7A2808;
+  --border:      #D8D5CE;
+  --border-2:    #C4C0B8;
+  --t100:        #6B82A8;
+  --t100-bg:     #EDF1F8;
+  --t200:        #3A8A7A;
+  --t200-bg:     #E8F5F2;
+  --t300:        #3B5A9A;
+  --t300-bg:     #EBF0FA;
+  --ff-serif:    Georgia,'Times New Roman',serif;
+  --ff-sans:     -apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --ff-mono:     'SF Mono','Consolas','Monaco',monospace;
+  --r:           4px;
+  --w:           680px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161512;--bg-2:#1E1D1A;--bg-3:#252320;
+  --text-1:#EDE9E2;--text-2:#A09C96;--text-3:#6A6660;
+  --accent:#7BA4D6;--accent-bg:#1A2840;--accent-dim:#9DBDE8;
+  --amber:#D4A050;--amber-bg:#2A1E08;--amber-text:#D4A050;
+  --rust:#D4774A;--rust-bg:#2A1008;--rust-text:#D4774A;
+  --border:#2E2C28;--border-2:#3E3C38;
+  --t100-bg:#1A2030;--t200-bg:#0E2420;--t300-bg:#1A2040;
+}}
+:root[data-theme="dark"]{
+  --bg:#161512;--bg-2:#1E1D1A;--bg-3:#252320;
+  --text-1:#EDE9E2;--text-2:#A09C96;--text-3:#6A6660;
+  --accent:#7BA4D6;--accent-bg:#1A2840;--accent-dim:#9DBDE8;
+  --amber:#D4A050;--amber-bg:#2A1E08;--amber-text:#D4A050;
+  --rust:#D4774A;--rust-bg:#2A1008;--rust-text:#D4774A;
+  --border:#2E2C28;--border-2:#3E3C38;
+  --t100-bg:#1A2030;--t200-bg:#0E2420;--t300-bg:#1A2040;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text-1);
+  font-family:var(--ff-sans);font-size:15px;line-height:1.6;
+  padding:2.5rem 1.5rem 6rem;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto}
+
+/* Masthead */
+.masthead{border-bottom:2px solid var(--text-1);padding-bottom:1.5rem;margin-bottom:2.5rem}
+.eyebrow{font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.4rem}
+h1{font-size:1.6rem;font-weight:600;line-height:1.2;text-wrap:balance;color:var(--text-1)}
+.subtitle{color:var(--text-2);font-size:0.85rem;margin-top:0.4rem;font-family:var(--ff-serif);font-style:italic}
+
+/* TOC */
+.toc{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.4rem;margin-bottom:3rem}
+.toc-label{font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.6rem}
+.toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px 1.5rem}
+.toc li{font-size:0.76rem}
+.toc a{color:var(--text-2)}
+.toc a:hover{color:var(--accent)}
+.toc .n{font-family:var(--ff-mono);font-size:0.58rem;color:var(--text-3);margin-right:0.3rem}
+@media(max-width:600px){.toc ol{grid-template-columns:1fr 1fr}}
+@media(max-width:400px){.toc ol{grid-template-columns:1fr}}
+
+/* Section headings */
+.section-label{
+  font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--text-3);border-bottom:1px solid var(--border);padding-bottom:0.4rem;margin:3rem 0 1.5rem;
+}
+h2{font-size:1.05rem;font-weight:600;margin-bottom:0.25rem}
+.section-desc{font-size:0.8rem;color:var(--text-2);margin-bottom:1.5rem;font-family:var(--ff-serif);font-style:italic}
+
+/* Alert / research callout */
+.callout{
+  background:var(--accent-bg);border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;
+  padding:0.7rem 1rem;margin:0.75rem 0 1.25rem;
+  font-size:0.78rem;color:var(--text-1);font-family:var(--ff-sans);line-height:1.55;
+}
+.callout .tag{font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-dim);margin-right:0.5rem}
+.callout.new{background:var(--amber-bg);border-color:var(--amber)}
+.callout.new .tag{color:var(--amber-text)}
+
+/* Color swatches */
+.swatches{display:flex;flex-wrap:wrap;gap:8px;margin:1rem 0 2rem}
+.swatch{width:72px}
+.swatch-color{height:44px;border-radius:var(--r);border:1px solid rgba(0,0,0,0.08);margin-bottom:3px}
+.swatch-name{font-family:var(--ff-mono);font-size:0.56rem;color:var(--text-2);display:block;line-height:1.3}
+.swatch-hex{font-family:var(--ff-mono);font-size:0.54rem;color:var(--text-3);display:block}
+
+/* Type specimens */
+.type-spec{margin:0.75rem 0 1.5rem;display:flex;flex-direction:column;gap:1rem}
+.type-row{border-bottom:1px solid var(--border);padding-bottom:1rem}
+.type-label{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.4rem}
+
+/* Pattern cards */
+.pattern{border-top:1px solid var(--border);padding-top:2rem;margin-top:2rem}
+.pattern.new-pattern{border-top-color:var(--amber);border-top-width:2px}
+.pattern-num{font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-dim);display:block;margin-bottom:0.2rem}
+.pattern-num.new{color:var(--amber-text)}
+.pattern h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem}
+.new-badge{font-family:var(--ff-mono);font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--amber-bg);color:var(--amber-text);border:1px solid var(--amber);padding:1px 6px 2px;border-radius:2px}
+.mockup{
+  background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r);
+  padding:1.5rem;margin-bottom:0.75rem;
+}
+.mockup-label{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.75rem;padding-bottom:0.4rem;border-bottom:1px dashed var(--border)}
+.meta-row{
+  display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;
+  padding:0.5rem 0;border-top:1px solid var(--border);
+  font-family:var(--ff-mono);font-size:0.6rem;color:var(--text-3);margin-bottom:0.5rem;
+}
+.meta-row .badge{background:var(--bg-3);border:1px solid var(--border-2);color:var(--text-2);padding:1px 7px 2px;border-radius:2px;font-size:0.58rem}
+.rules{list-style:none;display:flex;flex-direction:column;gap:3px;margin:0.5rem 0 1.5rem}
+.rules li{font-size:0.77rem;color:var(--text-2);padding-left:1rem;position:relative;line-height:1.5}
+.rules li::before{content:'—';position:absolute;left:0;color:var(--border-2);font-size:0.7rem}
+.rules li.research{color:var(--accent-dim)}
+.rules li.research::before{content:'↗';color:var(--accent-dim)}
+
+/* ── Inside mockups ── */
+.tier-badge{
+  display:inline-flex;align-items:center;gap:0.3rem;
+  font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;
+  padding:2px 8px 3px;border-radius:2px;margin-bottom:0.4rem;
+}
+.t100{background:var(--t100-bg);color:var(--t100)}
+.t200{background:var(--t200-bg);color:var(--t200)}
+.t300{background:var(--t300-bg);color:var(--t300)}
+.meta-chips{display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem;flex-wrap:wrap}
+.read-chip{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.08em;color:var(--text-3);background:var(--bg-3);border:1px solid var(--border);padding:1px 7px 2px;border-radius:2px}
+.arc-chip{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.08em;color:var(--accent-dim);background:var(--accent-bg);border:1px solid var(--accent);padding:1px 7px 2px;border-radius:2px}
+.m-eyebrow{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.15rem}
+.m-h1{font-size:1.3rem;font-weight:700;line-height:1.2;color:var(--text-1);margin-bottom:0.15rem;text-wrap:balance}
+.m-goal{font-family:var(--ff-serif);font-size:0.84rem;color:var(--text-2);font-style:italic;border-top:1px solid var(--border);padding-top:0.35rem;margin-top:0.35rem}
+.m-h2-primary{font-family:var(--ff-sans);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-2);margin-bottom:0.3rem}
+.m-h2-secondary{font-family:var(--ff-sans);font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-3);margin-bottom:0.25rem}
+.m-p{font-family:var(--ff-serif);font-size:0.87rem;color:var(--text-1);line-height:1.72;margin-bottom:0.45rem;max-width:58ch}
+.m-p:last-child{margin-bottom:0}
+
+/* Concept Panel */
+.concept-panel{border-left:3px solid var(--accent);background:var(--accent-bg);padding:0.75rem 1rem;margin:0.4rem 0;border-radius:0 var(--r) var(--r) 0}
+.concept-panel .m-p{color:var(--text-1)}
+
+/* Pull Quote — NEW */
+.pull-quote{
+  border-top:2px solid var(--text-1);border-bottom:1px solid var(--border);
+  padding:0.75rem 0 0.65rem;margin:0.75rem 0;
+}
+.pull-quote-text{
+  font-family:var(--ff-serif);font-size:1.05rem;font-style:italic;
+  color:var(--text-1);line-height:1.5;max-width:52ch;
+}
+.pull-quote-source{font-family:var(--ff-mono);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-3);margin-top:0.4rem}
+
+/* Steps */
+.steps{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin:0.4rem 0}
+.steps li{display:flex;gap:0.75rem;align-items:flex-start;font-family:var(--ff-serif);font-size:0.87rem;color:var(--text-1);line-height:1.65}
+.step-num{font-family:var(--ff-mono);font-size:0.62rem;font-weight:700;color:var(--accent);background:var(--accent-bg);width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:2px;flex-shrink:0;margin-top:2px}
+
+/* Watchout */
+.watchout-block{border-left:3px solid var(--rust);background:var(--rust-bg);padding:0.7rem 1rem;border-radius:0 var(--r) var(--r) 0}
+.watchout-label{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--rust);margin-bottom:0.25rem}
+.watchout-block .m-p{color:var(--text-1)}
+
+/* Try This */
+.try-block{background:var(--amber-bg);border:1px solid var(--amber);border-radius:var(--r);padding:0.85rem 1rem}
+.try-label{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber-text);margin-bottom:0.25rem}
+.try-block .m-p{color:var(--text-1)}
+
+/* Proof */
+.proof-block{border-top:1px solid var(--border);padding-top:0.55rem;margin-top:0.55rem}
+.proof-label{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.2rem}
+
+/* Check-in — NEW */
+.checkin-block{
+  border:1px solid var(--border-2);border-radius:var(--r);
+  padding:0.9rem 1.1rem;margin:0.4rem 0;
+  background:var(--bg);
+}
+.checkin-label{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.4rem}
+.checkin-q{font-family:var(--ff-sans);font-size:0.84rem;font-weight:600;color:var(--text-1);margin-bottom:0.5rem}
+.checkin-options{display:flex;flex-wrap:wrap;gap:0.4rem}
+.checkin-opt{font-family:var(--ff-sans);font-size:0.76rem;color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:4px 12px;cursor:pointer;min-height:36px;display:flex;align-items:center}
+.checkin-opt:hover{background:var(--accent-bg)}
+
+/* Sources */
+.source-block{border-top:1px solid var(--border);padding-top:0.7rem;margin-top:0.7rem;display:flex;flex-direction:column;gap:0.28rem}
+.source-label{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.15rem}
+.source-item{font-family:var(--ff-sans);font-size:0.72rem;color:var(--text-2);border-left:2px solid var(--border-2);padding-left:0.55rem;line-height:1.45}
+.source-item strong{color:var(--text-1);font-weight:600}
+
+/* Image */
+.image-block{background:var(--bg-3);border:1px dashed var(--border-2);border-radius:var(--r);padding:1.5rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:0.4rem}
+.image-placeholder{font-family:var(--ff-mono);font-size:0.6rem;color:var(--text-3);display:flex;align-items:center;gap:0.4rem}
+.image-caption{font-family:var(--ff-serif);font-size:0.77rem;color:var(--text-2);font-style:italic;max-width:40ch;text-align:center}
+.image-spec-pill{font-family:var(--ff-mono);font-size:0.6rem;color:var(--accent-dim);background:var(--accent-bg);border-radius:2px;padding:2px 7px}
+
+/* What Next */
+.whatnext-block{display:flex;flex-wrap:wrap;gap:0.45rem;padding-top:0.7rem;border-top:1px solid var(--border);margin-top:0.7rem}
+.whatnext-label{font-family:var(--ff-mono);font-size:0.56rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);width:100%;margin-bottom:0.05rem}
+.next-chip{font-family:var(--ff-sans);font-size:0.75rem;color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:4px 10px;text-decoration:none;min-height:32px;display:flex;align-items:center}
+.next-chip:hover{background:var(--accent-bg);text-decoration:none}
+
+/* Spacer guidance */
+.spacer-demo{background:repeating-linear-gradient(0deg,transparent,transparent 3px,var(--border) 3px,var(--border) 4px);height:32px;border-radius:var(--r);margin:0.4rem 0;display:flex;align-items:center;justify-content:center}
+.spacer-label{font-family:var(--ff-mono);font-size:0.58rem;color:var(--text-3);background:var(--bg-2);padding:2px 8px;border-radius:2px}
+
+/* Tables */
+.table-wrap{overflow-x:auto;margin:0.75rem 0 1.5rem;border-radius:var(--r)}
+table{width:100%;border-collapse:collapse;font-family:var(--ff-sans);font-size:0.76rem}
+th{text-align:left;padding:0.45rem 0.7rem;background:var(--bg-2);border-bottom:1px solid var(--border-2);color:var(--text-2);font-weight:600;white-space:nowrap}
+td{padding:0.4rem 0.7rem;border-bottom:1px solid var(--border);color:var(--text-1);vertical-align:top;line-height:1.45}
+tr:last-child td{border-bottom:none}
+
+/* Spec block */
+.spec-comment{font-family:var(--ff-mono);font-size:0.68rem;color:var(--text-3);background:var(--bg-3);border:1px solid var(--border);border-radius:var(--r);padding:0.6rem 0.9rem;margin:0.75rem 0;line-height:1.5;overflow-x:auto;white-space:pre}
+
+/* Column layout diagram */
+.col-demo{display:grid;gap:8px;margin:0.75rem 0 1.25rem}
+.col-demo.two-col{grid-template-columns:680px 1fr;max-width:900px}
+.col-demo.one-col{grid-template-columns:680px}
+@media(max-width:720px){.col-demo.two-col{grid-template-columns:1fr}}
+.col-box{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r);padding:0.75rem 1rem;font-family:var(--ff-mono);font-size:0.62rem;color:var(--text-3);min-height:60px;display:flex;flex-direction:column;gap:0.25rem}
+.col-box.content{background:var(--accent-bg);border-color:var(--accent-dim)}
+.col-box .col-label{font-weight:700;color:var(--text-2)}
+.col-box .col-note{font-size:0.56rem}
+</style>
+
+<div class="wrap">
+
+<div class="masthead">
+  <p class="eyebrow">Design Foundations Library · Production Reference</p>
+  <h1>Layout &amp; Visual Identity System</h1>
+  <p class="subtitle">12 layout patterns, design tokens, SharePoint Flexible Section guidance, mobile rules, image spec format, and white space system. Reference during drafting and production.</p>
+</div>
+
+<div class="toc">
+  <p class="toc-label">Contents</p>
+  <ol>
+    <li><a href="#tokens"><span class="n">01</span>Color &amp; Tokens</a></li>
+    <li><a href="#type"><span class="n">02</span>Typography</a></li>
+    <li><a href="#layout"><span class="n">03</span>Column Layout</a></li>
+    <li><a href="#whitespace"><span class="n">04</span>White Space</a></li>
+    <li><a href="#mobile"><span class="n">05</span>Mobile / Touch</a></li>
+    <li><a href="#p01"><span class="n">P1</span>Article Header</a></li>
+    <li><a href="#p02"><span class="n">P2</span>Section Block</a></li>
+    <li><a href="#p03"><span class="n">P3</span>Concept Panel</a></li>
+    <li><a href="#p04"><span class="n">P4</span>Step Sequence</a></li>
+    <li><a href="#p05"><span class="n">P5</span>Watchout Block</a></li>
+    <li><a href="#p06"><span class="n">P6</span>Try This Block</a></li>
+    <li><a href="#p07"><span class="n">P7</span>Proof Block</a></li>
+    <li><a href="#p08"><span class="n">P8</span>Source Attribution</a></li>
+    <li><a href="#p09"><span class="n">P9</span>Image Block</a></li>
+    <li><a href="#p10"><span class="n">P10</span>What Next</a></li>
+    <li><a href="#p11"><span class="n">P11</span>Pull Quote ✦</a></li>
+    <li><a href="#p12"><span class="n">P12</span>Check-In ✦</a></li>
+    <li><a href="#imagespec"><span class="n">IS</span>Image Spec Format</a></li>
+    <li><a href="#sp"><span class="n">SP</span>SharePoint Mapping</a></li>
+  </ol>
+</div>
+
+<!-- TOKENS -->
+<div id="tokens">
+  <p class="section-label">01 — Color Tokens</p>
+  <h2>Palette</h2>
+  <p class="section-desc">Warm neutrals with two functional accents. Amber = activation (Try This only). Rust = honest warning (Watchout only). Neither appears decoratively.</p>
+  <div class="swatches">
+    <div class="swatch"><div class="swatch-color" style="background:#F5F3EE;border-color:#C4C0B8"></div><span class="swatch-name">Ground</span><span class="swatch-hex">#F5F3EE</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#ECEAE4"></div><span class="swatch-name">Ground-2</span><span class="swatch-hex">#ECEAE4</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#1C1B18"></div><span class="swatch-name">Text-1</span><span class="swatch-hex">#1C1B18</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#5A5750"></div><span class="swatch-name">Text-2</span><span class="swatch-hex">#5A5750</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#9A9690"></div><span class="swatch-name">Text-3</span><span class="swatch-hex">#9A9690</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#3B5A9A"></div><span class="swatch-name">Accent</span><span class="swatch-hex">#3B5A9A</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#E8A835"></div><span class="swatch-name">Amber</span><span class="swatch-hex">#E8A835</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#C4522A"></div><span class="swatch-name">Rust</span><span class="swatch-hex">#C4522A</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#6B82A8"></div><span class="swatch-name">T100</span><span class="swatch-hex">#6B82A8</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#3A8A7A"></div><span class="swatch-name">T200</span><span class="swatch-hex">#3A8A7A</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#3B5A9A"></div><span class="swatch-name">T300</span><span class="swatch-hex">#3B5A9A</span></div>
+    <div class="swatch"><div class="swatch-color" style="background:#D8D5CE"></div><span class="swatch-name">Border</span><span class="swatch-hex">#D8D5CE</span></div>
+  </div>
+</div>
+
+<!-- TYPOGRAPHY -->
+<div id="type">
+  <p class="section-label">02 — Typography</p>
+  <h2>Type System</h2>
+  <p class="section-desc">Georgia body resolves cleanly at Surface Pro's 267 PPI — high-DPI screens remove the historical objection to serifs on screen. System-ui headers: zero webfont dependency. Monospace for all metadata.</p>
+  <div class="callout"><span class="tag">Research</span>NNGroup (2023): at 220+ PPI, serif body type matches or exceeds sans-serif readability. Georgia is the right call for Surface users. Visible Language literature review: target 50–75 characters per line (66 ideal). SharePoint default renders 90–110 CPL — see Column Layout section for the fix.</div>
+  <div class="type-spec">
+    <div class="type-row">
+      <p class="type-label">Article Title — system-ui 700, 28px / 1.2 · text-wrap: balance</p>
+      <div style="font-family:var(--ff-sans);font-size:1.75rem;font-weight:700;line-height:1.2;color:var(--text-1);text-wrap:balance">Why Requirements Change Without Anyone Saying So</div>
+    </div>
+    <div class="type-row">
+      <p class="type-label">Primary section heading — system-ui 700, 12px uppercase, 0.07em tracking</p>
+      <div style="font-family:var(--ff-sans);font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-2)">What's Actually Happening</div>
+    </div>
+    <div class="type-row">
+      <p class="type-label">Secondary section heading — system-ui 600, 11px uppercase, 0.07em tracking, text-3</p>
+      <div style="font-family:var(--ff-sans);font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-3)">Prior Knowledge</div>
+    </div>
+    <div class="type-row">
+      <p class="type-label">Body — Georgia 400, 16px / 1.75 · max 58ch</p>
+      <div style="font-family:var(--ff-serif);font-size:1rem;line-height:1.75;color:var(--text-1);max-width:58ch">The scope grows without anyone saying the scope is growing. Requirements shift in standup conversations, not in a doc. By the time someone names it, the work is already wrong.</div>
+    </div>
+    <div class="type-row">
+      <p class="type-label">Pull quote — Georgia 400 italic, 18px / 1.5 · max 52ch</p>
+      <div style="font-family:var(--ff-serif);font-size:1.1rem;font-style:italic;color:var(--text-1);line-height:1.5;max-width:52ch">"The doc is what gets built — not the conversation."</div>
+    </div>
+    <div class="type-row">
+      <p class="type-label">Label / Metadata — monospace 9px uppercase, 0.12em tracking</p>
+      <div style="font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3)">Tier 200 · Practice · 4 min read</div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:1.5rem">Section Heading Hierarchy</h2>
+  <p class="section-desc">Primary and secondary sections have different visual weight. Primary sections (Concept, Method, Try This) carry more visual weight than supporting sections (Prior Knowledge Hook, Trigger, Take This Further).</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Section</th><th>Heading style</th><th>Weight signal</th></tr>
+      <tr><td>Concept / Method / Try This / Watchout</td><td>Primary — system-ui 700, text-2</td><td>Full weight, standard spacing above</td></tr>
+      <tr><td>Goal / Artifact / What Next</td><td>Primary — system-ui 700, text-2</td><td>Same weight, structural role</td></tr>
+      <tr><td>Prior Knowledge Hook / Trigger / Take This Further / AI Path</td><td>Secondary — system-ui 600, text-3</td><td>Lighter, less spacing above — supporting context</td></tr>
+      <tr><td>Source Attribution</td><td>Secondary — monospace, text-3</td><td>Muted — reference, not content</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- COLUMN LAYOUT -->
+<div id="layout">
+  <p class="section-label">03 — Column Layout &amp; Line Length</p>
+  <h2>Fixing Line Length in SharePoint</h2>
+  <p class="section-desc">The single highest-impact layout fix. SharePoint's default single-column layout renders text at 90–110 CPL. Research target: 66 CPL. The fix: Flexible Sections (available mid-2025, no SPFx required).</p>
+  <div class="callout"><span class="tag">Research</span>Baymard Institute + Visible Language (2005): optimal line length is 50–75 CPL (66 ideal). At 90+ CPL, readers lose their place at line returns and fatigue increases. WCAG 1.4.8 recommends 80 CPL maximum. SharePoint's default single-column is a measurable readability problem.</div>
+  <h3 style="font-size:0.85rem;font-weight:600;margin:1rem 0 0.4rem;color:var(--text-1)">Recommended Layout: Two-Column with Narrow Navigation</h3>
+  <div class="col-demo two-col">
+    <div class="col-box content">
+      <span class="col-label">Content column — 680px</span>
+      <span class="col-note">Max-width constrains line length to ~66 CPL at 16px body</span>
+      <span class="col-note">All patterns (P1–P12) render inside this column</span>
+    </div>
+    <div class="col-box">
+      <span class="col-label">Navigation / ToC column</span>
+      <span class="col-note">Flexible width — fills remaining space</span>
+      <span class="col-note">Contents: piece number + title + section links (T300 only)</span>
+      <span class="col-note">Leave blank for T100/T200 unless arc has 5+ sections</span>
+    </div>
+  </div>
+  <h3 style="font-size:0.85rem;font-weight:600;margin:1rem 0 0.4rem;color:var(--text-1)">How to configure in SharePoint Modern (no SPFx needed)</h3>
+  <ul class="rules">
+    <li>In SharePoint page edit mode: Add section → choose "Flexible section" (available mid-2025 in Microsoft 365)</li>
+    <li>Drag left column to approximately 70% width — right column fills remainder</li>
+    <li>Place all content web parts (Text, Image, Quick Links) in the left column</li>
+    <li>For T300 arcs: place a Quick Links web part in the right column listing arc parts</li>
+    <li>For T100/T200: leave right column empty or hide with a Spacer web part</li>
+    <li>If Flexible Sections are not yet available in your tenant: use a 2-column layout with the 2/3–1/3 option and place all content in the wider column</li>
+    <li class="research">Fallback without custom layout: use a single-column layout and apply max-width via the Script Editor web part if the tenant permits it: <code>body { max-width: 680px; }</code></li>
+  </ul>
+</div>
+
+<!-- WHITE SPACE -->
+<div id="whitespace">
+  <p class="section-label">04 — White Space System</p>
+  <h2>Spacing Between Sections</h2>
+  <p class="section-desc">White space isn't padding — it's comprehension. Wichita State University research found ~20% comprehension improvement from generous inter-paragraph and section spacing. SharePoint's default is tight. This must be corrected manually.</p>
+  <div class="callout"><span class="tag">Research</span>Wichita State / eLearning replication: white space between paragraphs and around page margins increases comprehension ~20%, with a slight reduction in reading speed. Net effect is positive for learning content. Source: Cieden, Shift eLearning (citing primary research).</div>
+  <h3 style="font-size:0.85rem;font-weight:600;margin:1rem 0 0.5rem;color:var(--text-1)">Spacer web part usage</h3>
+  <p style="font-size:0.8rem;color:var(--text-2);margin-bottom:0.75rem;font-family:var(--ff-serif)">Place a Spacer web part between major pattern transitions. Minor transitions use SharePoint's natural paragraph spacing.</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Transition</th><th>Spacer height</th><th>Rationale</th></tr>
+      <tr><td>Header (P1) → first section</td><td>32px</td><td>Breathing room after the promise</td></tr>
+      <tr><td>Concept Panel (P3) → Step Sequence (P4)</td><td>24px</td><td>Concept lands before Method begins</td></tr>
+      <tr><td>Step Sequence (P4) → Watchout (P5)</td><td>16px</td><td>Close — Watchout belongs to Method</td></tr>
+      <tr><td>Watchout (P5) → Try This (P6)</td><td>32px</td><td>The biggest visual break — signals transition to action</td></tr>
+      <tr><td>Try This (P6) → Proof (P7)</td><td>0px</td><td>Immediate follow-on — Proof belongs to Try This</td></tr>
+      <tr><td>Proof (P7) → Take This Further</td><td>24px</td><td>Closing stretch — gentle</td></tr>
+      <tr><td>Any section → Source Attribution (P8)</td><td>32px</td><td>Sources are reference, not content — separate clearly</td></tr>
+      <tr><td>Any section → What Next (P10)</td><td>40px</td><td>Largest gap — signals end of piece</td></tr>
+      <tr><td>Pull Quote (P11) → next section</td><td>24px</td><td>Quote needs to breathe</td></tr>
+    </table>
+  </div>
+  <div class="mockup" style="margin-top:0.5rem">
+    <div class="mockup-label">Spacer — visual reference</div>
+    <div class="spacer-demo"><span class="spacer-label">32px Spacer web part</span></div>
+    <p style="font-family:var(--ff-mono);font-size:0.6rem;color:var(--text-3);margin-top:0.4rem">Add via: Edit → Insert → Spacer → set height in px</p>
+  </div>
+</div>
+
+<!-- MOBILE -->
+<div id="mobile">
+  <p class="section-label">05 — Mobile &amp; Touch</p>
+  <h2>Surface Pro and SharePoint Mobile</h2>
+  <p class="section-desc">Surface Pro operates as a touch device at 267 PPI. SharePoint Mobile renders pages in the SharePoint app (iOS/Android). Both require specific treatment for tap targets, font scaling, and color blocks.</p>
+  <ul class="rules">
+    <li><strong>Touch target minimum:</strong> 44×44px for all interactive elements (What Next chips, Check-In options). SharePoint Quick Links web part meets this by default — verify custom link styles do too.</li>
+    <li><strong>Font size floor:</strong> Never below 14px body text in SharePoint mobile app rendering. Georgia 16px (desktop) renders as approximately 14px in the mobile view — acceptable. Do not reduce body type below 16px on desktop.</li>
+    <li><strong>Color blocks on mobile:</strong> Concept Panel (P3), Try This (P6), and Watchout (P5) rely on tinted backgrounds. SharePoint mobile preserves these in the Text web part — test in mobile view after publishing. If a web part uses a Highlighted Content block instead of Text, test separately — rendering varies.</li>
+    <li><strong>Left borders on mobile:</strong> Concept Panel and Watchout use left-border treatment. These render correctly in SharePoint mobile. If custom HTML was used instead of Text web part formatting, verify in mobile SharePoint before publishing.</li>
+    <li><strong>Pull Quote (P11) on mobile:</strong> The top-border + italic style reads well at mobile widths. Do not add a left border for mobile — adds visual noise at narrow widths.</li>
+    <li><strong>Two-column layout on mobile:</strong> SharePoint automatically stacks Flexible Sections to single-column on narrow viewports. The right navigation column disappears — acceptable. Confirm the right column contains no critical content, only navigation.</li>
+    <li><strong>Check-In (P12) on mobile:</strong> Microsoft Forms and Quick Poll web parts are mobile-responsive by default. Verify embedded Forms render correctly in the SharePoint mobile app — not just a mobile browser.</li>
+    <li><strong>Image blocks on mobile:</strong> Set images to "Full width" in the Image web part settings — this ensures they scale to viewport rather than overflowing.</li>
+  </ul>
+</div>
+
+<p class="section-label">P1–P12 — Layout Patterns</p>
+
+<!-- P1 -->
+<div class="pattern" id="p01">
+  <span class="pattern-num">Pattern 01</span>
+  <h3>Article Header</h3>
+  <div class="mockup">
+    <div class="meta-chips">
+      <span class="tier-badge t200">T200 · Practice</span>
+      <span class="read-chip">4 min read</span>
+    </div>
+    <p class="m-eyebrow">Piece 205 · Requirements</p>
+    <h1 class="m-h1">Why Requirements Change Without Anyone Saying So</h1>
+    <p class="m-goal">Map assumption-to-requirement drift before it becomes a sprint reset.</p>
+  </div>
+  <div class="meta-row">
+    <span>SharePoint web part:</span><span class="badge">Text (H1)</span><span>+</span><span class="badge">Divider</span>
+  </div>
+  <ul class="rules">
+    <li>Tier badge chip: T100 blue-gray, T200 teal, T300 deep blue — always first</li>
+    <li><strong>Reading time chip:</strong> monospace, muted — placed immediately after tier badge. "4 min read" not "under 5 minutes." Always present.</li>
+    <li>T300 arc pieces add arc position chip: "Part 2 of 5" in accent color — between tier badge and reading time</li>
+    <li>Piece number + category in eyebrow — monospace, text-3</li>
+    <li>Title: names the recognizable situation, not the technique. text-wrap: balance.</li>
+    <li>Goal line: one sentence, italic Georgia — the promise the piece keeps</li>
+    <li>No author byline, no date, no subtitle</li>
+    <li class="research">Research basis: setting time expectations reduces abandonment. Reading time chip signals respect for the reader's time before they commit.</li>
+  </ul>
+</div>
+
+<!-- P1 T300 variant -->
+<div class="pattern" id="p01t300" style="border-top:none;padding-top:0.5rem;margin-top:0.25rem">
+  <span class="pattern-num" style="color:var(--t300)">Pattern 01 — T300 Arc Variant</span>
+  <div class="mockup">
+    <div class="meta-chips">
+      <span class="tier-badge t300">T300 · Orchestrate</span>
+      <span class="arc-chip">Part 2 of 5</span>
+      <span class="read-chip">6 min read</span>
+    </div>
+    <p class="m-eyebrow">Arc 309 · Prototyping · Part 2</p>
+    <h1 class="m-h1">The Difference Between a Prototype and a Guess</h1>
+    <p class="m-goal">Decide which prototype fidelity a specific test question actually needs.</p>
+  </div>
+  <ul class="rules">
+    <li>Arc position chip in accent color — placed between tier badge and reading time</li>
+    <li>Eyebrow includes arc number, arc title, and part number</li>
+    <li>Navigation column (Flexible Sections right column) lists all arc parts as Quick Links for T300 pieces</li>
+  </ul>
+</div>
+
+<!-- P2 -->
+<div class="pattern" id="p02">
+  <span class="pattern-num">Pattern 02</span>
+  <h3>Section Block</h3>
+  <div class="mockup">
+    <p class="m-h2-secondary">Prior Knowledge</p>
+    <p class="m-p">You've watched a requirement shift mid-sprint. You know the feeling — the work you scoped two weeks ago isn't quite what anyone is describing now, and nobody announced the change.</p>
+  </div>
+  <div class="mockup" style="margin-top:0.5rem">
+    <p class="m-h2-primary">What's Actually Happening</p>
+    <p class="m-p">Requirements drift when decisions are made in conversation and never written down. The verbal agreement is real. It just doesn't match the doc. The doc is what gets built.</p>
+  </div>
+  <div class="meta-row">
+    <span>SharePoint web part:</span><span class="badge">Text</span>
+  </div>
+  <ul class="rules">
+    <li>Two heading weights: Primary (Concept, Method, Try This, Watchout, Artifact) — 700, text-2. Secondary (Prior Knowledge Hook, Trigger, Take This Further, AI Path) — 600, text-3</li>
+    <li>Published section labels rename the template labels — never uses template terms in published text</li>
+    <li>Body: Georgia 16px / 1.75 — max 58ch line length (enforced by column layout)</li>
+    <li>One idea per section — never combines two concepts in one block</li>
+  </ul>
+</div>
+
+<!-- P3 -->
+<div class="pattern" id="p03">
+  <span class="pattern-num">Pattern 03</span>
+  <h3>Concept Panel</h3>
+  <div class="mockup">
+    <p class="m-h2-primary">What's Actually Happening</p>
+    <div class="concept-panel">
+      <p class="m-p">Requirements drift when decisions are made in conversation and never written down. The verbal agreement is real. It just doesn't match the doc. The doc is what gets built.</p>
+    </div>
+  </div>
+  <div class="meta-row">
+    <span>SharePoint web part:</span><span class="badge">Text — Quote or Highlighted</span><span>Accent-blue tint</span>
+  </div>
+  <ul class="rules">
+    <li>Accent-blue left border + tinted background — one instance per piece maximum</li>
+    <li>The "ah" moment — opens with the situation, not a definition</li>
+    <li>1–3 sentences maximum. If it needs more, the concept hasn't been scoped.</li>
+    <li>No bold inside the panel — the panel signals importance</li>
+    <li>Pull Quote (P11) often follows this section — together they capture both reading modes: linear readers get the panel, scanners get the quote</li>
+  </ul>
+</div>
+
+<!-- P4 -->
+<div class="pattern" id="p04">
+  <span class="pattern-num">Pattern 04</span>
+  <h3>Step Sequence</h3>
+  <div class="mockup">
+    <p class="m-h2-primary">How to Run It</p>
+    <ol class="steps">
+      <li><span class="step-num">1</span><span>Pull up the requirements doc for something currently in progress.</span></li>
+      <li><span class="step-num">2</span><span>Read every sentence containing "the user will" or "the system will." Highlight each one.</span></li>
+      <li><span class="step-num">3</span><span>Write A or F in the margin beside each — assumption or fact. A fact has evidence. Everything else is an assumption.</span></li>
+      <li><span class="step-num">4</span><span>Count. If more than half are A, the doc has a drift risk.</span></li>
+    </ol>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Text — numbered list</span></div>
+  <ul class="rules">
+    <li>Monospace step number in accent chip — system-ui step text at 16px</li>
+    <li>Each step is exactly one action — if a step contains "and," split it</li>
+    <li>Imperative verb opens every step — no "you should" or "consider"</li>
+    <li>No explanation inside the step — explain in Concept, not Method</li>
+    <li>Maximum 6 steps. More than 6 = re-scope the piece.</li>
+  </ul>
+</div>
+
+<!-- P5 -->
+<div class="pattern" id="p05">
+  <span class="pattern-num">Pattern 05</span>
+  <h3>Watchout Block</h3>
+  <div class="mockup">
+    <div class="watchout-block">
+      <p class="watchout-label">Watchout</p>
+      <p class="m-p">The failure mode is tagging everything as an assumption to feel thorough. If you end a session with 40 assumptions and no path to test any of them, the list is a way to feel like you did the work without reducing risk. One testable assumption this week beats a list you'll never return to.</p>
+    </div>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Text — Highlighted</span><span>Rust/red tint</span></div>
+  <ul class="rules">
+    <li>Rust border + tint — one Watchout per piece, maximum</li>
+    <li>Names the failure mode first, directly — no softening</li>
+    <li>Personal register — "you" not "teams" or "practitioners"</li>
+    <li>Specific to THIS method's failure — not generic caution</li>
+    <li>Never ends with reassurance — states the honest thing and stops</li>
+  </ul>
+</div>
+
+<!-- P6 -->
+<div class="pattern" id="p06">
+  <span class="pattern-num">Pattern 06</span>
+  <h3>Try This Block</h3>
+  <div class="mockup">
+    <div class="try-block">
+      <p class="try-label">Try This — 5 minutes</p>
+      <p class="m-p">Pull up one active requirements doc right now. Run the A/F scan on the first page only. Don't finish the whole doc — one page is enough to see the pattern.</p>
+    </div>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Text — Highlighted or Banner</span><span>Amber tint — most visually distinct block on the page</span></div>
+  <ul class="rules">
+    <li>Amber border + tint — strongest visual signal on the page</li>
+    <li>Time estimate always in the label: "Try This — 5 minutes"</li>
+    <li>Names a specific artifact the reader already has — never generic</li>
+    <li>Achievable in the same sitting — zero setup, zero dependencies</li>
+    <li>Proof (P7) follows immediately — never before</li>
+    <li>Spacer (32px) before this block — largest breathing gap in the piece</li>
+  </ul>
+</div>
+
+<!-- P7 -->
+<div class="pattern" id="p07">
+  <span class="pattern-num">Pattern 07</span>
+  <h3>Proof Block</h3>
+  <div class="mockup">
+    <div class="try-block" style="border-radius:0 0 var(--r) var(--r);border-top:none;padding-top:0.5rem">
+      <p class="try-label">Try This — 5 minutes</p>
+      <p class="m-p">Pull up one active requirements doc right now. Run the A/F scan on the first page only.</p>
+    </div>
+    <div class="proof-block">
+      <p class="proof-label">If It Worked</p>
+      <p class="m-p" style="font-family:var(--ff-serif);color:var(--text-1);font-size:0.87rem;line-height:1.65">You'll find at least one statement you thought was a fact that's actually an assumption — and you'll know exactly who could confirm or disprove it.</p>
+    </div>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Text</span><span>with Divider web part above (not Spacer)</span></div>
+  <ul class="rules">
+    <li>Hairline divider above — no color fill, no background</li>
+    <li>One observable signal, one sentence</li>
+    <li>Observable in the same sitting as Try This</li>
+    <li>Appears directly below Try This — no Spacer between them</li>
+    <li>Never says "well done" — names what happened, nothing more</li>
+  </ul>
+</div>
+
+<!-- P8 -->
+<div class="pattern" id="p08">
+  <span class="pattern-num">Pattern 08</span>
+  <h3>Source Attribution</h3>
+  <div class="mockup">
+    <div class="source-block">
+      <p class="source-label">Sources</p>
+      <div class="source-item"><strong>Kahneman, D. (2011)</strong> — Thinking, Fast and Slow. System 1/2 distinction; why verbal agreements feel more certain than they are.</div>
+      <div class="source-item"><strong>Klein, G. (1998)</strong> — Sources of Power. Recognition-primed decision model; how experts conflate assumption with pattern recognition.</div>
+      <div class="source-item"><strong>NNGroup (2023)</strong> — Requirements Documentation research. Verbal agreements are the #1 source of scope drift in agile teams.</div>
+    </div>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Text — compact</span><span>with Spacer (32px) + Divider above</span></div>
+  <ul class="rules">
+    <li>Every source also appears inline in prose — this block is for navigation and credibility, not the primary citation</li>
+    <li>Author + year + publication + specific finding — three lines maximum per source</li>
+    <li>Minimum source counts: T100 → 3, T200 → 4, T300 → 5 per arc</li>
+    <li>Font size: 13px — clearly reference material, not content</li>
+  </ul>
+</div>
+
+<!-- P9 -->
+<div class="pattern" id="p09">
+  <span class="pattern-num">Pattern 09</span>
+  <h3>Image Block</h3>
+  <div class="mockup">
+    <div class="image-block">
+      <div class="image-placeholder"><span>▭</span><span>img-001 · after-concept</span><span class="image-spec-pill">AI-generated · Gemini</span></div>
+      <p class="image-caption">Two-column diagram: assumption (thought bubble + question mark) vs. verified fact (document + checkmark). Flat style, library palette.</p>
+    </div>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Image web part</span><span>Full-width setting on mobile</span></div>
+  <ul class="rules">
+    <li>Only when a diagram reduces cognitive load that prose cannot — not decorative</li>
+    <li>Flat illustration, warm white background, library palette colors only, no people, no gradients</li>
+    <li>Dimensions: 1360×680px (displayed at 680×340 — 2x for Surface Pro retina)</li>
+    <li>Caption: Georgia italic, muted — describes content, not meaning</li>
+    <li>Alt text: complete description for screen readers — required, not optional</li>
+    <li>Image spec (see Image Spec Format section) written before production begins</li>
+    <li>Set web part to "Full width" for mobile responsiveness</li>
+  </ul>
+</div>
+
+<!-- P10 -->
+<div class="pattern" id="p10">
+  <span class="pattern-num">Pattern 10</span>
+  <h3>What Next</h3>
+  <div class="mockup">
+    <div class="whatnext-block">
+      <p class="whatnext-label">What Next</p>
+      <a class="next-chip" href="#">103 — Emotional Attachment</a>
+      <a class="next-chip" href="#">200 — Story Mapping in Cursor</a>
+      <a class="next-chip" href="#">Back to library</a>
+    </div>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Quick Links</span><span>or Text with inline links — min 44px touch height</span></div>
+  <ul class="rules">
+    <li>Conditional routing only — never recaps the piece</li>
+    <li>1–3 chips maximum: one deeper, one next, one back to library</li>
+    <li>Chip text: piece number + title — never generic ("next article")</li>
+    <li>Spacer (40px) before — the largest gap in the piece, signals end</li>
+    <li>Minimum 44px touch height for all chips on mobile</li>
+  </ul>
+</div>
+
+<!-- P11 — NEW -->
+<div class="pattern new-pattern" id="p11">
+  <span class="pattern-num new">Pattern 11 — New</span>
+  <h3>Pull Quote <span class="new-badge">New</span></h3>
+  <div class="callout new"><span class="tag">Research basis</span>Eye-tracking study of 26 readers across 34 newspaper pages: fixation on pull quotes happens before body text — they function as a second headline for scanner-first readers. Directly portable to SharePoint Text web parts. Source: ResearchGate (journalism eye-tracking, 2019).</div>
+  <div class="mockup">
+    <p class="m-h2-primary">What's Actually Happening</p>
+    <div class="concept-panel">
+      <p class="m-p">Requirements drift when decisions are made in conversation and never written down. The verbal agreement is real. It just doesn't match the doc. The doc is what gets built.</p>
+    </div>
+    <div class="pull-quote" style="margin-top:0.75rem">
+      <div class="pull-quote-text">"The doc is what gets built — not the conversation."</div>
+    </div>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Text — Quote style</span><span>or Highlighted Content</span></div>
+  <ul class="rules">
+    <li>Bold top border (2px, text-1) + hairline bottom border (1px, border) — not a colored block</li>
+    <li>Georgia italic, 18px — larger than body, smaller than H1. Max 52ch.</li>
+    <li>The quotable line required by the writing spec — this is its visual home</li>
+    <li>Placement: immediately after the Concept Panel — surfaces the key insight for F-pattern scanners before they reach the Method</li>
+    <li>One per piece. Never more than one.</li>
+    <li>Spacer (24px) after the pull quote before the next section</li>
+    <li>No attribution line — the piece itself is the source</li>
+    <li>Do not use for T100 pieces under 400 words — the quote will feel oversized relative to the content</li>
+  </ul>
+</div>
+
+<!-- P12 — NEW -->
+<div class="pattern new-pattern" id="p12">
+  <span class="pattern-num new">Pattern 12 — New</span>
+  <h3>Check-In <span class="new-badge">New</span></h3>
+  <div class="callout new"><span class="tag">Research basis</span>eLearning industry research (multiple 2024 meta-analyses): interactive elements increase time-on-task by ~36% over static text. SharePoint's Quick Poll and Forms web parts can approximate this without SPFx. Secondary benefit: gives you completion data — did people actually do the exercise?</div>
+  <div class="mockup">
+    <div class="checkin-block">
+      <p class="checkin-label">Quick check</p>
+      <p class="checkin-q">Did you run the A/F scan?</p>
+      <div class="checkin-options">
+        <div class="checkin-opt">Yes — here's what I found</div>
+        <div class="checkin-opt">Not yet — saving for later</div>
+        <div class="checkin-opt">This doesn't apply right now</div>
+      </div>
+    </div>
+  </div>
+  <div class="meta-row"><span>SharePoint web part:</span><span class="badge">Microsoft Forms (embedded)</span><span>or Quick Poll web part</span></div>
+  <ul class="rules">
+    <li>Placement: after Proof (P7), before Take This Further — the piece is done, this is the bridge to spaced practice</li>
+    <li>One question only — not a quiz, not a survey. One.</li>
+    <li>Question format: "Did you [verb from Try This]?" — mirrors the Try This action exactly</li>
+    <li>3 response options: yes + finding | not yet | doesn't apply. No right/wrong.</li>
+    <li>Anonymous response is acceptable — the goal is engagement signal, not grading</li>
+    <li>Link the "yes" option to the Take This Further channel where that applies</li>
+    <li>Optional for T100 pieces — where Try This is observational and hard to confirm</li>
+    <li>Required for T200 and T300 pieces where Try This has a tangible output</li>
+    <li>SharePoint Forms web part must be tested in mobile SharePoint app separately from browser</li>
+    <li class="research">Response data: review monthly — high "not yet" rates signal the Try This prompt needs to be more specific or lower-effort</li>
+  </ul>
+</div>
+
+<!-- IMAGE SPEC -->
+<div id="imagespec">
+  <p class="section-label">Image Spec Format</p>
+  <h2>Image Spec</h2>
+  <p class="section-desc">Written during the companion publish doc phase. Self-contained brief for Gemini Imagen generation or a human illustrator. Every image in a piece gets a spec before production begins.</p>
+  <div class="spec-comment">IMAGE-SPEC
+id:           img-001
+piece:        205-requirements-drift
+placement:    after-concept (between Concept Panel and Pull Quote)
+purpose:      Illustrate the gap between verbal agreement and written record
+dimensions:   1360x680px (display at 680x340 — 2x for Surface Pro retina)
+style:        Flat illustration, no shadows, no people, no gradients, no 3D
+palette:      Ground #F5F3EE, Accent #3B5A9A, Amber #E8A835, Text #1C1B18
+alt-text:     "Two panels. Left: a speech bubble labeled 'Agreed in standup' with a
+               checkmark. Right: a document icon labeled 'Requirements doc' with a
+               checkmark and a question mark beside it."
+gemini-prompt:
+  "Flat vector illustration, warm off-white background (#F5F3EE). Two equal panels
+  side by side, separated by a thin vertical line in (#D8D5CE). Left panel: a speech
+  bubble shape in slate blue (#3B5A9A) containing a white checkmark, labeled below
+  in dark text (#1C1B18) reading 'Agreed in standup.' Right panel: a document icon
+  outline in (#1C1B18) with two list items — a checkmark in slate blue and beside it
+  a question mark shape in amber (#E8A835) — labeled below 'Requirements doc.' Clean,
+  minimal, no people, no drop shadows, no gradients. Professional, warm, slightly
+  editorial. 1360x680 pixels, 2:1 aspect ratio."</div>
+  <ul class="rules">
+    <li>Gemini prompt must specify: background hex, palette hex values, exact visual content, style constraints (no people, no shadows, flat, no gradients), and pixel dimensions</li>
+    <li>Alt text describes content fully — assume the image is invisible</li>
+    <li>If an image can't be spec'd to add clear value over prose — don't add the image</li>
+    <li>Gemini Imagen 3 handles this spec format well. If results are wrong: add "vector illustration style, like an editorial icon set" and retry.</li>
+  </ul>
+</div>
+
+<!-- SHAREPOINT MAPPING -->
+<div id="sp">
+  <p class="section-label">SharePoint Web Part Mapping</p>
+  <h2>Pattern → SharePoint</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Pattern</th><th>Primary web part</th><th>Color treatment</th><th>Notes</th></tr>
+      <tr><td>P1 Article Header</td><td>Text (H1)</td><td>Tier badge via inline span</td><td>Reading time + arc position in metadata chips</td></tr>
+      <tr><td>P2 Section Block</td><td>Text</td><td>None — primary vs secondary heading weight only</td><td>Rename template section labels in published text</td></tr>
+      <tr><td>P3 Concept Panel</td><td>Text → Quote or Highlighted</td><td>Blue tint + left border</td><td>One per piece; fallback: Quote web part in blue theme</td></tr>
+      <tr><td>P4 Step Sequence</td><td>Text → numbered list</td><td>None</td><td>Step numbers bolded; max 6 steps</td></tr>
+      <tr><td>P5 Watchout Block</td><td>Text → Highlighted</td><td>Rust/red tint + left border</td><td>Test in mobile — tint rendering varies by web part type</td></tr>
+      <tr><td>P6 Try This Block</td><td>Text → Highlighted or Banner</td><td>Amber tint + border</td><td>Most visually distinct — verify contrast; 32px Spacer before</td></tr>
+      <tr><td>P7 Proof Block</td><td>Text + Divider above</td><td>None</td><td>Divider (not Spacer) above; no gap between Try This and Proof</td></tr>
+      <tr><td>P8 Source Attribution</td><td>Text — compact</td><td>None</td><td>Spacer (32px) + Divider above; 13px font size</td></tr>
+      <tr><td>P9 Image Block</td><td>Image web part</td><td>N/A</td><td>Full-width setting; alt text required; 2x resolution images</td></tr>
+      <tr><td>P10 What Next</td><td>Quick Links or Text links</td><td>None</td><td>Spacer (40px) before; min 44px touch height</td></tr>
+      <tr><td>P11 Pull Quote</td><td>Text → Quote style</td><td>Bold top border, hairline bottom border</td><td>After Concept Panel; Spacer (24px) after; one per piece</td></tr>
+      <tr><td>P12 Check-In</td><td>Microsoft Forms (embedded) or Quick Poll</td><td>None — clean border only</td><td>After Proof; test in SharePoint mobile app; one question only</td></tr>
+    </table>
+  </div>
+  <h3 style="font-size:0.85rem;font-weight:600;margin:1.25rem 0 0.5rem;color:var(--text-1)">Tenant capability tiers</h3>
+  <ul class="rules">
+    <li><strong>Full CSS control available (Script Editor or SPFx):</strong> Use exact hex tokens. Implement column max-width constraint via CSS. Full fidelity.</li>
+    <li><strong>Standard Microsoft 365 tenant, no custom code:</strong> Use Flexible Sections for column layout. Use built-in theme colors (blue for Concept, yellow for Try This, red for Watchout). Close approximation of full spec.</li>
+    <li><strong>Restricted tenant (no custom web parts, no Script Editor):</strong> Use 2-column layout (2/3 + 1/3). Use Text web part Quote for Concept Panel, built-in highlighting for Try This and Watchout. Minimum viable fidelity — still effective.</li>
+    <li>Never use SharePoint's dark-background section presets for content — readability at length collapses. Reserve for decorative breaks only.</li>
+  </ul>
+</div>
+
+</div>

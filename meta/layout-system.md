@@ -2,7 +2,7 @@
 
 Reference for the write-piece skill. Read during the layout phase (Step 12) to map article sections to patterns and generate the companion `.publish.md`.
 
-Full visual reference: `meta/library-design-system` (artifact at https://claude.ai/code/artifact/205b2c01-df03-49bf-a5f8-e47327a4bd7b)
+Full visual reference: [`meta/library-design-system.html`](library-design-system.html)
 
 ---
 

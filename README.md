@@ -136,6 +136,7 @@ Arcs within `300-systems/`:
 | [`STATUS.md`](STATUS.md) | Per-piece publish-readiness tracking |
 | [`meta/content-strategy-spec.html`](meta/content-strategy-spec.html) | Governing voice, tone, and content craft ruleset — 12 modules with research backing; reference for authors |
 | [`meta/layout-system.md`](meta/layout-system.md) | SharePoint layout pattern library — 12 patterns, white space system, image spec format, mobile rules, and publish doc template |
+| [`meta/library-design-system.html`](meta/library-design-system.html) | Visual identity reference — all 12 patterns rendered at production fidelity, design tokens, and SharePoint web part mapping |
 
 ---
 
