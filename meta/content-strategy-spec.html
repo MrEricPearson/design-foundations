@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Content Strategy Specification</title>
+<style>
+/* ── Tokens ── */
+:root {
+  --bg:        #F8F7F5;
+  --bg-2:      #F0EEE9;
+  --bg-rule:   #EAE8E2;
+  --text-1:    #1A1916;
+  --text-2:    #5C5A56;
+  --text-3:    #9A9690;
+  --accent:    #2B4A82;
+  --accent-bg: #EBF0FA;
+  --accent-dim:#4A6EA8;
+  --border:    #E0DDD8;
+  --border-2:  #C8C5BE;
+  --warn-bg:   #FBF4E8;
+  --warn-text: #7A5A20;
+  --ff-serif:  Georgia,'Times New Roman',serif;
+  --ff-sans:   -apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --ff-mono:   'SF Mono','Consolas','Monaco',monospace;
+  --r:         4px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:        #161514;
+  --bg-2:      #1E1D1B;
+  --bg-rule:   #252320;
+  --text-1:    #F0EDE8;
+  --text-2:    #A8A49E;
+  --text-3:    #6B6760;
+  --accent:    #7BA4D6;
+  --accent-bg: #1A2840;
+  --accent-dim:#9DBDE8;
+  --border:    #2E2C2A;
+  --border-2:  #3E3C38;
+  --warn-bg:   #2A2210;
+  --warn-text: #D4A84A;
+}}
+:root[data-theme="dark"]{
+  --bg:#161514;--bg-2:#1E1D1B;--bg-rule:#252320;--text-1:#F0EDE8;--text-2:#A8A49E;
+  --text-3:#6B6760;--accent:#7BA4D6;--accent-bg:#1A2840;--accent-dim:#9DBDE8;
+  --border:#2E2C2A;--border-2:#3E3C38;--warn-bg:#2A2210;--warn-text:#D4A84A;
+}
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text-1);
+  font-family:var(--ff-serif);font-size:16px;line-height:1.75;
+  max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 5rem;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ── Masthead ── */
+.masthead{
+  border-bottom:2px solid var(--text-1);
+  padding-bottom:1.5rem;margin-bottom:2.5rem;
+}
+.masthead .eyebrow{
+  font-family:var(--ff-mono);font-size:0.65rem;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--text-3);margin-bottom:0.5rem;
+}
+.masthead h1{
+  font-family:var(--ff-sans);font-size:1.75rem;font-weight:600;
+  line-height:1.2;color:var(--text-1);text-wrap:balance;
+}
+.masthead .subtitle{
+  font-family:var(--ff-serif);font-size:1rem;color:var(--text-2);
+  margin-top:0.5rem;font-style:italic;
+}
+
+/* ── TOC ── */
+.toc{
+  background:var(--bg-2);border:1px solid var(--border);
+  border-radius:var(--r);padding:1.25rem 1.5rem;margin-bottom:3rem;
+}
+.toc-label{
+  font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--text-3);margin-bottom:0.75rem;
+}
+.toc ol{
+  list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:3px 2rem;
+}
+.toc li{font-family:var(--ff-sans);font-size:0.8rem}
+.toc a{color:var(--text-2)}
+.toc a:hover{color:var(--accent)}
+.toc .toc-num{
+  font-family:var(--ff-mono);font-size:0.65rem;color:var(--text-3);
+  margin-right:0.35rem;
+}
+@media(max-width:540px){.toc ol{grid-template-columns:1fr}}
+
+/* ── Module sections ── */
+.module{
+  border-top:1px solid var(--border);
+  padding-top:2.5rem;margin-top:2.5rem;
+}
+.module:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.module-header{margin-bottom:1.5rem}
+.module-num{
+  font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--accent-dim);display:block;margin-bottom:0.25rem;
+}
+.module h2{
+  font-family:var(--ff-sans);font-size:1.25rem;font-weight:600;
+  color:var(--text-1);line-height:1.3;text-wrap:balance;
+}
+.module-desc{
+  font-family:var(--ff-sans);font-size:0.8rem;color:var(--text-3);margin-top:0.25rem;
+}
+
+/* ── Prose ── */
+.module p{
+  font-family:var(--ff-serif);font-size:0.95rem;color:var(--text-1);
+  line-height:1.75;margin-bottom:0.9rem;max-width:65ch;
+}
+.module h3{
+  font-family:var(--ff-sans);font-size:0.85rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.07em;color:var(--text-2);
+  margin:1.5rem 0 0.6rem;
+}
+
+/* ── Rules lists ── */
+.rules{
+  list-style:none;background:var(--bg-rule);
+  border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;
+  padding:1rem 1.25rem;margin:0.75rem 0 1rem;display:flex;flex-direction:column;gap:0.4rem;
+}
+.rules li{
+  font-family:var(--ff-sans);font-size:0.83rem;color:var(--text-1);
+  line-height:1.55;padding-left:1rem;position:relative;
+}
+.rules li::before{
+  content:'—';position:absolute;left:0;color:var(--accent-dim);font-size:0.75rem;
+}
+
+/* ── Research callouts ── */
+.research{
+  background:var(--accent-bg);border-radius:var(--r);
+  padding:0.85rem 1.1rem;margin:0.75rem 0 1rem;
+  display:flex;gap:0.6rem;align-items:flex-start;
+}
+.research-icon{
+  font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--accent-dim);flex-shrink:0;padding-top:0.15rem;
+}
+.research p{
+  font-family:var(--ff-sans);font-size:0.78rem;color:var(--text-1);
+  line-height:1.55;margin:0;max-width:none;
+}
+.research cite{font-style:italic;color:var(--text-2)}
+
+/* ── Warn blocks ── */
+.warn{
+  background:var(--warn-bg);border-radius:var(--r);
+  border-left:3px solid var(--warn-text);
+  padding:0.8rem 1.1rem;margin:0.75rem 0 1rem;
+}
+.warn p{
+  font-family:var(--ff-sans);font-size:0.8rem;color:var(--warn-text);
+  margin:0;line-height:1.5;max-width:none;
+}
+
+/* ── Word pills ── */
+.word-cloud{display:flex;flex-wrap:wrap;gap:5px;margin:0.6rem 0 1rem}
+.pill{
+  font-family:var(--ff-mono);font-size:0.7rem;padding:2px 8px 3px;
+  border-radius:2px;border:1px solid var(--border-2);
+  background:var(--bg-2);color:var(--text-2);
+}
+.pill.t1{background:#FBEAEA;border-color:#E8BABA;color:#8B2020}
+.pill.t2{background:#FBF3E8;border-color:#E8D0A0;color:#7A5020}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .pill.t1{background:#2A1010;border-color:#5A2020;color:#E8A0A0}
+:root:not([data-theme="light"]) .pill.t2{background:#2A1E08;border-color:#5A4020;color:#D4A84A}}
+:root[data-theme="dark"] .pill.t1{background:#2A1010;border-color:#5A2020;color:#E8A0A0}
+:root[data-theme="dark"] .pill.t2{background:#2A1E08;border-color:#5A4020;color:#D4A84A}
+
+/* ── Tables ── */
+.table-wrap{overflow-x:auto;margin:0.75rem 0 1rem;border-radius:var(--r)}
+table{width:100%;border-collapse:collapse;font-family:var(--ff-sans);font-size:0.78rem}
+th{
+  background:var(--bg-2);color:var(--text-2);font-weight:600;
+  text-align:left;padding:0.5rem 0.75rem;border-bottom:1px solid var(--border-2);
+  white-space:nowrap;
+}
+td{
+  padding:0.45rem 0.75rem;border-bottom:1px solid var(--border);
+  color:var(--text-1);vertical-align:top;line-height:1.45;
+}
+tr:last-child td{border-bottom:none}
+em{font-style:italic;color:var(--text-2)}
+
+/* ── Checklist ── */
+.checklist{list-style:none;margin:0.5rem 0 1rem;display:flex;flex-direction:column;gap:4px}
+.checklist li{
+  font-family:var(--ff-sans);font-size:0.8rem;color:var(--text-1);
+  display:flex;align-items:flex-start;gap:0.6rem;line-height:1.5;
+}
+.check-box{
+  width:14px;height:14px;border:1.5px solid var(--border-2);border-radius:2px;
+  flex-shrink:0;margin-top:2px;background:var(--bg);
+}
+.checklist .group-label{
+  font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--text-3);margin-top:1rem;margin-bottom:0.25rem;
+  padding-bottom:0.25rem;border-bottom:1px solid var(--border);
+}
+
+/* ── Section dividers ── */
+.divider{border:none;border-top:1px solid var(--border);margin:2rem 0}
+.section-label{
+  font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--text-3);
+  border-bottom:1px solid var(--border);padding-bottom:0.5rem;margin-bottom:1.75rem;
+  margin-top:3rem;
+}
+
+/* ── Sources ── */
+.sources{margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem}
+.source-item{
+  font-family:var(--ff-sans);font-size:0.78rem;color:var(--text-2);
+  border-left:2px solid var(--border-2);padding-left:0.75rem;line-height:1.5;
+}
+.source-item strong{color:var(--text-1);font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <p class="eyebrow">Design Foundations Library · Governing Ruleset</p>
+  <h1>Content Strategy &amp; Voice Specification</h1>
+  <p class="subtitle">A hardened ruleset for tone, craft, engagement, and quality — compiled from a 12-module workshop and grounded in peer-reviewed research.</p>
+</div>
+
+<div class="toc">
+  <p class="toc-label">Contents</p>
+  <ol>
+    <li><a href="#m01"><span class="toc-num">01</span>Voice Profile</a></li>
+    <li><a href="#m02"><span class="toc-num">02</span>Tone Calibration</a></li>
+    <li><a href="#m025"><span class="toc-num">02.5</span>Anti-AI Ruleset</a></li>
+    <li><a href="#m03"><span class="toc-num">03</span>Reader Contract</a></li>
+    <li><a href="#m04"><span class="toc-num">04</span>Opening Line Doctrine</a></li>
+    <li><a href="#m05"><span class="toc-num">05</span>Sentence-Level Craft</a></li>
+    <li><a href="#m06"><span class="toc-num">06</span>Recognition Mechanism</a></li>
+    <li><a href="#m07"><span class="toc-num">07</span>Vocabulary System</a></li>
+    <li><a href="#m08"><span class="toc-num">08</span>Section-by-Section Engagement</a></li>
+    <li><a href="#m09"><span class="toc-num">09</span>Earned Authority</a></li>
+    <li><a href="#m10"><span class="toc-num">10</span>Virality Mechanics</a></li>
+    <li><a href="#m11"><span class="toc-num">11</span>Title &amp; Header Doctrine</a></li>
+    <li><a href="#m12"><span class="toc-num">12</span>Quality Benchmark</a></li>
+    <li><a href="#writers">Reference Writers</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+</div>
+
+<!-- ─── MODULE 01 ─── -->
+<div class="module" id="m01">
+  <div class="module-header">
+    <span class="module-num">Module 01</span>
+    <h2>Voice Profile</h2>
+    <p class="module-desc">Who is writing this. What they sound like at every line.</p>
+  </div>
+
+  <h3>The Core Model</h3>
+  <p>The author persona is a fun, smart friend — not a function making a case, not a discipline explaining itself. Friends take your side. They share things with enthusiasm and no agenda. They don't make you feel behind, and they would never frame something as "here's what you should have been doing."</p>
+
+  <ul class="rules">
+    <li>The discipline is invisible. Pieces never argue for design. They argue for better work. The field stays out of it.</li>
+    <li>The wall rule: any sentence implying the reader is doing something wrong fails before it reaches them.</li>
+    <li>Humor disarms — it earns its place by doing something. Land it on the situation, never on the reader.</li>
+    <li>Sources are how a smart friend backs their recommendations. "Kahneman figured this out" — not a footnote number.</li>
+    <li>The test: does this feel like something a friend texted you because they found it useful — or like something written to get you to change how you work?</li>
+  </ul>
+
+  <h3>Sounds Like / Doesn't Sound Like</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Sounds like</th><th>Doesn't sound like</th></tr>
+      <tr><td>The group chat message that opens with "okay hear me out…"</td><td>A LinkedIn post with a lesson at the end</td></tr>
+      <tr><td>The colleague who forwards one article every few months and it's always worth reading</td><td>"As designers, we…" / "Best practices suggest…"</td></tr>
+      <tr><td>Someone who's tried this and is honest about what was weird</td><td>A training module introduction</td></tr>
+      <tr><td>A friend who can't wait to tell you something without making a whole thing of it</td><td>A discipline justifying its seat at the table</td></tr>
+    </table>
+  </div>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>Cialdini's liking principle: people are persuaded by people they like. The friend model maximizes liking — shared interests, familiarity, and warmth are the strongest predictors of persuasive impact. <cite>Cialdini, Influence, 1984.</cite> Knowles' andragogy: adult learners are self-directed and respond to peer-voice, problem-centered content over expert-lecture formats. <cite>Knowles, 1968.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 02 ─── -->
+<div class="module" id="m02">
+  <div class="module-header">
+    <span class="module-num">Module 02</span>
+    <h2>Tone Calibration</h2>
+    <p class="module-desc">Voice is constant. Tone adapts by tier and by section.</p>
+  </div>
+
+  <h3>By Tier</h3>
+  <ul class="rules">
+    <li><strong>T100 (Recognize)</strong> — Quick, observational, almost offhand. The cognitive ask is low; the register is lighter. Humor is most available here. Sources appear as "if you want to go further," not as proof.</li>
+    <li><strong>T200 (Practice)</strong> — Focused. The friend is at their workbench. Warmth stays through word choice; precision goes up, especially in Method. The Watchout brings warmth back.</li>
+    <li><strong>T300 (Orchestrate)</strong> — More connective tissue, longer ideas, more "here's the irony of this whole situation" humor. Still fast where it can be — the arc doesn't mean sentences get longer.</li>
+  </ul>
+
+  <h3>By Section (Register)</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Section</th><th>Tone target</th></tr>
+      <tr><td>Goal</td><td>Declarative, no warmup</td></tr>
+      <tr><td>Prior Knowledge Hook</td><td>Warmest in the piece — validation before addition</td></tr>
+      <tr><td>Concept</td><td>"Here's the thing" — focused, medium density</td></tr>
+      <tr><td>Trigger</td><td>Conversational, situational drop-in</td></tr>
+      <tr><td>Method</td><td>Precise, imperative — friend voice through word choice not discursiveness</td></tr>
+      <tr><td>Watchout</td><td>Most personal in the piece — self-implication, honest</td></tr>
+      <tr><td>Try This</td><td>"Okay. Your turn." — short, energizing</td></tr>
+      <tr><td>Proof</td><td>Simple, confident, one sentence</td></tr>
+      <tr><td>Take This Further</td><td>Warmest close — invitation, no pressure</td></tr>
+    </table>
+  </div>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>Cognitive Load Theory: different cognitive demands require different instructional registers. Recognition tasks carry lower intrinsic load than production tasks — appropriate register reduces extraneous load and improves learning outcomes. <cite>Sweller, 1988.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 02.5 ─── -->
+<div class="module" id="m025">
+  <div class="module-header">
+    <span class="module-num">Module 02.5</span>
+    <h2>Anti-AI Writing Ruleset</h2>
+    <p class="module-desc">Subtract patterns that signal processed origin. Don't add warmth on top — remove what's underneath.</p>
+  </div>
+
+  <div class="warn"><p>AI writing is statistically optimized for maximum clarity and broadest applicability. That's the opposite of what a friend sounds like. The fix is subtraction, not addition.</p></div>
+
+  <h3>Banned Words — Tier 1 (Never use)</h3>
+  <div class="word-cloud">
+    <span class="pill t1">delve</span><span class="pill t1">tapestry</span><span class="pill t1">testament</span><span class="pill t1">illuminate</span><span class="pill t1">paradigm</span><span class="pill t1">intricate</span><span class="pill t1">multifaceted</span><span class="pill t1">nuanced</span><span class="pill t1">juxtapose</span><span class="pill t1">endeavor</span><span class="pill t1">quintessential</span><span class="pill t1">burgeoning</span><span class="pill t1">ubiquitous</span><span class="pill t1">synergistic</span><span class="pill t1">pivotal</span><span class="pill t1">paramount</span><span class="pill t1">navigate</span><span class="pill t1">embark</span><span class="pill t1">realm</span><span class="pill t1">landscape</span><span class="pill t1">nestled</span><span class="pill t1">leverage</span><span class="pill t1">facilitate</span><span class="pill t1">optimize</span><span class="pill t1">catalyze</span><span class="pill t1">holistic</span><span class="pill t1">robust</span><span class="pill t1">seamless</span><span class="pill t1">foster</span><span class="pill t1">comprehensive</span>
+  </div>
+
+  <h3>Banned Words — Tier 2 (Avoid)</h3>
+  <div class="word-cloud">
+    <span class="pill t2">crucial</span><span class="pill t2">notable</span><span class="pill t2">significant</span><span class="pill t2">innovative</span><span class="pill t2">transformative</span><span class="pill t2">impactful</span><span class="pill t2">actionable</span><span class="pill t2">scalable</span><span class="pill t2">actually</span><span class="pill t2">certainly</span><span class="pill t2">essentially</span><span class="pill t2">ultimately</span>
+  </div>
+
+  <h3>Banned Openers</h3>
+  <ul class="rules">
+    <li>"Let's dive in" / "Let's explore"</li>
+    <li>"It's important to note that" / "It's worth mentioning"</li>
+    <li>"At its core" / "In essence" / "Fundamentally"</li>
+    <li>"Generally speaking" / "In many cases"</li>
+    <li>"Furthermore," / "Moreover," / "Additionally," at sentence start</li>
+    <li>"In conclusion," / "To summarize,"</li>
+    <li>"Certainly!" / "Great question!"</li>
+  </ul>
+
+  <h3>Banned Structural Moves</h3>
+  <ul class="rules">
+    <li>Parallel negation: "Not X, but Y" — state the Y directly</li>
+    <li>Tricolons framed as profound: "clarity, simplicity, and purpose"</li>
+    <li>Em dash as dramatic aside — max one per 300 words</li>
+    <li>Rhetorical Q+A: "What does this mean? It means…" — answer without announcing</li>
+    <li>Significance inflation: "stands as a testament to," "marks a pivotal moment"</li>
+    <li>Performing balance: appending "however" to every claim</li>
+    <li>Dangling analysis: ", highlighting the importance of…" — adds no meaning</li>
+    <li>Bullet soup: 3+ bullets with identical openers → convert to prose</li>
+  </ul>
+
+  <h3>Punctuation Signals (AI uses these at 3–5× human rate)</h3>
+  <ul class="rules">
+    <li>Em dash —: maximum one per 300 words. Replace with period, comma, or colon.</li>
+    <li>Semicolon ;: almost never. Replace with a period.</li>
+    <li>Bold: maximum two instances per piece, genuine emphasis only.</li>
+  </ul>
+
+  <h3>Sentence Length Rules</h3>
+  <ul class="rules">
+    <li>At least one sentence of 6 words or fewer per 150 words — force this</li>
+    <li>Never three consecutive sentences within 5 words of each other in length</li>
+    <li>Target mix: some 4–8 words, most 12–20, some 25–35</li>
+  </ul>
+
+  <h3>The Editing Pass Sequence</h3>
+  <ul class="rules">
+    <li>Pass 1 — Strip: remove every banned word, opener, closer, structural tell. Don't replace yet.</li>
+    <li>Pass 2 — Rebuild structure: fix sentence uniformity, force a short sentence, check punctuation.</li>
+    <li>Pass 3 — Add texture: contractions, specificity, roughness. Apply friend test per sentence.</li>
+    <li>Pass 4 — Read aloud: if you wouldn't say it in a hallway, it doesn't pass.</li>
+  </ul>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>Burstiness: human prose has sentence-length standard deviation of 0.6–1.2; AI clusters uniformly at 0.2–0.4 variance. Perplexity: human writing scores 105–165 approximate units; GPT-4 scores 20–30. <cite>NAACL 2024 Ghostbuster; ICML 2024 Binoculars.</cite> Processing fluency: easily-processed text is rated as more truthful, regardless of content. Stocks with easy-to-pronounce names outperform hard-to-pronounce names the week after IPO. <cite>Alter &amp; Oppenheimer, 2006.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 03 ─── -->
+<div class="module" id="m03">
+  <div class="module-header">
+    <span class="module-num">Module 03</span>
+    <h2>Reader Contract</h2>
+    <p class="module-desc">The implicit promise made in the first few words. Breaking it loses the reader before the method arrives.</p>
+  </div>
+
+  <h3>The Five Promises</h3>
+  <ul class="rules">
+    <li><strong>Time:</strong> under five minutes — felt, not just technically true</li>
+    <li><strong>One thing:</strong> not five things. One.</li>
+    <li><strong>Respect:</strong> you already know things. This piece is adding, not correcting.</li>
+    <li><strong>Tone consistency:</strong> the first sentence's tone holds through the last</li>
+    <li><strong>Agency:</strong> after this, you can do something — not just know something</li>
+  </ul>
+
+  <h3>What Breaks the Contract</h3>
+  <ul class="rules">
+    <li>Opening by explaining why the topic matters — that's the reader's judgment</li>
+    <li>"In design, there's a technique called…" — codes as preaching before the first period</li>
+    <li>Unsolicited reassurance: "don't worry, this is simpler than it sounds"</li>
+    <li>Throat-clearing: "Before we get started…" / "To set the stage…"</li>
+    <li>Overselling: "one of the most important skills you can develop"</li>
+    <li>Tone bait-and-switch: warm opener, dry body, corporate closer</li>
+    <li>Trailing after the point is made</li>
+  </ul>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>NNGroup eye-tracking (500+ participants, 13 years): people rarely read online completely — they scan. The contract is set in the first scan pass. Content that fails its implicit promise in the first horizontal sweep is abandoned. "Users detest anything that seems like marketing fluff" and immediately switch to scan mode. <cite>NNGroup, How People Read Online, 2023.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 04 ─── -->
+<div class="module" id="m04">
+  <div class="module-header">
+    <span class="module-num">Module 04</span>
+    <h2>Opening Line Doctrine</h2>
+    <p class="module-desc">The opening line has one job: make the second line inevitable.</p>
+  </div>
+
+  <h3>The Two Core Rules (from reference writers)</h3>
+  <ul class="rules">
+    <li><strong>The bear rule (Kao):</strong> start at the highest-stakes moment, not the beginning. Not "here's the context" — start AT the thing.</li>
+    <li><strong>Specific → universal (Housel):</strong> don't open with the principle. Open with the thing that made you notice it. The insight lands harder when the reader discovers it.</li>
+  </ul>
+
+  <h3>By Section — First Sentence Rules</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Section</th><th>First sentence job</th><th>Fails when</th></tr>
+      <tr><td>Goal</td><td>State the one thing as fact</td><td>It announces instead of states</td></tr>
+      <tr><td>Concept</td><td>Open with the situation that makes the concept visible</td><td>Starts with a formal definition</td></tr>
+      <tr><td>Trigger</td><td>Drop the reader into the moment</td><td>Describes the situation from outside</td></tr>
+      <tr><td>Method</td><td>Start the process, imperative</td><td>Describes the step instead of giving it</td></tr>
+      <tr><td>Watchout</td><td>Name the failure mode directly</td><td>Softens before naming</td></tr>
+      <tr><td>Try This</td><td>Hand them something specific they already have</td><td>Explains what the exercise is asking</td></tr>
+      <tr><td>Proof</td><td>Name the signal, one sentence</td><td>Qualifies or conditions</td></tr>
+    </table>
+  </div>
+
+  <h3>The Naming Move</h3>
+  <p>Where a piece introduces a concept the reader already experiences but hasn't named, give it a name mid-sentence and keep moving. The name does more than the definition. It gives the reader vocabulary they can use in meetings immediately.</p>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>F-pattern eye-tracking: "First few words on the left of each line receive more fixations than subsequent words." If users "see only the first 2 words, they should still get the gist of the following section." <cite>NNGroup, F-Shaped Pattern, 2017.</cite> Information gap theory: curiosity is created by a perceived gap between what we know and what we want to know. Opening lines that name a gap — without closing it — generate pull. <cite>Loewenstein, 1994, Carnegie Mellon.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 05 ─── -->
+<div class="module" id="m05">
+  <div class="module-header">
+    <span class="module-num">Module 05</span>
+    <h2>Sentence-Level Craft</h2>
+    <p class="module-desc">The verb IS the sentence. Everything else supports it or is dead weight.</p>
+  </div>
+
+  <h3>Density — One Idea Per Sentence</h3>
+  <ul class="rules">
+    <li>The "and" test: if a sentence contains "and," ask whether it carries two ideas. If yes, split it. The second idea is almost always stronger alone.</li>
+    <li>Packed sentences land no ideas. Unpacked sentences land all of them.</li>
+  </ul>
+
+  <h3>Rhythm (Burstiness)</h3>
+  <ul class="rules">
+    <li>Minimum: one sentence of 6 words or fewer per 150 words — force it even when nothing obviously short wants to appear</li>
+    <li>Never three consecutive sentences within 5 words of each other in length</li>
+    <li>Build with length, cut to land. The short sentence earns its impact from what preceded it.</li>
+  </ul>
+
+  <h3>Verbs</h3>
+  <ul class="rules">
+    <li>Kill list: <em>serves as, allows for, helps to, enables, supports, facilitates, functions as</em> — replace with the thing they point at</li>
+    <li>Target verbs: <em>breaks, reveals, forces, earns, kills, costs, surfaces, catches, names</em> — verbs that do things</li>
+    <li>Modifiers to eliminate: <em>very, quite, highly, extremely, somewhat, rather, fairly, largely</em> — if the adjective needs one of these, find a stronger adjective</li>
+  </ul>
+
+  <h3>Warmth at the Sentence Level</h3>
+  <ul class="rules">
+    <li>Contractions throughout: "don't" not "do not." The sentence sounds spoken, not written for review.</li>
+    <li>Short sentences invite the reader in. Thirty-word sentences keep them at distance.</li>
+    <li>Naming the awkward truth: "this is the part where people bail." Signals you're in it with them.</li>
+    <li>Authentic uncertainty: "I'm not sure this holds in every case." One per piece. Not hedge stacking — actual admission.</li>
+  </ul>
+
+  <h3>The Cut Test</h3>
+  <ul class="rules">
+    <li>Remove this sentence: does the piece lose something that can't be recovered from context? If no — cut.</li>
+    <li>Restatement of previous sentence → cut. Transition without new content → cut. "And that's why this matters" in any form → cut.</li>
+  </ul>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>NNGroup: concise writing produces 58% higher usability; scannable text 47% higher; objective writing 27% higher; combined approach 124% higher usability. Follow-up case study achieved 159% higher usability with rewritten pages. "Web users read only 18% of added verbiage." <cite>NNGroup, Concise, Scannable, and Objective, 1997.</cite> Miller's Law: working memory holds approximately 7 ± 2 items. One idea per sentence respects the cognitive limit. <cite>Miller, 1956.</cite> Processing fluency: easy-to-read text is judged as more truthful and credible, independent of content accuracy. <cite>Alter &amp; Oppenheimer, 2006.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 06 ─── -->
+<div class="module" id="m06">
+  <div class="module-header">
+    <span class="module-num">Module 06</span>
+    <h2>The Recognition Mechanism</h2>
+    <p class="module-desc">Pattern description — the replacement for anecdotes. More powerful because the reader's story is always more vivid than anything invented.</p>
+  </div>
+
+  <h3>Why It Works Better Than Stories</h3>
+  <p>Anecdotes create recognition: the reader hears a story and thinks "that's my team." Pattern description delivers recognition directly — describing the pattern so precisely that the reader supplies their own instance. That instance is theirs. More intimate, more relevant, zero risk of anyone seeing themselves called out.</p>
+
+  <h3>The Five Pattern Types</h3>
+  <ul class="rules">
+    <li><strong>The invisible shift:</strong> "The scope grows without anyone saying the scope is growing."</li>
+    <li><strong>The gap everyone knows about:</strong> "The doc gets large enough that nobody updates it. Everyone references it anyway."</li>
+    <li><strong>The collective fiction:</strong> "The meeting ends without a decision. Everyone acts like one was made."</li>
+    <li><strong>The restart:</strong> "You're two sprints in. The ask shifts. The sprint resets. Nobody asks why."</li>
+    <li><strong>The attribution error:</strong> "The delay feels like a process failure. The process is fine. The assumption was wrong from the start."</li>
+  </ul>
+
+  <h3>The Structural Template</h3>
+  <ul class="rules">
+    <li>Name the moment — present tense, second person, active motion</li>
+    <li>Name the unspoken thing — what everyone experiences but nobody says</li>
+    <li>Let it breathe — don't explain or resolve immediately</li>
+    <li>Introduce the concept — it follows naturally once the pattern is recognized</li>
+  </ul>
+
+  <h3>Four Things That Kill Recognition</h3>
+  <ul class="rules">
+    <li>Third person: "teams often experience…" → "you're experiencing…"</li>
+    <li>Past tense: "what often happened was…" creates distance. Present tense creates immediacy.</li>
+    <li>The qualifier: "you may have experienced something like this…" — recognition requires confidence</li>
+    <li>Explaining before recognizing: recognition must land first. Explanation follows.</li>
+  </ul>
+
+  <h3>The Specificity Paradox</h3>
+  <p>Pattern description works better the more specific it is — but only specific to the pattern, not to a person or team. "The requirements doc has forty pages. Nobody has opened it in three weeks. Everyone's still using it." Specificity of detail creates universality of recognition.</p>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>Narrative transportation theory: stories create engagement by transporting readers into a narrative world — pattern description triggers the same transportation without a named story. The reader's self-supplied instance is more vivid than an authored one. <cite>Green &amp; Brock, 2000.</cite> Self-referential processing: the brain's default mode network activates more strongly when processing self-relevant information — content that prompts self-recognition engages deeper memory encoding than third-person description. <cite>Rogers, Kuiper &amp; Kirker, 1977.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 07 ─── -->
+<div class="module" id="m07">
+  <div class="module-header">
+    <span class="module-num">Module 07</span>
+    <h2>Vocabulary System</h2>
+    <p class="module-desc">Every vocabulary choice runs through one test: would a PM, developer, or ops person use this word naturally, without having heard it from a designer first?</p>
+  </div>
+
+  <h3>Design Vocabulary — Translation Guide</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Design-coded</th><th>Plain-language version</th></tr>
+      <tr><td>user research</td><td>talking to users / finding out what people actually do</td></tr>
+      <tr><td>ideation</td><td>brainstorming / generating options</td></tr>
+      <tr><td>wireframe</td><td>rough sketch / early layout</td></tr>
+      <tr><td>journey map</td><td>mapping what happens across the whole experience</td></tr>
+      <tr><td>affinity mapping</td><td>grouping what you found to see the patterns</td></tr>
+      <tr><td>design thinking</td><td>never use — guaranteed wall</td></tr>
+      <tr><td>design sprint</td><td>describe the process, not the branded name</td></tr>
+      <tr><td>human-centered design</td><td>never use</td></tr>
+      <tr><td>stakeholder alignment</td><td>getting the people who need to agree into the same understanding</td></tr>
+      <tr><td>pain points</td><td>what's frustrating / what's slowing them down</td></tr>
+      <tr><td>north star</td><td>the one thing that doesn't change</td></tr>
+      <tr><td>how might we</td><td>what if we… / what would it take to…</td></tr>
+    </table>
+  </div>
+
+  <h3>Safe Terms (Crossed Into General Use)</h3>
+  <div class="word-cloud">
+    <span class="pill">prototype</span><span class="pill">assumption</span><span class="pill">hypothesis</span><span class="pill">insight</span><span class="pill">feedback</span><span class="pill">iteration</span><span class="pill">requirements</span><span class="pill">stakeholder</span><span class="pill">discovery</span><span class="pill">sprint</span><span class="pill">persona</span>
+  </div>
+
+  <h3>The "This Is Just Work" Framing</h3>
+  <p>The most powerful vocabulary move is treating design techniques as ordinary work practice. "Before you write the requirements, write down what you're assuming to be true." That's assumption mapping. It doesn't sound like design methodology — it sounds like sensible practice. The technique is invisible. The utility is front and center.</p>
+
+  <h3>Jargon Policy</h3>
+  <ul class="rules">
+    <li>Use precise terminology when: (1) the term is genuinely universal to this audience, (2) the term is the subject of the piece, or (3) no plain-language equivalent is as precise.</li>
+    <li>When a term is needed, drop it into context so the context defines it — never define it formally. Formal definitions are lectures.</li>
+    <li>Acronyms: spell out on first use. When in doubt, spell it out. The extra two words cost nothing.</li>
+  </ul>
+
+  <h3>Word Preference Hierarchy</h3>
+  <ul class="rules">
+    <li>The word you'd say out loud — always wins</li>
+    <li>The word that's more specific to the actual experience (<em>drift</em> beats <em>change</em>, <em>break</em> beats <em>fail</em>, <em>bail</em> beats <em>abandon</em>)</li>
+    <li>The shorter word when everything else is equal</li>
+  </ul>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>NNGroup: users "detest anything that seems like marketing fluff" and shift to scanning immediately when they encounter it. Users prefer "factual information" over promotional language. <cite>NNGroup, Concise, Scannable, and Objective, 1997.</cite> Plain Language Action and Information Network: plain language documents require less re-reading, reduce support calls, and increase compliance with instructions across all literacy levels.</p>
+  </div>
+</div>
+
+<!-- ─── MODULE 08 ─── -->
+<div class="module" id="m08">
+  <div class="module-header">
+    <span class="module-num">Module 08</span>
+    <h2>Section-by-Section Engagement</h2>
+    <p class="module-desc">Each section has a cognitive job and an emotional job. Missing the emotional job produces a technically correct piece that loses readers anyway.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>Section</th><th>Emotional job</th><th>Biggest failure mode</th></tr>
+      <tr><td>Goal</td><td>Orient without overhead</td><td>Announcing instead of stating</td></tr>
+      <tr><td>Prior Knowledge Hook</td><td>Validation before addition</td><td>Explaining rather than activating</td></tr>
+      <tr><td>Trigger</td><td>Recognition of situation</td><td>Describing instead of placing reader in it</td></tr>
+      <tr><td>Concept</td><td>The "ah" moment</td><td>What before why; formal definition first</td></tr>
+      <tr><td>You'll See It When</td><td>Readiness to notice</td><td>Too abstract to be checkable</td></tr>
+      <tr><td>The Signal</td><td>Confidence to act</td><td>Multiple signals instead of one</td></tr>
+      <tr><td>Don't Confuse This With</td><td>Clarity at the edges</td><td>Picking obscure confusion over most common</td></tr>
+      <tr><td>Method</td><td>Confidence to do it now</td><td>Steps too large; passive voice; blending with explanation</td></tr>
+      <tr><td>Artifact</td><td>Tangibility</td><td>"Better understanding of…" — abstract output</td></tr>
+      <tr><td>Watchout</td><td>Honesty</td><td>Clinical distance; softening before naming</td></tr>
+      <tr><td>Try This</td><td>Activation</td><td>Generic prompt; requires setup not at hand</td></tr>
+      <tr><td>Proof</td><td>Reassurance</td><td>Multiple signals; too slow to observe</td></tr>
+      <tr><td>Take This Further</td><td>Invitation</td><td>Feels like homework; wrong reflection type</td></tr>
+      <tr><td>AI Path</td><td>Permission slip</td><td>Appears before Try This; replaces instead of extends</td></tr>
+      <tr><td>Judgment Exercise</td><td>Productive discomfort</td><td>Generic question; not arc-specific</td></tr>
+      <tr><td>What Next</td><td>Directional, light</td><td>Summarizing what just happened</td></tr>
+    </table>
+  </div>
+
+  <h3>Critical Transitions</h3>
+  <ul class="rules">
+    <li><strong>Concept → Method:</strong> Concept must close with the insight before Method opens with the first step. Confusion in Concept makes Method feel like arbitrary steps.</li>
+    <li><strong>Watchout → Try This:</strong> Watchout should leave them informed and prepared — not warned off. The failure mode is named; the method isn't broken.</li>
+    <li><strong>Try This → Proof:</strong> Proof must be observable in the same sitting. A Proof that takes a week to verify breaks the feedback loop. The learning doesn't close.</li>
+  </ul>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>The testing effect: students who practice retrieval (active recall) outperform students who restudied material by approximately 50% on delayed tests. The Try This prompt triggers retrieval practice — it's not just a learning mechanism, it's the most effective retention mechanism in the piece. <cite>Roediger &amp; Karpicke, 2006.</cite> Desirable difficulties: challenges that feel hard during learning produce better long-term retention than smooth, easy processing. The Judgment Exercise (T300) is a deliberate desirable difficulty. <cite>Bjork, 1994.</cite> Ebbinghaus forgetting curve: without spaced practice, ~70% of learned material is forgotten within 24 hours. Take This Further is the spaced practice intervention. <cite>Ebbinghaus, 1885.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 09 ─── -->
+<div class="module" id="m09">
+  <div class="module-header">
+    <span class="module-num">Module 09</span>
+    <h2>Earned Authority</h2>
+    <p class="module-desc">The moment you claim authority, you lose it. Trust is built by structure and specificity, not by assertion.</p>
+  </div>
+
+  <h3>The Six Mechanisms</h3>
+  <ul class="rules">
+    <li><strong>Specificity:</strong> vague claims sound generated. Specific claims sound observed. Specificity IS the credibility signal.</li>
+    <li><strong>Naming failure modes:</strong> people who've been in the work name what breaks. People who haven't describe the upside.</li>
+    <li><strong>Source displacement:</strong> when Kahneman says it, design isn't saying it. Sources outside the discipline carry more weight than internal authority.</li>
+    <li><strong>Modest claims:</strong> "this makes requirements conversations shorter" earns more trust than "this will transform your practice."</li>
+    <li><strong>Named limits:</strong> naming where something doesn't hold signals deep understanding. Precision about limits is the credibility signal authority claims try to fake.</li>
+    <li><strong>Peer voice as implicit credential:</strong> writing that sounds like someone in the work implicitly signals field experience.</li>
+  </ul>
+
+  <h3>Sources Mechanic — Four Levels</h3>
+  <ul class="rules">
+    <li><strong>Named person:</strong> "Kahneman figured this out." Highest credibility transfer. Reader can search and verify.</li>
+    <li><strong>Named field:</strong> "Behavioral economics has a term for this." Moves credibility to external ground.</li>
+    <li><strong>Named body of evidence:</strong> "There's 20 years of research on this from Nielsen Norman Group." Names depth without requiring academic engagement.</li>
+    <li><strong>Honest uncertainty:</strong> "I'm not sure where this originated, but it shows up in…" Builds more trust than a confident wrong citation.</li>
+  </ul>
+
+  <h3>The Construction That Works Hardest</h3>
+  <p><em>"Every time I've watched this break, it breaks at [specific point]."</em> Variants: "including the time I ran this wrong…" / "here's where I've seen teams give this up…" — self-implication earns trust nothing else does. Only works if what follows is genuinely specific.</p>
+
+  <h3>The Authority-Free Structure</h3>
+  <p>The most credible piece doesn't need the author to claim anything — the reader can verify everything: Try This gives them direct experience, Proof tells them what to check, sources point toward independent verification, Watchout names the limits. Self-verifying structure is more credible than any credential.</p>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>Pratfall effect (Aronson, 1966): when a highly competent person makes a small mistake, listeners rate them as more attractive and credible — not less. The "including the time I ran this wrong" construction has direct experimental backing. The effect operates via self-comparison: a competent person's mistake humanizes them and reduces perceived aloofness. <cite>Aronson, Willerman &amp; Floyd, 1966.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 10 ─── -->
+<div class="module" id="m10">
+  <div class="module-header">
+    <span class="module-num">Module 10</span>
+    <h2>Virality Mechanics</h2>
+    <p class="module-desc">Corporate virality has no algorithm. The entire spread mechanism: someone reads → thinks "I need to send this to [specific person]" → does.</p>
+  </div>
+
+  <h3>The Seven Triggers</h3>
+  <ul class="rules">
+    <li><strong>Recognition:</strong> "This describes exactly what's happening to us right now." Primary driver. When this fires, forwarding happens before the piece is finished.</li>
+    <li><strong>Relief:</strong> "I can actually do this." The reader wants to give their team the same relief.</li>
+    <li><strong>Speed:</strong> Under five minutes is a forwarding constraint, not just a learning constraint. The forwarder is protecting the recipient's time.</li>
+    <li><strong>Quotability:</strong> A specific line the forwarder wants to paste into their Teams message. "Read this — especially the part about [quote]."</li>
+    <li><strong>Naming:</strong> Vocabulary the reader can use in meetings immediately. The word travels ahead of the content.</li>
+    <li><strong>Surprise:</strong> Low expectation exceeded. Especially powerful in a SharePoint context where expectations start low.</li>
+    <li><strong>Timing:</strong> The piece lands while the reader is in the situation it describes. The Trigger section is where you engineer for this.</li>
+  </ul>
+
+  <h3>Three Highest-Yield Engineering Points</h3>
+  <ul class="rules">
+    <li><strong>Trigger copy:</strong> The highest-virality investment in a piece. Precision here activates recognition before the method arrives. Ask: could someone read this and feel it describing their current week?</li>
+    <li><strong>Quotable lines:</strong> Every piece needs one. Under 15 words, self-contained, names something everyone experiences but nobody has said plainly. Concept and Watchout are the most likely homes.</li>
+    <li><strong>Titles:</strong> The forwarder's first tool. A title that names the recognizable situation — not the technique — gives them a one-sentence recommendation. The title IS the pitch.</li>
+  </ul>
+
+  <h3>The Try This → Evangelist Pipeline</h3>
+  <p>People who do the exercise and it works don't just forward the piece — they demonstrate the technique first: "I tried this and here's what I found — the piece explains it better than I can." That peer testimony is the highest-trust forwarding pattern.</p>
+
+  <h3>What Kills Virality</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Cause</th><th>Effect</th></tr>
+      <tr><td>Longer than 5 minutes</td><td>Nobody recommends it — they can't be wrong about the time cost</td></tr>
+      <tr><td>Training-module feeling</td><td>No voluntary forwarding, ever</td></tr>
+      <tr><td>Preaching tone</td><td>Reader felt evaluated; won't subject their team to the same</td></tr>
+      <tr><td>Vague Try This</td><td>No exercise, no evangelist moment, no peer testimony</td></tr>
+      <tr><td>Descriptive title</td><td>Forwarder must explain the piece before recommending it — most won't</td></tr>
+    </table>
+  </div>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>Jonah Berger's STEPPS framework (Contagious, 2013): six drivers of social transmission — Social currency, Triggers, Emotion, Public, Practical value, Stories. Recognition maps to Social currency + Emotion; Speed maps to Practical value; Naming maps to Social currency; the Trigger section maps directly to Triggers. <cite>Berger, 2013.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 11 ─── -->
+<div class="module" id="m11">
+  <div class="module-header">
+    <span class="module-num">Module 11</span>
+    <h2>Title &amp; Header Doctrine</h2>
+    <p class="module-desc">Titles do more work than any other sentence. Getting them wrong means the content never gets read regardless of quality.</p>
+  </div>
+
+  <h3>Three Jobs a Title Has</h3>
+  <ul class="rules">
+    <li>Filter the right reader in — and the wrong reader out, without being exclusive</li>
+    <li>Set the expectation correctly — the title makes a promise the piece must keep</li>
+    <li>Give the forwarder a sentence — they should be able to say "this is the thing about X" in one breath</li>
+  </ul>
+
+  <h3>Descriptive vs. Named-Thing Titles</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Descriptive (avoid)</th><th>Named-thing (target)</th></tr>
+      <tr><td>Assumption Mapping for Product Teams</td><td>Why Requirements Change Without Anyone Saying So</td></tr>
+      <tr><td>How to Run a Lo-Fi Prototype Test</td><td>Testing Before Anything Is Built</td></tr>
+      <tr><td>Introduction to Journey Mapping</td><td>The Gap Between What Was Decided and What Gets Built</td></tr>
+    </table>
+  </div>
+
+  <h3>Title Construction Rules</h3>
+  <ul class="rules">
+    <li>Lead with the situation, not the method — the reader cares about their situation first</li>
+    <li>Make it a complete thought — fragments feel like filing labels, not invitations</li>
+    <li>Never announce the tier: "Introduction to…" / "A Guide to…" / "How to…" signals mandatory learning</li>
+    <li>Sweet spot: universal enough to be recognizable, specific enough not to be vague</li>
+  </ul>
+
+  <h3>Section Headers</h3>
+  <ul class="rules">
+    <li>Don't label the section type ("Method") — tell the reader what this part gives them</li>
+    <li>Three to six words. Longer headers are doing the Concept's job.</li>
+    <li>Stay in the same voice as the piece — headers aren't exempt from the friend register</li>
+  </ul>
+
+  <h3>Title Test</h3>
+  <p>Read the title aloud to someone who hasn't read the piece. Ask: do you know why you'd read this? If they can answer in one sentence without help, the title works.</p>
+
+  <div class="research">
+    <span class="research-icon">Research</span>
+    <p>Information gap theory: curiosity requires a perceived gap between what we know and what we want to know. Named-thing titles create this gap — descriptive titles close it before the reader opens the piece. <cite>Loewenstein, 1994.</cite> NNGroup F-pattern: "If users see only the first 2 words, they should still get the gist of the following section." Information-carrying words must lead. <cite>NNGroup, F-Shaped Pattern, 2017.</cite></p>
+  </div>
+</div>
+
+<!-- ─── MODULE 12 ─── -->
+<div class="module" id="m12">
+  <div class="module-header">
+    <span class="module-num">Module 12</span>
+    <h2>Quality Benchmark</h2>
+    <p class="module-desc">Per-piece checklist and three-phase validation pipeline. Nothing publishes without clearing Phase 1. Phases 2 and 3 run on the first cohort.</p>
+  </div>
+
+  <h3>Phase 1 — Internal Checklist</h3>
+  <p>Run independently by author and reviewer. Disagreements are a conversation before anything moves.</p>
+
+  <div class="checklist">
+    <div class="group-label">Voice &amp; Contract</div>
+    <li><div class="check-box"></div>Feels like a friend sharing something useful — not a function making a case</li>
+    <li><div class="check-box"></div>Discipline is invisible — never argues for design</li>
+    <li><div class="check-box"></div>Delivers exactly one goal</li>
+    <li><div class="check-box"></div>Ends when the last true thing is said — no trailing</li>
+    <li><div class="check-box"></div>Tone holds consistently through all sections</li>
+    <li><div class="check-box"></div>Reads in under five minutes</li>
+
+    <div class="group-label">Anti-AI Audit</div>
+    <li><div class="check-box"></div>No Tier 1 banned words</li>
+    <li><div class="check-box"></div>No banned openers or closers</li>
+    <li><div class="check-box"></div>Em dashes: max one per 300 words</li>
+    <li><div class="check-box"></div>No tricolons, parallel negation, or rhetorical Q+A</li>
+    <li><div class="check-box"></div>At least one sentence of 6 words or fewer per 150 words</li>
+    <li><div class="check-box"></div>No three consecutive sentences within 5 words of each other</li>
+    <li><div class="check-box"></div>No hedge stacking</li>
+
+    <div class="group-label">Craft</div>
+    <li><div class="check-box"></div>Opens in the moment — no warmup, no announcement</li>
+    <li><div class="check-box"></div>Each section's first sentence passes its section-specific job</li>
+    <li><div class="check-box"></div>One idea per sentence — "and" test applied</li>
+    <li><div class="check-box"></div>Active verbs throughout — no "serves as," "allows for," "helps to"</li>
+    <li><div class="check-box"></div>Contractions throughout</li>
+    <li><div class="check-box"></div>At least one quotable line — under 15 words, self-contained</li>
+    <li><div class="check-box"></div>Pattern description used wherever recognition is needed</li>
+
+    <div class="group-label">Vocabulary</div>
+    <li><div class="check-box"></div>No design-coded vocabulary without plain-language handling</li>
+    <li><div class="check-box"></div>Every technical term introduced through context, not definition</li>
+    <li><div class="check-box"></div>Second person throughout — "you," not "teams" or "practitioners"</li>
+    <li><div class="check-box"></div>Industry-safe — a practitioner at a different org recognizes themselves</li>
+
+    <div class="group-label">Section-by-Section</div>
+    <li><div class="check-box"></div>Goal: declarative, no announcement</li>
+    <li><div class="check-box"></div>Prior Knowledge Hook (T200): one sentence, validates before adding</li>
+    <li><div class="check-box"></div>Trigger (T200): second person, drops reader into the moment</li>
+    <li><div class="check-box"></div>Method (T200): imperative, each step is one action</li>
+    <li><div class="check-box"></div>Watchout: names failure mode specifically; personal register</li>
+    <li><div class="check-box"></div>Try This: one specific artifact named, achievable in same sitting</li>
+    <li><div class="check-box"></div>Proof: one observable signal, one sentence</li>
+    <li><div class="check-box"></div>Judgment Exercise (T300): arc-specific, tests key assumption failing</li>
+
+    <div class="group-label">Authority &amp; Virality</div>
+    <li><div class="check-box"></div>Claims calibrated to evidence — not over-confident, not over-hedged</li>
+    <li><div class="check-box"></div>Sources named conversationally — never cited formally</li>
+    <li><div class="check-box"></div>Title names the recognizable situation, not the technique</li>
+    <li><div class="check-box"></div>Title passes the one-sentence test</li>
+    <li><div class="check-box"></div>Piece passes the forwarding test</li>
+  </div>
+
+  <h3>Phase 2 — Doctoral Peer Review</h3>
+  <p>Content accuracy only. Voice and tone are Phase 1's job — reviewers do not check those here.</p>
+  <ul class="rules">
+    <li>Is the framework or method described correctly?</li>
+    <li>Are claims supported by research?</li>
+    <li>Are there sourcing gaps that would strengthen the piece?</li>
+    <li>Is the pedagogy appropriate for the tier?</li>
+    <li>Any factual errors or misrepresentations?</li>
+  </ul>
+
+  <h3>Phase 3 — Audience Sample Testing</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Metric</th><th>What it measures</th><th>Action if low</th></tr>
+      <tr><td>Completion rate</td><td>Did they read to the end?</td><td>Check tone consistency, trailing after the point</td></tr>
+      <tr><td>Time on page</td><td>Did it stay under 5 minutes?</td><td>Audit for density and structure bloat</td></tr>
+      <tr><td>Try This completion</td><td>Did they do the exercise?</td><td>Prompt too vague or requires too much setup</td></tr>
+      <tr><td>Comprehension</td><td>Can they state the one thing?</td><td>Concept or Goal not precise enough</td></tr>
+      <tr><td>Forward signal</td><td>Would they share with a colleague?</td><td>Check title, quotability, recognition precision</td></tr>
+      <tr><td>Open feedback</td><td>Most useful / most confusing</td><td>Patterns across pieces = structural rule revision</td></tr>
+    </table>
+  </div>
+
+  <h3>Ruleset Health Check (after 5 pieces)</h3>
+  <ul class="rules">
+    <li>Which banned patterns are still slipping through? Tighten those rules.</li>
+    <li>Which sections keep appearing in "most confusing"? That section type needs a rule revision.</li>
+    <li>Which Try This prompts generated evangelist moments? Extract what they share.</li>
+    <li>If readers are finishing, exercising, forwarding, and using vocabulary from pieces in conversation — the ruleset is working. Refine, don't rebuild.</li>
+  </ul>
+</div>
+
+<!-- ─── REFERENCE WRITERS ─── -->
+<div class="module" id="writers">
+  <div class="module-header">
+    <span class="module-num">Reference</span>
+    <h2>Reference Writers</h2>
+    <p class="module-desc">Two writers whose voice most closely approximates the target register. Read before writing; read after drafting to calibrate.</p>
+  </div>
+
+  <h3>Morgan Housel — <em>Collaborative Fund blog; The Psychology of Money</em></h3>
+  <p>Behavioral economics and decision-making. Never lectures. What to take:</p>
+  <ul class="rules">
+    <li>Opens from the specific, not the principle — the insight emerges rather than being handed over</li>
+    <li>States claims without hedging; marks genuine uncertainty with "I think" — one mark per piece</li>
+    <li>One number earns more than three paragraphs</li>
+    <li>The "maybe" reframe: describes a thought process and lets the reader recognize theirs in it — not prescriptive</li>
+    <li>Short sentences land after long ones. Build with length; cut to deliver.</li>
+  </ul>
+
+  <h3>Wes Kao — <em>weskao.com</em></h3>
+  <p>Communication, teaching, and management craft. Opens without warmup. What to take:</p>
+  <ul class="rules">
+    <li>The bear rule: start right before the highest-stakes moment, not at the beginning</li>
+    <li>Names patterns — gives practitioners vocabulary for what they're experiencing ("spiky point of view," "state change method")</li>
+    <li>Imperative by default: "Remove the 90% of stuff that's only moderately relevant" — not "consider removing"</li>
+    <li>Pairs principle with anchor in one sentence: principle + application, immediately</li>
+    <li>Second person throughout — "you," always</li>
+  </ul>
+</div>
+
+<!-- ─── SOURCES ─── -->
+<div class="module" id="sources">
+  <div class="module-header">
+    <span class="module-num">Sources</span>
+    <h2>Research Foundation</h2>
+    <p class="module-desc">Named conversationally in the modules above. Full references here for peer review and go-deeper purposes.</p>
+  </div>
+
+  <div class="sources">
+    <div class="source-item"><strong>Alter, A. L. &amp; Oppenheimer, D. M. (2006)</strong> — Predicting short-term stock fluctuations by using processing fluency. Proceedings of the National Academy of Sciences. Core finding: easily-processed information is judged as more credible and truthful.</div>
+    <div class="source-item"><strong>Aronson, E., Willerman, B. &amp; Floyd, J. (1966)</strong> — The effect of a pratfall on increasing interpersonal attractiveness. Psychonomic Science. Core finding: competent people who make small mistakes become more likable, not less.</div>
+    <div class="source-item"><strong>Berger, J. (2013)</strong> — Contagious: Why Things Catch On. Simon &amp; Schuster. STEPPS framework: Social currency, Triggers, Emotion, Public, Practical value, Stories.</div>
+    <div class="source-item"><strong>Bjork, R. A. (1994)</strong> — Memory and metamemory considerations in the training of human beings. Metacognition: Knowing about knowing. Desirable difficulties: challenges that feel hard during learning improve long-term retention.</div>
+    <div class="source-item"><strong>Cialdini, R. B. (1984)</strong> — Influence: The Psychology of Persuasion. Harper Business. The liking principle: people are persuaded by people they like.</div>
+    <div class="source-item"><strong>Ebbinghaus, H. (1885)</strong> — Über das Gedächtnis. The forgetting curve: without spaced practice, ~70% of learned material is forgotten within 24 hours.</div>
+    <div class="source-item"><strong>Green, M. C. &amp; Brock, T. C. (2000)</strong> — The role of transportation in the persuasiveness of public narratives. Journal of Personality and Social Psychology. Narrative transportation theory: stories create engagement by transporting readers into a narrative world.</div>
+    <div class="source-item"><strong>Knowles, M. (1968)</strong> — Andragogy, not pedagogy. Adult Leadership. Adult learners are self-directed and respond to practical, problem-centered, peer-voice content over expert-lecture formats.</div>
+    <div class="source-item"><strong>Loewenstein, G. (1994)</strong> — The psychology of curiosity: a review and reinterpretation. Psychological Bulletin. Information gap theory: curiosity arises from a perceived gap between what we know and want to know.</div>
+    <div class="source-item"><strong>Miller, G. A. (1956)</strong> — The magical number seven, plus or minus two: some limits on our capacity for processing information. Psychological Review. Working memory limit: approximately 7 ± 2 items.</div>
+    <div class="source-item"><strong>Nielsen Norman Group (1997)</strong> — Concise, Scannable, and Objective: How to Write for the Web. Concise writing = 58% higher usability; scannable = 47%; objective = 27%; combined = 124%.</div>
+    <div class="source-item"><strong>Nielsen Norman Group (2017)</strong> — F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant. Eye-tracking: first words of each line receive most fixations; first 2 words of headers convey most meaning.</div>
+    <div class="source-item"><strong>Nielsen Norman Group (2023)</strong> — How People Read Online: New and Old Findings. 500+ participants, 13-year study. Core finding: people scan rather than read; scanning patterns persist across technological changes.</div>
+    <div class="source-item"><strong>Roediger, H. L. &amp; Karpicke, J. D. (2006)</strong> — Test-Enhanced Learning. Psychological Science. The testing effect: retrieval practice outperforms restudying by approximately 50% on delayed tests.</div>
+    <div class="source-item"><strong>Rogers, T. B., Kuiper, N. A. &amp; Kirker, W. S. (1977)</strong> — Self-reference and the encoding of personal information. Journal of Personality and Social Psychology. Self-referential processing produces stronger memory encoding than third-person description.</div>
+    <div class="source-item"><strong>Sweller, J. (1988)</strong> — Cognitive load during problem solving: effects on learning. Cognitive Science. Cognitive Load Theory: different learning tasks require different instructional registers to minimize extraneous load.</div>
+    <div class="source-item"><strong>NAACL 2024 (Ghostbuster) / ICML 2024 (Binoculars)</strong> — AI text detection research. Human prose: sentence-length SD 0.6–1.2 (burstiness); perplexity 105–165. GPT-4: SD 0.2–0.4; perplexity 20–30.</div>
+  </div>
+</div>
+
+</body>
+</html>

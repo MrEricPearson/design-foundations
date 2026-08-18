@@ -310,7 +310,65 @@ body{font-family:var(--ff-sans);background:var(--bg);color:var(--text-1);line-he
 .track-divider{height:1px;background:var(--border);margin:6px 0;}
 .track-main-ref{font-family:var(--ff-mono);font-size:0.61rem;color:var(--text-3);padding:6px 0 0;letter-spacing:0.02em;}
 .track-foot{font-family:var(--ff-mono);font-size:0.60rem;color:var(--text-3);text-align:right;padding:9px 18px 0;border-top:1px solid var(--border);margin-top:4px;}
-@media(max-width:680px){.track-cols{grid-template-columns:1fr;}}
+
+/* ── PREREQ PILLS ── */
+.prereq-universal{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:12px 16px;margin-bottom:16px;}
+.prereq-univ-head{font-family:var(--ff-mono);font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;}
+.prereq-pills{display:flex;flex-wrap:wrap;gap:5px;}
+.prereq-pill{display:inline-flex;align-items:baseline;gap:4px;padding:2px 7px 3px;border-radius:2px;font-size:0.71rem;line-height:1.35;}
+.prereq-pill .p-n{font-family:var(--ff-mono);font-size:0.61rem;font-variant-numeric:tabular-nums;}
+.prereq-pill.t100{background:var(--t100-bg);} .prereq-pill.t100 .p-n{color:var(--t100);} .prereq-pill.t100 .p-t{color:var(--text-1);}
+.prereq-pill.t200{background:var(--t200-bg);} .prereq-pill.t200 .p-n{color:var(--t200);} .prereq-pill.t200 .p-t{color:var(--text-1);}
+.prereq-pill.sh{background:var(--accent-bg);} .prereq-pill.sh .p-n{color:var(--accent-dim);} .prereq-pill.sh .p-t{color:var(--text-2);}
+.track-prereq-section{padding:11px 18px 13px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:9px;}
+.track-prereq-sublabel{font-family:var(--ff-mono);font-size:0.53rem;letter-spacing:0.10em;text-transform:uppercase;color:var(--text-3);margin-bottom:5px;}
+
+/* ── PROTOTYPING PATH ── */
+.proto-path{margin-top:32px;background:var(--bg-alt);border:1px solid var(--border-strong);border-radius:var(--r);padding:24px 24px 28px;}
+.proto-path-eyebrow{font-family:var(--ff-mono);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--t200);margin-bottom:8px;}
+.proto-path-title{font-family:var(--ff-serif);font-size:1.08rem;margin-bottom:6px;color:var(--text-1);}
+.proto-path-note{font-size:0.845rem;color:var(--text-2);max-width:72ch;line-height:1.55;margin-bottom:20px;}
+.proto-path-cols{display:grid;grid-template-columns:250px 1fr;gap:20px;align-items:start;}
+.proto-prereq-col{display:flex;flex-direction:column;gap:14px;}
+.proto-prereq-block{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:10px;}
+.proto-prereq-head{font-family:var(--ff-mono);font-size:0.53rem;letter-spacing:0.10em;text-transform:uppercase;color:var(--text-3);margin-bottom:5px;}
+.proto-methods-col{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.proto-method-section-head{font-family:var(--ff-mono);font-size:0.53rem;letter-spacing:0.10em;text-transform:uppercase;color:var(--text-3);padding:7px 14px;background:var(--bg);border-bottom:1px solid var(--border);}
+.proto-method-item{display:grid;grid-template-columns:50px 1fr;gap:0 8px;align-items:start;padding:8px 14px;border-bottom:1px solid var(--border);}
+.proto-method-item:last-child{border-bottom:none;}
+.proto-method-item.core{background:var(--t200-bg);}
+.proto-method-n{font-family:var(--ff-serif);font-size:0.75rem;color:var(--t200);opacity:0.9;padding-top:2px;font-variant-numeric:tabular-nums;}
+.proto-method-body{display:flex;flex-direction:column;}
+.proto-method-t{font-size:0.79rem;color:var(--text-1);line-height:1.38;}
+.proto-method-hook{font-size:0.72rem;color:var(--text-3);margin-top:2px;line-height:1.35;}
+
+/* ── CURRICULUM STEPS (Prototyping Path) ── */
+.curr-meta{font-family:var(--ff-mono);font-size:0.58rem;color:var(--text-3);letter-spacing:0.04em;line-height:1.8;margin-bottom:18px;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--r);}
+.curr-phase-head{font-family:var(--ff-mono);font-size:0.53rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--text-3);padding:12px 0 6px;margin-top:4px;border-bottom:1px solid var(--border);}
+.curr-list{display:flex;flex-direction:column;}
+.curr-step{display:grid;grid-template-columns:26px 1fr;gap:0 10px;padding:9px 0;border-bottom:1px solid var(--border);}
+.curr-step:last-child{border-bottom:none;}
+.curr-step.is-mvp{background:var(--t200-bg);margin:0 -6px;padding:9px 6px;border-radius:2px;}
+.curr-step-num{font-family:var(--ff-mono);font-size:0.59rem;color:var(--text-3);padding-top:3px;font-variant-numeric:tabular-nums;}
+.curr-step-body{display:flex;flex-direction:column;gap:4px;}
+.curr-step-hd{display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
+.curr-tier{font-family:var(--ff-mono);font-size:0.49rem;letter-spacing:0.07em;text-transform:uppercase;padding:1px 5px 2px;border-radius:2px;}
+.curr-tier.t100{background:var(--t100-bg);color:var(--t100);}
+.curr-tier.t200{background:var(--t200-bg);color:var(--t200);}
+.curr-tier.t300{background:var(--t300-bg);color:var(--t300);}
+.curr-n{font-family:var(--ff-serif);font-size:0.74rem;color:var(--text-2);font-variant-numeric:tabular-nums;}
+.curr-title{font-size:0.79rem;color:var(--text-1);}
+.curr-mvp-pip{font-family:var(--ff-mono);font-size:0.48rem;letter-spacing:0.08em;text-transform:uppercase;background:var(--t200);color:#fff;padding:1px 5px 2px;border-radius:2px;}
+.curr-prep-note{font-family:var(--ff-mono);font-size:0.51rem;color:var(--accent-dim);letter-spacing:0.04em;}
+.curr-prereqs{display:flex;align-items:center;flex-wrap:wrap;gap:4px;}
+.curr-prereq-lbl{font-family:var(--ff-mono);font-size:0.50rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-3);}
+.curr-pb{display:inline-flex;align-items:baseline;gap:3px;padding:1px 6px 2px;border-radius:2px;font-size:0.68rem;}
+.curr-pb.t100{background:var(--t100-bg);} .curr-pb.t100 .n{color:var(--t100);} .curr-pb.t100 .l{color:var(--text-2);}
+.curr-pb.t200{background:var(--t200-bg);} .curr-pb.t200 .n{color:var(--t200);} .curr-pb.t200 .l{color:var(--text-2);}
+.curr-pb .n{font-family:var(--ff-mono);font-size:0.58rem;font-variant-numeric:tabular-nums;}
+.curr-hook{font-size:0.75rem;color:var(--text-3);line-height:1.42;}
+
+@media(max-width:680px){.track-cols{grid-template-columns:1fr;}.proto-path-cols{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -655,7 +713,22 @@ body{font-family:var(--ff-sans);background:var(--bg);color:var(--text-1);line-he
 <div class="tracks-section">
 <div class="tracks-eyebrow">Parallel Tracks — Role-Specific</div>
 <h2 class="tracks-title">Three Audience Tracks</h2>
-<p class="tracks-note">These tracks run alongside the main series — not after it. Complete Act I (Ep1–3) first to establish the shared frame, then use your track in parallel. Each track is a curated set of T300 arcs that go deeper into the decisions and situations specific to your role — the places where the shared foundation is necessary but not sufficient.</p>
+<p class="tracks-note">Each track runs alongside the main series — not after it. The eight universal prereqs below apply to every track; complete them first. Track-specific prereqs (labeled <em>shared</em> or <em>unique</em>) are listed within each column. Each track is a curated set of T300 arcs that go deeper into the decisions and situations specific to your role — the places where the shared foundation is necessary but not sufficient. A focused Prototyping Path follows for Q3 lesson plan delivery.</p>
+
+<div class="prereq-universal">
+  <div class="prereq-univ-head">Universal prereqs — needed before any track</div>
+  <div class="prereq-pills">
+    <span class="prereq-pill t100"><span class="p-n">100</span><span class="p-t">Assumption vs. Fact</span></span>
+    <span class="prereq-pill t100"><span class="p-n">101</span><span class="p-t">Not all assumptions equal</span></span>
+    <span class="prereq-pill t100"><span class="p-n">103</span><span class="p-t">Attachment is the real risk</span></span>
+    <span class="prereq-pill t100"><span class="p-n">107</span><span class="p-t">Framing the Problem</span></span>
+    <span class="prereq-pill t100"><span class="p-n">113</span><span class="p-t">Defining Success</span></span>
+    <span class="prereq-pill t100"><span class="p-n">126</span><span class="p-t">Mental Models</span></span>
+    <span class="prereq-pill t100"><span class="p-n">247</span><span class="p-t">Dual Process Theory</span></span>
+    <span class="prereq-pill t100"><span class="p-n">249</span><span class="p-t">Loss Aversion</span></span>
+  </div>
+</div>
+
 <div class="track-cols">
 
   <!-- ── TRACK A: PRODUCT MANAGERS ── -->
@@ -665,7 +738,35 @@ body{font-family:var(--ff-sans);background:var(--bg);color:var(--text-1);line-he
       <div class="track-col-audience">Product Managers</div>
       <p class="track-tension">You're the connective tissue between stakeholders and builders. This track gives you the diagnostic tools to turn incoming asks into something worth building — before anyone starts.</p>
     </div>
-    <div class="track-prereq">Foundation first: Act I (Ep1–3) · Ep5 Behavioral Hooks</div>
+    <div class="track-prereq-section">
+      <div>
+        <div class="track-prereq-sublabel">Shared with Track B</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill sh"><span class="p-n">109</span><span class="p-t">Weighing Trade-offs</span></span>
+          <span class="prereq-pill sh"><span class="p-n">123</span><span class="p-t">What Usability Testing Is</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="track-prereq-sublabel">Shared with Track C</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill sh"><span class="p-n">125</span><span class="p-t">Jobs-to-be-Done</span></span>
+          <span class="prereq-pill sh"><span class="p-n">149</span><span class="p-t">Research vs. Anecdote</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="track-prereq-sublabel">Track A only</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill t100"><span class="p-n">122</span><span class="p-t">Starting Questions</span></span>
+          <span class="prereq-pill t100"><span class="p-n">129</span><span class="p-t">Stakeholder Mapping</span></span>
+          <span class="prereq-pill t100"><span class="p-n">131</span><span class="p-t">Question Design / Bias</span></span>
+          <span class="prereq-pill t100"><span class="p-n">133</span><span class="p-t">Visual Hierarchy</span></span>
+          <span class="prereq-pill t100"><span class="p-n">163</span><span class="p-t">Alignment vs. Consensus</span></span>
+          <span class="prereq-pill t100"><span class="p-n">248</span><span class="p-t">Framing Effect</span></span>
+          <span class="prereq-pill t100"><span class="p-n">256</span><span class="p-t">Hick's Law</span></span>
+          <span class="prereq-pill t100"><span class="p-n">257</span><span class="p-t">Authority Bias</span></span>
+        </div>
+      </div>
+    </div>
     <div class="track-arc-list">
       <div class="track-section-head">Core</div>
       <div class="track-arc-item">
@@ -732,7 +833,33 @@ body{font-family:var(--ff-sans);background:var(--bg);color:var(--text-1);line-he
       <div class="track-col-audience">Custom Dev Teams</div>
       <p class="track-tension">You can build anything — this track addresses the gap between "it works" and "people use it," at the exact decision points where that gap opens during a build.</p>
     </div>
-    <div class="track-prereq">Foundation first: Ep1 Assumption · Ep22 Testing What You Built</div>
+    <div class="track-prereq-section">
+      <div>
+        <div class="track-prereq-sublabel">Shared with Track A</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill sh"><span class="p-n">109</span><span class="p-t">Weighing Trade-offs</span></span>
+          <span class="prereq-pill sh"><span class="p-n">123</span><span class="p-t">What Usability Testing Is</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="track-prereq-sublabel">Shared with Track C</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill sh"><span class="p-n">110</span><span class="p-t">Constraints as Design Input</span></span>
+          <span class="prereq-pill sh"><span class="p-n">130</span><span class="p-t">Scenario Writing</span></span>
+          <span class="prereq-pill sh"><span class="p-n">253</span><span class="p-t">Sunk Cost Fallacy</span></span>
+          <span class="prereq-pill sh"><span class="p-n">255</span><span class="p-t">Jakob's Law</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="track-prereq-sublabel">Track B only</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill t100"><span class="p-n">111</span><span class="p-t">Self-Critique</span></span>
+          <span class="prereq-pill t100"><span class="p-n">157</span><span class="p-t">Why Not to Help During Testing</span></span>
+          <span class="prereq-pill t100"><span class="p-n">158</span><span class="p-t">Task Statement Design</span></span>
+          <span class="prereq-pill t100"><span class="p-n">254</span><span class="p-t">Mode Errors</span></span>
+        </div>
+      </div>
+    </div>
     <div class="track-arc-list">
       <div class="track-section-head">Core</div>
       <div class="track-arc-item">
@@ -792,7 +919,38 @@ body{font-family:var(--ff-sans);background:var(--bg);color:var(--text-1);line-he
       <div class="track-col-audience">Platform · Non-Custom Dev</div>
       <p class="track-tension">You implement tools you didn't build and live with how well people use them. This track applies design judgment to the decisions you actually control: configuration, documentation, and adoption.</p>
     </div>
-    <div class="track-prereq">Foundation first: Ep1 Assumption · Ep12 States, Forms, Onboarding</div>
+    <div class="track-prereq-section">
+      <div>
+        <div class="track-prereq-sublabel">Shared with Track B</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill sh"><span class="p-n">110</span><span class="p-t">Constraints as Design Input</span></span>
+          <span class="prereq-pill sh"><span class="p-n">130</span><span class="p-t">Scenario Writing</span></span>
+          <span class="prereq-pill sh"><span class="p-n">253</span><span class="p-t">Sunk Cost Fallacy</span></span>
+          <span class="prereq-pill sh"><span class="p-n">255</span><span class="p-t">Jakob's Law</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="track-prereq-sublabel">Shared with Track A</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill sh"><span class="p-n">125</span><span class="p-t">Jobs-to-be-Done</span></span>
+          <span class="prereq-pill sh"><span class="p-n">149</span><span class="p-t">Research vs. Anecdote</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="track-prereq-sublabel">Track C only</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill t100"><span class="p-n">124</span><span class="p-t">Nielsen's Heuristics</span></span>
+          <span class="prereq-pill t100"><span class="p-n">135</span><span class="p-t">Leading vs. Lagging Indicators</span></span>
+          <span class="prereq-pill t100"><span class="p-n">250</span><span class="p-t">Status Quo Bias</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="track-prereq-sublabel">Method prereq — Extended arc 329 only</div>
+        <div class="prereq-pills">
+          <span class="prereq-pill t200"><span class="p-n">206x</span><span class="p-t">Any journey mapping approach</span></span>
+        </div>
+      </div>
+    </div>
     <div class="track-arc-list">
       <div class="track-section-head">Core</div>
       <div class="track-arc-item">
@@ -846,6 +1004,246 @@ body{font-family:var(--ff-sans);background:var(--bg);color:var(--text-1);line-he
   </div>
 
 </div>
+</div>
+</section>
+
+<!-- ═══ PROTOTYPING PATH ═══ -->
+<section id="proto-path-section">
+<div class="proto-path">
+  <div class="proto-path-eyebrow">Focus Path — Q3 Lesson Plan</div>
+  <h2 class="proto-path-title">Prototyping: Selection &amp; Sequencing</h2>
+  <p class="proto-path-note">A minimal, self-contained curriculum for teaching the platform how to prototype. Prereq badges appear only the first time that prereq is consumed in the sequence — once introduced, it's considered filled and doesn't appear again. MVP core (steps 1–15) delivers the Q3 goal. Complete arc (steps 16–20) adds the remaining approaches, all prereqs already satisfied.</p>
+
+  <div class="curr-meta">
+    20 steps total &nbsp;·&nbsp; 15 steps to MVP &nbsp;·&nbsp; 9 T100 atoms (all placed immediately before first use) &nbsp;·&nbsp; 1 T200 method prereq &nbsp;·&nbsp; 1 T300 arc header &nbsp;·&nbsp; 9 T200 approaches
+  </div>
+
+  <div class="curr-list">
+
+    <div class="curr-phase-head">Phase 1 — Concepts and Framing &nbsp; each atom appears at last possible moment before first use</div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">1</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd">
+          <span class="curr-tier t100">T100</span><span class="curr-n">103</span><span class="curr-title">Attachment is the real risk</span>
+          <span class="curr-prep-note">→ prereq for 177</span>
+        </div>
+        <div class="curr-hook">Emotional investment in a direction — not the direction itself — is what makes assumptions dangerous.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">2</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd">
+          <span class="curr-tier t100">T100</span><span class="curr-n">132</span><span class="curr-title">Prototype Fidelity</span>
+          <span class="curr-prep-note">→ prereq for 177 and all 309x</span>
+        </div>
+        <div class="curr-hook">Fidelity is a question about what you're testing, not what tool you're using.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">3</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t100">T100</span><span class="curr-n">177</span><span class="curr-title">What a Prototype Is</span></div>
+        <div class="curr-prereqs">
+          <span class="curr-prereq-lbl">first use →</span>
+          <span class="curr-pb t100"><span class="n">103</span><span class="l">Attachment</span></span>
+          <span class="curr-pb t100"><span class="n">132</span><span class="l">Prototype Fidelity</span></span>
+        </div>
+        <div class="curr-hook">A prototype is a question made tangible — not a draft of the final thing. Reframes the decision about when and whether to prototype.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">4</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd">
+          <span class="curr-tier t100">T100</span><span class="curr-n">105</span><span class="curr-title">Iteration</span>
+          <span class="curr-prep-note">→ prereq for 178</span>
+        </div>
+        <div class="curr-hook">Why the first version is never the point.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">5</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t100">T100</span><span class="curr-n">178</span><span class="curr-title">Prototype vs. MVP</span></div>
+        <div class="curr-prereqs">
+          <span class="curr-prereq-lbl">first use →</span>
+          <span class="curr-pb t100"><span class="n">177</span><span class="l">What a Prototype Is</span></span>
+          <span class="curr-pb t100"><span class="n">105</span><span class="l">Iteration</span></span>
+        </div>
+        <div class="curr-hook">Dissolves the most common confusion that causes teams to skip prototyping. A prototype tests a question; an MVP tests a business assumption with real users at risk.</div>
+      </div>
+    </div>
+
+    <div class="curr-phase-head">Phase 2 — Arc Entry</div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">6</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd">
+          <span class="curr-tier t100">T100</span><span class="curr-n">113</span><span class="curr-title">Defining Success Before You Start</span>
+          <span class="curr-prep-note">→ prereq for 309 arc, 309a/b/c/g</span>
+        </div>
+        <div class="curr-hook">Sets the testing criteria before anything is built.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">7</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t300">T300</span><span class="curr-n">309</span><span class="curr-title">Prototyping Arc — Selection and Sequencing</span></div>
+        <div class="curr-prereqs">
+          <span class="curr-prereq-lbl">first use →</span>
+          <span class="curr-pb t100"><span class="n">113</span><span class="l">Defining Success</span></span>
+        </div>
+        <div class="curr-hook">The decision framework: how to match prototype type to the question being tested. Without this, the nine approaches read as a menu, not a system.</div>
+      </div>
+    </div>
+
+    <div class="curr-phase-head">Phase 3 — MVP Core &nbsp; steps 8–15</div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">8</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd">
+          <span class="curr-tier t100">T100</span><span class="curr-n">106</span><span class="curr-title">Sketching / Quick Visualization</span>
+          <span class="curr-prep-note">→ prereq for 309a</span>
+        </div>
+        <div class="curr-hook">Rapid visual thinking tool. Sketching is how you externalize a hypothesis before any tool is involved.</div>
+      </div>
+    </div>
+
+    <div class="curr-step is-mvp">
+      <div class="curr-step-num">9</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309a</span><span class="curr-title">Paper / Sketch Prototype</span><span class="curr-mvp-pip">MVP</span></div>
+        <div class="curr-prereqs">
+          <span class="curr-prereq-lbl">first use →</span>
+          <span class="curr-pb t100"><span class="n">106</span><span class="l">Sketching</span></span>
+        </div>
+        <div class="curr-hook">Concept-level sketch testable before any screen or tool investment. Widest audience reach — start here for any practitioner audience.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">10</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd">
+          <span class="curr-tier t100">T100</span><span class="curr-n">158</span><span class="curr-title">Task Statement Design</span>
+          <span class="curr-prep-note">→ prereq for 309b and 309f</span>
+        </div>
+        <div class="curr-hook">How to write a task that reveals real behavior rather than coaching the answer. Required for any testable prototype where you observe a participant.</div>
+      </div>
+    </div>
+
+    <div class="curr-step is-mvp">
+      <div class="curr-step-num">11</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309b</span><span class="curr-title">Lo-fi Wireframe Prototype</span><span class="curr-mvp-pip">MVP</span></div>
+        <div class="curr-prereqs">
+          <span class="curr-prereq-lbl">first use →</span>
+          <span class="curr-pb t100"><span class="n">158</span><span class="l">Task Statement Design</span></span>
+        </div>
+        <div class="curr-hook">Structure and sequencing without visual design committed. The step up from paper when you need testable interaction flow across screens.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">12</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd">
+          <span class="curr-tier t100">T100</span><span class="curr-n">147</span><span class="curr-title">AI as Execution Partner</span>
+          <span class="curr-prep-note">→ prereq for 219, 309c, 309e, 309i</span>
+        </div>
+        <div class="curr-hook">The judgment/production split in AI-assisted workflows. What AI produces vs. where the practitioner decides — the frame that makes 309c/e/i legible.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">13</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd">
+          <span class="curr-tier t200">T200</span><span class="curr-n">219</span><span class="curr-title">AI for Design Work</span>
+          <span class="curr-prep-note">→ method prereq for 309c</span>
+        </div>
+        <div class="curr-prereqs">
+          <span class="curr-prereq-lbl">first use →</span>
+          <span class="curr-pb t100"><span class="n">147</span><span class="l">AI as Execution Partner</span></span>
+        </div>
+        <div class="curr-hook">Using AI as a production tool with judgment boundaries defined upfront. Hard prereq for 309c — run this method before the AI-generated approach.</div>
+      </div>
+    </div>
+
+    <div class="curr-step is-mvp">
+      <div class="curr-step-num">14</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309c</span><span class="curr-title">AI-Generated Prototype</span><span class="curr-mvp-pip">MVP</span></div>
+        <div class="curr-prereqs">
+          <span class="curr-prereq-lbl">first use →</span>
+          <span class="curr-pb t200"><span class="n">219</span><span class="l">AI for Design Work</span></span>
+        </div>
+        <div class="curr-hook">Working prototype at speed — before manual production is feasible. Highest relevance given org's AI context; 219 must be run first.</div>
+      </div>
+    </div>
+
+    <div class="curr-step is-mvp">
+      <div class="curr-step-num">15</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309i</span><span class="curr-title">Build to Think</span><span class="curr-mvp-pip">MVP</span></div>
+        <div class="curr-hook">Working code as design artifact — reveals implementation constraints lo-fi tools miss. All prereqs satisfied above (147 · 132 · 177). Most relevant for dev audiences.</div>
+      </div>
+    </div>
+
+    <div class="curr-phase-head">Phase 4 — Complete Arc &nbsp; all prereqs satisfied above · no new badges</div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">16</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309d</span><span class="curr-title">Wizard of Oz Prototype</span></div>
+        <div class="curr-hook">Human-operated simulation — tests whether users find value in behavior not yet built. Needs 177 · 132, both satisfied.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">17</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309e</span><span class="curr-title">Conversational Prototype</span></div>
+        <div class="curr-hook">Dialogue flow tested with real participants — validates AI logic before implementation. Needs 147 · 177 · 132, all satisfied.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">18</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309f</span><span class="curr-title">High-Fidelity Prototype</span></div>
+        <div class="curr-hook">Execution-quality prototype for final direction confirmation after visual design is settled. Needs 158 · 177 · 132, all satisfied.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">19</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309g</span><span class="curr-title">Service Prototype</span></div>
+        <div class="curr-hook">Full service walkthrough — maps where people, systems, and physical moments connect. Needs 113 · 177 · 132, all satisfied.</div>
+      </div>
+    </div>
+
+    <div class="curr-step">
+      <div class="curr-step-num">20</div>
+      <div class="curr-step-body">
+        <div class="curr-step-hd"><span class="curr-tier t200">T200</span><span class="curr-n">309h</span><span class="curr-title">Parallel Prototyping</span></div>
+        <div class="curr-hook">Two live alternatives on the same task — comparative evidence, not preference data. Needs 177 · 132, both satisfied.</div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 </section>
 

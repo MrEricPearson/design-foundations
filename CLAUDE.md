@@ -126,3 +126,67 @@ The talk's "Your turn" exercise must be concrete enough for a practitioner to at
 - Apply the tier boundary test before placing any new piece: (1) cognitive action — recognize/name vs. produce/run; (2) artifact type — observation vs. shared deliverable; (3) method complexity — 0-1 steps vs. 3+ sequential; (4) Goal verb — recognition verb vs. application verb. Three or more "Tier 200 flags" = re-tier.
 - Every new Priority A atom must be drafted and confirmed in the release queue **before** the method it supports publishes. Check `14-ordering-guide.md`.
 - Stay silent on the AI-adoption mandate. Stay silent on leadership-only concerns. Stay peer-voice. No examples/anecdotes.
+
+## Content Craft Rules (Non-Negotiable)
+These rules apply to every piece drafted in this project. They are extracted from `meta/content-strategy-spec.html`. When writing any content, apply all of them without being asked. Run the Phase 1 checklist mentally before returning any draft.
+
+### Voice — the wall rule
+The discipline (design) is invisible in every piece. Never argue for design; argue for better work. Any sentence implying the reader is doing something wrong fails before it reaches them. The author is a peer sharing something useful — not a function making a case, not an expert lecturing.
+
+### Anti-AI: Banned words — never use
+delve, tapestry, testament, illuminate, paradigm, intricate, multifaceted, nuanced, juxtapose, endeavor, quintessential, burgeoning, ubiquitous, synergistic, pivotal, paramount, navigate (metaphorical), embark, realm, landscape, nestled, leverage, facilitate, optimize, catalyze, holistic, robust, seamless, foster, comprehensive
+
+Avoid: crucial, notable, significant, innovative, transformative, impactful, actionable, scalable, actually, certainly, essentially, ultimately
+
+### Anti-AI: Banned openers and closers
+Never open with: "Let's dive in" / "Let's explore" / "It's important to note" / "It's worth mentioning" / "At its core" / "In essence" / "Fundamentally" / "Generally speaking" / "In many cases"
+Never close with: "In conclusion," / "To summarize," / "And that's why this matters"
+Never use: "Certainly!" / "Great question!" / rhetorical Q+A ("What does this mean? It means…") / parallel negation ("Not X, but Y" — state the Y directly)
+
+### Anti-AI: Structural bans
+- Em dash: max one per 300 words — replace extras with a period, comma, or colon
+- Semicolons: almost never — replace with a period
+- Bold: max two instances per piece, genuine emphasis only
+- Tricolons framed as profound: "clarity, simplicity, and purpose" — avoid
+- Bullet soup: 3+ bullets with identical openers → convert to prose
+- Dangling analysis: ", highlighting the importance of…" → cut
+
+### Sentence rhythm (burstiness)
+- At least one sentence of 6 words or fewer per 150 words — force this even when nothing short wants to appear
+- Never three consecutive sentences within 5 words of each other in length
+- Contractions throughout: "don't" not "do not"
+- One idea per sentence — the "and" test: if it carries two ideas, split it
+
+### Verbs
+Kill: serves as, allows for, helps to, enables, supports, facilitates, functions as — replace with the thing they point at.
+Target: breaks, reveals, forces, earns, kills, costs, surfaces, catches, names — verbs that do things.
+Cut modifiers: very, quite, highly, extremely, somewhat, rather, fairly, largely — find a stronger word instead.
+
+### Vocabulary
+Every design-coded term gets plain-language handling or is cut. Key translations:
+- user research → talking to users / finding out what people actually do
+- ideation → brainstorming / generating options
+- design thinking → never use
+- design sprint → describe the process, not the brand
+- human-centered design → never use
+- pain points → what's frustrating / what's slowing them down
+- how might we → what if we… / what would it take to…
+
+When a precise term is needed, drop it into context so the context defines it — never define formally. Second person throughout: "you," not "teams" or "practitioners."
+
+### Opening lines
+Open in the moment — no warmup, no announcement. Goal section: declarative, no announcement. Concept: open with the situation that makes it visible, not a formal definition. Method: start the process imperatively. Watchout: name the failure mode directly without softening first.
+
+### Sourcing mechanic
+Sources are named conversationally, not cited formally. "Kahneman figured this out" not a footnote number. Every piece needs at least 3 real sources woven into the content. Each source should appear where it earns the most trust — not batched at the end. Sources should be real, verifiable, and specific to the piece's topic (not generic "research shows").
+
+### Section rules that frequently fail
+- Proof must follow Try This — not precede it (a Proof before Try This is a preview, not feedback)
+- AI path always framed post-attempt: "after you've run this yourself…" — never as a substitute
+- Watchout: personal register, honest, specific to this method's actual failure mode — not generic caution
+- Try This: names a specific artifact the reader already has. Never: "try this with something you're working on" — name the thing
+- Take This Further reflection prompt must match learning type: application → "what would you do differently?"; schema-update → "what didn't fit?"; synthesis → "what would you tell someone doing this for the first time?"
+- Judgment Exercise (T300 only): arc-specific. Tests the arc's key assumption failing. Must be unanswerable by a different arc.
+
+### The cut test
+Remove this sentence: does the piece lose something that can't be recovered from context? If no — cut it. Restatement of previous sentence → cut. Transition without new content → cut.
