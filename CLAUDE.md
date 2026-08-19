@@ -133,6 +133,22 @@ These rules apply to every piece drafted in this project. They are extracted fro
 ### Voice — the wall rule
 The discipline (design) is invisible in every piece. Never argue for design; argue for better work. Any sentence implying the reader is doing something wrong fails before it reaches them. The author is a peer sharing something useful — not a function making a case, not an expert lecturing.
 
+### Reader relationship — the trust model
+The reader's buy-in depends as much on liking the author as on understanding the content. Write like a smart friend who's figured something out and wants to share it — not like someone filing a report. This means:
+- **Waste words on warmth.** Asides, self-aware moments, small admissions ("this took me a while to notice") — these aren't inefficiencies. They're the thing that makes a reader feel like a person is talking to them.
+- **Invoke excitement, not just understanding.** The goal isn't just to inform. It's to make the reader want to try this. Write toward that. A reader who's excited will use what they learned. A reader who's informed might not.
+- **Make it real to them.** Use "you're building something right now" not "teams often face." The reader should feel like this piece was written for their specific situation, not for a hypothetical practitioner.
+- The more the reader likes the author, the more they trust the content. Personality is a feature, not a distraction.
+
+### Structure — narrative over template
+Template section elements (Concept, Signal, Don't Confuse, Try Noticing) are author checklists — they ensure completeness. They are NOT reader-facing headers. The piece should read as one cohesive narrative, not a checklist with labels on it. Bold section titles make a piece feel cold and formulaic. Use `---` breaks and narrative transitions to carry the reader through. When published on SharePoint, the visual design (blue panel, amber block) does the navigation work. In the source markdown, the structure is invisible — it lives in the prose.
+
+### Word count — write toward five minutes
+Target ~1000 words. Short is not a virtue. Compressing toward brevity strips personality and forces precision over warmth. There is no room for a human voice at 400 words. Pieces should be long enough to breathe — to include the aside, the second example, the moment where the prose slows down and sits with something. Under 700 words is a sign the piece was compressed, not crafted.
+
+### Plain language — familiarity over precision
+If a phrase requires the reader to parse it, it failed. Use the words people actually say at work. "Defending a decision" not "holding a direction." "You've put work into this" not "you've invested in it." "Wrong" not "invalidated." If you wouldn't hear it in a normal conversation, rewrite it. Technically correct language that feels clinical loses readers. Familiar language that's slightly imprecise wins them.
+
 ### Anti-AI: Banned words — never use
 delve, tapestry, testament, illuminate, paradigm, intricate, multifaceted, nuanced, juxtapose, endeavor, quintessential, burgeoning, ubiquitous, synergistic, pivotal, paramount, navigate (metaphorical), embark, realm, landscape, nestled, leverage, facilitate, optimize, catalyze, holistic, robust, seamless, foster, comprehensive
 
@@ -144,10 +160,10 @@ Never close with: "In conclusion," / "To summarize," / "And that's why this matt
 Never use: "Certainly!" / "Great question!" / rhetorical Q+A ("What does this mean? It means…") / parallel negation ("Not X, but Y" — state the Y directly)
 
 ### Anti-AI: Structural bans
-- Em dash: max one per 300 words — replace extras with a period, comma, or colon
+- Em dash: never two in the same sentence; never two in adjacent paragraphs — replace extras with a period, comma, or colon. Visual proximity matters more than word count.
 - Semicolons: almost never — replace with a period
 - Bold: max two instances per piece, genuine emphasis only
-- Tricolons framed as profound: "clarity, simplicity, and purpose" — avoid
+- Tricolons framed as profound: "clarity, simplicity, and purpose" — avoid. Anaphora (repeating "the reasons... the reasons...") also banned unless the reader is already deeply invested.
 - Bullet soup: 3+ bullets with identical openers → convert to prose
 - Dangling analysis: ", highlighting the importance of…" → cut
 
@@ -177,8 +193,21 @@ When a precise term is needed, drop it into context so the context defines it �
 ### Opening lines
 Open in the moment — no warmup, no announcement. Goal section: declarative, no announcement. Concept: open with the situation that makes it visible, not a formal definition. Method: start the process imperatively. Watchout: name the failure mode directly without softening first.
 
+### Goal lines and subtitles — name the experience, not the concept
+The subtitle and goal line's job is recognition, not description. If the reader thinks "yes, that's me" — it worked. If they think "okay, so this article is about X" — it didn't. Name the feeling or the moment, not the mechanism. "Honest feedback on it starts to feel personal" works because it names an experience. "It gets harder to be honest about whether it's working" describes a concept. The concept is what the piece teaches. The subtitle is what makes someone decide to read it. Test every goal line: does it name something the reader has felt, or something the author wants to explain?
+
 ### Sourcing mechanic
-Sources are named conversationally, not cited formally. "Kahneman figured this out" not a footnote number. Every piece needs at least 3 real sources woven into the content. Each source should appear where it earns the most trust — not batched at the end. Sources should be real, verifiable, and specific to the piece's topic (not generic "research shows").
+Sources use APA inline citation format: name in the sentence + year in parentheses. "Barry Staw (1976) showed this..." or "(Kahneman & Tversky, 1979)" when name isn't in the sentence. This is the format used by Coursera, edX, and LinkedIn Learning — signals verifiability without feeling academic. Every piece needs at least 3 real sources woven into the content. Each source should appear where it earns the most trust — not batched at the end. Full citation details go in the Sources block at the end.
+
+### Fluidity — the read-aloud test
+Read the piece aloud before returning it. If the narrator stumbles, something's wrong. Fluidity means:
+- Intentional rhythm: build momentum with longer sentences, then release with a short one. "Nothing else changed." lands as a beat.
+- Strategic pauses: a short sentence after a dense paragraph lets the idea settle.
+- Strategic awkwardness: a deliberately plain or blunt phrase can hit harder than a polished one.
+- If three consecutive sentences feel like they have the same weight and pace, break the pattern.
+
+### Humor
+Every piece gets one genuine moment of humor or levity unless the subject is too serious for it. Not a pun, not a setup-and-label ("this might sound funny but") — actual humor that earns a smile. It should come from something true and recognizable. Parentheticals work well: "(If you've ever done X and felt Y, you've experienced this exact thing.)" The more the reader laughs, the more they trust the author.
 
 ### Section rules that frequently fail
 - Proof must follow Try This — not precede it (a Proof before Try This is a preview, not feedback)

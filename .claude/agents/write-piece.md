@@ -156,20 +156,30 @@ Load the exact template from CLAUDE.md for this tier. Use it exactly. Do not add
 
 **Apply all craft rules from CLAUDE.md.** The highest-failure-risk rules to actively hold while writing:
 
-**Voice:**
-- Peer/practitioner register throughout — the author has done this work, not studied it
-- Discipline (design) is completely invisible — never argues for design, never names "design" unless unavoidable
-- No anecdotes, examples, or invented stories — use pattern description instead (see below)
+**Voice — the trust model:**
+The reader's buy-in depends as much on liking the author as on understanding the content. Write like a smart friend sharing something they figured out — not a report, not a template, not a lesson. Practically, this means:
+- Waste words on warmth. Asides, small admissions ("this took me a while to notice"), self-aware moments — these aren't inefficiencies. They make a reader feel like a person is talking to them.
+- The author is present. First person ("I") is welcome when it adds warmth. "I want to tell you something" is a better opener than "here's a concept."
+- Invoke excitement, not just understanding. A reader who's excited uses what they learned. Write toward wanting to try this, not just understanding it.
+- Use "you're building something right now" not "teams often face." The reader should feel like this piece was written for their situation specifically.
 
-**Pattern description (required at Concept and Trigger):**
-- Describe the universal pattern so precisely that the reader supplies their own instance
-- Present tense, second person, active motion: "You're two sprints in. The ask shifts. Nobody announces it."
+**Structure — narrative, not labeled sections:**
+Template elements (Concept, Signal, Don't Confuse, Try Noticing) are author checklists, not reader-facing headers. Do NOT write **Concept:** or **You'll see it when:** as bold labels in the piece. The piece reads as one cohesive narrative. Use `---` breaks and prose transitions to carry the reader through. The structure is invisible — it lives in the writing, not the labels.
+
+**Word count — write toward five minutes (~1000 words):**
+Short is not a virtue. Under 700 words is a sign the piece was compressed, not crafted. Pieces need room to breathe — for asides, for the prose to slow down and sit with something, for the reader to feel invited rather than instructed. Compressing strips personality. Write toward 1000, not away from it.
+
+**Plain language — familiarity over precision:**
+If a phrase requires parsing, it failed. Use words people actually say at work. "Defending a decision" not "holding a direction." "You've put time into this" not "you've invested in it." If you wouldn't hear it in a normal conversation, rewrite it. Technically precise language that feels clinical loses readers. Familiar language wins them.
+
+**Pattern description (required at Concept):**
+- Describe the universal pattern so the reader supplies their own instance
+- Present tense, second person, active motion: "You're a few weeks in. The ask shifts. Nobody announces it."
 - Name the unspoken thing — what everyone experiences but nobody says out loud
-- Do not explain or resolve immediately — let the recognition land first
-- Specific details about the pattern, not specific details about a person or team
+- Let the recognition land before explaining it
 
 **Reference writer techniques (apply to opening):**
-- **Bear rule (Wes Kao):** Open at the highest-stakes moment, not the warmup. Not "here's the context" — open AT the thing.
+- **Bear rule (Wes Kao):** Open at the highest-stakes moment. Not "here's the context" — open AT the thing.
 - **Specific → universal (Morgan Housel):** Open with the specific observation, not the principle. The insight lands harder when the reader discovers it rather than being handed it.
 
 **Anti-AI (actively enforce):**
