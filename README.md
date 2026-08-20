@@ -65,7 +65,7 @@ No piece requires another piece to make sense. Read what's relevant. Skip what i
 ```
 100-foundations/   132 atomic concepts    Recognize-tier; no prerequisites required
 200-methods/        40 practical methods   Practice-tier; builds on 100-level concepts  
-300-systems/        36 judgment arcs       Orchestrate-tier; multi-part, audience-specific
+300-systems/        38 judgment arcs       Orchestrate-tier; multi-part, audience-specific
 standalone/          4 conceptual pieces   No tier; read anytime
 meta/                Navigation guides, reading paths, master outline
 assets/              Chapter Talk reference materials (internal)
@@ -91,6 +91,7 @@ Clusters within `100-foundations/`:
 - **Cognitive interface** (237–243): Cognitive overload, progressive disclosure, accessibility, empty states, error states, onboarding
 - **Research methods** (244–246): Qualitative vs. quantitative, mixed methods, sample size
 - **Cognitive science** (247–264): Dual process theory, framing effect, loss aversion, sunk cost, Jakob's Law, Hick's Law, correlation vs. causation, survivorship bias
+- **Interface cognition & AI shifts** (265–268, upcoming): Cost of novelty, no-UI design goal, serendipity problem in AI-curated interfaces, skeuomorphism vs. abstraction
 
 ### Tier 200 — Methods you can run
 
@@ -109,11 +110,11 @@ Clusters within `200-methods/`:
 
 Arcs within `300-systems/`:
 
-**For Product Managers (317–321):** From vague ask to solvable problem → requirements that survive the build → lightweight validation → prioritizing without false precision → managing the feedback loop
+**For Product Managers (317–321, 335):** From vague ask to solvable problem → requirements that survive the build → lightweight validation → prioritizing without false precision → managing the feedback loop → evaluating a design you didn't create
 
-**For Custom Dev (312, 322–325):** Designing what you're building → what's missing from your spec → technical decisions as UX decisions → ship/patch/hold → when things break in production
+**For Custom Dev (312, 322–325, 336):** Designing what you're building → what's missing from your spec → technical decisions as UX decisions → ship/patch/hold → when things break in production → code review as UX review
 
-**For Platform / Non-Custom Dev (313, 326–329):** UX in a product you didn't build → evaluating vendors before you're locked in → documentation as experience design → running the platform like a product → platform migration as a UX project
+**For Platform / Non-Custom Dev (313, 326–329, 337):** UX in a product you didn't build → evaluating vendors before you're locked in → documentation as experience design → running the platform like a product → platform migration as a UX project → when adoption fails
 
 **Cross-audience cognitive science (314–315):** How people actually decide · The psychology of resistance
 

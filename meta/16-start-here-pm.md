@@ -50,6 +50,7 @@ Eight arcs deliver systems-level judgment specifically for PM contexts. Three ar
 | 319 — Lightweight Validation Without a Research Team | Run a concept test, impression test, or one-task session yourself — fast enough to get signal before a decision point |
 | 320 — Prioritizing Without False Precision | Use RICE/ICE frameworks honestly: name the assumptions behind the inputs, make uncertainty explicit, and communicate reprioritization decisions credibly |
 | 321 — Managing the Design Feedback Loop | Run design reviews that produce decisions — define the right session type, classify feedback in real time, close on named decisions, and protect approved work from re-litigation |
+| 335 — Evaluating a Design You Didn't Create | Evaluate a design as a reviewer or PM — separate structure from style, test the design against its stated problem, and name concerns without redesigning |
 
 317 and 318 form a natural pair (problem definition → requirements). 319 can be read independently; highest cross-audience value. 320 and 321 address late-stage PM judgment challenges.
 

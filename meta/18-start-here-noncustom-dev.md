@@ -39,6 +39,7 @@ Four extended arcs address the full non-custom dev workflow from pre-adoption ev
 | 327 — Documentation as Experience Design | Write task-organized documentation that closes the support loop; test it before publishing; maintain it so it doesn't become a trap |
 | 328 — Running the Platform Like a Product | Apply product thinking to platform management: define outcome-level success metrics, gather systematic signal, make configuration decisions with the same rigor as product decisions |
 | 329 — Platform Migration as a UX Project | Treat migrations as user experience transitions: map what users are actually losing, design the transition period, communicate in a way that builds trust not anxiety |
+| 337 — When Adoption Fails | Diagnose which of four failure modes is driving low adoption after deployment — and choose a response matched to the actual cause, not the visible symptom |
 
 326 is the highest-priority extension — most impactful before any new tool adoption. 327 addresses ongoing adoption gaps. 328 addresses platform management for teams with an ongoing stewardship role. 329 applies when a migration is planned.
 

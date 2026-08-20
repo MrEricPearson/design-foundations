@@ -159,6 +159,15 @@ Consistent with the library's philosophy: this is a recommended path, not a mand
 | A/B Testing Basics | 200a-ab-testing-basics.md | 2 | 103, 113 |
 | Iteration Rhythm | 200b-iteration-rhythm.md | 2 | 103, 105 |
 
+**Cluster L atoms — Interface Cognition & AI Shifts (gaps identified 2026-08-20):**
+
+| Piece | File | Wave | Hard prereqs |
+|---|---|---|---|
+| The Cost of Novelty | 265-cost-of-novelty.md | 3 | 255, 126 |
+| No UI as Design Goal | 266-no-ui-as-design-goal.md | 3 | 169, 147, 238 |
+| The Serendipity Problem | 267-serendipity-problem.md | 3 | 172, 147 |
+| Skeuomorphism vs. Abstraction | 268-skeuomorphism-vs-abstraction.md | 3 | 169, 126 |
+
 ---
 
 ## Tier 200 Methods

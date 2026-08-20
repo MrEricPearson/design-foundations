@@ -41,6 +41,7 @@ Four extended arcs address the full custom dev workflow from spec-reading to pro
 | 323 — Technical Decisions as UX Decisions | Recognize when data model choices, async patterns, and error handling become user experience decisions — and make them with the user in front of mind |
 | 324 — The Ship / Patch / Hold Decision | Make confident launch decisions by defining the quality threshold before testing, evaluating known issues by user impact, and choosing a launch path with appropriate risk controls |
 | 325 — When Things Break in Production | Respond to production incidents in a way that protects users, communicates transparently, and produces learning through blameless post-mortems |
+| 336 — Code Review as UX Review | Evaluate a pull request for experience implications — not just technical correctness — using four questions that surface what code review typically misses |
 
 322 pairs naturally with 312 as build-time self-review. 323 is the most novel arc — addresses the class of UX failures that emerge from implementation decisions nobody thought of as design decisions. 324 and 325 form a launch/post-launch pair.
 
