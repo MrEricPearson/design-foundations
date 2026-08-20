@@ -126,6 +126,7 @@ The talk's "Your turn" exercise must be concrete enough for a practitioner to at
 - Apply the tier boundary test before placing any new piece: (1) cognitive action — recognize/name vs. produce/run; (2) artifact type — observation vs. shared deliverable; (3) method complexity — 0-1 steps vs. 3+ sequential; (4) Goal verb — recognition verb vs. application verb. Three or more "Tier 200 flags" = re-tier.
 - Every new Priority A atom must be drafted and confirmed in the release queue **before** the method it supports publishes. Check `14-ordering-guide.md`.
 - Stay silent on the AI-adoption mandate. Stay silent on leadership-only concerns. Stay peer-voice. No examples/anecdotes.
+- **Prereq cross-references are layout elements, not prose.** Never embed a meta-reference parenthetical inside article copy ("if you're arriving here without reading X..."). The article reads cleanly on its own. The prereq lives as a labeled UI element — a chip or callout — in the publish doc, placed below the article header. Document it in the layout map under a "Prereq chip" row.
 
 ## Content Craft Rules (Non-Negotiable)
 These rules apply to every piece drafted in this project. They are extracted from `meta/content-strategy-spec.html`. When writing any content, apply all of them without being asked. Run the Phase 1 checklist mentally before returning any draft.
