@@ -1,0 +1,18 @@
+# No UI as Design Goal
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 169 (Affordance), 147 (AI as Execution Partner), 238 (Progressive Disclosure) | **Blocks:** 308, 309e
+
+**Goal:** Recognize when the absence of a visible interface is a deliberate design decision — not a missing piece — so you can evaluate conversational, voice, and AI-driven experiences on their own terms.
+
+**Concept:** The working assumption when building AI-powered features is that they need an interface — a screen, a panel, a dashboard, something visible. The correction: interface is a means to an end, and the end is a successful interaction. For a growing class of AI interactions, a visible UI introduces more friction than it removes. The mechanism: a UI adds affordance — it shows what can be done, invites action, and signals state. But affordance has a cost. Every element on screen asks for attention and implies a decision. When the system can interpret intent directly — through conversation, voice, or behavior — a visual layer between the user and the outcome is overhead, not aid.
+
+This is not a new idea in interface design. Voice systems, automated phone trees, and ambient devices have long operated without screens. What AI has changed is the scope: where "no UI" was once limited to narrow input modalities, AI can now handle open-ended language, making conversational interfaces viable for tasks that previously required visual scaffolding. The design question is no longer whether a screen is possible but whether a screen improves the interaction.
+
+**You'll see it when:** A team is building an AI feature and the first design conversation is about where to put the interface element — what panel it lives in, how it surfaces in the nav, what the empty state looks like. The assumption that there must be a UI is doing work that hasn't been examined. Alternatively: you're evaluating a conversational feature and your instinct is to add a visual component to "make it clearer." That instinct is worth pausing on.
+
+**The signal:** The interface exists to explain the system to the user rather than to enable the user to do something. When you look at a screen and the primary job of most elements is to communicate what the AI is doing or can do — rather than to let the user act — that's a sign the system may be more explainable through conversation than through UI. A truly well-designed no-UI experience needs no panel to explain itself; it confirms actions and surfaces errors in the channel where the interaction is happening.
+
+**Don't confuse this with:** Invisible design in the sense of seamless visual design — removing visual complexity while keeping a screen-based interface. No UI as a design goal means the primary interaction modality is something other than screen-based visual elements. The two are related (both reduce unnecessary surface) but operate at different levels. A beautifully minimal screen is still a screen.
+
+**Try Noticing:** Look at an AI feature you're currently building or evaluating. List what the UI is doing: revealing capabilities, confirming actions, showing state, handling errors, explaining what happened. Now ask: which of those jobs could the conversational layer handle instead? Where the answer is "most of them," the screen may be scaffolding that the interaction doesn't need.
+
+**What Next:** For AI interactions where the interface is invisible, trust works differently — users can't see system state and can't inspect what the AI is doing. 308 (Designing for AI Trust) covers how to build calibrated trust without visual feedback mechanisms. For conversational prototyping — testing dialogue flow before implementation — read 309e (Conversational Prototype).

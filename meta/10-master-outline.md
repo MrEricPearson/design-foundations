@@ -166,7 +166,7 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 
 **Cluster L — Interface Cognition & AI Shifts (gaps identified 2026-08-20)** [all GAP — not yet drafted]
 136. The Cost of Novelty [GAP — 100-foundations/265-cost-of-novelty.md — prereqs: 255, 126; when breaking convention earns its learning cost; flip side of Jakob's Law; blocks 312, 313, 323]
-137. No UI as Design Goal [GAP — 100-foundations/266-no-ui-as-design-goal.md — prereqs: 169, 147, 238; invisible design, ambient computing, intent-based interfaces; blocks 308, 309e]
+137. No UI as Design Goal [DRAFTED — 100-foundations/266-no-ui-as-design-goal.md — prereqs: 169, 147, 238; invisible design, ambient computing, intent-based interfaces; blocks 308, 309e]
 138. The Serendipity Problem [GAP — 100-foundations/267-serendipity-problem.md — prereqs: 172, 147; you can't discover what you don't know to search for in AI-curated interfaces; blocks 308, 313]
 139. Skeuomorphism vs. Abstraction [GAP — 100-foundations/268-skeuomorphism-vs-abstraction.md — prereqs: 169, 126; when physical metaphor helps vs. constrains; blocks 312, 313]
 140. The Design Style Spectrum [GAP — 100-foundations/269-design-style-spectrum.md — prereqs: 268, 126; what each major style (skeuomorphic, flat, layered/elevation, neumorphic, brutalist) signals to users and when style-function mismatch creates friction; blocks 312, 313]

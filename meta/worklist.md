@@ -81,11 +81,12 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 ---
 
-### Step 26 — blocked · do not queue
+### Batch F addition — gap piece + deferred step · 2 items
 
-- [ ] **Step 26** · 🚫 T200 · `309e-conversational-prototype.md` — [200-methods/309e-conversational-prototype.md](../200-methods/309e-conversational-prototype.md)
-  - **Blocker:** draft `266-no-ui-as-design-goal.md` first · T100 · prereqs: 169, 147, 238
-  - Once 266 is written and at `ready` status, move step 26 into queue after step 25
+- [ ] **Gap** · 📝 T100 · `266-no-ui-as-design-goal.md` — [100-foundations/266-no-ui-as-design-goal.md](../100-foundations/266-no-ui-as-design-goal.md)
+  - Rough draft in place · run write-piece skill to produce publish.md before step 26
+- [ ] **Step 26** · 📝 T200 · `309e-conversational-prototype.md` — [200-methods/309e-conversational-prototype.md](../200-methods/309e-conversational-prototype.md)
+  - Run after 266.publish.md exists
 
 ---
 
@@ -98,8 +99,7 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 | 3 | C | 3 | AI cluster — 147 is already satisfied entering this batch |
 | 4 | D | 4 | Four T200 approaches — all prereqs satisfied |
 | 5 | E | 6 | Testing branch — atoms then methods in strict order |
-| Gap sprint | — | 1 | Draft 266, then move step 26 into queue |
-| 6 | Step 26 | 1 | Unblocked — run write-piece skill on 309e |
+| Gap sprint | — | 2 | 266 rough draft done · run skill on 266, then 309e |
 
 ---
 
