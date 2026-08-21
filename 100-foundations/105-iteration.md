@@ -1,16 +1,65 @@
 # Iteration
-**Tier:** 100 — Recognize (Practice Atom) | **Arc:** Standalone | **Prereqs:** 103 | **Episode:** 1
 
-**Goal:** Recognize the difference between iteration and refinement — so you can identify whether a second version was shaped by what the first version revealed, or just improved on the same direction.
+**Tier:** 100 — Recognize (Practice Atom) | **Arc:** Standalone | **Prereqs:** None | **Wave:** 1
 
-**Concept:** The working assumption is that iteration means improvement — making each version better than the last through successive polish. The correction: refinement and iteration are different cognitive acts that produce different outcomes, and conflating them produces work that gets more polished but never more right. The mechanism: refinement optimizes the current direction. The second version is better than the first in the same way — cleaner, faster, more consistent. Iteration changes the direction based on what the first version revealed. The second version is different from the first in ways that came from learning, not preference. The distinguishing question is not how different v2 is from v1, but whether the difference was driven by what v1 taught you or by how you wanted it to be better.
+**Goal:** Recognize whether a second version was shaped by what the first version revealed — or just by a preference to make it better.
 
-The practical consequence: teams that refine instead of iterate put significant effort into directions that are wrong in ways the work would have revealed if the checkpoint had been real.
+**Goal line (for article header):** Most second versions are just better at being wrong.
 
-**The move:** Before starting a second version of anything, complete this sentence: "Version one taught me ___." If you can fill it in specifically, use that as the brief for v2. If you can't, you're about to refine — stop and name what the first version would need to reveal before a genuine second version makes sense.
+---
 
-**Don't confuse this with polish being wrong.** Refinement is a legitimate activity — sometimes a direction is right and it just needs to be made better. A false positive: a v2 that looks dramatically different from v1 feels like real iteration. But if the changes were driven by aesthetic judgment rather than a specific learning from v1, iteration didn't happen — just a bigger refinement step. The test is whether you can name the specific thing v1 revealed that made v2 different.
+You've built the second version, and it's better — cleaner, more thought-through, with visible improvements. That's real progress. The question isn't about how much it improved. The question is what made it different, and whether that difference came from learning.
 
-**Try Noticing:** Look at your last two versions of something — a design, document, proposal, or prototype. What did v1 teach you? If the answer is vague ("it needed to be cleaner") rather than specific ("users couldn't find the starting action"), that's refinement dressed as iteration.
+Most people skip that question. "Iteration" has come to mean "making another version," and that's not what it means. Refinement is making another version. Iteration is making a different version because the first one taught you something that changed what you were trying to do.
 
-**What Next:** If you want a structured way to use AI to accelerate the production step within each iteration cycle, read 147 (AI as Execution Partner). If iteration is surfacing assumptions faster than expected, return to 101 (Not All Assumptions Are Equal) to prioritize which findings to act on.
+This distinction gets collapsed in almost every project. You can refine a thing for months and reasonably believe you've been iterating the whole time. Most people do.
+
+Donald Schön spent years studying how professionals learn through their work. In *The Reflective Practitioner* (1983), he described what he called reflection-in-action: the practitioner "carries out an experiment which serves to generate both a new understanding of the phenomenon and a change in the situation." Not just a new understanding of what was wrong. A change in the situation itself, because what the practitioner learned changed what they understood the problem to be.
+
+That's the mechanism. Iteration isn't the same as doing it again. It's doing it again because you learned something specific enough to do it differently. The version isn't the unit of progress. The learning is.
+
+This is what distinguishes the two in practice. When you're genuinely iterating, the brief for v2 isn't "make this better." It's "address what this revealed." Those are different starting points, and they produce different work.
+
+Refinement keeps the direction and improves it. The second version is better in the same way: cleaner, faster, more consistent. Refinement is a legitimate activity. Sometimes a direction is right and the work genuinely needs another pass. The problem comes when a team believes they're iterating (responding to what they learned) when they're refining (executing the same direction more confidently). The difference is invisible from the outside. It shows up later, when the thing is polished and still wrong.
+
+The more confidently you refine in a wrong direction, the more polished the wrong thing gets.
+
+Jakob Nielsen tracked what happens when teams genuinely iterate — redesigning based on what user testing revealed about each version. Across four case studies (Nielsen, 1993), the median improvement from first to last version was 165%. Per iteration: 38%. That's not from prettier execution. That's from teams learning something specific each time and changing direction in response.
+
+---
+
+Before starting a second version of anything, complete this sentence: "Version one taught me ___."
+
+If you can fill it in specifically, use that as the brief for v2. Something like: "the form felt long because users couldn't see where they were in the process," or "the integration point we assumed was simple turned out to require manual steps," or "the ask wasn't clear until the third paragraph." The specific thing v1 revealed is now the problem v2 is designed to address.
+
+If you can't fill it in, you haven't learned something specific enough to change direction. Maybe v1 needs more time in the world first: shown to someone, tested against something real, or just used more. Or maybe refinement is the right move and the direction is sound. Worth knowing before you start. Refinement and iteration look the same from the outside, because the artifact changes either way. They feel different from the inside, if you ask.
+
+---
+
+The trickiest false positive is a v2 that looks dramatically different from v1: a complete restructure, a new frame, a whole different approach. This can feel like obvious evidence of real iteration. But Jansson and Smith (1991) found in their study of design fixation that designers tend to replicate the underlying problems of early concepts even when their solutions look very different. Their solutions were "more inflexible and less original" than those from designers who hadn't been anchored to a first direction. Visual difference doesn't guarantee directional change. The test stays the same: can you name the specific thing v1 revealed that made v2 different?
+
+Refinement isn't wrong. Sometimes the direction is right and the work needs to be made better. It might mean tighter transitions in a document, faster load states in a flow, or a prototype pushed to higher fidelity so the right things can be tested. All of it is real work. The distinction matters because when you don't know which one you're doing, you can't decide whether to test before the next version or ship before the next refinement.
+
+(If you've ever watched a team spend three weeks polishing a feature that a single user conversation would have redirected, you've watched this play out at full scale.)
+
+---
+
+Look at the last two versions of something you're working on — a document, feature spec, proposal, or prototype. Put them side by side. Write down in one sentence what v1 taught you.
+
+If the answer is vague ("it needed work," "the flow was off"), it's worth asking what v1 would have needed to reveal before a genuinely different v2 made sense. Not to stop the work. To notice where you are in the process, and whether the next version is earning its difference.
+
+---
+
+If iteration is surfacing assumptions faster than you expected, 101 (Not All Assumptions Are Equal) will help you prioritize which findings to act on. If you want a method for accelerating the production step within each cycle, 147 (AI as Execution Partner) covers that.
+
+---
+
+**Sources**
+
+Jansson, D. G., & Smith, S. M. (1991). Design fixation. *Design Studies, 12*(1), 3–11.
+
+Nielsen, J. (1993). Iterative design of user interfaces. *IEEE Software, 10*(6), 32–41. [Also available at nngroup.com]
+
+Schön, D. A. (1983). *The Reflective Practitioner: How Professionals Think in Action.* Basic Books.
+
+Dow, S., Glassco, A., Kass, J., Schwarz, M., Schwartz, D. L., & Klemmer, S. R. (2010). Parallel prototyping leads to better design results, more divergence, and increased self-efficacy. *ACM Transactions on Computer-Human Interaction, 17*(4), Article 18.

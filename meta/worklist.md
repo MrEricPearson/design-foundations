@@ -36,8 +36,8 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 ### Batch A — Phase 1 remainder · 2 items
 
-- [ ] **Step 5** · 📝 T100 · `105-iteration.md` — [100-foundations/105-iteration.md](../100-foundations/105-iteration.md)
-- [ ] **Step 6** · 📝 T100 · `178-prototype-vs-mvp.md` — [100-foundations/178-prototype-vs-mvp.md](../100-foundations/178-prototype-vs-mvp.md)
+- [x] **Step 5** · ✅ T100 · `105-iteration.md` — [100-foundations/105-iteration.md](../100-foundations/105-iteration.md)
+- [x] **Step 6** · ✅ T100 · `178-prototype-vs-mvp.md` — [100-foundations/178-prototype-vs-mvp.md](../100-foundations/178-prototype-vs-mvp.md)
 
 ---
 
