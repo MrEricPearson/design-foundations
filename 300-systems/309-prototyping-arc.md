@@ -1,156 +1,122 @@
-# Prototyping — Arc Overview and Approach Selection
-**Tier:** 300 — Orchestrate | **Arc:** Prototyping | **Prereqs:** 177 (What a Prototype Is), 132 (Prototype Fidelity), 113 (Defining Success Before You Start) | **Note:** Read this before choosing an approach piece. Each approach piece is self-contained — if you already know your approach, go directly to it.
+# Prototyping Arc — Selection and Sequencing
+**Tier:** 300 — Orchestrate | **Arc:** Prototyping | **Prereqs:** 177 (What a Prototype Is), 132 (Prototype Fidelity), 113 (Defining Success Before You Start) | **Parts:** 309a–309i (each publishes separately)
 
-**Arc Goal:** After completing the relevant approach piece in this arc, you will be able to match a prototype approach to a question — choosing not for speed or familiarity but because it is the cheapest method that answers what you're actually trying to find out.
+**Arc Goal:** Given a question you need to answer before committing, choose the prototype type that answers it with the least effort — not by familiarity, but by what the question requires.
 
-**Arc Trigger:** You need to test an assumption before building the thing that assumption drives. The approach selection choice is: what is the specific question, and what is the minimum artifact that can answer it?
-
----
-
-## Before you choose an approach
-
-Write the question this prototype will answer. One sentence. If you can't write it, don't start building yet — the question is the prototype's scope, and without it you'll build something that looks like a prototype but tests nothing specific.
+**Arc Trigger:** You need to test an assumption before committing to what it drives. The question isn't "should we prototype?" but "what are we trying to find out, and what's the minimum artifact that answers it?"
 
 ---
 
-## Choose Your Approach
+The question you're testing determines the prototype you need. Everything else is habit.
 
-The three approaches differ in what question they're best suited to test, what tools they require, and how much setup they need. They're not a progression — start with the one that fits your context.
+Harder to follow than it sounds, because the habit runs deep. You reach for the approach you know — before naming what it's meant to find out. The findings confirm the direction that was already favored. (If you've spent weeks building something a two-hour session could've answered, you've paid the cost this arc prevents.)
 
----
-
-### Approach A — Paper/Sketch → **309a**
-
-**Question it answers:** Is this conceptual direction right? Does this flow make sense?
-
-**The mechanism:** Roughness is a commitment signal. A sketch registers in the room as "this is a question" — reviewers engage with the direction, not the details. A polished artifact registers as "this is decided" — reviewers refine it. You only get directional feedback when the artifact communicates that direction is still open.
-
-**Use when:** The concept is unvalidated. If you're unsure which approach to use, start here — the cost is lowest and the question is most important.
-
-→ **Read 309a (Paper/Sketch Prototype)**
+The nine approaches differ in what question each answers. They're not a progression — start with the one that fits your question. Before you choose, write that question in one sentence. A prototype without a prior question has no scope.
 
 ---
 
-### Approach B — Lo-fi Wireframe → **309b**
+### Paper and sketch → 309a
 
-**Question it answers:** Can someone navigate to their goal through this structure?
-
-**The mechanism:** Visual design can compensate for structural failures — users follow aesthetic cues even when structure doesn't work. Lo-fi removes the compensation, exposing the structure to carry the full load. A participant who navigates correctly through a wireframe did so because the structure worked, not because it looked right. That's the only navigation finding worth acting on before visual design is built.
-
-**Use when:** Concept is validated (or clear); the question is navigational.
-
-→ **Read 309b (Lo-fi Wireframe Prototype)**
+Paper prototyping answers the earliest question: does this direction make sense? Buxton (2007) showed that rough artifacts signal openness — a sketch reads as "this is still a question," and reviewers engage with direction rather than details. Polished artifacts shift reviewers into refinement mode before direction is confirmed. Use when the concept is unvalidated. When you're unsure which approach fits, start here.
 
 ---
 
-### Approach C — AI-Generated → **309c**
+### Lo-fi wireframe → 309b
 
-**Question it answers:** Does the interaction behavior work the way we expect?
-
-**The mechanism:** AI generates plausible structure from patterns across millions of interfaces — it will look right before you've determined whether it is right. That plausibility anchors evaluation. The question-before-generation discipline breaks the anchor by giving you a specification to evaluate the output against, before the output influences what you think you're testing.
-
-**Use when:** Interaction behavior (not just structure) is what's being tested; concept and structure are already validated.
-
-→ **Read 309c (AI-Generated Prototype)**
+Lo-fi wireframes test navigation. Visual design compensates for structural failure — users follow aesthetic cues even when organization doesn't work. Stripping visual treatment forces structure to carry the full load. A person who navigates correctly through a wireframe did so because the structure worked. That's the only navigation finding worth acting on before visual design is built. Use when concept is clear and the question is flow.
 
 ---
 
-### Approach D — Wizard of Oz → **309d**
+### AI-generated → 309c
 
-**Question it answers:** Is this automated behavior valuable — before the automation is built?
-
-**The mechanism:** Users evaluate the *utility* of a behavior, not its implementation. A human producing an AI recommendation in real time has the same utility value as one generated by a model. Wizard of Oz separates "is this valuable?" from "can we build it?" — answering the first before paying for the second.
-
-**Use when:** Testing any behavior that would, in production, be system-generated — recommendations, smart defaults, automated categorization. Best used when automation cost is high and value is unproven.
-
-→ **Read 309d (Wizard of Oz Prototype)**
+AI-generated prototypes test interaction behavior, but require a prior specification. Write the question first. AI generates plausible structure from patterns, so output looks right before you've confirmed it is — the question is what you evaluate against. Use when interaction behavior, not concept or structure, is what remains unvalidated.
 
 ---
 
-### Approach E — Conversational → **309e**
+### Wizard of Oz → 309d
 
-**Question it answers:** Does the dialogue logic work — at every branching point, including the ones users take that you didn't plan?
-
-**The mechanism:** Conversation is a protocol. Both sides operate with expectations about turn-taking and appropriate responses to ambiguity. Conversational design breaks at the points where user input diverges from expectations. A live scripted test surfaces those points before the system is built.
-
-**Use when:** The interaction is primarily language-based — chatbots, voice assistants, guided dialogue flows.
-
-→ **Read 309e (Conversational Prototype)**
+Wizard of Oz tests whether automated behavior is valuable before automation is built. A person simulating system responses provides the same utility signal as the system itself. Paul and Rosala (2024) at Nielsen Norman Group describe the method's value as one separation: "is this valuable?" answered before "can we build it?" Use for recommendations, smart defaults, or generated outputs where value is unproven and automation cost is high.
 
 ---
 
-### Approach F — High-Fidelity → **309f**
+### Conversational → 309e
 
-**Question it answers:** Does the finished-quality experience create the intended response — emotional, cognitive, or behavioral?
-
-**The mechanism:** Fidelity communicates completion. High fidelity elicits execution-quality feedback (interaction feel, visual quality, emotional response). Low fidelity elicits structural feedback. Use high fidelity only when execution quality is what remains to be validated — concept and structure are sound, and the question is whether the realized version creates the right experience.
-
-**Use when:** Concept and structure are validated; the remaining question is about experience quality or emotional response. Do not use to validate concept or structure.
-
-→ **Read 309f (High-Fidelity Prototype)**
+Conversational prototypes test dialogue logic. Systems break where input diverges from what's expected — and a scripted session surfaces those breaks before the system exists. Use when the interaction is primarily language-based: chatbots, guided flows, voice.
 
 ---
 
-### Approach G — Service → **309g**
+### High-fidelity → 309f
 
-**Question it answers:** Does the full experience hold together across all touchpoints and handoffs?
-
-**The mechanism:** Most service failures happen between touchpoints, not within them. Digital prototypes only test within touchpoints. Service prototypes test the seams — the information transfers, timing expectations, and communication protocols that connect touchpoints. Finding a seam failure in a prototype costs a meeting; finding it in production costs user trust.
-
-**Use when:** The experience spans digital and non-digital touchpoints (phone, email, physical, third-party). When users might succeed at every individual touchpoint and still fail at the journey.
-
-→ **Read 309g (Service Prototype)**
+High-fidelity prototypes test the finished experience — emotional response, interaction feel, visual quality. Fidelity signals completion, shifting reviewers from structural feedback to execution feedback. Use only after concept and structure are sound. Using high-fidelity before both are confirmed gets you polish feedback on an unresolved foundation.
 
 ---
 
-### Approach H — Parallel → **309h**
+### Service → 309g
 
-**Question it answers:** Which direction works — when we don't know enough to choose before testing?
-
-**The mechanism:** Single-direction testing optimizes the direction you're in. Parallel testing generates comparative data — which direction worked better, not just whether a single direction can be made to work. Comparative data reveals mental model preferences that single-direction testing can't surface.
-
-**Use when:** The team has divergent intuitions about what will work, and there are at least two genuinely different directions (not variations of the same direction).
-
-→ **Read 309h (Parallel Prototyping)**
+Service prototypes test seams. Most service failures happen between touchpoints — in handoffs, information transfers, and timing dependencies. Shostack (1984) formalized this: failure points live in backstage dependencies, not the visible moments where failures appear. Use when the experience spans digital and non-digital touchpoints, or when someone could succeed at every individual step and still fail at the journey.
 
 ---
 
-### Approach I — Build to Think → **309i**
+### Parallel → 309h
 
-**Question it answers:** What is actually true about this problem — at a level of concreteness that design artifacts can't reach?
-
-**The mechanism:** Some questions are only answerable by engaging with reality. Building creates encounters with the actual system — API behavior, data edge cases, latency — that designing cannot anticipate. Each encounter with reality converts an assumption into a decision made with evidence. The artifact is disposable; the decisions are the output.
-
-**Use when:** The design question involves dynamic content, real-time data, complex state, or AI-generated outputs that behave unpredictably until running. When "simple" design decisions keep revealing hidden complexity.
-
-→ **Read 309i (Build to Think)**
+Parallel prototypes test which direction works when you don't know enough to choose. Dow, Heddleston, and Klemmer (2010) at Stanford found that testing multiple directions simultaneously produced better results, more divergent thinking, and higher self-efficacy than developing a single direction. The mechanism is comparative data — which direction worked better, not just whether one can be made to work. Use when you have genuinely divergent intuitions and at least two distinct directions. Variations don't count.
 
 ---
 
-## Vendor Software and Non-Custom Dev Context
+### Build to think → 309i
 
-If you're working with vendor software or a third-party system, you typically can't prototype the interface itself. What you can prototype:
+Build to think tests what's actually true at a level of concreteness design artifacts can't reach. Cagan (2026) distinguishes "build to learn" from "build to earn" — functional prototypes with real data reveal behavioral patterns static mockups miss. Use when the question involves dynamic content, complex state, or behavior that's unpredictable until the system is running.
 
-- **Adjacent experiences:** onboarding flows, help documentation, communication that wraps the tool, training artifacts
-- **Configuration logic:** map the decision path for how the tool would be set up for different user needs (paper or wireframe works here)
-- **Handoffs:** prototype what happens before a user reaches the vendor tool and what happens after — those experiences are yours to design
+---
+
+### Working with vendor software or third-party systems
+
+You typically can't prototype the interface itself. What you can prototype: onboarding and communication wrapping the tool; configuration decision paths (paper or wireframe works here); and handoffs before and after a user reaches the vendor tool. Those experiences are yours to design.
 
 → See 220 (Working in Vendor Software) for the full constraint path.
 
 ---
 
-## Arc-Level Prompts
+**Try This — 20 minutes**
 
-**Try This:** Take something you're currently working on that has at least one unresolved question about how it will work. Write the question. Choose the approach above that fits your constraint. Build the minimum prototype that answers it — not the best-looking prototype, the fastest one that answers the question. Stop when you can answer the question you wrote, not when the prototype feels complete.
+Take something you're working on now with at least one unresolved question about how it will function. Write the question in one sentence. Use the list above to identify the approach that fits. Build the minimum version that answers it — the fastest, not the most complete. Stop when the question is answered.
 
-**Take This Further:** In the next 2-5 days, bring the prototype to one person who'll use what you're building. Don't walk them through it — let them engage with it first, then ask: "What did you expect to happen when you did that?" After, write one sentence: what did you learn that changed your understanding of the question you were testing?
+---
 
-**Judgment Exercise:** This arc's key assumption: there is a question to answer before committing — and the prototype exists to answer it, not to demonstrate progress. Here is the situation where that assumption fails: a prototype that was built to learn has been shown externally and is now being treated as a commitment. Teams are asking "when will we get this?" Leadership has demoed it. Stakeholders have expectations built around what they saw. The prototype is now load-bearing — people are planning against it.
+**If it worked:** You have a finding that confirms or challenges an assumption, and you know what to do next because of it.
 
-In this situation, two things are true simultaneously: (1) there are still unvalidated assumptions the prototype didn't test; (2) the cost of surfacing those assumptions has increased because people are already committed to the direction.
+---
 
-What would you change about your approach — and what would you preserve from the arc?
+**Over the next 2-5 days,** bring the prototype to one person who'll use what you're building. Let them engage first. Ask: "What did you expect to happen when you did that?" Then write one sentence: what changed your understanding of the question you were testing?
 
-*(A well-formed answer preserves the discipline: the prototype revealed something, there is still something it didn't test, and that thing still needs testing before it becomes a commitment. What changes: the test is now an internal validation, not a stakeholder reveal, because the audience that needs to remain open to change is the development team, not the stakeholders. What gets cut: the assumption that stakeholders can still redirect. The arc doesn't guarantee you can undo commitments already made; it tells you what questions remain unanswered inside those commitments.)*
+---
 
-**What Next:** When you're ready to test the prototype with a real person, read 215a (Moderated Usability Session) for a live facilitated session, or 215b (Unmoderated Usability Testing) if participants work through it independently. If the prototype reveals a flow that crosses team boundaries, read 303 (One Feature, Three Handoffs). If you want to evaluate the prototype yourself before testing it with others, read 216 (Heuristic Evaluation).
+**Judgment Exercise**
+
+This arc's key assumption: the prototype exists to answer a specific question, and that question is written before building starts.
+
+Here's where that assumption fails: a prototype built to learn is now treated as a commitment. Teams are asking when they'll get it. Leadership has demoed it. Stakeholders have built expectations around what they saw. The prototype is load-bearing. Unvalidated assumptions still exist, and the cost of surfacing them has risen.
+
+What would you change about your approach — and what would you preserve?
+
+*(A well-formed answer preserves the discipline but changes the audience: the test is now internal, because the development team needs to stay open to findings — not the stakeholders already committed. The arc doesn't undo commitments. It tells you what questions remain inside them.)*
+
+---
+
+**What Next**
+
+When you're ready to test with a real person, read 215a (Moderated Usability Session) or 215b (Unmoderated Usability Testing). If the prototype reveals a cross-team flow, read 303 (One Feature, Three Handoffs). To evaluate the prototype yourself first, read 216 (Heuristic Evaluation).
+
+---
+
+**Sources**
+
+Buxton, B. (2007). *Sketching User Experiences: Getting the Design Right and the Right Design*. Morgan Kaufmann. Rough artifacts signal openness to exploration; high-fidelity prototypes foreclose alternatives prematurely by appearing finished.
+
+Cagan, M. (2026, April 16). Build to learn vs. build to earn. Silicon Valley Product Group. https://www.svpg.com/build-to-learn-vs-build-to-earn/ Functional prototypes with real data generate behavioral learning static mockups cannot produce.
+
+Dow, S., Heddleston, K., & Klemmer, S. (2010). Parallel prototyping leads to better design results, more divergence, and increased self-efficacy. *ACM Transactions on Computer-Human Interaction*, 17(4). https://dl.acm.org/doi/10.1145/1879831.1879836 Teams testing multiple directions simultaneously outperformed teams refining a single direction on design quality, divergence, and self-efficacy.
+
+Paul, S., & Rosala, M. (2024, April 19). The Wizard of Oz method in UX. Nielsen Norman Group. https://www.nngroup.com/articles/wizard-of-oz/ Wizard of Oz prototyping validates utility before building the system that delivers it, lowering investment risk into complex technologies.
+
+Shostack, G. L. (1984). Designing services that deliver. *Harvard Business Review*, 62(1), 133–139. Service blueprinting identified that failure points live in backstage dependencies between touchpoints — not in the customer-facing moments where failures appear.
