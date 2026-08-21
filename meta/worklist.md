@@ -43,7 +43,7 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 ### Batch B — Arc entry + first MVP cluster · 6 items
 
-- [ ] **Step 7** · 📝 T100 · `113-defining-success.md` — [100-foundations/113-defining-success.md](../100-foundations/113-defining-success.md)
+- [x] **Step 7** · ✅ T100 · `113-defining-success.md` — [100-foundations/113-defining-success.md](../100-foundations/113-defining-success.md)
 - [ ] **Step 8** · 📝 T300 · `309-prototyping-arc.md` — [300-systems/309-prototyping-arc.md](../300-systems/309-prototyping-arc.md)
   - Arc header only — decision framework that frames all 309x approaches. Confirm scope with write-piece skill before starting.
 - [ ] **Step 9** · 📝 T200 · `309a-paper-sketch-prototype.md` — [200-methods/309a-paper-sketch-prototype.md](../200-methods/309a-paper-sketch-prototype.md)
