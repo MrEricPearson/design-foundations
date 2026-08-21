@@ -48,7 +48,7 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 - [x] **Step 9** · ✅ T200 · `309a-paper-sketch-prototype.md` — [200-methods/309a-paper-sketch-prototype.md](../200-methods/309a-paper-sketch-prototype.md)
 - [x] **Step 10** · ✅ T100 · `158-task-statement-design.md` — [100-foundations/158-task-statement-design.md](../100-foundations/158-task-statement-design.md)
 - [x] **Step 11** · ✅ T200 · `309b-lofi-wireframe-prototype.md` — [200-methods/309b-lofi-wireframe-prototype.md](../200-methods/309b-lofi-wireframe-prototype.md)
-- [ ] **Step 12** · 📝 T100 · `147-ai-as-execution-partner.md` — [100-foundations/147-ai-as-execution-partner.md](../100-foundations/147-ai-as-execution-partner.md)
+- [x] **Step 12** · ✅ T100 · `147-ai-as-execution-partner.md` — [100-foundations/147-ai-as-execution-partner.md](../100-foundations/147-ai-as-execution-partner.md)
 
 ---
 
