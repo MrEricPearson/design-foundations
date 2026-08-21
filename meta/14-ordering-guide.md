@@ -167,6 +167,7 @@ Consistent with the library's philosophy: this is a recommended path, not a mand
 | No UI as Design Goal | 266-no-ui-as-design-goal.md | 3 | 169, 147, 238 |
 | The Serendipity Problem | 267-serendipity-problem.md | 3 | 172, 147 |
 | Skeuomorphism vs. Abstraction | 268-skeuomorphism-vs-abstraction.md | 3 | 169, 126 |
+| The Design Style Spectrum | 269-design-style-spectrum.md | 3 | 268, 126 |
 
 ---
 
@@ -312,17 +313,46 @@ Tier 200 pieces may publish after their prerequisite atoms are live. Recommended
 8. **Content modeling method** (after content architecture atoms 179-183):
    - 221-content-modeling.md (can publish as soon as 179, 180, 181, 183 are live)
 
-9. **Prototyping cluster** (after atoms 177, 178 are live — Wave 2):
-   - 309-prototyping-arc.md (arc header — in 300-systems/; can publish simultaneously with first approach piece)
-   - 309a-paper-sketch-prototype.md (widest reach; start here)
-   - 309b-lofi-wireframe-prototype.md (after 309a; parallel with 309c)
-   - 309c-ai-generated-prototype.md (requires 219 as hard prereq; parallel with 309b)
-   - 309d-wizard-of-oz-prototype.md (can publish after 309a)
-   - 309e-conversational-prototype.md (can publish after 309a; requires 147)
-   - 309f-high-fidelity-prototype.md (recommended after 309a and 309b; addresses "when to use high fidelity")
-   - 309g-service-prototype.md (no ordering constraint relative to other 309 pieces)
-   - 309h-parallel-prototyping.md (can publish any time after 309a)
-   - 309i-build-to-think.md (can publish any time after 309c; requires 147)
+9. **Prototyping cluster — JIT-ordered 26-step sequence** (after atoms 177, 178 are live — Wave 2):
+
+   JIT rule: each prereq atom publishes immediately before its first consumer. Once introduced, it's not re-listed.
+
+   **Phase 1 — Concepts and Framing**
+   1. 106-sketching.md — prereq for 132 and 309a; must lead the sequence
+   2. 132-prototype-fidelity.md — first use: 106; prereq for 177 and all 309x approaches
+   3. 103-attachment-is-the-real-risk.md — prereq for 177
+   4. 177-what-a-prototype-is.md — first use: 103, 132
+   5. 105-iteration.md — prereq for 178
+   6. 178-prototype-vs-mvp.md — first use: 177, 105
+
+   **Phase 2 — Arc Entry**
+   7. 113-defining-success-before-you-start.md — prereq for 309 arc, 309a/b/c/g, 215a
+   8. 309-prototyping-arc.md (300-systems/) — first use: 113; arc header and decision framework
+
+   **Phase 3 — MVP Core (steps 9–15; delivers Q3 goal)**
+   9. 309a-paper-sketch-prototype.md — MVP; prereqs 106 · 132 · 113 all satisfied
+   10. 158-task-statement-design.md — prereq for 309b, 309f, 215a, 215b
+   11. 309b-lofi-wireframe-prototype.md — MVP; first use: 158
+   12. 147-ai-as-execution-partner.md — prereq for 219, 309c, 309e, 309i
+   13. 219-ai-for-design-work.md — T200 method prereq for 309c; first use: 147
+   14. 309c-ai-generated-prototype.md — MVP; first use: 219
+   15. 309i-build-to-think.md — MVP; prereqs 147 · 132 · 177 all satisfied; dev-audience priority
+
+   **Phase 4 — Complete Arc (steps 16–19; 309e deferred — see below)**
+   16. 309d-wizard-of-oz-prototype.md — prereqs 177 · 132 satisfied
+   17. 309f-high-fidelity-prototype.md — prereqs 158 · 177 · 132 satisfied
+   18. 309g-service-prototype.md — prereqs 113 · 177 · 132 satisfied
+   19. 309h-parallel-prototyping.md — prereqs 177 · 132 satisfied
+
+   **Phase 5 — Testing Branch (steps 20–25; 113 and 158 already satisfied above)**
+   20. 123-what-usability-testing-is.md — prereq for 174, 215a, 215b
+   21. 157-why-you-dont-help-during-testing.md — prereq for 215a, 215b
+   22. 159-observation-effect.md — prereq for 215a
+   23. 174-think-aloud-protocol.md — first use: 123; prereq for 215a
+   24. 215a-moderated-usability-session.md — first use: 123, 157, 159, 174 (113 · 158 already satisfied)
+   25. 215b-unmoderated-usability-testing.md — all prereqs satisfied (123 · 157 · 158)
+
+   **⚠ BLOCKED — Step 26:** 309e-conversational-prototype.md requires gap piece **266-no-ui-as-design-goal.md** (not yet drafted). Draft 266 before publishing 309e. All other prereqs (147 · 177 · 132) are already satisfied by step 12.
 
 ### Wave 4 — Tier 300 arcs (after Wave 3 dependencies are live)
 

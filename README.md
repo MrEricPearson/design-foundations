@@ -63,7 +63,7 @@ No piece requires another piece to make sense. Read what's relevant. Skip what i
 ## What's in here
 
 ```
-100-foundations/   132 atomic concepts    Recognize-tier; no prerequisites required
+100-foundations/   133 atomic concepts    Recognize-tier; no prerequisites required
 200-methods/        40 practical methods   Practice-tier; builds on 100-level concepts  
 300-systems/        38 judgment arcs       Orchestrate-tier; multi-part, audience-specific
 standalone/          4 conceptual pieces   No tier; read anytime
@@ -91,7 +91,7 @@ Clusters within `100-foundations/`:
 - **Cognitive interface** (237–243): Cognitive overload, progressive disclosure, accessibility, empty states, error states, onboarding
 - **Research methods** (244–246): Qualitative vs. quantitative, mixed methods, sample size
 - **Cognitive science** (247–264): Dual process theory, framing effect, loss aversion, sunk cost, Jakob's Law, Hick's Law, correlation vs. causation, survivorship bias
-- **Interface cognition & AI shifts** (265–268, upcoming): Cost of novelty, no-UI design goal, serendipity problem in AI-curated interfaces, skeuomorphism vs. abstraction
+- **Interface cognition & AI shifts** (265–269, upcoming): Cost of novelty, no-UI design goal, serendipity problem in AI-curated interfaces, skeuomorphism vs. abstraction, design style spectrum
 
 ### Tier 200 — Methods you can run
 

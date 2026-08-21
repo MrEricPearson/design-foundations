@@ -1,7 +1,7 @@
 # Master Outline — Design Foundations Manual
 Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown explicitly.
 [DRAFTED] = content exists. [GAP] = identified, not yet written.
-**Last updated:** 2026-08-20 (v11) — Second-pass gap analysis arcs 317-334 added (PM arcs 317-321, Custom Dev arcs 322-325, Non-Custom Dev arcs 326-329, Cross-audience arcs 330-334 including new Arc 334 Solution-First Rapid Ideation). v9 note preserved below.
+**Last updated:** 2026-08-20 (v12) — Atom 269 (Design Style Spectrum) added to Cluster L; separate from 268 to avoid complexity overload. Second-pass gap analysis arcs 317-334 added (PM arcs 317-321, Custom Dev arcs 322-325, Non-Custom Dev arcs 326-329, Cross-audience arcs 330-334 including new Arc 334 Solution-First Rapid Ideation). v9 note preserved below.
 **v9 note:** 2026-08-10 (v9) — Audience-specialized arcs 311-316 added (3 audience-specific + 3 cross-audience). New Cluster J (Cognitive Science / Behavioral Economics, atoms 247-260) and Cluster K (Data Literacy, atoms 261-264). Audience start-here meta files (16-18) updated with arc references. v8 note preserved below.
 **v8 note:** 2026-08-10 (v8) — World-class quality elevation: all atoms 100–148 fully rewritten to T100/Practice Atom standard (prior knowledge hook, causal mechanism, observational Try Noticing, false-positive diagnostics). 22 new T100 atoms added (225–246: bias cluster, ethics/dark patterns, cognitive interface, quant/qual methods). 2 new T200 methods added (222 reward loop design, 223 form design method). 116/117/119 superseded: redirects to canonical 242/241/238. Phase 2 atoms (148–200b) confirmed at world-class standard. v7 (same date): Phase 3 depth pass — see v7 note.
 
@@ -169,6 +169,7 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 137. No UI as Design Goal [GAP — 100-foundations/266-no-ui-as-design-goal.md — prereqs: 169, 147, 238; invisible design, ambient computing, intent-based interfaces; blocks 308, 309e]
 138. The Serendipity Problem [GAP — 100-foundations/267-serendipity-problem.md — prereqs: 172, 147; you can't discover what you don't know to search for in AI-curated interfaces; blocks 308, 313]
 139. Skeuomorphism vs. Abstraction [GAP — 100-foundations/268-skeuomorphism-vs-abstraction.md — prereqs: 169, 126; when physical metaphor helps vs. constrains; blocks 312, 313]
+140. The Design Style Spectrum [GAP — 100-foundations/269-design-style-spectrum.md — prereqs: 268, 126; what each major style (skeuomorphic, flat, layered/elevation, neumorphic, brutalist) signals to users and when style-function mismatch creates friction; blocks 312, 313]
 
 ---
 
