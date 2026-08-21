@@ -55,7 +55,7 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 ### Batch C — AI cluster + MVP close · 4 items
 
 - [x] **Step 13** · ✅ T200 · `219-ai-for-design-work.md` — [200-methods/219-ai-for-design-work.md](../200-methods/219-ai-for-design-work.md)
-- [ ] **Step 14** · 📝 T200 · `309c-ai-generated-prototype.md` — [200-methods/309c-ai-generated-prototype.md](../200-methods/309c-ai-generated-prototype.md)
+- [x] **Step 14** · ✅ T200 · `309c-ai-generated-prototype.md` — [200-methods/309c-ai-generated-prototype.md](../200-methods/309c-ai-generated-prototype.md)
 - [ ] **Step 15** · 📝 T200 · `309i-build-to-think.md` — [200-methods/309i-build-to-think.md](../200-methods/309i-build-to-think.md)
 
 ---

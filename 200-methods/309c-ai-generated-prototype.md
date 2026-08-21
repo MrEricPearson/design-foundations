@@ -1,50 +1,82 @@
-# 309c — AI-Generated Prototype
-**Tier:** 200 — Practice | **Arc:** Prototyping (see 309-prototyping-arc.md for approach selection) | **Prereqs:** 177 (What a Prototype Is), 132 (Prototype Fidelity), 147 (AI as Execution Partner), 219 (AI for Design Work), 113 (Defining Success Before You Start) | **Note:** Fast-production approach — highest judgment demand; define the question before generating anything. See 309a first if concept hasn't been validated.
+# The Fastest Way to Test the Wrong Thing
+**Tier:** 200 — Practice | **Arc:** Prototyping (309) | **Prereqs:** 177 (What a Prototype Is), 132 (Prototype Fidelity), 147 (AI as Execution Partner), 158 (Task Statement Design) | **Audience:** General
 
-**Goal:** After this piece, you will be able to use AI tools to generate a working prototype faster than building it by hand — while making all evaluative decisions yourself.
+*It generated fast. Nobody stopped to ask whether it was generating the right thing.*
 
-**Prior knowledge hook:** The model most people apply to AI-assisted work: generate first, evaluate after. This works well for drafts, code scaffolding, and content outlines — the generated artifact is a starting point that the practitioner refines. Applied to prototyping, it produces a failure mode: AI generates plausible structure from patterns across millions of interfaces, producing something that looks exactly right at a glance. That visual plausibility becomes a selection pressure against revising it — once you see a polished, well-structured looking prototype, "is this the right question to be testing?" becomes much harder to ask. Plausibility anchors before validation happens. The question must come before the generation, not after it.
+---
 
-**Trigger:** Use this approach when: (a) the question requires interaction behavior to test — not just visual structure, but something that actually responds; or (b) you need to move quickly to a testable artifact and have already defined the question precisely and validated the concept. If the concept hasn't been validated, use 309a first. If the question is navigational structure rather than interaction behavior, 309b is faster and easier to revise.
+You ran the session. People reacted to the prototype: someone noted the button placement, another flagged the error state, two said it felt intuitive. Forty minutes in, someone raised a concern about the overall flow. The room moved on. The debrief was waiting.
 
-**Why this works:** AI compresses the production step. What takes hours of wireframing or coding takes minutes of prompting. The mechanism that makes this work — and the same mechanism that makes it fail when misapplied: AI generates structure from patterns it knows across millions of existing interfaces. The output will be plausible. It will look like real UI. It will be approximately right. The problem is that "approximately right" and "answers your specific question" are different conditions. AI generates for the general case; prototyping tests a specific question. The discipline of writing the question before prompting is not a best practice — it is the step that keeps the practitioner in the design role and the AI in the production role. Skip it and those roles reverse.
+What nobody confirmed: whether the prototype was testing the question you actually needed to answer. The session gave you feedback on what AI built. That's not the same thing.
 
-**Method:**
-1. **Write the question before opening any tool.** On paper: "This prototype will test [specific question]." One sentence. If you can't state the question in one sentence, don't start generating yet. AI will fill the gap with something — but what it fills the gap with is based on what's typical, not what's needed.
-2. **Define the scope.** List: one user goal, the minimum screens or states required to test it, and what you will explicitly exclude. Write these down. The scope constrains the generation; without it, generated prototypes tend to be comprehensive rather than targeted.
-3. **Prompt for function, not aesthetics.** Describe what the interaction needs to do, not how it should look: "Build a prototype that allows a user to [goal] with these screens: [list each screen and what happens on it]." Don't describe visual design unless visual design is the thing you're testing.
-4. **Evaluate the output against your question.** Before doing anything else: does what was generated actually allow you to test what you wrote in step 1? If the generated UI routes users through a flow you didn't intend, revise the prompt — not your question. The question is the specification; the prompt is the attempt to communicate it to the AI.
-5. **Label every screen.** At the top of every generated screen, add visible text: "Prototype — not final design." This is not optional when the prototype will be shown to anyone who didn't watch it being built. Realistic-looking AI-generated UI triggers approval responses, not learning responses. The label keeps the session in learning mode.
-6. **Document what's simulated.** Note explicitly: what data is fake, what interactions are stubbed, what the prototype doesn't do. Share this as context with anyone reviewing the prototype — not buried in an email, but visible in the session.
+---
 
-**Artifact:** A functional or functional-looking prototype with a documented question it's designed to answer, the scope written down, all screens labeled as prototypes, and a documented list of what's simulated.
+If you've used AI for drafts, outlines, or code scaffolding, you know the generate-then-evaluate approach: generate first, then refine. That works in most contexts. The instinct to apply it to prototyping is right. What it produces there is a specific, predictable failure mode. Knowing it in advance is what keeps the method from inverting on you.
 
-**Watchout:** Starting with the AI tool before the question is defined. The reason smart practitioners do this: in most AI-assisted work, generating a draft and then refining it is faster and better than specifying in advance. They're applying a correct principle (generate, then evaluate) in a context where it inverts the result. In prototyping, the generated artifact anchors cognition before the question is evaluated — the prototype looks real, feels real, and revising it to answer a different question feels like waste. Once the generation has happened, the question gets shaped around the artifact rather than the artifact around the question. The question defines the prototype; the AI generates the artifact that tests it. In that order, every time.
+Use this approach when the question requires interaction behavior to test: something that responds, not just something that looks like it responds. A paper sketch (309a) handles conceptual direction. A lo-fi wireframe (309b) handles navigational structure. Come here when you need real interaction: a filter that updates, a form that validates, a modal that fires.
 
-## When You Can't Run the Full Version
+---
 
-**If AI-generated code doesn't behave correctly or the generation produces something you can't evaluate:** step back to 309b (Lo-fi Wireframe Prototype) for the same test. A navigational question can be tested without working code. Return to 309c only if the question specifically requires interaction behavior that can't be simulated visually.
+AI compresses the production step. What takes hours of coded UI takes minutes of prompting. That speed is real and useful. The risk is in what happens cognitively the moment you see the output.
 
-**What you still get:** by having written the question and scope before attempting generation, you've done the foundational judgment work. The wireframe approach tests a different question (structure vs. behavior), but the question-first discipline carries forward.
+Tversky and Kahneman (1974) showed the mechanism: people estimate from an initial value and adjust, but the adjustment is never enough. The anchor dominates. In prototyping, when AI generates something visually finished before you've confirmed the structure is right, that polished output becomes the reference point for everything that follows. Wang and Brown (2025) at Nielsen Norman Group confirmed the consequence: showing polished AI prototypes "without proper framing may sabotage your stakeholder communication." The polish changes the kind of thinking people bring to the room.
 
-**What you give up:** the ability to test realistic interaction responses — the thing a user does and what happens next, at speed, with real-feeling feedback. If that's the specific question, you'll need to come back to 309c when the generation issues are resolved.
+The discipline that protects against it is one sentence, written before you open any tool.
 
-**Don't do this:** use a realistic-looking generated prototype without the "Prototype — not final design" labels. AI-generated UI looks finished enough to be mistaken for a real product, especially by stakeholders who weren't present during generation. Without labels, prototype reviews become premature approval sessions.
+---
 
-## At Enterprise Scale
+**Step 1: Write the question.** On paper — not in the prompt window. "This prototype will test [specific question]." One sentence. Two sentences means two questions. Plan two tests. AI fills a vague scope with what's typical. What's typical isn't always what you're testing.
 
-**Regulated environments:** in healthcare, finance, government, and other regulated contexts where prototypes containing real-looking data cannot be shared externally — generate the prototype with clearly fake data, test it internally, and document what it revealed. The output that leaves the team is the learning (a written summary of what the prototype surfaced), not the artifact itself.
+**Step 2: Define the scope.** List: one user goal, the minimum screens required to test it, and what you'll explicitly exclude. Without clear scope, AI generates comprehensive rather than targeted: a full product when you needed one flow.
 
-**Stakeholder reviews of AI-generated prototypes:** the realism of AI-generated UI creates a specific enterprise failure mode — leadership sees a polished-looking screen and believes the product is further along than it is, or treats the prototype review as a design sign-off rather than a test. The "Prototype — not final design" label matters most precisely when the prototype looks most finished. At enterprise scale, consider adding a visible banner at the top of every screen during review sessions, not just a small label.
+**Step 3: Prompt for function, not aesthetics.** Describe what the interaction needs to do: "A prototype that lets a user [goal] across: [list each screen and what happens]." Huei-Hsin Wang (2025) found that vague prompts reliably produce poor layouts: excessive elements, poor visual hierarchy. Describe the function, not the appearance.
 
-**Try This:** For something you're currently working on: write the question on paper. List the minimum screens. Prompt for function ("a prototype that allows a user to [goal] with these screens: [list]"). Before sharing the output with anyone, evaluate it against your question — does it test what you wrote? Label every screen. Show it to one person and watch what they do. Note where the generated behavior does something you didn't expect — that's where the AI's interpretation of your prompt diverged from your intent.
+**Step 4: Evaluate against the question.** Before doing anything else: does what was generated test what you wrote in step 1? If the flow routes users somewhere you didn't intend, revise the prompt — not the question. The question is the specification. The prompt is your attempt to communicate it.
 
-**Proof:** You've preserved the judgment layer if you can answer, before sharing the prototype: "What question was this prototype designed to test? Does the generated output actually test it?" Both questions must be answerable before the session runs.
+**Step 5: Label every screen.** At the top of each generated screen: "Prototype — not final design." Visible, not small. AI-generated UI looks finished enough that stakeholders who weren't present during generation may treat it as a product preview. The label keeps the session in learning mode.
 
-The false positive: a feedback session that produces responses to the generated interface — users react to what was generated, the team discusses the reactions, and decisions are made based on the feedback. This looks like a successful prototype session. The question it didn't answer: was this the right interface to test? If the AI's structural choices shaped what users responded to, you got feedback on the AI's interpretation of your domain — not on your design judgment. Successful AI-generated prototyping requires distinguishing between "we got reactions to what was generated" and "we tested the question we needed to answer."
+---
 
-**Take This Further:** In the next 2-5 days, run the same prototype with a second participant who has less context on what you're building. Watch for the moment they treat the prototype as a real product rather than a test artifact. Write one sentence: at what point did the prototype's realism stop being an asset and start creating the wrong expectations?
+When you're done: a working prototype with a documented question, a scope written down, every screen labeled, and a list of what's simulated. That last item matters when sharing with anyone who wasn't present during generation. What the prototype doesn't do should be visible before the session starts.
 
-**After you've run this yourself:** This approach IS the AI path. The judgment layer is steps 1-2 (defining the question and scope before generating), step 4 (evaluating whether the output tests the right thing), and step 5 (labeling). If you've done those steps yourself, you've preserved the judgment the method is designed to develop. If you skipped them, the AI made the judgment calls — and you'll see the results in the feedback session.
+---
 
-**What Next:** When you're ready to test the prototype with a real participant, read 215a (Moderated Usability Session) for a live facilitated session, or 215b (Unmoderated Usability Testing) if participants work independently. If the prototype surfaces a systemic pattern (a consistent failure mode across multiple states), read 216 (Heuristic Evaluation) to map it to a known design principle. If the prototype reveals a deeper uncertainty about who you're designing for, read 301 (From a Vague Ask to a Real Persona).
+The failure mode that catches experienced practitioners: opening the tool before writing the question. It's not carelessness. Generate-then-evaluate works in nearly every other AI-assisted context. They've applied it correctly dozens of times, and so they apply it here. The generated prototype looks real, feels navigable, and revising it to test a different question feels like waste. The question gets shaped around the artifact rather than the artifact around the question. (If you've watched a team debate a generated layout before anyone asked what it was supposed to answer, you've seen this.)
+
+Kate Moran (2026) at NNGroup puts the accountability clearly: when you specify what to build, AI is responsible for execution quality. What to test, and whether the output actually tests it — that's yours. Write the question before you generate anything. Every time, in that order.
+
+---
+
+For a feature or flow you're currently working on: write the question on paper before opening any tool. List the minimum screens. Prompt for function: "a prototype that lets a user [goal] across these screens: [list]." Evaluate the output against your question: does it actually test what you wrote? Label every screen. Show it to one person and watch what they do. Note where the generated behavior did something you didn't expect. That's where AI's interpretation of your prompt diverged from your intent.
+
+Give the whole process 45 minutes. You should have a testable prototype today.
+
+---
+
+You've preserved the judgment layer if you can answer, before sharing: "What question was this prototype designed to test?" If you can answer clearly, you're ready. If the honest answer is "I'm not sure," the prototype ran ahead of you.
+
+The false positive: a session where participants react, decisions get made, and it looks like success. What it didn't confirm: whether you were testing the right structure. A productive-looking session can still not answer your question.
+
+---
+
+Over the next few days, show the same prototype to someone with less context. Watch for when they treat it as a finished product. Write one sentence: at what point did the realism stop being useful and start creating the wrong expectation?
+
+---
+
+This approach is the AI path. The generation in step 3 is what AI contributes. If you've defined the question, scoped the minimum interaction, and evaluated whether the output tests it, the judgment layer was yours throughout. That was the point.
+
+---
+
+When you're ready to test with a real participant, read 215a (Moderated Usability Session) for a live facilitated session, or 215b (Unmoderated Usability Testing) if participants work independently. If the prototype surfaces a consistent pattern across multiple states, read 216 (Heuristic Evaluation) to map it to a known structural principle. If the prototype reveals a deeper uncertainty about who you're designing for, read 301 (From a Vague Ask to a Real Persona).
+
+---
+
+**Sources**
+
+Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. *Science, 185*(4157), 1124–1131. Finding: people estimate uncertain quantities by starting from an initial value and adjusting — but the adjustment is systematically insufficient. The anchor dominates even when the estimator knows it's arbitrary and is motivated to set it aside.
+
+Wang, H-H., & Brown, M. (2025, October 24). Good from afar, but far from good: AI prototyping in real design contexts. Nielsen Norman Group. https://www.nngroup.com/articles/ai-prototyping/ Finding: showing polished AI-generated prototypes without proper framing "may sabotage stakeholder communication"; AI tools lack the judgment and nuance of an experienced practitioner; the approach works best with people who already understand the craft.
+
+Moran, K. (2026, March 27). GenUI vs. vibe coding: Who's designing? Nielsen Norman Group. https://www.nngroup.com/articles/genui-vs-vibe/ Finding: when practitioners specify what to build, AI is responsible for execution quality; the distinct failure modes are poor execution (vibe coding) vs. poor judgment (genUI); design decision authority determines which failure mode applies.
+
+Wang, H-H. (2025, December 5). Prompt to design interfaces: Why vague prompts fail and how to fix them. Nielsen Norman Group. https://www.nngroup.com/articles/vague-prototyping/ Finding: vague prompts produce "Frankenstein layouts" — excessive elements, poor hierarchy, redundant components, counterintuitive information flows; "good design decisions can't be automated" and AI remains a tool requiring human judgment and expertise.
