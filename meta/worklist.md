@@ -1,6 +1,6 @@
 # Worklist — Prototyping Path
 **Focus:** Q3 prototyping curriculum · 26-step JIT sequence
-**Workflow:** run write-piece skill (via loop) per item, in queue order, until publish.md exists for each step
+**Workflow:** run write-piece skill (via loop) per item, in strict step order, until publish.md exists for each step
 **Last updated:** 2026-08-21
 
 ---
@@ -41,32 +41,27 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 ---
 
-### Batch B — Arc entry · 2 items
+### Batch B — Arc entry + first MVP cluster · 6 items
 
 - [ ] **Step 7** · 📝 T100 · `113-defining-success.md` — [100-foundations/113-defining-success.md](../100-foundations/113-defining-success.md)
 - [ ] **Step 8** · 📝 T300 · `309-prototyping-arc.md` — [300-systems/309-prototyping-arc.md](../300-systems/309-prototyping-arc.md)
-  - Note: T300 arc header — confirm with write-piece skill whether to draft full arc or just arc header in this pass
-
----
-
-### Batch C — MVP core atoms · 3 items
-
-- [ ] **Step 9 prereq** · 📝 T100 · `147-ai-as-execution-partner.md` — [100-foundations/147-ai-as-execution-partner.md](../100-foundations/147-ai-as-execution-partner.md)
-- [ ] **Step 10** · 📝 T100 · `158-task-statement-design.md` — [100-foundations/158-task-statement-design.md](../100-foundations/158-task-statement-design.md)
-- [ ] **Step 12** · 📝 T200 · `219-ai-for-design-work.md` — [200-methods/219-ai-for-design-work.md](../200-methods/219-ai-for-design-work.md)
-
----
-
-### Batch D — MVP approaches · 4 items
-
+  - Arc header only — decision framework that frames all 309x approaches. Confirm scope with write-piece skill before starting.
 - [ ] **Step 9** · 📝 T200 · `309a-paper-sketch-prototype.md` — [200-methods/309a-paper-sketch-prototype.md](../200-methods/309a-paper-sketch-prototype.md)
+- [ ] **Step 10** · 📝 T100 · `158-task-statement-design.md` — [100-foundations/158-task-statement-design.md](../100-foundations/158-task-statement-design.md)
 - [ ] **Step 11** · 📝 T200 · `309b-lofi-wireframe-prototype.md` — [200-methods/309b-lofi-wireframe-prototype.md](../200-methods/309b-lofi-wireframe-prototype.md)
+- [ ] **Step 12** · 📝 T100 · `147-ai-as-execution-partner.md` — [100-foundations/147-ai-as-execution-partner.md](../100-foundations/147-ai-as-execution-partner.md)
+
+---
+
+### Batch C — AI cluster + MVP close · 4 items
+
+- [ ] **Step 13** · 📝 T200 · `219-ai-for-design-work.md` — [200-methods/219-ai-for-design-work.md](../200-methods/219-ai-for-design-work.md)
 - [ ] **Step 14** · 📝 T200 · `309c-ai-generated-prototype.md` — [200-methods/309c-ai-generated-prototype.md](../200-methods/309c-ai-generated-prototype.md)
 - [ ] **Step 15** · 📝 T200 · `309i-build-to-think.md` — [200-methods/309i-build-to-think.md](../200-methods/309i-build-to-think.md)
 
 ---
 
-### Batch E — Complete arc approaches · 4 items
+### Batch D — Complete arc · 4 items
 
 - [ ] **Step 16** · 📝 T200 · `309d-wizard-of-oz-prototype.md` — [200-methods/309d-wizard-of-oz-prototype.md](../200-methods/309d-wizard-of-oz-prototype.md)
 - [ ] **Step 17** · 📝 T200 · `309f-high-fidelity-prototype.md` — [200-methods/309f-high-fidelity-prototype.md](../200-methods/309f-high-fidelity-prototype.md)
@@ -75,53 +70,39 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 ---
 
-### Batch F — Testing branch atoms · 4 items
+### Batch E — Testing branch · 6 items
 
 - [ ] **Step 20** · 📝 T100 · `123-what-usability-testing-is.md` — [100-foundations/123-what-usability-testing-is.md](../100-foundations/123-what-usability-testing-is.md)
 - [ ] **Step 21** · 📝 T100 · `157-why-you-dont-help-during-testing.md` — [100-foundations/157-why-you-dont-help-during-testing.md](../100-foundations/157-why-you-dont-help-during-testing.md)
 - [ ] **Step 22** · 📝 T100 · `159-observation-effect.md` — [100-foundations/159-observation-effect.md](../100-foundations/159-observation-effect.md)
 - [ ] **Step 23** · 📝 T100 · `174-think-aloud-protocol.md` — [100-foundations/174-think-aloud-protocol.md](../100-foundations/174-think-aloud-protocol.md)
-
----
-
-### Batch G — Testing branch methods · 2 items
-
 - [ ] **Step 24** · 📝 T200 · `215a-moderated-usability-session.md` — [200-methods/215a-moderated-usability-session.md](../200-methods/215a-moderated-usability-session.md)
 - [ ] **Step 25** · 📝 T200 · `215b-unmoderated-usability-testing.md` — [200-methods/215b-unmoderated-usability-testing.md](../200-methods/215b-unmoderated-usability-testing.md)
 
 ---
 
-### Deferred — blocked on gap piece
+### Step 26 — blocked · do not queue
 
 - [ ] **Step 26** · 🚫 T200 · `309e-conversational-prototype.md` — [200-methods/309e-conversational-prototype.md](../200-methods/309e-conversational-prototype.md)
-  - **Blocker:** gap piece `266-no-ui-as-design-goal.md` must be drafted first
-  - **Gap file to create:** [100-foundations/266-no-ui-as-design-goal.md](../100-foundations/266-no-ui-as-design-goal.md) · T100 · prereqs: 169, 147, 238
+  - **Blocker:** draft `266-no-ui-as-design-goal.md` first · T100 · prereqs: 169, 147, 238
+  - Once 266 is written and at `ready` status, move step 26 into queue after step 25
 
 ---
 
 ## Batch sizing guidance for loop runs
 
-A single loop session can typically handle 3–4 T100 atoms or 2–3 T200/T300 methods before quality starts to slip. Suggested burst structure:
-
-| Session | Batches | Items | Est. time |
+| Session | Batch | Items | Notes |
 |---|---|---|---|
-| 1 | A + start B | 3–4 | 60–90 min |
-| 2 | B remainder + C | 3–4 | 75–90 min |
-| 3 | D | 4 | 90 min |
-| 4 | E | 4 | 90 min |
-| 5 | F | 4 | 60–75 min |
-| 6 | G | 2 | 45–60 min |
-| Gap sprint | Draft 266 | 1 | 45 min |
-| 7 | Step 26 (unblocked) | 1 | 45 min |
-
----
-
-## Notes on the T300 arc (Step 8)
-
-The `309-prototyping-arc.md` file is a T300 arc header, not a standalone method. When you reach it in the queue, tell the write-piece skill you're drafting a T300 arc header only (not a full arc with all parts) — confirm the scope before starting. The arc parts (309a–309i) publish as separate T200 method files; the arc header is the decision framework that frames all of them.
+| 1 | A | 2 | Two T100 atoms — quick first run to validate loop behavior |
+| 2 | B | 6 | Mixed T100/T200/T300 — be at keyboard for T300 scope question at step 8 |
+| 3 | C | 3 | AI cluster — 147 is already satisfied entering this batch |
+| 4 | D | 4 | Four T200 approaches — all prereqs satisfied |
+| 5 | E | 6 | Testing branch — atoms then methods in strict order |
+| Gap sprint | — | 1 | Draft 266, then move step 26 into queue |
+| 6 | Step 26 | 1 | Unblocked — run write-piece skill on 309e |
 
 ---
 
 ## After the prototyping path
 
-Once all 26 steps are at `ready` status, the natural continuation is Cluster L atoms (265–269) and then the remaining T200/T300 pieces from the broader ordering guide (`meta/14-ordering-guide.md`). That worklist expansion can be added here when the prototyping path is complete.
+Once all 26 steps are at `ready` status, continue with Cluster L atoms (265–269) and the remainder of the ordering guide (`meta/14-ordering-guide.md`). Expand this worklist then.
