@@ -1,16 +1,62 @@
-# Task Statement Design
-**Tier:** 100 — Recognize | **Note:** Prereq for 215a (Moderated Usability Session) and 215b (Unmoderated Usability Testing); pairs with 174 (Think-Aloud Protocol)
+# When Your Task Statement Gives Away the Answer
+**Tier:** 100 — Recognize | **Note:** Prereq for 215a (Moderated Usability Testing) and 215b (Unmoderated Usability Testing); pairs with 174 (Think-Aloud Protocol) and 157 (Why You Don't Help During Testing)
 
-**Goal:** Recognize whether a usability task statement gives away the expected path — because a task that reveals its answer tests memory, not usability.
+**Goal:** Recognize when a usability task statement reveals the interface path — because a task that names the answer tests memory, not usability.
 
-**Concept:** A usability task statement tells a participant what to accomplish without telling them how. The quality of the task statement determines the quality of the data it produces. A task that names the feature you want tested ("use the new filter to find all open tickets") tells participants where to look before they've looked. A task that describes the goal without naming the path ("find all tickets that haven't been responded to yet") lets participants reveal whether the interface is clear enough to navigate without hints. The first tests whether participants can follow instructions. The second tests whether the interface communicates its own structure.
+*You wrote it to be clear. What you wrote was a hint.*
 
-**You'll see it when:** A task statement contains the name of a menu item, a button label, or a feature name that users would have to find on their own. Once it's in the task, it's a waypoint — not a destination. Participants follow the named thing, not their own navigation instincts.
+---
 
-**The signal:** Read the task statement and ask: "Does this sentence name anything that appears in the interface?" If yes, that's a hint. Try rewriting the task in terms of what the person wants to accomplish — the goal, not the mechanism. "Book a room for tomorrow afternoon" is a goal. "Use the booking calendar to schedule a room for tomorrow afternoon" is a mechanism hint that invalidates room-finding data.
+The participants in your last usability test found the feature quickly. What you might not know is that your task told them where to look.
 
-**Don't confuse this with:** The need for task statements to be specific and concrete. Specificity matters — vague tasks produce vague data. The test is not whether the task is specific but whether it specifies a goal or a path. "Find the January invoice for Acme Corp and download a PDF of it" is specific without naming where invoices live or what the download button is called.
+When you write "Use the filter to find all tickets assigned to your team," you've named the feature. The participant isn't finding "filter" — they're following an instruction that already contains the word. Those are different cognitive tasks. One produces data about whether the interface is clear. The other confirms that people can read.
 
-**Try Noticing:** Review the last set of usability tasks you ran or saw. For each task, underline any word that matches something visible in the interface — a button label, a menu item, a feature name. Every underlined word is a potential spoiler. Rewrite the task around the goal the labeled element is designed to achieve.
+A usability task statement's job is to describe what the person wants to accomplish without describing how the interface accomplishes it. The quality of your task determines the quality of what you learn. A task that names a feature, a button label, or a menu item has done the participant's navigation work before the session starts. The participant finds the thing. You record a success. And you walk away with a much more confident answer to a much less useful question.
 
-**What Next:** When writing tasks for a live session, read 215a (Moderated Usability Session) for session structure and the facilitator's role in keeping tasks honest. When writing tasks for unmoderated testing — where no facilitator can clarify — read 215b (Unmoderated Usability Testing), which has specific guidance on self-contained task statement requirements.
+Raluca Budiu (2016) at Nielsen Norman Group studied this mechanism directly. In one study, participants were asked to find an "iPad keypad" — a less common way to say keyboard. Most typed "keypad" into the search box, even though the interface used "keyboard." The task's word stuck. Participants didn't navigate to the right label. They searched for the term the task had just handed them. The test measured whether the label in the task matched a label in the interface. Not whether anyone would find the feature on their own.
+
+Amy Schade (2017), also at NNGroup, names the failure plainly. Tasks that contain interface terminology test "reading comprehension and ability to find matching words, rather than your labels and navigation." The study runs. Participants find what you asked them to find. You conclude the feature is discoverable. But what you've confirmed is narrower: that people can follow an instruction containing the right word. Which isn't the same thing, and isn't what the test was for.
+
+---
+
+You'll recognize this pattern once you know what to look for. A leading task reads like directions: "Go to Account Settings and update your notification preferences." A goal-oriented task reads like a situation: "You've been getting too many email notifications. Take care of that." One tells participants where to go. The other lets the interface tell them. The difference is everything the test is supposed to measure.
+
+The same problem appears in softer forms: naming a section, a workflow stage, a status label, a tab. Any noun in the task that exists as a visible label on screen becomes a waypoint. Participants move toward those terms rather than exploring how the interface structures itself. You get completion rates. You lose the data that would make those rates meaningful.
+
+(If you've written task scripts that look more like step-by-step tutorials than situations, you've done this. Most people do, the first few times. The tasks feel specific and helpful, which is the exact property that makes them less useful.)
+
+---
+
+The signal is one question. Read the task. Does any word in it appear as a visible label somewhere in the interface? Button text, menu item, section heading, feature name, status badge, tab label. Every match is doing the participant's work. The test is measuring label-matching, not discoverability. That's the sentence to hold onto.
+
+Marieke McCloskey (2014) at NNGroup frames the standard directly: effective tasks specify "what to accomplish and why, but never how." The "how" lives in the interface labels, the navigation structure, the button text. The goal lives in what the participant cared about before they opened the screen.
+
+---
+
+This isn't an argument for vague tasks. Vague tasks produce vague data, and "do something with a document" is not a usability task. Specific tasks are what you're after — specific about the person's situation and goal, not about the interface path they should take to get there.
+
+"Find the January invoice for Acme Corp and download a PDF of it" is specific. It names a document, a company, a file format. None of those appear as labels in most invoicing interfaces. The participant still has to find where invoices live. That's the test.
+
+The false positive: thinking any concrete detail in a task is a hint. It isn't. Dates, amounts, names, document titles: these add context the participant needs. They don't reveal interface structure. A menu label does. The check is always the same: does this word appear on screen?
+
+---
+
+Pull up your next session's task list, or the last one you ran. For each task, find every word that also appears as a visible label somewhere in the interface: menu items, button text, section headings, status labels, feature names. Every match is doing the participant's navigation for them. The test is measuring word-matching for those terms, not whether the interface communicates on its own.
+
+Then rewrite each flagged task from the participant's goal. What did they want to accomplish before they knew this interface existed? That question is the task. The interface is supposed to answer it, and the test's only job is to make sure nothing else does it first.
+
+If you found matches, those tasks were coaching the answer. That's not a flaw in how you've been testing — it's just the thing you now know to check.
+
+---
+
+When you're ready to run a live session, 215a (Moderated Usability Testing) covers session structure and how to handle participants who ask clarifying questions about the task itself. When you're planning unmoderated testing — where no one can step in to clarify — 215b (Unmoderated Usability Testing) covers what self-contained task statements require when there's no facilitator in the room.
+
+---
+
+**Sources**
+
+Budiu, R. (2016). Priming and User Interfaces. Nielsen Norman Group. https://www.nngroup.com/articles/priming/
+
+McCloskey, M. (2014). Turn User Goals into Task Scenarios for Usability Testing. Nielsen Norman Group. https://www.nngroup.com/articles/task-scenarios-usability-testing/
+
+Schade, A. (2017). Write Better Qualitative Usability Tasks. Nielsen Norman Group. https://www.nngroup.com/articles/better-usability-tasks/
