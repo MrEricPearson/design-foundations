@@ -1,50 +1,72 @@
 # 309b — Lo-fi Wireframe Prototype
-**Tier:** 200 — Practice | **Arc:** Prototyping (see 309-prototyping-arc.md for approach selection) | **Prereqs:** 177 (What a Prototype Is), 132 (Prototype Fidelity), 158 (Task Statement Design), 113 (Defining Success Before You Start) | **Note:** Navigational testing approach — assumes the concept has been validated; see 309a first if concept is still open.
+**Tier:** 200 — Practice | **Arc:** Prototyping | **Prereqs:** 177, 132, 158, 113
 
-**Goal:** After this piece, you will be able to build a navigable wireframe prototype that tests whether a user can reach their goal — without visual design choices obscuring whether the structure itself works.
+**Goal:** After this piece, you can build a navigable wireframe prototype that tests whether a user can reach their goal — without visual design choices obscuring whether the structure itself works.
 
-**Prior knowledge hook:** The wrong model: visual design choices (color, typography, spacing) communicate priority — and therefore, testing a polished design is more rigorous than testing a stripped-down one, because the fully realized artifact better represents what users will see. The mechanism this model misses: visual design can compensate for structural failures. A beautifully styled interface gives users aesthetic orientation even when the navigation structure is broken — they follow visual cues to the next action rather than structural ones. Strip the visual design and the structure must carry the full cognitive load. If the structure fails without visual guidance, it will fail in production too — just invisibly, until someone asks why users aren't completing tasks.
+---
 
-**Trigger:** Use this approach when the question is navigational: "Can someone get from here to what they need?" or "Is the decision path between states clear?" The concept direction is already validated (or known) and the question is now about structure and flow. If the concept is still open, use 309a first. If the question requires working interaction behavior, use 309c.
+You already know that different fidelity levels serve different questions. That's the problem. What's easy to miss is that visual design doesn't just change how a prototype looks — it changes what the test can actually measure.
 
-**Why this works:** When visual hierarchy is present, users are guided through it — a primary button, a bold heading, a highlighted path — and may navigate successfully due to aesthetic cues rather than structural ones. The navigation structure didn't have to work; the visual design did the work instead. Without visual design, cognitive guidance is purely structural. A participant who navigates correctly through a lo-fi wireframe did so because the structure worked — not because a visual cue directed them. That's the only kind of navigation finding worth acting on before the visual design is built. Lo-fi testing surfaces structural failures that high-fidelity testing hides.
+When visual hierarchy is present, participants use it. A primary button, a bold heading, a highlighted path — these guide users through an interface even when the navigation structure underneath is ambiguous or wrong. Kurosu and Kashimura (1995) established this directly: the correlation between aesthetics and *perceived* ease of use is stronger than the correlation between aesthetics and *actual* ease of use. Users experience an attractive interface as more usable than it is. In a test, that means a participant can navigate successfully because a visual cue pointed them forward — not because your structure worked.
 
-**Method:**
-1. **Write the task statement.** Before building anything: write the task a participant would attempt. Per 158 (Task Statement Design) — describe the goal without naming the path: "Find the place where you'd submit a request for equipment." Not "click on the Equipment menu." One task per prototype session.
-2. **Map the minimum flow.** List every screen or state the participant must pass through to complete the task, start to finish. Don't design screens that aren't on this path — scope ruthlessly. If you're tempted to add screens for edge cases before anyone has tested the main path, stop.
-3. **Build at box-and-label fidelity.** Rectangles for UI elements. Text labels for controls. Boxes with an "X" for images. No styling. No color. No visual hierarchy refinements. If you find yourself adding visual polish, add a text note instead: "visual design goes here." Keep it ugly on purpose — ugly signals "this is still in progress."
-4. **Connect the screens.** Create one clickable hot-spot per meaningful interaction in the task path. Label each hot-spot with what it triggers: "tap → goes to screen 3." Don't create hot-spots for things outside the scope of the task. If tapping something leads to a screen that isn't part of the test, label it "out of scope" — don't hide it and don't build it.
-5. **Label everything as a prototype.** At the top of every screen: "Wireframe — not final design." This is not optional when stakeholders are in the room. A wireframe that looks like it's waiting for color will be treated as waiting for color. A wireframe labeled as a wireframe will be treated as a test.
-6. **Label fake data.** If any screen shows example data, label it "example data — not real" on the screen. Data that looks realistic in a wireframe gets evaluated for accuracy, not for structure.
+Strip the visual design, and you remove that compensation. The structure has to carry the full cognitive load. (If you've ever polished a prototype to have it ready for a stakeholder review, then watched users completely miss the main action — you've seen this exact dynamic.) Virzi, Sokolov, and Karis (1996) compared paper prototypes and high-fidelity versions of the same products and found substantially the same usability problems in both conditions. Lo-fi testing doesn't produce weaker findings. It surfaces structural failures without visual design covering them first.
 
-**Artifact:** A navigable click-through — minimum 3-5 connected states covering the core task path — at box-and-label fidelity, with a documented task statement, all screens labeled as wireframes, and all example data labeled as fake.
+**Strip the visual design and you find out if the structure works.**
 
-**Watchout:** Building beyond the task path before testing the main path. The reason smart practitioners do this: thoroughness is a professional value — a document that covers all cases is more rigorous than one that covers only the main case. Applying that correct principle to a prototype scope creates a test where participants can wander off the task path in multiple directions, where deviation is harder to interpret (was it the structure or the extra screens?), and where the finding on the main path is diluted by findings from paths that haven't been prioritized. The task path is the minimum scope needed to answer the test question. Everything else is test scope that will distort the finding on the question you actually needed to answer.
+---
 
-## When You Don't Have a Design Tool
+Use this when the question is navigational: can someone get from where they start to what they need? The concept direction is already validated. What's still open is whether the path through it is clear. If the concept is still uncertain, you're not ready for this yet. If the question requires working interaction behavior — data loading, conditional states, error handling — you need something functional. This sits between those two: a connected structure, testable today, before any visual work has happened.
 
-"Wireframe tool" does not mean "Figma." A navigable click-through can be built in:
-- Miro (connect frames with links)
-- Google Slides or PowerPoint (connect shapes to other slides with hyperlinks)
-- Printed pages, taped to a wall, pointed to during a session
-- Any other tool that connects labeled states in a sequence
+---
 
-The artifact is a connected sequence of labeled states. The tool is irrelevant.
+Start with the task statement. Before anything gets drawn: write the task a participant would attempt. It describes a goal, not a path: "find where you'd submit a request for equipment," not "click on Equipment." The task statement is the scope of the prototype. Everything in it either serves the task or doesn't belong there.
 
-## At Enterprise Scale
+From the task, map the minimum flow. List every screen or state a participant must pass through to complete the task — start to finish, main path only. Stop. Don't build screens that aren't on this path. The temptation to cover edge cases before testing the main route is real, but a prototype that branches in five directions makes it much harder to interpret where someone went wrong.
 
-**Multi-stakeholder review:** If multiple stakeholders need to review the same wireframe prototype and can't be in the same session: record a walk-through (narrate while clicking through it) and share the recording. Stakeholders reviewing a live prototype together tend to debate the prototype; stakeholders reviewing async tend to flag different issues independently — both are valid, and the async approach often surfaces more diverse feedback because people aren't anchoring to what others say first.
+Build at box-and-label fidelity. Rectangles for UI elements. Text labels for controls. No color. No styling. No visual hierarchy. If you catch yourself adding polish, write a note instead: "visual design goes here." Keep it rough — participants engage with structure rather than react to aesthetics.
 
-**Multi-role flows:** If the task path involves multiple user roles (an approver receives something a requester submits, for example), build one task per role in the same prototype — connected by the state that passes between them. Don't build one "combined" flow that tries to show what everyone experiences simultaneously; that creates a prototype no single person can navigate from their own perspective.
+Connect the screens. One clickable hot-spot per meaningful interaction in the task path. Label each with what it triggers: "tap → screen 3." Don't build hot-spots for things outside the task scope. If something leads somewhere not being tested, label it "out of scope" and move on.
 
-**Try This:** For something you're currently working on, write a task statement. List the screens on the task path — start to finish, main path only. Build boxes-and-labels for each screen. Connect them with one hot-spot per interaction. Show it to one person today: give them the task statement, put the prototype in front of them, and watch without explaining what to do. Note where they hesitate or go the wrong way. Those are the structure problems.
+Label every screen as a prototype. At the top: "Wireframe — not final design." This isn't optional when stakeholders are present. A wireframe without a label gets treated like it's waiting for color. A labeled wireframe gets treated like a test.
 
-**Proof:** When a participant gets stuck at a specific screen and can't figure out what to tap next — that's navigational confusion the wireframe surfaced before visual design was built. When a participant moves through without hesitation, the structure works.
+Label any example data. Data that looks real in a wireframe gets evaluated for accuracy rather than for the structural question you're actually testing.
 
-The false positive: a participant who completes the task because they're familiar with similar products — they navigated by importing mental models from elsewhere, not because your structure worked. A participant who succeeds immediately and confidently without ever hesitating is less diagnostic than one who pauses, considers, and makes the right choice. To distinguish: after the session, ask "what were you thinking when you decided to tap [element] on screen 2?" If the answer is "that's just where I'd expect it to be," the structure succeeded because it matched convention, not because it worked on its own terms. Both outcomes are valuable — but they mean different things.
+---
 
-**Take This Further:** In the next 2-3 days, run the same wireframe with a second participant who has a different level of familiarity with the product area — someone newer to it, or someone with a different role. Write one sentence: what did the second participant get stuck on that the first didn't? What does that tell you about which assumptions in your structure aren't universal?
+What you end up with: a navigable click-through, 3–5 connected states at box-and-label fidelity, covering the core task path. It includes the documented task statement, all screens labeled as wireframes, and any example data marked as fake. Research consistently supports this format regardless of tool: Wiklund, Thurrott, and Dumas (1992) found no meaningful difference in error rates across prototypes of varying fidelity compared to an actual product, and Sefelin, Tscheligi, and Giller (2003) found that both paper and computer-based lo-fi prototypes surface all major issue categories. The tool is irrelevant. Build in Figma, Miro, PowerPoint, or with printed pages on a table. The connected structure is the artifact.
 
-**After you've run this yourself:** Describe the task path to an AI tool and ask it to play the role of a first-time user: "Starting on screen 1, which says [description], I'm trying to [task]. Where do I go?" Walk through the AI's narration against your click-through and note where the AI's instinct diverges from what your prototype routes them to. Divergences are navigation structure questions worth testing with a real participant.
+---
 
-**What Next:** When the structure is validated, if you need to test the interaction behavior (not just the structure), move to 309c (AI-Generated Prototype) for a functional version. If you're ready to test with a participant in a structured session, read 215a (Moderated Usability Session) or 215b (Unmoderated Usability Testing). If the wireframe reveals confusion at a specific handoff point, read 303 (One Feature, Three Handoffs).
+One failure mode reliably breaks the test before it starts: building beyond the task path before testing the main path. Thoroughness is a real professional value, and a more complete prototype feels more rigorous. Applying that instinct to prototype scope creates a test where participants can wander off in multiple directions, deviation is harder to read, and the finding on the main path gets diluted by findings from paths that weren't prioritized. The task path is the minimum needed to answer the actual test question. Everything else distorts the finding you needed most.
+
+---
+
+For something you're currently working on: write a task statement for one core flow. List the screens on the task path — main path only. Build boxes-and-labels for each screen. Connect them with one hot-spot per interaction. Show it to one person today: give them the task statement, put the prototype in front of them, and watch without explaining anything. Note where they hesitate or go the wrong direction. Those are the structural problems.
+
+This takes about 30–45 minutes to build and 20 minutes to run.
+
+---
+
+If a participant gets stuck at a specific screen and can't figure out what to do next, the wireframe found a structural problem before visual design was built. One thing to watch: a participant who completes the task immediately and confidently, without pausing, may have navigated by importing mental models from other products rather than by following your structure. After the session, ask what they were thinking at a key decision point. "That's just where I'd expect it to be" and "I followed the label" mean different things.
+
+---
+
+In the next 2–3 days, run the same wireframe with a second participant who has different familiarity with the product area. Write one sentence. What did the second participant get stuck on that the first didn't? What does that tell you about which structural assumptions aren't universal?
+
+After you've run this yourself: describe the task path to an AI tool and ask it to play the role of a first-time user. "Starting on screen 1, which shows [description], I'm trying to [task], where do I go?" Walk the AI's narration against your click-through. Where its instinct diverges from what your prototype routes them to: navigation questions worth testing with a real participant.
+
+---
+
+When the structure is validated and the question shifts to interaction behavior — what happens when states change, data loads, or conditions aren't met — move to 309c. If you're ready to run a structured session with a participant, read 215a (Moderated Usability Session) or 215b (Unmoderated Usability Testing). If the wireframe surfaces confusion at a specific handoff between roles or systems, read 303 (One Feature, Three Handoffs).
+
+---
+
+**Sources**
+
+Kurosu, M., & Kashimura, K. (1995). Apparent usability vs. inherent usability: Experimental analysis on the determinants of the apparent usability. *CHI '95 Extended Abstracts on Human Factors in Computing Systems*. ACM.
+
+Virzi, R. A., Sokolov, J. L., & Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. *Proceedings of the CHI Conference on Human Factors in Computing Systems*. ACM.
+
+Wiklund, M. E., Thurrott, C., & Dumas, J. S. (1992). Does the fidelity of software prototypes affect the perception of usability? *Proceedings of the Human Factors Society 36th Annual Meeting*.
+
+Sefelin, R., Tscheligi, M., & Giller, V. (2003). Paper prototyping — what is it good for? A comparison of paper- and computer-based low-fidelity prototyping. *CHI '03 Extended Abstracts on Human Factors in Computing Systems*. ACM.
