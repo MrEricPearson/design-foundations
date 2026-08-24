@@ -64,28 +64,27 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 - [x] **Step 16** · ✅ T200 · `309d-wizard-of-oz-prototype.md` — [200-methods/309d-wizard-of-oz-prototype.md](../200-methods/309d-wizard-of-oz-prototype.md)
 - [x] **Step 17** · ✅ T200 · `309f-high-fidelity-prototype.md` — [200-methods/309f-high-fidelity-prototype.md](../200-methods/309f-high-fidelity-prototype.md)
-- [ ] **Step 18** · 📝 T200 · `309g-service-prototype.md` — [200-methods/309g-service-prototype.md](../200-methods/309g-service-prototype.md)
-- [ ] **Step 19** · 📝 T200 · `309h-parallel-prototyping.md` — [200-methods/309h-parallel-prototyping.md](../200-methods/309h-parallel-prototyping.md)
+- [x] **Step 18** · ✅ T200 · `309g-service-prototype.md` — [200-methods/309g-service-prototype.md](../200-methods/309g-service-prototype.md)
+- [x] **Step 19** · ✅ T200 · `309h-parallel-prototyping.md` — [200-methods/309h-parallel-prototyping.md](../200-methods/309h-parallel-prototyping.md)
 
 ---
 
 ### Batch E — Testing branch · 6 items
 
-- [ ] **Step 20** · 📝 T100 · `123-what-usability-testing-is.md` — [100-foundations/123-what-usability-testing-is.md](../100-foundations/123-what-usability-testing-is.md)
-- [ ] **Step 21** · 📝 T100 · `157-why-you-dont-help-during-testing.md` — [100-foundations/157-why-you-dont-help-during-testing.md](../100-foundations/157-why-you-dont-help-during-testing.md)
-- [ ] **Step 22** · 📝 T100 · `159-observation-effect.md` — [100-foundations/159-observation-effect.md](../100-foundations/159-observation-effect.md)
-- [ ] **Step 23** · 📝 T100 · `174-think-aloud-protocol.md` — [100-foundations/174-think-aloud-protocol.md](../100-foundations/174-think-aloud-protocol.md)
-- [ ] **Step 24** · 📝 T200 · `215a-moderated-usability-session.md` — [200-methods/215a-moderated-usability-session.md](../200-methods/215a-moderated-usability-session.md)
-- [ ] **Step 25** · 📝 T200 · `215b-unmoderated-usability-testing.md` — [200-methods/215b-unmoderated-usability-testing.md](../200-methods/215b-unmoderated-usability-testing.md)
+- [x] **Step 20** · ✅ T100 · `123-what-usability-testing-is.md` — [100-foundations/123-what-usability-testing-is.md](../100-foundations/123-what-usability-testing-is.md)
+- [x] **Step 21** · ✅ T100 · `157-why-you-dont-help-during-testing.md` — [100-foundations/157-why-you-dont-help-during-testing.md](../100-foundations/157-why-you-dont-help-during-testing.md)
+- [x] **Step 22** · ✅ T100 · `159-observation-effect.md` — [100-foundations/159-observation-effect.md](../100-foundations/159-observation-effect.md)
+- [x] **Step 23** · ✅ T100 · `174-think-aloud-protocol.md` — [100-foundations/174-think-aloud-protocol.md](../100-foundations/174-think-aloud-protocol.md)
+- [x] **Step 24** · ✅ T200 · `215a-moderated-usability-session.md` — [200-methods/215a-moderated-usability-session.md](../200-methods/215a-moderated-usability-session.md)
+- [x] **Step 25** · ✅ T200 · `215b-unmoderated-usability-testing.md` — [200-methods/215b-unmoderated-usability-testing.md](../200-methods/215b-unmoderated-usability-testing.md)
 
 ---
 
 ### Batch F addition — gap piece + deferred step · 2 items
 
-- [ ] **Gap** · 📝 T100 · `266-no-ui-as-design-goal.md` — [100-foundations/266-no-ui-as-design-goal.md](../100-foundations/266-no-ui-as-design-goal.md)
-  - Rough draft in place · run write-piece skill to produce publish.md before step 26
-- [ ] **Step 26** · 📝 T200 · `309e-conversational-prototype.md` — [200-methods/309e-conversational-prototype.md](../200-methods/309e-conversational-prototype.md)
-  - Run after 266.publish.md exists
+- [x] **Gap** · ✅ T100 · `266-no-ui-as-design-goal.md` — [100-foundations/266-no-ui-as-design-goal.md](../100-foundations/266-no-ui-as-design-goal.md)
+  - New draft completed 2026-08-24 with all deliverables (article + publish.md + QA report) in 01-drafts/100-foundations/
+- [x] **Step 26** · ✅ T200 · `309e-conversational-prototype.md` — [200-methods/309e-conversational-prototype.md](../200-methods/309e-conversational-prototype.md)
 
 ---
 

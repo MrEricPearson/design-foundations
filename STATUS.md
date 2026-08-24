@@ -146,6 +146,10 @@
 | 244 | Qualitative vs. Quantitative Research | [244-qualitative-vs-quantitative-research.md](100-foundations/244-qualitative-vs-quantitative-research.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereqs: 103, 225 |
 | 245 | Mixed Methods | [245-mixed-methods.md](100-foundations/245-mixed-methods.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereq: 244 |
 | 246 | Sample Size and What It Means | [246-sample-size-and-what-it-means.md](100-foundations/246-sample-size-and-what-it-means.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereqs: 244, 245 |
+| 265 | The Cost of Novelty | [265-cost-of-novelty.md](01-drafts/100-foundations/265-cost-of-novelty.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 255, 126 |
+| 267 | The Serendipity Problem | [267-serendipity-problem.md](01-drafts/100-foundations/267-serendipity-problem.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 172, 147 |
+| 268 | Skeuomorphism vs. Abstraction | [268-skeuomorphism-vs-abstraction.md](01-drafts/100-foundations/268-skeuomorphism-vs-abstraction.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 169, 126 |
+| 269 | The Design Style Spectrum | [269-design-style-spectrum.md](01-drafts/100-foundations/269-design-style-spectrum.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 268, 126 |
 
 ---
 
