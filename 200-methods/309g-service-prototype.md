@@ -1,38 +1,88 @@
-# Service Prototype
-**Tier:** 200 — Practice | **Arc:** 309 (Prototyping) | **Prereqs:** 177, 132, 113 | **Wave:** 4
+# Testing the Seams Before They Break
+**Tier:** 200 — Practice | **Arc:** Prototyping (309) | **Prereqs:** 177 (What a Prototype Is), 132 (Prototype Fidelity), 113 (Defining Success Before You Start) | **Audience:** General
 
-**Goal:** Run a service prototype session that tests the end-to-end user experience across digital and non-digital touchpoints — at a moment when the digital interface alone can't answer the question.
+*Every step worked. The journey failed anyway.*
 
-**Prior Knowledge Hook:** The frame most practitioners bring to prototyping: we're testing the interface. The interface is the design. The test tells us whether the design works. This frame is accurate for products where the complete user experience is contained in the digital interface. It fails for services, where the experience spans the interface plus human interactions, physical environments, wait times, support flows, and cross-channel handoffs. In these contexts, testing the interface alone is like testing one act of a three-act play and declaring the play ready.
+---
 
-**Trigger:** Use a service prototype when: the user's full journey includes interactions outside the digital product (phone calls, physical visits, email exchanges, third-party handoffs); when the failure mode you're trying to prevent involves breakdown at the seams between touchpoints (the user knows how to use the app, but the app leads them to a process that fails them); or when users report satisfaction with individual touchpoints but dissatisfaction with the overall experience. The service prototype tests the seams.
+Someone calls the support line and gets the right answer. They navigate the app and submit the form correctly. They receive the confirmation email on time. Three weeks later, they call again: the thing they submitted never happened.
 
-**Why this works:** Most user experience failures in service contexts don't happen within touchpoints — they happen between them. The app works. The email confirmation arrives. The support rep is helpful. But the information in the email contradicts what the app shows. The support rep can't see what the app displays. The physical location doesn't know what the online system promised. These seam failures cannot be tested by any prototype that tests a single touchpoint in isolation — they require staging the full journey and observing what happens where the handoffs occur.
+Every touchpoint succeeded. Nothing carried forward.
 
-The mechanism: service prototypes expose the hidden communication assumptions between touchpoints. Every seam in a service journey is a communication protocol: touchpoint A assumes touchpoint B knows X; touchpoint B assumes the user already has Y; the system assumes a time window that the physical environment makes impossible. Making these assumptions explicit by staging the full journey reveals which ones are wrong before building the supporting infrastructure.
+---
 
-**Method:**
+You've probably run prototypes before — screens connected in sequence, someone clicking through. That works when the experience lives in one place. This method is for when it doesn't.
 
-**Step 1: Map the service journey end to end.** Identify every touchpoint a user encounters from initial trigger to final resolution. For each touchpoint: what channel (digital, phone, physical, email), what the user needs, what the service provides, and what carries from this touchpoint to the next. This is your service blueprint at prototype fidelity.
+Use this when you're designing something that spans digital and non-digital touchpoints. An onboarding flow that includes a phone call. A request that moves through three systems. A purchase that requires someone in another department to do something specific before the user's next step can happen. When the experience depends on information moving between places — and you need to know whether those handoffs will actually work before the first real user hits them.
 
-**Step 2: Identify the seams.** Mark every point where information, intent, or context must transfer from one touchpoint to another. These are the highest-risk points in the service. If the information transfer fails (or never happens), the user experience at the next touchpoint degrades. Circle these seams — they are the primary test targets.
+---
 
-**Step 3: Assign roles to the service team.** Each touchpoint needs a person or resource to represent it in the prototype session. Digital interfaces: use an existing prototype or the live system. Phone or human interactions: a team member plays the role, scripted. Physical environment: staged or described. Each role-player knows their script and, critically, knows what information they're supposed to receive from the previous touchpoint and what they're supposed to pass forward.
+Shostack (1984) formalized the problem in Harvard Business Review: most service failures don't happen where users see them. They happen backstage, in dependencies users never observe. The checkout works. The warehouse can't fulfill it. The user experiences delay. Where things break and where failures appear are different places.
 
-**Step 4: Run the user through the full journey.** The user experiences the service as if it were real — as close to real as you can stage. Facilitator follows alongside. Do not interrupt the journey; observe what happens at each seam. Does the information transfer? Does the user have to repeat themselves? Does anything break between touchpoints?
+Bitner, Ostrom, and Morgan (2008) later extended this into a full design framework at Arizona State's service research institute: service blueprinting forces visibility into everything behind the interface — the handoffs, the information transfers, the dependencies that must resolve for the frontstage experience to hold together. The mechanism is explicit: draw what happens backstage and where it touches what users see. Failures live at those connection points.
 
-**Step 5: Debrief at the seams.** After the session, focus analysis on every seam: was the information transferred correctly? Did the user experience continuity or disruption? Did the role-playing service team have what they needed to serve the user? Each seam failure is a design gap in the service infrastructure.
+Forlizzi and Battarbee (2004) described why prototyping services is harder than prototyping products: a product prototype sits in front of you; a service prototype requires enacting a series of moments in time. You're not testing whether one thing works. You're testing whether the sequence holds when time passes and people hand things off. That's the question service prototypes answer.
 
-**Artifact:** An annotated service journey map showing: what worked at each touchpoint, what broke at each seam, and what information assumptions were revealed as wrong. These findings are the design requirements for the service layer — the infrastructure, communications, and protocols that support the digital interface.
+Stickdorn and colleagues (2018) gave this definition: a service prototype tests the orchestration. The individual moments might all function. What's unvalidated is whether they connect. A person could succeed at every individual step and still fail at the journey if one handoff loses information or timing falls out of sync.
 
-**Watchout:** The failure mode that is almost universal in service prototype sessions: the prototype becomes a demo of how it's supposed to work rather than a test of whether it does. Role-players know the designed protocol. The user, playing along cooperatively, follows the designed flow. Nobody breaks. The session passes. The actual seam failures — the ones that happen when users don't cooperate with the designed protocol, or when the information transfer fails in real conditions — aren't revealed because the session is too clean. Real service prototypes require real complexity: unpredictable users, constrained role-players, and deliberate attempts to surface the assumptions that break.
+The wrong model: prototyping is for interfaces. That's where it breaks. The interface is one moment. The service is the whole sequence. Testing one screen at a time misses the seams.
 
-**Try This:** Think of a product or service you work on that involves at least one touchpoint outside the digital interface — a phone call, an email, a physical step. Map the journey end to end for one user scenario. Identify the two seams you trust least — the handoffs where you suspect information doesn't transfer reliably. What would a 30-minute staged test of those two seams look like? What would you need to stage and what would you learn?
+---
 
-**Proof:** The service prototype worked if you found at least one seam failure you did not already know about. The false positive: a session where every seam worked as designed, because the role-players and user were all cooperating with the design. A service prototype that reveals no gaps is almost always a staged demonstration rather than a genuine test. Real service journeys have friction; a prototype that produces no friction either eliminated real failure modes (the design is exceptional) or eliminated the conditions that produce failure modes (the staging was too cooperative).
+1. Map the full journey as written. List every touchpoint the user encounters from start to finish, across all channels. Email, app screen, phone call, physical location, paper form. Include wait states: "User waits 2 days for approval." The map includes everything, not just what you control.
 
-**Take This Further:** Over the next week, audit one failure or complaint in a service you work on. Trace it back to its seam: which handoff failed, what information was missing, and what assumption was wrong? Write one sentence: what would have been required in the service prototype to surface this failure before it happened to a real user?
+2. Add the backstage layer. Below each user-facing touchpoint, write what must happen behind it for that moment to work. When a user submits a form, someone reviews it. When they receive a confirmation, a system generated it based on data from another system. Write those dependencies explicitly. This is the blueprint: frontstage on top, backstage below.
 
-**After you've run this yourself:** AI can help map the information that must transfer at each seam — describe the service journey and ask what data, context, or confirmations each touchpoint needs to receive from the previous one. Use this checklist to verify your service blueprint before running the prototype.
+3. Mark the handoffs. Draw a line connecting each place information moves from one system, person, or channel to another. Label what's being transferred: "approval decision," "user's equipment request," "account number." Those lines are the failure points. Shostack's finding holds: if the service breaks, it breaks at a line, not at a box.
 
-**What Next:** Service prototypes test the full journey. When the question is specifically about what happens when multiple design directions are explored simultaneously before committing to one, read 309h (Parallel Prototyping). When you need to prototype quickly to understand a technical or interaction constraint by building it, read 309i (Build to Think).
+4. Build the minimum enactment. Pick the riskiest handoff — the one where you're least confident information will transfer correctly or timing will hold. Prototype just that segment: the two touchpoints it connects and the backstage dependency between them. Use whatever makes it real enough to test. A real email. A spreadsheet standing in for a system. A phone call. If the user would wait three days, compress it to three minutes but keep the waiting period. The enactment includes time passing.
+
+5. Run it with roles. One person plays the user, another plays each backstage role. Walk through the segment. The user acts, the backstage person responds based only on what the handoff gave them. Stop when something doesn't carry forward. Document it: what information was expected that didn't arrive? What timing assumption broke?
+
+6. Fix the handoff, then extend. Redesign the transfer so the missing piece gets captured or communicated. Re-run that segment. If it holds, prototype the next handoff. Repeat until the full journey is enacted end to end without a break.
+
+---
+
+What you end up with: a blueprint showing every touchpoint and dependency, and a documented list of handoff failures you found and fixed before anyone built the real service. The artifact is the blueprint with annotations: "Fixed: approval decision now includes equipment type" or "Added: confirmation email tells user what happens next and when."
+
+Blomkvist (2014) compared service prototypes to product prototypes at Linköping University and found that service prototypes must be evaluated through enactment — walking through time — because service quality emerges from sequencing and timing, not from static inspection. You can't look at a service blueprint and know it works. You have to run it.
+
+---
+
+The failure mode that catches teams who've prototyped interfaces before: building the frontstage touchpoints in high fidelity before testing whether the backstage can actually support them. The screens look polished. The user journey appears complete. Then someone runs it and discovers the confirmation email can't be generated because two systems don't share the field it needs to display. High-fidelity frontstage with untested backstage dependencies produces a prototype that looks finished and can't be built. Test the seams before you polish what they connect.
+
+---
+
+Take something you're working on now that crosses at least two systems or involves a handoff to another person. Map the user's journey: every touchpoint, frontstage. Add the backstage layer: what must happen behind each moment for it to work? Mark one handoff where you're not completely confident the information will transfer cleanly. Prototype just that handoff with a colleague: one of you is the user, one is the system or person on the other side. Use a real email, a shared doc, whatever makes it concrete. Run it. Note what didn't carry forward.
+
+This takes about 45 minutes to map and 20 minutes to enact one segment.
+
+---
+
+If you discover something that should transfer but doesn't — a field, a decision, a piece of context — the prototype worked. That's the finding: the handoff needs redesign before it's built. One thing to watch: the person playing the backstage role filling in gaps with knowledge they have from outside the prototype. "Oh, I'd just assume that means X." The real system won't assume. Constraint the backstage player: they only know what the handoff explicitly gave them.
+
+---
+
+Over the next week, pick one more handoff from the same journey. Map it, enact it, document what breaks. Then write one sentence: what pattern do the two handoff failures share? If both broke because of missing context, that's a design rule for every handoff in this service. If both broke because timing wasn't explicit, every touchpoint needs to tell users what happens next and when.
+
+---
+
+After you've run this yourself: AI can generate the first-draft blueprint from a journey description. Describe the user's path across touchpoints, ask the tool to map likely backstage dependencies and flag handoffs where information might not transfer cleanly. Use that as the starting map, then validate it by enacting the flagged segments. The AI won't catch everything — backstage dependencies are specific to your systems — but it'll surface the handoffs worth testing first.
+
+---
+
+When the service prototype reveals that one touchpoint isn't clear about what the user should do next, 205 (Content Design) covers how to write interface copy that sets expectations across time. If timing dependencies are the issue — users waiting without knowing what's happening — 120 (Performance and Perceived Speed) addresses how to make wait states feel deliberate instead of broken. When you're ready to test the full enacted service with a real user, 215a (Moderated Usability Session) applies to service walkthroughs just as it does to interface testing.
+
+---
+
+**Sources**
+
+Bitner, M. J., Ostrom, A. L., & Morgan, F. N. (2008). Service blueprinting: A practical technique for service innovation. *California Management Review, 50*(3), 66–94. Finding: Service blueprinting forces visibility into backstage processes and their connection points with frontstage customer touchpoints; failures consistently occur at the interface between what customers see and the support processes that must function behind them.
+
+Blomkvist, J. (2014). *Representing future situations of service: Prototyping in service design* [Doctoral dissertation, Linköping University]. Finding: Service prototypes must be evaluated through enactment rather than inspection because service quality emerges from sequencing and timing across touchpoints; static examination of a service blueprint cannot reveal whether the orchestration will hold under real conditions.
+
+Forlizzi, J., & Battarbee, K. (2004). Understanding experience in interactive systems. *Proceedings of the 2004 Conference on Designing Interactive Systems*. ACM. Finding: Product prototypes can be physically examined; service prototypes require enactment across time because services are experienced as sequences of interactions, and the quality of the whole depends on how individual moments connect when time passes and roles hand things off.
+
+Shostack, G. L. (1984). Designing services that deliver. *Harvard Business Review, 62*(1), 133–139. Finding: Service failures consistently occur in backstage dependencies — the operational processes and information transfers that support customer-facing moments — not in the frontstage touchpoints where failures become visible to users.
+
+Stickdorn, M., Hormess, M. E., Lawrence, A., & Schneider, J. (2018). *This is service design doing*. O'Reilly Media. Finding: A service prototype tests orchestration rather than individual touchpoints; users may succeed at every discrete interaction and still experience failure if handoffs lose information, timing breaks, or dependencies don't resolve correctly between moments.
