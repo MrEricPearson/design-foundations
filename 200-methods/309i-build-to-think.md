@@ -1,40 +1,87 @@
-# Build to Think
-**Tier:** 200 — Practice | **Arc:** 309 (Prototyping) | **Prereqs:** 177, 132, 147 | **Wave:** 4
+# What Running Code Tells You That Diagrams Don't
 
-**Goal:** Use building as a design method — producing a running artifact not to ship, but to learn what's actually true about the problem.
+**Tier:** 200 — Practice | **Arc:** 309 (Prototyping) | **Prereqs:** 177, 178, 147 | **Wave:** 4
 
-**Prior Knowledge Hook:** The model most people hold about building vs. designing: design first, then build. Design is the thinking; building is the execution of what was designed. Build to Think inverts this for a specific class of problem: when the design question cannot be answered by looking at a static representation of the system — when the answer only appears when the system is actually running.
+You're three design reviews into the same feature. Each review ends the same way: "It depends on how the data looks." Somebody sketches a wireframe. Everyone agrees the wireframe looks fine with placeholder numbers. Twelve rows, not the forty thousand that live in production. Nobody knows what happens when the actual dataset shows up.
 
-**Trigger:** Use Build to Think when: the design problem involves dynamic content, real-time data, or complex state that cannot be meaningfully evaluated from wireframes; when the technical constraints are unknown and the design decisions depend on what the system can actually do; when AI-generated interfaces or outputs are part of the experience and their behavior can't be predetermined; or when a "simple" design question repeatedly reveals hidden complexity as soon as you try to specify it precisely. The "repeated hidden complexity" signal is the clearest: it means the problem's true structure only emerges under construction pressure.
+Somewhere around the fourth review, someone says what everyone has been thinking since the second one: "We should probably just build it and see."
 
-**Why this works:** Some problems can only be understood by engaging with them at a level of concreteness that design artifacts don't provide. A wireframe of a dynamic data dashboard shows a static arrangement. Building a working version of that dashboard — even a rough one — immediately reveals: which data is available in which format, how latency affects the experience, which edge cases produce broken layouts, which interactions feel right when the data is real. These are design-determining facts that no amount of design review would have surfaced.
+That's not giving up on design. That's instinct catching up to evidence.
 
-The mechanism: building creates encounters with reality. When something is designed on paper, the designer fills gaps with assumptions. When it's built, the gaps become concrete — the API returns something unexpected, the data model doesn't support the assumed display, the interaction that looked clean in Figma requires three loading states to function properly. Each encounter with reality is a design decision made more precisely than paper allows.
+---
 
-Build to Think is prototyping, not engineering. The artifact is disposable. It exists to generate learning, not to ship. The discipline is: build the minimum that creates the encounter with reality you need — then stop and carry the learning forward, not the code.
+Some questions about a feature can only be answered by touching the system. Not because you're impatient. Because the answer lives in runtime behavior. Does the API respond fast enough for a live preview to feel real? Does this third-party calendar component handle nested recurring events? Does the filter experience stay manageable when the data is real and enormous rather than small and invented?
 
-**Method:**
+Wireframes show what you intend. Running code shows what's true.
 
-**Step 1: Name what you're trying to learn.** Before writing any code or building anything, write the design question you're trying to answer by building. "Does the filter experience feel manageable with 1000+ results?" or "Can we produce a layout that works for both 2-item and 20-item lists from the same component?" If you can't state the learning objective in one sentence, you're not clear enough on what building will teach you. This constraint prevents "build to avoid deciding" — the failure mode of building instead of making hard design decisions.
+You've spent time with prototypes. You know a prototype isn't for shipping: it's for learning something specific. Build to Think applies that same logic directly to code: you write real implementation, to a deliberately shallow depth, specifically to surface the one thing that's been blocking progress. The artifact isn't the code. The artifact is the answer you couldn't get any other way.
 
-**Step 2: Build the minimum that answers the question.** Identify the smallest artifact that would produce the encounter with reality you need. If the question is about data density at scale: import 1000+ real records into a simple prototype. If the question is about AI output quality: connect a real AI call to a minimal display layer. Do not build a full product; build the component of reality that the question requires.
+---
 
-**Step 3: Run the artifact and observe.** Use the built artifact as you designed it to be used. Note every moment where behavior diverges from what was assumed in the design. Note every edge case that the static design didn't account for. Note every decision that becomes obvious when the system is running that was unclear on paper. These observations are the output of the build-to-think session.
+Use this when design questions keep circling because their answer depends on runtime behavior: real data volume, real API response shape, real state complexity. The pattern that tells you it's time: every design conversation ends with "it depends on..." and what it depends on is something nobody can see in a wireframe. That's the signal.
 
-**Step 4: Extract the design decisions.** Convert the observations into explicit design choices. "The filter produces too many results for the interface to handle without pagination — pagination approach confirmed as required." "The AI output varies too widely in length for fixed-height cards — card height must be dynamic with a max and a truncation strategy." Each observation becomes a constraint or a decision that the subsequent design can be built on.
+---
 
-**Step 5: Discard or preserve deliberately.** Make an explicit decision about the built artifact: is it disposed of (the learning has been extracted into design decisions), or does it become the foundation for the next iteration? Most Build to Think artifacts should be disposed of. The discipline is in extracting the learning as explicit design decisions before moving on — not assuming the learning will travel in the code.
+Donald Schön (1983) spent his career studying how professionals generate knowledge, and his finding was uncomfortable for anyone who assumes thinking precedes doing. Understanding doesn't fully precede engagement. It emerges through it. His term was "reflection-in-action": the practitioner runs experiments that "generate both a new understanding of the phenomenon and a change in the situation." What you're thinking shifts as you act.
 
-**Artifact:** A document of design decisions made concrete through building — not the code, but the learnings extracted from building. Each decision stated as: the question going in, what the build revealed, the design decision that follows.
+Software teams figured this out independently. Kent Beck introduced spike solutions in Extreme Programming, time-boxed experiments aimed at learning one specific thing. Ron Jeffries, one of Beck's collaborators on the C3 project, described it plainly: a spike is concluded when you learn what you needed to learn. Not when the code is clean. Not when the feature works. When the question is answered.
 
-**Watchout:** Build to Think becomes "just build it and ship it" when the learning objective is unclear and the artifact is of sufficient quality that it feels like a product. This is the most common failure: teams start building to think, find that the build is going well, and pivot to building to ship without explicitly recognizing the pivot. The resulting product has the quality of a prototype that was rationalized into production — fast, but missing the disciplined design choices that would have been made if the learning phase had ended and a real product decision phase had begun. The artifact is not the output. The design decisions are the output.
+Kery and Myers (2017) at Carnegie Mellon confirmed what practitioners already suspected: that "writing code to prototype or experiment" while "allowing the end goal to evolve throughout the process" is a distinct, legitimate mode of inquiry.
 
-**Try This:** Find a design question you're currently stuck on — one where you keep designing and redesigning static artifacts without resolution. Ask: would 2 hours of building something rough answer the question? If yes, do it. Build the minimum thing that would create the encounter with reality the question needs. Stop at 2 hours. Extract the learning as decisions. Discard the artifact.
+Build to Think is a spike with explicit design intent.
 
-**Proof:** Build to Think worked if you made at least one design decision after building that you could not have made from reviewing static artifacts. The false positive: you built something, it worked, and you shipped it. That is delivery, not learning. Build to Think generates learning that is applied to a design that then gets built properly. If the artifact goes directly to production, you weren't building to think — you were building to ship while telling yourself it was a prototype.
+---
 
-**Take This Further:** Over the next 3-5 days, audit one thing your team has built and shipped. Ask: were there design decisions made during development that should have been made during design? Each "we realized in development that..." moment is a question that build-to-think would have answered earlier, at lower cost. Write one sentence: what was the most expensive "we realized in development" in this project?
+The discipline starts before a line of code is written. Name what you're trying to learn. "Does the filter stay usable when the result count hits five figures?" "Can we display AI-generated content in a fixed-height card, or does the length variability break the layout?" If the sentence requires "and," it's two questions. Pick one.
 
-**After you've run this yourself:** AI tools (Cursor, Copilot, etc.) dramatically lower the cost of the build step — you can get to the encounter with reality faster. This makes the discipline question more important: you must still know what you're building to learn, and you must still stop when you've learned it. Cheap building removes the cost barrier; it does not remove the need for the learning objective.
+Then name your stopping condition: what will count as an answer? What does "learned it" look like? If you can't describe when you'd stop, you don't have a question — you have a direction. And a direction produces a very different kind of build.
 
-**What Next:** You've now covered the full prototyping approach library — from paper through build-to-think. The approach selection guide lives in 309 (Prototyping Arc). For the overall quality threshold — when is a prototype sufficient to move forward — read 113 (Knowing When You Know Enough).
+Build shallow, using real data and a real endpoint. Implement only what the question requires, and resist everything beyond it. Skip error handling, loading states, styled components. You need the encounter, not a product.
+
+Run it. Use the artifact the way the feature is supposed to be used. Note every moment where behavior diverges from what the design assumed, and what becomes obvious in motion that was unclear on paper. These moments are the data you came for.
+
+Extract the design decisions. Each observation becomes a constraint or a confirmation: "pagination required at scale," "card height must be dynamic with a max and a truncation pattern," "the latency is fine — the loading state is cosmetic, not functional." Write these down before you close the IDE. This document is the artifact. The code is the byproduct.
+
+Then stop. Decide deliberately: foundation for the next iteration, or discarded? Beck's teams planned to throw away the spike. They kept the decisions, not the code.
+
+---
+
+The failure mode looks like progress. You've been building for two hours. The question was answered ninety minutes ago, but the code is working pretty well, and it just needs a few more routes. Maybe some error handling. You're here anyway.
+
+Arkes and Blumer (1985) documented the mechanism behind what happens next: once you've invested in something, continuing it feels necessary — even when the original purpose has already been met. The build feels like forward motion. The stopping condition gets quietly replaced by a new one. (If you've watched a team demo a "prototype" to stakeholders who immediately asked when it would ship, then watched everyone in the room hesitate before answering, you've seen this exact thing.)
+
+The stopping condition isn't optional. It's the whole method.
+
+---
+
+Find a technical question in your current sprint where the answer depends on behavior you haven't seen in a running system. Write it in one sentence. Write the stopping condition in one sentence. Block two hours. Build only what answers the question. Stop at two hours regardless. Extract at least two documented design decisions from what you observed. Then decide deliberately: discard the code and carry the learning forward, or preserve it as a foundation.
+
+---
+
+You'll know it worked if you made at least one design decision after building that you couldn't have made from reviewing static artifacts alone. The false positive: the code went directly into the next PR without a separate decision phase. That's building to ship. The spike was skipped, not run.
+
+---
+
+Over the next week, look at one feature your team shipped in the last quarter. Find the "we realized during development that..." moments. Each one is a question that Build to Think would have answered earlier, at lower cost, before the design direction was locked. Write one sentence: what would you have named as the question, and when in the project would you have run the spike?
+
+If you share it in [the relevant channel], you'll see what others caught too.
+
+---
+
+After you've run this yourself: tools like Cursor or Copilot bring the build step close to zero cost. You can get to the encounter with reality in thirty minutes instead of two hours. This makes the discipline question more important, not less. Cheap building removes the cost barrier. It doesn't remove the need to name the question first, or to stop when it's answered. The tool runs the code. You have to run the thinking.
+
+---
+
+If you're deciding between approaches (paper sketch, AI-generated prototype, or this one), the selection guide lives in the prototyping arc overview (309). If you built something that's working and you're feeling like you should keep it, read 103 before you commit.
+
+---
+
+**Sources**
+
+Schön, D. A. (1983). *The Reflective Practitioner: How Professionals Think in Action.* Basic Books. Professional understanding emerges through action — experiments in practice "generate both a new understanding of the phenomenon and a change in the situation."
+
+Beck, K. (1999). *Extreme Programming Explained.* Addison-Wesley. / Jeffries, R. (XP spike documentation). Spike solutions as time-boxed learning experiments: "The spike is concluded when you learn what you needed to learn." Code is expected to be discarded; the learning is what carries forward.
+
+Kery, M. B. & Myers, B. A. (2017). *Exploring Exploratory Programming.* Carnegie Mellon HCI Institute. Exploratory programming defined by two essential features: "writing code to prototype or experiment" and "allowing the end goal to evolve throughout the process."
+
+Arkes, H. R. & Blumer, C. (1985). The psychology of sunk cost. *Organizational Behavior and Human Decision Processes, 35*(1), 124–140. Once invested in a direction, people continue even when the original objective has been met or abandoned — continuation feels less wasteful than stopping.
