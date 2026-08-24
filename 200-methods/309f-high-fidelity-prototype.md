@@ -1,38 +1,76 @@
-# High-Fidelity Prototype
-**Tier:** 200 — Practice | **Arc:** 309 (Prototyping) | **Prereqs:** 177, 132, 158 | **Wave:** 4
+# 309f — When Visual Design Is the Question
+**Tier:** 200 — Practice | **Arc:** Prototyping | **Prereqs:** 177, 132, 158 | **Wave:** 4
 
-**Goal:** Build a high-fidelity prototype that tests interaction behavior, visual design response, and emotional reaction to the finished-quality experience — at the point where those questions cannot be answered by lower fidelity.
+**Goal:** Build a high-fidelity prototype purposefully — scoped to the questions only visual quality can answer — and read the findings accurately so you can separate visual feedback from structural feedback that arrived too late.
 
-**Prior Knowledge Hook:** High-fidelity prototypes are often positioned as the "best" kind of prototype — the one you build when you've figured everything out, as a final confirmation before development. This positioning is a trap. High-fidelity prototypes have a specific question they answer better than any other prototype type. They also have specific failure modes when used for questions they're poorly suited for. The skill is knowing when you've reached the question that high fidelity is the right answer for.
+---
 
-**Trigger:** Use a high-fidelity prototype when: (1) earlier, lower-fidelity testing has established that the structure and flow are sound, and the remaining question is how users *experience* the design — the visual quality, the responsiveness, the microinteractions; (2) the decision-maker is unable to evaluate the design from lower-fidelity artifacts and needs to experience the finished quality to make a go/no-go decision; (3) testing is for emotional response — delight, confidence, trust — that only emerges in the context of a polished experience. Do not use high fidelity to test structure, flow, or concept: low-fidelity prototypes answer those questions faster and with lower commitment cost.
+You already know fidelity should match the question — a wireframe tests structure, paper tests the concept. You've matched fidelity to question before, even if you didn't call it that. What's worth understanding specifically about high-fidelity prototypes is the mechanism: they don't just look different from lo-fi. They change the kind of feedback participants give you.
 
-**Why this works:** Fidelity is a signal about the state of decisions. A low-fidelity prototype signals "this is not final — give me feedback about direction." A high-fidelity prototype signals "this is what it will look like — give me feedback about execution." Users calibrate their feedback accordingly. This means high fidelity elicits feedback that is specifically about execution quality — which is the right feedback when execution is what remains to be validated, and the wrong feedback when conceptual decisions are still open. Using high fidelity too early silences structural feedback (users won't question the concept when it looks finished) and amplifies execution feedback (they notice color, spacing, fonts) — often in the wrong order.
+---
 
-The mechanism: polished artifacts communicate commitment. When something looks finished, people in the room register "this is what we're doing" — which changes the kind of feedback they give. This is a feature when structural decisions are made and you want execution feedback. It is a bug when structural decisions are still open and you need structural feedback.
+Use a high-fidelity prototype when the question genuinely requires experiencing finished visual execution. Visual hierarchy decisions, brand perception, content clarity with real copy, accessibility at actual contrast levels, interaction timing and animation: these are the questions hi-fi is built to answer. The structural questions need to be settled first: the flow is navigable, the concept is validated, the main path works. What remains is whether the designed version of that validated structure earns the response you need. That's when you build hi-fi. Not before.
 
-**Method:**
+---
 
-**Step 1: Define the specific question this prototype answers.** Before building anything, write the question you're testing in one sentence. It should be testable with a high-fidelity experience specifically: "Does the payment flow feel trustworthy?" or "Does the onboarding design create the confidence we want users to feel?" If the question is structural — "is this the right flow?" or "do users understand the concept?" — you are not in high-fidelity territory yet.
+Kurosu and Kashimura (1995) ran an experiment with 252 participants evaluating 26 variations of an ATM interface. Their finding: the correlation between aesthetics and *perceived* ease of use was stronger than the correlation between aesthetics and *actual* ease of use. Participants rated attractive interfaces as more usable, even when they weren't. Tractinsky (1997) replicated this with a different population and found the same pattern.
 
-**Step 2: Build only the prototype, not the product.** Limit scope strictly to the screens and flows relevant to the question. High-fidelity prototypes are time-expensive; a full-product prototype at high fidelity almost always exceeds what's needed to answer the question. Define the minimum scope that covers the test scenario.
+For prototype testing, this is the mechanism at work. Participants calibrate their feedback to what the artifact signals. A rough prototype tells participants: this direction might work, tell me if it doesn't. A polished one tells them: this is what it will be, tell me if the execution is right. Participants respond accordingly. In a hi-fi session, you'll hear about color, spacing, copy, and the timing of a transition. You won't hear much about whether the concept is the right concept. That feedback is suppressed by what the prototype told them about where the decisions stand.
 
-**Step 3: Build to visual and interaction fidelity, not technical fidelity.** High fidelity means visual completeness and realistic interactions — not working logic, real data, or actual integrations. Use design tool prototyping (Figma, etc.) rather than production code unless code is specifically required to answer the question. The goal is that users cannot distinguish the prototype from the finished product in the specific flows being tested.
+This is the feature, not the bug. Use it deliberately.
 
-**Step 4: Test as normal.** Run the session like a usability test — task-based, with thinking-aloud protocol. Pay particular attention to: moments where users pause unexpectedly, moments where the visual design seems to create confusion rather than clarity, emotional responses (delight, hesitation, confidence) that the design intends to produce.
+**A high-fidelity prototype signals "this is what it will be." Participants respond by evaluating whether the execution is right, not whether the direction is right.**
 
-**Step 5: Capture reactions to quality specifically.** In debrief, ask questions targeted at the experience dimension being tested: "How did you feel at that moment?" "What gave you confidence that this was trustworthy?" "What would you change about how this looks?" These questions are appropriate at high fidelity; at low fidelity, they would lead users to give feedback about aesthetics when you needed feedback about structure.
+---
 
-**Artifact:** Session recordings and notes with user reactions categorized by: (a) interaction-level feedback (this click/tap/transition didn't work as expected), (b) visual-design feedback (this doesn't look right, this looks trustworthy/untrustworthy), and (c) emotional response feedback (I felt confident/anxious/delighted here). These map directly to the types of changes available in late-stage design.
+Before anything gets built, write the test question in one sentence. What are you testing that requires a participant to experience finished visual quality? "Does the visual hierarchy direct users to the primary action without hesitation?" or "Does the onboarding sequence create the confidence we want users to feel?" If the question is about navigation, concept clarity, or whether users understand the flow: you're not in hi-fi territory yet. Write the question first. It determines the scope.
 
-**Watchout:** Smart, experienced designers build high-fidelity prototypes for questions that don't require high fidelity — not because they're lazy, but because they want to be thorough, want to feel certain, want stakeholders to "see" what they're evaluating. This is the most common and most expensive form of over-prototyping. The cost: the time to build high fidelity, plus the anchoring effect that makes structural changes harder once something looks finished. Before building high fidelity, ask: which part of this would a low-fidelity prototype not test? If you can't answer that question specifically, you may not need high fidelity yet.
+From that question, define the minimum scope. Build only the screens and flows a participant needs to encounter in order to answer the question you wrote. High-fidelity is the most expensive prototype type to build and revise. Three screens with real interactions and real copy answer a visual question better than twenty screens where twelve are still placeholder. Scope is the discipline that makes hi-fi worth it.
 
-**Try This:** On something you're currently working on: identify one question you're trying to answer that requires a high-fidelity prototype — one that genuinely requires experiencing the finished quality to answer. Write the question. Now identify the *minimum scope* of prototype that would answer that question. What's the smallest set of screens and interactions that would create enough context for a user to provide the feedback you need?
+Use real content throughout. Placeholder text breaks hi-fi testing in a specific way: participants fill in the blank with whatever they assume the real content would say, then respond to their assumption rather than your actual copy. Real copy is part of the visual design. Leave it out and you've lowered the fidelity of the thing you're trying to test.
 
-**Proof:** The high-fidelity prototype worked if you received feedback specifically about execution quality — visual, interaction, and emotional — that you could not have received at lower fidelity. The false positive: users gave you positive feedback about how polished it looks, with no structural concerns raised. This is expected from high-fidelity testing, but it doesn't confirm the design works. If the positive feedback came from a session where users encountered no friction, the absence of negative feedback may mean the test scenarios didn't surface the problems, not that there are no problems.
+Before the session, write down what "it worked" looks like — one observable signal. "Participants reached the confirmation screen without hesitating at the form" is checkable. "Participants liked it" isn't.
 
-**Take This Further:** In the next 3-5 days, audit one prototype or design artifact you or your team recently built. What was the question it was designed to answer? Was that the question high fidelity was suited for? If not — what fidelity would have answered the question faster? Write one sentence: what fidelity should this have been, and what did building it at the actual fidelity cost?
+Run the session with a task statement. Give participants a goal to accomplish in language they'd recognize from their actual context. Watch where they hesitate at a visual element, where timing creates confusion or builds confidence, what words they reach for when describing how something felt. Note all of it.
 
-**After you've run this yourself:** AI tools can generate high-fidelity visuals quickly — layouts, styled components, even interactive prototypes. This lowers the cost of high-fidelity enough that the discipline question ("do I need high fidelity for this?") becomes more important, not less. A cheap high-fidelity prototype is still the wrong tool if the question doesn't require it.
+In the debrief, ask about execution quality specifically: "What gave you confidence at that step?" "What made you pause?" These questions are appropriate at high fidelity. At low fidelity, they'd pull participants toward aesthetic evaluation when you needed structural critique.
 
-**What Next:** High-fidelity prototypes test the digital interface experience. When the product involves people, processes, and physical touchpoints alongside the digital interface, the interface prototype will miss the most important parts of the experience — read 309g (Service Prototype) to understand how to prototype the full service.
+---
+
+What you end up with: session notes organized into two columns. Structural feedback and visual/behavioral feedback. Structural: participants couldn't find the main action, didn't understand the hierarchy, took a wrong path. Visual/behavioral: the interaction timing felt off, the copy was ambiguous, the color didn't read as trustworthy. Walker, Takayama, and Landay (2002) found that high- and low-fidelity prototypes surface the same structural usability issues. Anything in the structural column was available earlier, cheaper. The visual/behavioral column is what you built hi-fi to get.
+
+---
+
+The sign you built hi-fi too early is a findings list full of structural feedback. Participants who can't find the primary action, who don't understand the page purpose, who navigate in circles: those are lo-fi findings dressed in hi-fi clothing. The prototype wasn't wrong. The question it was asked to answer wasn't ready for it yet. Fixing that means returning to lower fidelity, answering the structural questions you skipped, and then rebuilding. (If you've watched a team spend three weeks on pixel-perfect screens for a product whose navigation nobody had tested: you've seen this exact progression.)
+
+---
+
+For something you're currently working on: identify one design decision that's genuinely open and requires experiencing visual execution to evaluate. Write the question. Scope the minimum prototype that answers it: the fewest screens, with real copy for every piece of text a participant will encounter. Estimate the build time. Build it. Show it to one person with a task statement, watch the session, and categorize what comes back as structural or visual. That category tells you whether you built hi-fi for the right question.
+
+This takes 30–45 minutes to scope and an hour or two to build.
+
+---
+
+If participants gave you feedback about visual quality, interaction timing, or emotional response that you couldn't have gotten at lower fidelity — it worked. One signal to watch for: entirely positive feedback with no friction. Check whether participants actually encountered the decisions you were most uncertain about. If they did and sailed through, that's real signal. If they never reached those moments, the session didn't answer the question. Redesign the task and run it again.
+
+---
+
+In the next 2–3 days: look at the last prototype your team built at high fidelity. What was the question it was designed to answer? Write one sentence: were the findings mostly structural or mostly visual? If mostly structural, what fidelity should it have been?
+
+After you've run this yourself: AI tools now generate high-fidelity visuals quickly. That changes the build-cost calculation, not the question-fit calculation. The question still leads. The discipline is in knowing what you're testing, not how fast you can produce the artifact.
+
+---
+
+If the visual questions are answered and the remaining question is whether the experience holds across touchpoints or cross-channel moments, read 309g (Service Prototype). If you're ready to run a structured testing session, read 215a (Moderated Usability Session). If hi-fi testing surfaced structural feedback you didn't expect, back up to 309b (Lo-fi Wireframe Prototype).
+
+---
+
+**Sources**
+
+Kurosu, M., & Kashimura, K. (1995). Apparent usability vs. inherent usability: Experimental analysis on the determinants of the apparent usability. *CHI '95 Extended Abstracts on Human Factors in Computing Systems*. ACM.
+
+Tractinsky, N. (1997). Aesthetics and apparent usability: Empirically assessing cultural and methodological issues. In *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems* (pp. 115–122). ACM.
+
+Walker, M., Takayama, L., & Landay, J. A. (2002). High-fidelity or low-fidelity, paper or computer? Choosing attributes when testing web prototypes. *Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46*(5), 661–665.
+
+Nielsen Norman Group. (n.d.). UX prototypes: Low fidelity vs. high fidelity. Retrieved from nngroup.com/articles/ux-prototype-hi-lo-fidelity/
