@@ -1,38 +1,76 @@
 # Conversational Prototype
-**Tier:** 200 — Practice | **Arc:** 309 (Prototyping) | **Prereqs:** 177, 132, 147 | **Wave:** 4
+**Tier:** 200 — Practice | **Part of:** 309 Prototyping Arc (Part 5 of 9) | **Prereqs:** 177, 132, 147, 266 | **Supports:** 308
 
-**Goal:** Run a conversational prototype session that tests the logic, language, and flow of a voice or chat interaction — before building the dialogue system.
+---
 
-**Prior Knowledge Hook:** Most practitioners approach conversational AI or chatbot design the same way they approach screen design: they design what it should say, then build it, then test it. This sequence has a specific failure mode: conversational design has to work across hundreds of possible user inputs, and no amount of design-time review reveals the gaps in the dialogue logic that become obvious the moment a real user says something unexpected. Testing conversation logic requires live conversation — and live conversation doesn't require a built system to test.
+Test dialogue logic before building the system — script the paths a conversation can take, simulate them with a real person, and find where input diverges from expectation.
 
-**Trigger:** Use this when designing voice assistants, chatbot flows, AI conversational features, or any system where the interaction is primarily language-based rather than point-and-click. Also useful for testing conversational onboarding, guided workflows, or support flows that walk users through a process via dialogue.
+---
 
-**Why this works:** Conversation is a protocol. Both sides operate with expectations about turn-taking, topic maintenance, appropriate responses to ambiguity, and what happens when the expected input doesn't come. Conversational design breaks when the protocol assumptions diverge from user behavior — when the system expects a confirmation and the user asks a follow-up question, or when the system handles "yes" but the user says "sure" or "I guess so" or "maybe?" A conversational prototype surfaces these divergences by running the protocol with a real user before encoding it in a system. Every unexpected user turn is a gap in the design.
+When interaction happens through language rather than visible controls, the interface disappears. No button to click wrong. No dropdown listing the options. What the system says, and how it says it, is the whole product.
 
-The mechanism: a human plays the "system" role in real time, responding to user inputs according to a designed script. The user doesn't know they're talking to a person. The facilitator captures every moment where the human-playing-system had to improvise — every user input that the script didn't account for — as a design gap.
+If you're building something where the primary interaction is language: a chatbot, a voice assistant, an AI agent interpreting instructions. The team is almost certainly writing conversation flows in code. Questions keep surfacing that nobody can answer without seeing it work. What happens when someone asks two things at once? What does the system say when it doesn't understand? What does confirmation sound like when there's no UI to display it? Building first means discovering these problems after the dialogue logic is locked in.
 
-**Method:**
+---
 
-**Step 1: Map the intended dialogue.** Write out the expected conversation — the "happy path" — as a structured flow: system turn, user turn, system response. Include the 3-5 most likely variations at each branch. This is the script your human operator will work from.
+A conversational prototype tests dialogue structure before implementation. You script the paths a conversation can take — what the system says, what users might say back, how the system branches, where it confirms or clarifies. Then you simulate it: one person plays the user, another (the wizard) plays the system by reading scripted responses and choosing which path to follow based on what the user actually says.
 
-**Step 2: Identify the gap risk areas.** Before the session, review your dialogue map and mark the 3-5 points where user input is most likely to diverge from expectation. These are the moments to watch most closely in sessions.
+Three things surface that code won't show you until it's too late: where users say things you didn't script for, where the system's phrasing creates confusion, and where the conversation needs repair strategies you hadn't planned.
 
-**Step 3: Set up the session format.** The user interacts with the interface as if it were real — a voice interface, a chat window, an app. The human operator types or speaks responses in real time from the script, improvising when the user goes off-script. The facilitator observes and notes every improvisation.
+This works because conversation follows structure even when it feels freeform. Sacks, Schegloff, and Jefferson (1974) demonstrated that turn-taking is systematically organized: speakers signal completion, listeners know when to start, and violations feel like interruptions even without literal overlap. Clark (1996) showed that conversations succeed only when both parties work to establish common ground, building shared understanding across turns. Scripting makes those structures visible. When users diverge from your script, that's not user failure. That's your script failing to account for how people actually talk.
 
-**Step 4: Run a debrief focused on off-script moments.** After the session, review every moment where the operator had to improvise. Each one is a dialogue gap: a user input the script didn't handle. Categorize each gap: is it a common input the system should handle (add to the design), or an edge case the system should gracefully decline?
+---
 
-**Step 5: Revise the dialogue map.** Add the gaps discovered. Re-run with another participant until the dialogue map handles most inputs without operator improvisation.
+1. Script the happy path turn by turn. Write exact words, not descriptions. "The system asks for account details" is not a script. "Which account would you like to check — personal checking, business checking, or savings?" is. End when the task is complete.
 
-**Artifact:** A revised dialogue map with annotated gaps from sessions — each gap marked with what the user said, what the system said in the prototype, and whether that response should be encoded in production.
+2. Add one branch for ambiguity. Find the turn where input is most open-ended and write three variations of what the user might say: the expected answer, a clarifying question, and something adjacent but off-script. Pick the three most representative responses.
 
-**Watchout:** The smart practitioner failure mode: the operator tries to "save" off-script user moments by improvising a good response — producing a seamless experience — without flagging the gap. The session feels successful. The design doesn't improve. The gap shows up in production. The operator's job is to improvise AND flag, clearly and immediately, every time they go off-script. A session with many flags is a session that produced valuable findings. A session with no flags usually means the operator was compensating rather than revealing.
+3. Script the error path. Write what the system says when it doesn't understand, then write what happens next. An error path without a way forward just ends the conversation.
 
-**Try This:** Take a conversational flow you're currently designing or planning. Write the dialogue map for the top 3 user scenarios. Then find a colleague and role-play it — one of you as the user, one as the system. The person playing the system should only respond based on the written script, and mark every moment they have to make something up. Each made-up moment is a design gap.
+4. Write the confirmation pattern for any action the conversation results in. Grice (1975) called this the maxim of quality: make contributions you have evidence for. In conversational systems, confirmation is how users know the system understood them. Write what the system says to confirm, and what it does if the user says "no, that's not right."
 
-**Proof:** The conversational prototype worked if you have a list of specific dialogue gaps — user inputs the designed system couldn't handle — with decisions about each: should these be added to the happy path, handled as graceful fallbacks, or considered out of scope? The false positive: a session where the user stayed entirely on the happy path. This tells you the happy path works (valuable) but tells you nothing about what happens when users don't (which they always will). Successful conversational testing requires users who diverge, not users who comply.
+5. Simulate with a real person. One plays the user. Another plays the system, reading scripted responses exactly as written, choosing branches based on what the user says. Don't improvise. If the wizard has to make something up, that's a gap. Mark it.
 
-**Take This Further:** Over the next 3-5 days, run one more script with a different user. Compare the gaps: are they the same gaps or different ones? Patterns across users are design priorities. Unique gaps are edge cases. Write one sentence: what was the most surprising off-script moment, and what does it tell you about the user's mental model of what this system can do?
+6. Run it three times with different people as users. Give each person the task goal, not the script. Write down where they said things you didn't script for, where the phrasing confused them, and where conversations broke down completely.
 
-**After you've run this yourself:** AI can help map the "long tail" of likely user inputs — describe the intended dialogue and ask for variations the user might express at each turn. Use this to stress-test your script before the session. A script that accounts for 80% of user variations will produce more signal in sessions because the operator flags only the genuine gaps.
+7. Revise based on what broke, then run again. If users asked clarifying questions at the same turn, rewrite that prompt. If they phrased answers you didn't anticipate, add those as branches. The first script is never right.
 
-**What Next:** Conversational prototypes test dialogue logic. When the dialogue is sound and you need to test interaction patterns in a visual interface with more fidelity, read 309f (High-Fidelity Prototype). When the conversation is part of a larger service journey, read 309g (Service Prototype) to test how it fits.
+---
+
+What you end up with is a dialogue script with annotated divergence points: the scripted paths plus notes on where real users went off-script and which system phrasings caused confusion. This becomes the specification for implementation. Your edge cases are named before they're edge cases in production.
+
+---
+
+You'll write system responses that sound fine on paper but feel robotic when spoken aloud. This isn't a writing-quality problem. It's a medium mismatch. Written language leans toward completeness and precision, while spoken language works better short and informal. The simulation catches it: if the wizard reading the script sounds like a terms-of-service document, rewrite it. (If you've ever seen a bot response make a room go quiet in the wrong way, you know exactly what this sounds like.) Raluca Budiu's research at Nielsen Norman Group (2018) found that users tolerated chatbot failures to understand them, but grew annoyed when responses were flat and repetitive, as if nobody was home on the other end. How a conversational system sounds is not a polish concern. It's a trust concern.
+
+---
+
+Pick a task in something you're building that requires back-and-forth: asking for input, confirming a choice, handling an error. Script a three-turn conversation: system prompt, user response, system confirmation or follow-up. Read it aloud to someone and ask them to respond naturally, as if they were the user. Give them the task, not the script. If their first response isn't one you scripted, you just found your first branch point.
+
+---
+
+If the person playing the user responds with something you didn't script and the wizard has to pause to decide what to say next, that's a gap your script needs to cover. If they respond and the wizard reads the scripted reply without hesitating, that path is working.
+
+---
+
+Over the next three days, script and simulate one full conversation flow for a feature with language-based interaction. Run it with at least two different people as users. Afterward, write one sentence: where did both users diverge from your script at the same turn, and what does that turn need to say differently?
+
+---
+
+After scripting and simulating manually, give an AI agent the user's task goal and let it respond to your prompts. Run it twenty times. The patterns in where it diverges show edge cases three manual sessions won't catch. Run the manual simulation first, because AI responses are statistically plausible but not representative of how any real user actually talks. The manual run teaches you what conversational breakdown feels like. The AI run shows how many ways it can happen.
+
+---
+
+Conversational prototypes test dialogue structure. They don't test whether automated conversation is valuable to users in the first place. For that, 309d (Wizard of Oz Prototype) tests system behavior before building automation. If the interface needs no visible UI, 266 (No UI as Design Goal) covers when invisible interfaces are a design decision, not a missing piece. Once the system is built, 308 (Designing for AI Trust) covers calibrating trust when users can't see system state.
+
+---
+
+**Sources**
+
+Clark, H. H. (1996). *Using Language*. Cambridge University Press. Grounding theory: conversation succeeds through the collaborative establishment of common ground — shared understanding built across turns.
+
+Grice, H. P. (1975). Logic and conversation. In P. Cole & J. Morgan (Eds.), *Syntax and Semantics 3: Speech Acts* (pp. 41–58). Academic Press. The cooperative principle and conversational maxims, including the maxim of quality (make contributions you have evidence for), which grounds confirmation patterns in conversational design.
+
+Nielsen Norman Group. Budiu, R. (2018, November 25). The user experience of chatbots. nngroup.com. Usability research on chatbot interaction patterns; key finding: users tolerated chatbot failures to understand input but grew annoyed when responses were flat and repetitive, underscoring that language quality is a usability concern, not a polish concern.
+
+Sacks, H., Schegloff, E. A., & Jefferson, G. (1974). A simplest systematics for the organization of turn-taking for conversation. *Language*, *50*(4), 696–735. Foundational conversation analysis demonstrating that turn-taking follows systematic rules — speakers signal completion, transitions occur at defined points, and violations feel like interruptions even without literal overlap.
