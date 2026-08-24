@@ -62,7 +62,7 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 ### Batch D — Complete arc · 4 items
 
-- [ ] **Step 16** · 📝 T200 · `309d-wizard-of-oz-prototype.md` — [200-methods/309d-wizard-of-oz-prototype.md](../200-methods/309d-wizard-of-oz-prototype.md)
+- [x] **Step 16** · ✅ T200 · `309d-wizard-of-oz-prototype.md` — [200-methods/309d-wizard-of-oz-prototype.md](../200-methods/309d-wizard-of-oz-prototype.md)
 - [ ] **Step 17** · 📝 T200 · `309f-high-fidelity-prototype.md` — [200-methods/309f-high-fidelity-prototype.md](../200-methods/309f-high-fidelity-prototype.md)
 - [ ] **Step 18** · 📝 T200 · `309g-service-prototype.md` — [200-methods/309g-service-prototype.md](../200-methods/309g-service-prototype.md)
 - [ ] **Step 19** · 📝 T200 · `309h-parallel-prototyping.md` — [200-methods/309h-parallel-prototyping.md](../200-methods/309h-parallel-prototyping.md)
