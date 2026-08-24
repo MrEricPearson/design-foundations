@@ -1,41 +1,73 @@
-# 215b — Unmoderated Usability Testing
-**Tier:** 200 — Practice | **Arc:** Usability Testing | **Prereqs:** 123 (What Usability Testing Is), 113 (Defining Success), 157 (Why You Don't Help During Testing) | **Note:** Use when synchronous access isn't available, when moderation introduces bias, or when you need results from a larger participant pool. If you can run a live session, see 215a (Moderated Usability Session) first.
+# Unmoderated Usability Testing
 
-**Goal:** After this piece, you will be able to run a usability test without being present — and get usable data from participants completing tasks on their own.
+**Goal:** Run unmoderated usability testing to find out where people get stuck without watching them in real time.
 
-**Prior knowledge hook:** Think of the last time you had a prototype or working feature that needed validation but couldn't get anyone in a room for a session. Unmoderated testing solves access — but it transfers the probing work entirely to question design, because no one will be there to follow up.
+---
 
-**Trigger:** You need task completion data from real participants, but synchronous access isn't available — different time zones, high-demand schedules, or a need for a larger participant pool than you can run through individual sessions. Or: moderation bias is a concern (participants behave differently when watched).
+Most people think usability testing means sitting in a room with someone while they use your thing. You watch them click around, you take notes, maybe you ask follow-up questions when they hesitate. That's moderated testing, and it works — but it's also slow, it requires scheduling, and it only scales as far as your calendar allows. If you need to talk to 30 people, you're looking at weeks of coordination.
 
-**Why this works:** Unmoderated tests decouple the session from the moderator's schedule and timezone. Participants complete tasks in their own environment, at their own pace, which often produces more naturalistic behavior than a scheduled session where a participant knows they're being observed.
+Unmoderated testing flips this. You write the tasks, you send the link, people do it on their own time. You get recordings of every session — what they clicked, where they paused, what they said out loud while they were trying to figure it out. No scheduling. No live facilitation. You trade real-time observation for scale and speed.
 
-**Method:**
-1. **Define one task per test.** Same as moderated: a concrete, user-perspective goal with no instructions on how to complete it. The difference: in unmoderated testing, the task statement is doing more work — there's no moderator to clarify ambiguity. Test the task statement with a colleague before deploying it.
-2. **Write your follow-up questions in advance.** In a moderated session, you ask follow-up questions based on what you observe. In unmoderated, you write them before the session. Write 2-3 questions for the friction points you most expect to occur: "Was there any moment where you weren't sure what to do? If so, describe it." "What did you expect to happen when you [specific action]?" Your advance questions won't cover every friction point — that's the tradeoff.
-3. **Choose your recording approach.** Screen recording with think-aloud instructions is the minimum: "As you complete the task, narrate what you're thinking." A purpose-built unmoderated testing tool (Maze, UserTesting, Lookback, etc.) automates this and adds quantitative data (task completion rates, time-on-task). Either approach works — the tool adds structure, not insight.
-4. **Recruit from your actual user population.** Unmoderated testing is easiest to run at scale, which makes it tempting to recruit convenience samples that don't match your actual users. A convenience sample that doesn't represent real users produces data about the wrong people completing the task. Screen for the key characteristics of your actual user before including a participant.
-5. **Review recordings for hesitations, restarts, and unexpected paths.** Watch the full recording for at least 3 participants before looking at aggregate data. The aggregate shows where the problem is; the recordings show what it looks like.
+---
 
-**Artifact:** Task completion data — which participants completed the task, where they dropped off, and what they said or did at the points of friction.
+You'd use this when you've built something people will interact with on their own — a prototype, a working feature, a flow you're not sure makes sense yet — and you want to know where it breaks down before you ship it. If you're wondering whether people can actually complete the core tasks without help, this gets you that answer faster than any other method.
 
-**Watchout:** Unmoderated tests can't probe. If a participant takes an unexpected path, you'll see that it happened — but you won't be able to ask why. Design your follow-up questions to cover the most likely unexpected paths, and treat any unexpected path you didn't anticipate as a reason to run a follow-up moderated session.
+It works because you're measuring behavior under realistic conditions. When no one's watching, people don't perform for you. They don't narrate their confusion politely. They just try to get the thing done, and when they can't, the recording shows you exactly where the model in their head diverged from the model in your interface (Nielsen, 1993). The task you wrote becomes the control — same instructions for everyone — and the variance in how people attempt it becomes the signal.
 
-**When You Can't Run the Full Version**
+---
 
-**If you have no testing tool and limited time:** Set up a screen recording on a shared device, write the task and think-aloud instructions on paper, and have the participant complete the task while recorded. Review the recording asynchronously. This is the minimum unmoderated setup — no platform, no automation. It works; the data is in the recording.
+Pick the thing you're testing. It needs to be something someone can interact with in a browser — a clickable prototype, a staging link, even a production feature if you're testing a change. If it's not live yet, tools like Figma prototypes or anything with working links will do the job. Write down the URL.
 
-**What you still get:** Behavioral data without synchronous access.
+Write three tasks. Each task should describe what someone would actually try to accomplish, not how to do it. Don't say "click the blue button in the top right." Say "find out how much shipping costs to your address." The task should feel like something they'd do on their own, not instructions you're giving them (Krug, 2010). If you're testing a sign-up flow, the task might be "create an account using your work email." If you're testing navigation, it might be "find the page that explains how refunds work." Three tasks is enough to surface the biggest problems without overwhelming people.
 
-**What you give up:** Quantitative aggregation, automated path tracking, and the efficiency of a purpose-built tool. The insight is the same; the time-to-insight is higher.
+Write a screener question. You need one question that filters for the people who would actually use this. If you're building something for project managers, ask "Do you currently manage software projects as part of your job?" If the answer is no, they don't get the test. The screener keeps you from testing with people who have no reason to care whether your thing works (Sauro & Lewis, 2016).
 
-**Don't do this:** Don't substitute a survey about the interface for an unmoderated test. Surveys produce attitudinal data ("I thought it was easy"). Unmoderated tests produce behavioral data ("they tried to click the logo to navigate back"). These are different kinds of evidence for different kinds of questions.
+Set up the test in an unmoderated testing tool. Tools like UserTesting, Maze, or Lookback let you define tasks, add the screener, and generate a link people can click to start the session. You'll paste in your URL, type in your three tasks, add the screener question, and set a target number of participants. Ten people is usually enough to catch the patterns — more than that and you start seeing the same problems repeat (Nielsen, 2000).
 
-**Try This:** Write one task statement for something you're currently working on. Test the statement by handing it to a colleague without context — can they tell you what they're supposed to accomplish without knowing anything about the product? If they need clarification, the task statement is too ambiguous for unmoderated use. Revise until it's self-contained.
+Send the link. You can recruit through the tool's panel (they'll find people who match your screener), or you can send the link directly to people you already know fit the profile. If you're using the tool's panel, you'll get results in a few hours. If you're sending it yourself, you'll get results as people have time to click through.
 
-**Proof:** If the recordings show hesitations or paths you didn't predict — moments where participants did something different from what you expected — the test produced useful data. If every recording shows participants completing the task directly, either the task was too easy or the participant pool was too similar to the team that built it.
+Watch the recordings. Each video shows you someone attempting your tasks — their screen, their voice if they're thinking aloud, their clicks and scrolls. You're looking for two things: where they hesitated, and where they gave up. If someone spent 40 seconds hunting for a button that should've been obvious, that's a findability problem. If they clicked something that didn't do what they expected, that's a labeling or affordance problem. If they completed the task but took a path you didn't anticipate, that's information about how they're thinking about the structure.
 
-**Take this further:** In the next week, run the same task with 3 additional participants. Write one sentence: what was the most consistent unexpected behavior across participants? That consistency is your primary design direction.
+Write down what blocked them. For each task, note which step caused confusion and how many people hit the same problem. If six out of ten people couldn't figure out how to start the return process, that's not a people problem — it's a design problem. If only one person struggled and nine didn't, that's probably an edge case you can defer. You're not trying to fix everything. You're trying to find the places where the current design is costing people effort they shouldn't have to spend.
 
-**After you've run this yourself:** Paste your task statement and follow-up questions into an AI tool and ask: "What friction points might participants experience that these follow-up questions wouldn't catch?" Add questions to cover one or two gaps the output identifies.
+---
 
-**What Next:** If the recordings show a specific friction pattern to organize and prioritize, read 214 (Affinity Mapping). If you want to validate the underlying design structure with an expert walk-through rather than user sessions, read 216 (Heuristic Evaluation). For a deeper behavioral investigation of specific friction points, follow up with 215a (Moderated Usability Session).
+What you end up with: a set of session recordings showing where people got stuck, how long it took them to recover, and whether they completed the task at all. You'll have notes on which problems showed up repeatedly and which ones were one-offs. You'll know whether the core flows work without intervention, or whether you need to redesign before anyone else tries to use this.
+
+---
+
+The failure mode here is writing tasks that teach people how to succeed instead of letting them figure it out. If your task says "click the blue button labeled 'Start' in the top navigation," you've just told them exactly where to look — you won't learn whether they could've found it on their own. The task should describe the goal, not the path. If you catch yourself writing instructions, stop and rewrite it as an outcome. "Find the page that shows pricing options" will tell you whether your navigation works. "Click 'Pricing' in the menu" won't.
+
+---
+
+Pull up something you're working on right now — a prototype, a feature branch, anything someone could click through in a browser. Write one task for it. Not how to do it, just what someone would try to accomplish if they landed on that page with a goal in mind. If you're building a form, the task might be "submit a request for time off next Friday." If you're building a dashboard, it might be "find out how many support tickets were closed last week." Write it down. Read it out loud. If it sounds like instructions, rewrite it as a goal.
+
+---
+
+If the task reads like something you'd say to a coworker who's never seen this before — and they'd know what to try — it's working. If reading it makes you realize you've been assuming people know where things are, that's the thing to fix before you run the test.
+
+---
+
+In the next two days, write tasks for the other two core things someone would try to do with this. Don't build the full test yet — just write the tasks. Then pick one person who fits your user profile and send them the tasks over email or Slack. Ask them to tell you, in one sentence, what they'd try first for each one. If their answer matches what you expected, your tasks are clear. If it doesn't, you've just learned something about how they're thinking about the problem. Write one sentence: what surprised you about what they said they'd do first?
+
+If you share it in the Platform Excellence channel, you'll see what others noticed too.
+
+---
+
+After you've written tasks, watched people attempt them, and fixed the biggest blockers: you can use AI to speed up the pattern-spotting step. Upload your session notes (the blockers and timestamps, not the full videos) and ask it to group the problems by type — findability issues, labeling mismatches, task failures, recovery paths people took. It won't catch things you didn't write down, but it'll surface which categories of problem cost people the most time. That gives you a prioritized fix list faster than reading through ten sets of notes manually.
+
+---
+
+If people completed the tasks without major friction, run the test with a bigger group to confirm the pattern holds. If you found repeated blockers in the same step, redesign that part of the flow, then test again with a new group to confirm the fix worked. If the tasks felt too easy or too hard, revisit how you're scoping the scenario — you may need to test a harder decision point or a simpler entry task first. When you're ready to run a live session with a facilitator present, 215a (Moderated Usability Session) covers that method.
+
+---
+
+## Sources
+
+Krug, S. (2010). *Rocket surgery made easy: The do-it-yourself guide to finding and fixing usability problems.* New Riders.
+
+Nielsen, J. (1993). *Usability engineering.* Academic Press.
+
+Nielsen, J. (2000). Why you only need to test with 5 users. *Nielsen Norman Group.* https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/
+
+Sauro, J., & Lewis, J. R. (2016). *Quantifying the user experience: Practical statistics for user research* (2nd ed.). Morgan Kaufmann.
