@@ -1,0 +1,1342 @@
+<title>Quality Benchmarks</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ground:       #F4F5FA;
+  --surface:      #FFFFFF;
+  --text:         #1B1F2E;
+  --muted:        #5C647A;
+  --border:       #DDE0EE;
+  --accent:       #2E4AF3;
+  --accent-soft:  #EAECF8;
+  --block-color:  #C0311E;
+  --block-bg:     #FDF1EF;
+  --adv-color:    #856000;
+  --adv-bg:       #FDF7EC;
+  --ctx-color:    #0E6DA8;
+  --ctx-bg:       #EFF5FA;
+  --nav-h:        50px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:       #0C1018;
+    --surface:      #131A26;
+    --text:         #E0E4F0;
+    --muted:        #6E78A0;
+    --border:       #1F2840;
+    --accent:       #5D72F5;
+    --accent-soft:  #181E35;
+    --block-color:  #EF7060;
+    --block-bg:     #1E1010;
+    --adv-color:    #D4A030;
+    --adv-bg:       #1A1608;
+    --ctx-color:    #56A8DC;
+    --ctx-bg:       #0C1820;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ground:       #0C1018;
+  --surface:      #131A26;
+  --text:         #E0E4F0;
+  --muted:        #6E78A0;
+  --border:       #1F2840;
+  --accent:       #5D72F5;
+  --accent-soft:  #181E35;
+  --block-color:  #EF7060;
+  --block-bg:     #1E1010;
+  --adv-color:    #D4A030;
+  --adv-bg:       #1A1608;
+  --ctx-color:    #56A8DC;
+  --ctx-bg:       #0C1820;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--ground);
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  height: var(--nav-h);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0 20px;
+}
+.nav::-webkit-scrollbar { display: none; }
+
+.nav a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.12s, border-color 0.12s;
+  flex-shrink: 0;
+}
+.nav a:hover { color: var(--accent); border-color: var(--accent); }
+.nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.nav .sep {
+  width: 1px;
+  background: var(--border);
+  flex-shrink: 0;
+  margin: 10px 0;
+}
+.nav .spacer { flex: 1; }
+.nav .protocol-link { color: var(--accent); font-weight: 600; }
+
+/* ── PAGE ── */
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 52px 28px 120px;
+}
+
+/* ── PAGE HEADER ── */
+.page-header { margin-bottom: 48px; }
+
+.page-header h1 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 42px;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.badge.accent {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--accent);
+}
+
+.page-header p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+/* ── LEGEND ── */
+.legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.legend-item .chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.chip.blocking { background: var(--block-bg); color: var(--block-color); }
+.chip.advisory { background: var(--adv-bg);   color: var(--adv-color); }
+.chip.new-tag  { background: var(--accent-soft); color: var(--accent); }
+
+/* ── RESEARCH BOX ── */
+.research {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+  padding: 22px 24px;
+  margin-bottom: 60px;
+}
+.research-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 28px;
+}
+.rf { }
+.rf strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: var(--text);
+}
+.rf p {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ── DIMENSION ── */
+.dimension {
+  scroll-margin-top: calc(var(--nav-h) + 16px);
+  margin-bottom: 72px;
+}
+
+.dim-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.dim-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 28px;
+  line-height: 1.15;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.dim-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+/* ── SUB-SECTION ── */
+.sub-head {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 0;
+}
+.sub-head::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── BENCHMARK ROWS ── */
+.bmarks { margin-top: 8px; }
+
+.bmark {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 0 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.bmark:last-child { border-bottom: none; }
+
+.sev {
+  padding-top: 2px;
+}
+.sev .chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.bmark-body {}
+
+.btext {
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+.btext .nt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 2px;
+  padding: 1px 5px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.bnote {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 72px;
+}
+
+/* ── PROTOCOL ── */
+.protocol-section {
+  scroll-margin-top: calc(var(--nav-h) + 16px);
+}
+
+.protocol-section h2 {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 28px;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+.protocol-section .proto-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 640px;
+  margin-bottom: 32px;
+}
+
+.proto-steps {
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.proto-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.proto-step:last-child { border-bottom: none; }
+
+.step-n {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 28px;
+  color: var(--border);
+  padding: 20px 16px 20px 20px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  background: var(--surface);
+  line-height: 1;
+}
+.step-body {
+  padding: 18px 20px;
+  background: var(--surface);
+}
+.step-body strong {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.step-body span {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── SCORING ── */
+.scoring-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.score-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px 20px;
+}
+.score-card .score-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+.score-card .score-label.b { color: var(--block-color); }
+.score-card .score-label.a { color: var(--adv-color); }
+.score-card p {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .research-grid { grid-template-columns: 1fr 1fr; }
+  .scoring-grid  { grid-template-columns: 1fr; }
+  .page          { padding: 32px 16px 80px; }
+  .page-header h1 { font-size: 32px; }
+  .dim-title      { font-size: 22px; }
+}
+@media (max-width: 420px) {
+  .research-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Dimensions">
+  <a href="#d1">Outcome</a>
+  <a href="#d2">Structure</a>
+  <a href="#d3">Voice</a>
+  <a href="#d4">Craft</a>
+  <a href="#d5">Action</a>
+  <a href="#d6">Sources</a>
+  <a href="#d7">Audience</a>
+  <a href="#d8">System</a>
+  <a href="#d9">Publication</a>
+  <span class="spacer"></span>
+  <div class="sep"></div>
+  <a href="#protocol" class="protocol-link">Protocol</a>
+</nav>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="header-meta">
+      <span class="badge">Design Foundations Library</span>
+      <span class="badge accent">81 Benchmarks · 9 Dimensions</span>
+    </div>
+    <h1>Quality Benchmarks</h1>
+    <p>A comprehensive evaluation rubric for every piece in the library — T100, T200, and T300. All BLOCKING benchmarks must pass before publication. Advisory benchmarks should reach ≥ 85%. Benchmarks marked <span class="chip new-tag" style="font-family:inherit;font-size:inherit;padding:0;border-radius:0;">NEW</span> extend the existing spec with criteria not previously formalized.</p>
+  </header>
+
+  <!-- LEGEND -->
+  <div class="legend" role="note">
+    <div class="legend-item"><span class="chip blocking">Blocking</span> Must pass — publication is blocked until resolved</div>
+    <div class="legend-item"><span class="chip advisory">Advisory</span> Should pass — judgment call; document the reason if skipped</div>
+    <div class="legend-item"><span class="chip new-tag">New</span> Not in existing CLAUDE.md spec — added from research or gap analysis</div>
+  </div>
+
+  <!-- RESEARCH GROUNDING -->
+  <div class="research">
+    <div class="research-eyebrow">Research Grounding</div>
+    <div class="research-grid">
+      <div class="rf">
+        <strong>Bloom's Taxonomy</strong>
+        <p>T100 = Remember/Understand. T200 = Apply. T300 = Analyze/Evaluate/Create. Goal verb and cognitive demand must match tier — a piece that requires judgment at T100 or only recognition at T200 is misfiled.</p>
+      </div>
+      <div class="rf">
+        <strong>Merrill's First Principles</strong>
+        <p>Effective instruction activates prior knowledge, demonstrates the concept, provides application, and integrates with real work. All four should be present in every T200/T300 piece.</p>
+      </div>
+      <div class="rf">
+        <strong>Sweller's Cognitive Load</strong>
+        <p>Intrinsic load (concept complexity) is irreducible. Extraneous load (unclear structure, labeled templates, noise) is avoidable. Germane load (schema formation) is what the piece is for.</p>
+      </div>
+      <div class="rf">
+        <strong>Keller's ARCS Model</strong>
+        <p>Learning requires Attention (opens in the moment), Relevance (reader sees themselves in the Trigger), Confidence (Try This is achievable), and Satisfaction (Proof closes the loop). Weak ARCS = reader doesn't return.</p>
+      </div>
+      <div class="rf">
+        <strong>Ericsson's Deliberate Practice</strong>
+        <p>The Try This → Take This Further spaced arc is grounded here. Reflection prompts must require conscious self-correction — not just repetition. Learning type determines the right prompt.</p>
+      </div>
+      <div class="rf">
+        <strong>Paivio's Dual Coding</strong>
+        <p>Visual + verbal encoding is more durable than verbal alone. The image spec in the publish doc isn't cosmetic — it's the second encoding channel. Images that decorate rather than illustrate waste this.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       D1: Learning Outcome Validity
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d1">
+    <div class="dim-eyebrow">Dimension 1</div>
+    <h2 class="dim-title">Learning Outcome Validity</h2>
+    <p class="dim-desc">Does the piece teach exactly what it claims? The goal statement is a contract with the reader. These benchmarks test whether the piece delivers on it.</p>
+
+    <div class="sub-head">Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Goal verb matches tier. T100: notice / identify / name / recognize / spot. T200: run / produce / apply / write / map / conduct. T300: decide / adapt / judge / orchestrate / navigate. A mismatched verb signals a misfiled piece.</p>
+          <p class="bnote">A T100 that says "run a test" or a T200 that says "recognize when" is wrong tier. Reclassify before continuing evaluation.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">The stated goal is achievable in one reading session. Someone who finishes this piece can attempt the goal today with no additional instruction.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">One thing only. The piece teaches exactly one goal. Any passage that serves a different goal is either cut or broken into a separate piece.<span class="nt">New</span></p>
+          <p class="bnote">Apply the recursive decomposition test: if the piece could be explained as two distinct things, split it. Three or more sequential steps with a shareable artifact at T100 = re-tier to T200.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Bloom's alignment holds. T100 targets Remember/Understand (the reader can name and recognize). T200 targets Apply (the reader can execute). T300 targets Analyze/Evaluate/Create (the reader can make judgment calls).<span class="nt">New</span></p>
+          <p class="bnote">A T100 that asks the reader to make judgment calls about context, or a T200 that only asks for recognition, fails this benchmark regardless of goal verb.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Novelty check: a PM, custom dev, or non-custom dev reading this would encounter something they couldn't derive from common sense or a Google search.<span class="nt">New</span></p>
+          <p class="bnote">If the piece's core claim is "here's something obvious with a design label on it," it will be dismissed. The mechanism or the framing must be genuinely new to the audience.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Merrill's coverage: the piece activates prior knowledge (Prior Knowledge Hook or opening), demonstrates the concept in action (Concept/Method), gives the reader an application opportunity (Try This), and integrates with their existing work (Take This Further).<span class="nt">New</span></p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Transfer validity: the method or concept works in SaaS, 3rd-party, or non-custom-dev contexts where the reader doesn't have design authority over the interface.<span class="nt">New</span></p>
+          <p class="bnote">A method that only works when you control the codebase fails this audience. If the method is genuinely constrained to greenfield, that constraint must be named in the Trigger.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       D2: Structural Completeness
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d2">
+    <div class="dim-eyebrow">Dimension 2</div>
+    <h2 class="dim-title">Structural Completeness</h2>
+    <p class="dim-desc">Every tier template is a sequence, not a checklist. Element presence matters. Element order matters. Template labels visible to readers fail this dimension entirely.</p>
+
+    <div class="sub-head">All tiers — Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">All required elements are present for the piece's tier. No element is absent or merged with another.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Elements appear in prescribed order. Proof follows Try This — a Proof that precedes Try This functions as a preview, not feedback, and breaks the deliberate-practice arc.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No template section labels are visible as reader-facing headers. Bold labels like <strong>**Concept:**</strong> or <strong>**Signal:**</strong> are author checklists — they do not appear in published prose. Structure is carried by <code>---</code> breaks and narrative transitions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">T100 element sequence — Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Sequence present: Goal → Concept (1–2 sentences: what this is + why it matters) → You'll See It When → The Signal (one checkable sign) → Don't Confuse This With (adjacent concept + how to tell them apart) → Try Noticing → What Next.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Don't Confuse This With names the one adjacent concept most often conflated with this one — not a generic disclaimer, not a list of similar things.<span class="nt">New</span></p>
+          <p class="bnote">The distinction must be sharp enough that after reading it, the reader could correctly sort three real examples into the right category. If it's fuzzy, tighten the distinguishing criterion.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">T200 element sequence — Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Sequence present: Goal → Prior Knowledge Hook (1 sentence activating existing schema) → Trigger → Concept (the mechanism — why this method works) → Method (exact steps) → Artifact → Watchout → Try This → Proof → Take This Further → AI path → What Next.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Concept names the mechanism — the reason the method works — not just a description of what the method does.<span class="nt">New</span></p>
+          <p class="bnote">"This works because…" should be answerable from the Concept section. If the Concept only describes the method's steps from a higher altitude, it hasn't explained the mechanism.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Prior Knowledge Hook activates a schema this audience actually has — not assumed domain knowledge, not assumed familiarity with design process.<span class="nt">New</span></p>
+          <p class="bnote">A hook that assumes the reader has run a usability study before will miss the audience. The schema must be something a PM or developer would recognize from their own work.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Method steps are minimal and sufficient. No step is a meta-instruction ("think about X," "consider Y"). Each step names one concrete action.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">T300 element sequence — Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Arc header present: Goal (judgment verb) + Arc trigger (when this whole system applies). Per-part format present for each part: heading → Concept → Method → What you end up with → Proof → Watchout. Arc footer present: Try This + Take This Further + Judgment Exercise + What Next.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Judgment Exercise names: (a) the arc's key assumption, (b) the specific situation where that assumption fails, (c) a question about that failure that couldn't apply to any other arc.<span class="nt">New</span></p>
+          <p class="bnote">Test: swap the Judgment Exercise into a different arc. If it still makes sense, it isn't arc-specific enough. The scenario must be the one failure mode that is uniquely dangerous for this arc's approach.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">T100 Practice Atom subtype applied correctly: only when the doing IS the concept and there is at most one step. If ≥ 3 steps with a shareable artifact, re-tier to T200.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">T300 arc parts form a genuine Bloom's progression: Recognition → Differentiation → Application → Judgment → Synthesis. Each part adds a cognitive layer the previous part couldn't.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       D3: Voice & Register
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d3">
+    <div class="dim-eyebrow">Dimension 3</div>
+    <h2 class="dim-title">Voice &amp; Register</h2>
+    <p class="dim-desc">The wall rule: the discipline is invisible. The author is a peer sharing something useful — not a function making a case. Every sentence is either useful to the reader or absent.</p>
+
+    <div class="sub-head">Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No banned words. Full list: delve, tapestry, testament, illuminate, paradigm, intricate, multifaceted, nuanced, juxtapose, endeavor, quintessential, burgeoning, ubiquitous, synergistic, pivotal, paramount, navigate (metaphorical), embark, realm, landscape, nestled, leverage, facilitate, optimize, catalyze, holistic, robust, seamless, foster, comprehensive.</p>
+          <p class="bnote">Also avoid: crucial, notable, significant, innovative, transformative, impactful, actionable, scalable, actually, certainly, essentially, ultimately.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No banned openers: "Let's dive in" / "Let's explore" / "It's important to note" / "It's worth mentioning" / "At its core" / "In essence" / "Fundamentally" / "Generally speaking" / "In many cases."</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No banned closers: "In conclusion," / "To summarize," / "And that's why this matters." No rhetorical Q+A ("What does this mean? It means…"). No parallel negation ("Not X, but Y" — state the Y directly).</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">The discipline is invisible. No sentence argues FOR design or positions design as a function. Every claim is argued from the reader's interest: better work, less rework, lower risk.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No sentence implies the reader is currently doing something wrong. The author is a peer who figured something out — not a function flagging a deficiency.</p>
+          <p class="bnote">Rewrite any sentence that, if said aloud, would make a colleague defensive. The same information can be framed as "here's what I found" instead of "here's what teams get wrong."</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Opens in the moment — no warmup paragraph, no announcement of what the piece will cover, no scene-setting preamble. The first sentence drops the reader into the highest-stakes observation.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Second person throughout: "you," not "teams," "practitioners," "organizations," or "designers." The reader should feel addressed individually.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Goal line and subtitle name the experience, not the concept.<span class="nt">New</span></p>
+          <p class="bnote">Test: does the subtitle make the reader think "yes, that's me" or "okay, so this is about X"? If it describes the concept instead of naming a felt moment, rewrite it. The concept is what the piece teaches. The subtitle is what makes someone decide to read it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">At least one moment of warmth, self-awareness, or levity per piece: a parenthetical aside, a small admission, a moment that acknowledges the reader as a person rather than a practitioner role.</p>
+          <p class="bnote">The more the reader likes the author, the more they trust the content. Personality is a feature, not a distraction.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">One genuine moment of humor — not a pun, not a labeled joke, not a setup-and-payoff. Something true and recognizable that earns a smile, unless the subject is too serious.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Contractions used throughout. "Don't" not "do not." "You're" not "you are." Formality signals distance; contractions signal a conversation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       D4: Sentence-Level Craft
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d4">
+    <div class="dim-eyebrow">Dimension 4</div>
+    <h2 class="dim-title">Sentence-Level Craft</h2>
+    <p class="dim-desc">Word count target is ~1,000 words. Under 700 is compressed, not crafted — personality requires room to breathe. These benchmarks are per-sentence and per-paragraph audits that require reading the piece, not skimming it.</p>
+
+    <div class="sub-head">Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">At least one sentence of 6 words or fewer per 150-word block. Scan the entire piece in blocks. Short sentences are mandatory rhythm devices — the piece cannot achieve momentum without them.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No three consecutive sentences within 5 words of each other in length. Consecutive same-length sentences flatten the rhythm and make prose feel machine-generated.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Em dash inventory: no more than one per 300 words in body prose. No two em dashes in the same sentence. No two em dashes in adjacent paragraphs.</p>
+          <p class="bnote">Em dashes inside quoted dialogue strings (as dialogue punctuation) are exempt from the body-prose count.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Semicolons: near-zero. Replace with a period in nearly every case. A semicolon in prose signals a sentence that should be two sentences.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Bold: maximum two instances per piece. Each instance must be genuine emphasis — a term the reader might miss that changes interpretation if they do. Not stylistic, not structural.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Bullet soup rule: three or more bullets with identical openers convert to prose. The pattern "You can…/ You can…/ You can…" is bullet soup. Structural bullets listing distinct items are permitted.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">One idea per sentence. The "and" test: if a sentence carries two independent ideas connected by "and," split it into two sentences.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Dead verb kill list. Replace every instance of: serves as, allows for, helps to, enables (in verb position), supports, facilitates, functions as. Replace with the thing they point at.</p>
+          <p class="bnote">Target verbs that do things: breaks, reveals, forces, earns, kills, costs, surfaces, catches, names. Cut modifiers instead of strengthening them: very / quite / highly / extremely / somewhat → find a stronger word or cut.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Cut test applied. For each sentence: remove it. Does the piece lose something that can't be recovered from context? If no — cut it. Restatements of the previous sentence are cuts. Transitions with no new content are cuts.<span class="nt">New</span></p>
+          <p class="bnote">Dangling analysis ("…highlighting the importance of…") always fails the cut test. The analysis should have been in the sentence it follows, or it's not needed.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Read-aloud test passes: a narrator reads every sentence without stumbling. Stumbles locate syntax problems, rhythm violations, or sentences that are doing too much.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Piece identity: the opening paragraph is distinctive enough that you'd know which piece this is if you encountered it without its title.<span class="nt">New</span></p>
+          <p class="bnote">Strong pieces open with the most characteristic thing about their concept — a specific failure mode, a specific paradox, a specific moment. Generic openings ("Prototypes answer questions") could belong to any piece in the library.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       D5: Action Section Quality
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d5">
+    <div class="dim-eyebrow">Dimension 5</div>
+    <h2 class="dim-title">Action Section Quality</h2>
+    <p class="dim-desc">The action sections — Try This, Proof, Take This Further, AI path — are where the piece either converts a reader into a practitioner or loses them. These are the most impactful benchmarks for whether learning actually transfers.</p>
+
+    <div class="sub-head">Try This — Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Names a specific artifact or work product the reader would have at their desk this week — not "something you're working on" but a named thing: a prototype, a Figma file, a Jira backlog, a service flow diagram, a draft task statement.<span class="nt">New</span></p>
+          <p class="bnote">Test: remove "something you're working on" from the Try This. What remains? If the answer is nothing, rewrite with a named artifact. If the answer is a specific artifact, the benchmark passes.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Achievable in one sitting, without setup, tool access, or coordination with people not already available. The time estimate or scope signal is present.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Tests the piece's actual concept. The Try This is not a related activity — it exercises the specific mechanism the Concept section named.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Trigger isolation test passes: the Trigger section reads as describing the reader's current week in complete isolation, with no additional context from elsewhere in the piece.<span class="nt">New</span></p>
+          <p class="bnote">Test: paste only the Trigger into a blank document. Does it immediately make sense to someone who hasn't read the rest of the piece? If it requires setup from the Concept to make sense, it's not a trigger — it's a conditional.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Proof — Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Proof appears after Try This. A Proof that precedes Try This is a preview — it tells the reader what success looks like before they've tried anything. The deliberate-practice loop requires attempt before feedback.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">States an observable external signal, not a self-assessment. "If six out of ten people couldn't find it" is observable. "If it felt like it worked" is not.<span class="nt">New</span></p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Two-state: addresses both outcomes. What does success look like? What does failure look like, and what does the reader do next in each case?<span class="nt">New</span></p>
+          <p class="bnote">A Proof that only validates success leaves the reader stranded when it doesn't work. Both branches should route the reader — success toward Take This Further, failure toward diagnosis or revision.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Take This Further — Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Reflection prompt matches learning type. Application → "what would you do differently?" Schema-update → "what didn't fit?" Synthesis → "what would you tell someone doing this for the first time?"</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Timeframe is specific and realistic. "In the next two to five days" is specific. "Soon" or "next time you have a chance" are not.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">The extended practice is genuinely different from Try This. It does not ask the reader to simply repeat what they just did — it extends the scope, applies the principle to a new context, or requires the reflection component that Try This omitted.<span class="nt">New</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">AI path — Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Framed post-attempt: "after you've run this yourself…" The AI path accelerates, never substitutes.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Describes a specific AI task: names what to give the AI (the input) and what to ask for (the output). "Use AI to help" is not specific. "Upload your session notes and ask it to group problems by type" is.<span class="nt">New</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Try This + Take This Further form a credible spaced practice arc: one immediate, one 2–5 days later. Together they cover initial encoding and spaced retrieval — the minimum viable deliberate-practice structure.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">If a public share prompt is included in Take This Further, the channel is named. "If you share it" with no channel named is unactionable.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">AI path describes achievable current capability — what Claude, ChatGPT, or equivalent can do today, not speculative capability. If the AI task described requires a feature that doesn't exist yet, revise it.<span class="nt">New</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       D6: Sourcing Integrity
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d6">
+    <div class="dim-eyebrow">Dimension 6</div>
+    <h2 class="dim-title">Sourcing Integrity</h2>
+    <p class="dim-desc">Every source is a trust claim. The worst outcome isn't a missing citation — it's a fabricated one or a misrepresented finding that a reader follows into a bad decision.</p>
+
+    <div class="sub-head">Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Minimum source count met. T100: ≥ 3 real sources. T200: ≥ 3 real sources. T300: ≥ 4 real sources across all parts.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No fabricated sources. Every author, year, and publication is verifiable — either via WebFetch or as a well-documented foundational work with unambiguous attribution.</p>
+          <p class="bnote">Unverifiable sources must be removed, not assumed correct. A source that is approximately right (right author, wrong year; right journal, wrong paper) fails this benchmark.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Claims accurately represent what the source found. No overstating, no paraphrasing that changes the finding's direction or magnitude. When in doubt, quote the original phrasing.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">APA inline citation format used throughout: name in the sentence + year in parentheses, or (Author, Year) when name isn't in the sentence. Full citation details in the Sources block at end.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Sources woven into prose at the point of claim — not batched at the end of a paragraph. A source that appears three paragraphs after the claim it supports fails this benchmark.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Source placement test: remove any citation from its sentence. Does the sentence lose credibility without it? If not, move the citation to the sentence where it would be missed.<span class="nt">New</span></p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">At least one source is domain-primary — original research, a foundational academic paper, or a first-person practitioner study — not a synthesis blog or summary article.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Recency: for empirical behavioral claims, prefer sources within 20 years. Classic foundational works (Grice 1975, Sacks et al. 1974, etc.) are exempt. A 2005 finding about digital behavior may not transfer to 2026 tools.<span class="nt">New</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       D7: Audience Fit
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d7">
+    <div class="dim-eyebrow">Dimension 7</div>
+    <h2 class="dim-title">Audience Fit</h2>
+    <p class="dim-desc">Functional/practitioner workers only — PMs, custom dev, non-custom dev. No design background assumed. No leadership content. No reference to mandates. These are hard disqualifiers.</p>
+
+    <div class="sub-head">Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">A functional practitioner with no design background can read, understand, and act on this piece without looking anything up.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No design-coded vocabulary without plain-language handling. Required translations: user research → "talking to users / finding out what people actually do." Ideation → "brainstorming / generating options." Pain points → "what's frustrating / what's slowing them down." Design thinking → never use. Human-centered design → never use. Design sprint → describe the process. How might we → "what if we… / what would it take to…"</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No leadership-only content. Anything that requires organizational authority to act on — budget decisions, org structure, headcount, process mandates — does not belong in this library.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No reference to the AI-adoption mandate or its consequences. The content stays entirely silent on this — the mandate belongs to leadership through separate channels.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No illustrative examples, anecdotes, or invented stories. Information is presented directly. Examples read as calling out real situations — they are a danger zone regardless of how generic they seem.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">"Real to them" test: the reader should feel this was written for their specific situation, not for a hypothetical practitioner. "You're building something right now" lands. "Teams often face" doesn't.<span class="nt">New</span></p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Transfer validity: if the piece addresses SaaS or 3rd-party contexts, the method works without design authority over the interface. If it's genuinely constrained to greenfield, the Trigger names that constraint.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">The Try This is executable by a PM, custom dev, or non-custom dev — not just by someone with design tools or design authority. If it requires Figma, design access, or a design team relationship, revise it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       D8: System Coherence
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d8">
+    <div class="dim-eyebrow">Dimension 8</div>
+    <h2 class="dim-title">System Coherence</h2>
+    <p class="dim-desc">Each piece is a node in a network. Broken routing, phantom prereqs, or vocabulary drift between pieces degrades the whole library — not just the piece that caused it.</p>
+
+    <div class="sub-head">Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Metadata header is accurate: tier, arc placement, and prereqs all match the piece's actual content and position in the library. Verify against the master outline.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">What Next routing points to real pieces that exist in the library. No phantom piece references — if a piece number appears in What Next, it must exist in the file system and the master outline.</p>
+          <p class="bnote">This was caught in production: "123 — Task vs Goal" was referenced in routing when the real piece is "123 — What Usability Testing Is." Cross-reference every routing link before publishing.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">What Next conditions are genuine decision points based on what the reader just learned — not "if you want more, read X." Each branch should route based on a specific outcome the reader just experienced.<span class="nt">New</span></p>
+          <p class="bnote">Test: replace "if you want more" with "if you just discovered [specific thing]." If the substitution reveals something meaningful, rewrite. If nothing meaningful is revealed, the routing is real.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Prereq cross-references are layout elements (a chip or callout in the publish doc, below the article header) — not embedded in prose. A parenthetical like "if you're arriving here without reading X first…" inside the article copy fails this benchmark.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">No duplication: this piece does not cover ground already fully covered by another piece without adding a new angle or advancing to a new tier. Overlap is a signal to cut content or merge pieces.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Cross-piece vocabulary consistency: if this piece and another piece both describe the same concept (assumptions, attachment, signal, artifact), they use consistent vocabulary. Drift between pieces makes the library feel uncoordinated.<span class="nt">New</span></p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">JIT ordering: each piece's listed prereqs would genuinely unlock something in this piece — not just thematically related, but conceptually required. If a prereq could be removed from the list without affecting the reader's ability to act on this piece, it's not a genuine prereq.<span class="nt">New</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       D9: Publication Readiness
+  ═════════════════════════════════════════ -->
+  <section class="dimension" id="d9">
+    <div class="dim-eyebrow">Dimension 9</div>
+    <h2 class="dim-title">Publication Readiness</h2>
+    <p class="dim-desc">The publish doc is not supplementary — it's the interface between the article and its readers. A missing publish doc, wrong naming convention, or absent image spec means the piece isn't ready to ship.</p>
+
+    <div class="sub-head">Blocking</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Publish doc exists at <code>[number].publish.md</code> — correct naming convention. Not <code>[number]-[title]-publish.md</code>, not <code>[number].qa-report.md</code>, not any other variant.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Layout map includes all required rows: Prereq chip (piece numbers + titles), image spec (Gemini prompt), pull quote (text + position), callout content (amber block text), What Next routing (piece links + conditions), platform (Teams vs SharePoint).</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Pull quote present and passes the quotability test: under 30 words as a unit, self-contained without context, names something the reader has felt or experienced — not something the author wants to explain.<span class="nt">New</span></p>
+          <p class="bnote">Test: could this sentence be a social media post that makes someone want to read the article? If yes, it's quotable. If it requires context from the piece to make sense, it fails.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip blocking">Blocking</span></div>
+        <div class="bmark-body">
+          <p class="btext">Platform specified. "Teams" or "SharePoint" is named. The platform determines layout behavior and the embed format for images and callouts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-head">Advisory</div>
+    <div class="bmarks">
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Image spec describes an image that illustrates the concept — not decorates it. The image should be explainable in terms of the concept: "this image shows [mechanism or moment]."<span class="nt">New</span></p>
+          <p class="bnote">Dual coding (Paivio) applies: the image and the prose are encoding the same concept through different channels. An image that decorates provides no second encoding. An image that illustrates the mechanism adds retention durability.</p>
+        </div>
+      </div>
+      <div class="bmark">
+        <div class="sev"><span class="chip advisory">Advisory</span></div>
+        <div class="bmark-body">
+          <p class="btext">Forwarding scenario is specific enough to copy-paste as a Teams message. It names a specific colleague role (not "someone") and a specific workflow moment (not "when working on something").<span class="nt">New</span></p>
+          <p class="bnote">Test: could a developer paste this forwarding scenario verbatim and have it make sense to a PM colleague? If it requires editing to be specific, rewrite it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ════════════════════════════════════════
+       PROTOCOL
+  ═════════════════════════════════════════ -->
+  <section class="protocol-section" id="protocol">
+    <div class="dim-eyebrow">Evaluation Protocol</div>
+    <h2>Recommended Pass Order</h2>
+    <p class="proto-desc">Run passes in this order. Earlier passes catch disqualifying problems before you invest time in prose-level work. Each pass is a distinct read-through — not a simultaneous checklist scan.</p>
+
+    <ol class="proto-steps">
+      <li class="proto-step">
+        <div class="step-n">1</div>
+        <div class="step-body">
+          <strong>Sourcing Integrity (D6)</strong>
+          <span>Verify every source before investing time in anything else. A fabricated source invalidates the piece's trust anchor regardless of how well-written it is. Use WebFetch on any source that isn't a well-documented foundational work.</span>
+        </div>
+      </li>
+      <li class="proto-step">
+        <div class="step-n">2</div>
+        <div class="step-body">
+          <strong>Structural Completeness (D2)</strong>
+          <span>Confirm all required elements are present in the correct order for the piece's tier. Use the element sequence as a checklist. If Proof precedes Try This, stop — structural problems cascade through everything else.</span>
+        </div>
+      </li>
+      <li class="proto-step">
+        <div class="step-n">3</div>
+        <div class="step-body">
+          <strong>Audience Fit (D7)</strong>
+          <span>Check for hard disqualifiers: design-coded vocabulary, leadership content, mandate references, illustrative examples. These are binary — present or absent. Any hit is blocking.</span>
+        </div>
+      </li>
+      <li class="proto-step">
+        <div class="step-n">4</div>
+        <div class="step-body">
+          <strong>System Coherence (D8)</strong>
+          <span>Verify the metadata header, confirm What Next routing links are real, check for phantom piece references. A broken link in What Next misdirects every reader who reaches it.</span>
+        </div>
+      </li>
+      <li class="proto-step">
+        <div class="step-n">5</div>
+        <div class="step-body">
+          <strong>Learning Outcome Validity (D1)</strong>
+          <span>Confirm goal verb matches tier. Confirm the piece teaches exactly one thing. Apply the Bloom's alignment check. This is a conceptual pass — read for intent, not prose.</span>
+        </div>
+      </li>
+      <li class="proto-step">
+        <div class="step-n">6</div>
+        <div class="step-body">
+          <strong>Action Section Quality (D5)</strong>
+          <span>Read Try This, Proof, Take This Further, and AI path as a unit. Apply every blocking benchmark in D5. This is the highest-leverage section for whether the piece produces practitioners or just informed readers.</span>
+        </div>
+      </li>
+      <li class="proto-step">
+        <div class="step-n">7</div>
+        <div class="step-body">
+          <strong>Voice &amp; Register (D3)</strong>
+          <span>Scan for banned words and openers. Then read the whole piece as a first-time reader and assess: does it feel like a peer or a function? Warm or clinical? Second-person or impersonal?</span>
+        </div>
+      </li>
+      <li class="proto-step">
+        <div class="step-n">8</div>
+        <div class="step-body">
+          <strong>Sentence-Level Craft (D4)</strong>
+          <span>Read aloud. Apply the rhythm audit, em dash inventory, and cut test. This pass takes the longest. It requires sentence-by-sentence attention — don't skim. Stumbles in the read-aloud locate problems faster than visual inspection.</span>
+        </div>
+      </li>
+      <li class="proto-step">
+        <div class="step-n">9</div>
+        <div class="step-body">
+          <strong>Publication Readiness (D9)</strong>
+          <span>Confirm the publish doc exists at the correct path, all layout rows are present, the pull quote passes the quotability test, and the platform is named. Final gate before commit.</span>
+        </div>
+      </li>
+    </ol>
+
+    <!-- SCORING -->
+    <div class="scoring-grid">
+      <div class="score-card">
+        <span class="score-label b">Blocking — Pass Threshold</span>
+        <p>All blocking benchmarks must pass. A single failing blocking benchmark holds the piece. There is no score — it's pass or fail per benchmark. Document which benchmarks failed and what the fix is before re-evaluating.</p>
+      </div>
+      <div class="score-card">
+        <span class="score-label a">Advisory — Pass Threshold</span>
+        <p>≥ 85% of advisory benchmarks should pass (roughly 13 of 15). Any advisory benchmark that fails must have a documented reason — "not applicable to this piece type" is a valid reason. "Didn't notice" is not.</p>
+      </div>
+      <div class="score-card">
+        <span class="score-label b" style="color:var(--ctx-color);">When Evaluation Uncovers a Gap</span>
+        <p>If evaluation reveals a systematic gap — a benchmark that every piece fails in the same way — update the benchmark spec and add a remediation pass for the backlog. Evaluation is also a feedback loop for the spec itself.</p>
+      </div>
+      <div class="score-card">
+        <span class="score-label a" style="color:var(--muted);">Evaluation Frequency</span>
+        <p>Full evaluation pass on every piece before initial publication. Abbreviated pass (D6 + D2 + D5 + D9) after any substantive revision. Full re-evaluation only required if the goal, method, or sourcing changes.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
