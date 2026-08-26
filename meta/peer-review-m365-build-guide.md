@@ -86,7 +86,7 @@ Use names without spaces — this avoids the `_x0020_` encoding problem in Power
 | TopicTag | Choice | Your confirmed taxonomy. Required. Single value only. Drives the display tag on Gallery cards and Adaptive Cards. |
 | NotificationTags | Choice | Same taxonomy. Multi-select allowed. Used for reviewer notification matching only — not displayed on cards. Add secondary tags here when an article spans categories (e.g., a prototyping method that's specifically about AI features). |
 | Subtitle | Single line of text | The hook that appears on Gallery cards and in Adaptive Cards. Must be single line; multi-line text columns do not display in Gallery view. |
-| LearningGoal | Multiple lines of text | What the reader gains after completing this piece — the answer key for the comprehension check question. Eric's use only; does not appear on Gallery cards. |
+| LearningGoal | Single line of text | Required. What the reader gains from this piece — written as a clear outcome statement. Eric's reference and the answer key for the feedback form comprehension check. Does not appear on Gallery cards. |
 | MinReviews | Number | Required. Default: 1. |
 | Ceiling | Number | Required. Default: 2. |
 | ReviewCount | Number | Default: 0. Updated by Power Automate Feedback Flow on each submission. |
