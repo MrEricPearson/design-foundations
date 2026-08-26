@@ -319,9 +319,9 @@ These files live at the project root and are not part of the microlearning serie
 | 220 | Working in Vendor Software | 220-working-in-vendor-software.md | 3 | 134 | Non-custom dev audience; vendor constraint map |
 | 301c | Assumption-First Proto-Persona | 300-systems/301c-assumption-first-proto-persona.md | 3 | 173, 151, 152 | Companion to 301 arc; no research access needed |
 | 309 arc | Prototyping — Arc header + arc footer | 300-systems/309-prototyping-arc.md | 4 | 177, 132, 113 | Approach selection (paper/wireframe/AI) + Judgment Exercise (approval-culture failure mode) |
-| 309a | Paper/Sketch Prototype | 200-methods/309a-paper-sketch-prototype.md | 4 | 177, 132, 106, 113 | Widest reach; no tools; concept-testing; starts prototyping arc |
-| 309b | Lo-fi Wireframe Prototype | 200-methods/309b-lofi-wireframe-prototype.md | 4 | 177, 132, 158, 113 | Navigational testing; any connected-page tool |
-| 309c | AI-Generated Prototype | 200-methods/309c-ai-generated-prototype.md | 4 | 177, 132, 147, 219, 113 | Fast production; question-first discipline critical |
+| 270a | Paper/Sketch Prototype | 200-methods/270a-paper-sketch-prototype.md | 4 | 177, 132, 106, 113 | Widest reach; no tools; concept-testing; starts prototyping arc |
+| 270b | Lo-fi Wireframe Prototype | 200-methods/270b-lofi-wireframe-prototype.md | 4 | 177, 132, 158, 113 | Navigational testing; any connected-page tool |
+| 270c | AI-Generated Prototype | 200-methods/270c-ai-generated-prototype.md | 4 | 177, 132, 147, 219, 113 | Fast production; question-first discipline critical |
 
 **Redirect stubs (navigational only — no content):** old 202, 204, 206, 215 files are now redirect stubs pointing to new arc clusters.
 
@@ -366,7 +366,7 @@ These files live at the project root and are not part of the microlearning serie
 
 ## Phase 3 Additions (world-class depth pass — 2026-08-10)
 
-**Context:** All new pieces drafted to world-class educational standard — mechanism-level explanations, wrong-model disruption, false-positive diagnostics in Proof sections, judgment-stress-testing Try This elements. Six previously created prototyping files (177, 178, 309, 309a, 309b, 309c) were also elevated to this standard: Prior Knowledge Hook, Why This Works, Watchout, and Proof sections rewrote entirely.
+**Context:** All new pieces drafted to world-class educational standard — mechanism-level explanations, wrong-model disruption, false-positive diagnostics in Proof sections, judgment-stress-testing Try This elements. Six previously created prototyping files (177, 178, 309, 270a, 270b, 270c) were also elevated to this standard: Prior Knowledge Hook, Why This Works, Watchout, and Proof sections rewrote entirely.
 
 ### New Tier 100 Atoms (Phase 3 — Cluster A: Content Architecture)
 
@@ -416,12 +416,12 @@ These files live at the project root and are not part of the microlearning serie
 | # | Piece | File | Wave | Prereqs | Notes |
 |---|---|---|---|---|---|
 | 221 | Content Modeling | 221-content-modeling.md | 3 | 179, 180, 181, 183 | 5-step method; named types/attributes/relationships before any screen design |
-| 309d | Wizard of Oz Prototype | 309d-wizard-of-oz-prototype.md | 4 | 177, 132 | Tests system behavior value before building automation |
-| 309e | Conversational Prototype | 309e-conversational-prototype.md | 4 | 177, 132, 147 | Dialogue logic testing; off-script moments are the data |
-| 309f | High-Fidelity Prototype | 309f-high-fidelity-prototype.md | 4 | 177, 132, 158 | Execution-quality testing only; wrong approach for concept/structure questions |
-| 309g | Service Prototype | 309g-service-prototype.md | 4 | 177, 132, 113 | Tests cross-touchpoint seams; most failures happen between touchpoints |
-| 309h | Parallel Prototyping | 309h-parallel-prototyping.md | 4 | 177, 132 | Comparative data > optimization data; requires genuinely different directions |
-| 309i | Build to Think | 309i-build-to-think.md | 4 | 177, 132, 147 | Building as design method; disposable artifact → extracted decisions |
+| 270d | Wizard of Oz Prototype | 270d-wizard-of-oz-prototype.md | 4 | 177, 132 | Tests system behavior value before building automation |
+| 270e | Conversational Prototype | 270e-conversational-prototype.md | 4 | 177, 132, 147 | Dialogue logic testing; off-script moments are the data |
+| 270f | High-Fidelity Prototype | 270f-high-fidelity-prototype.md | 4 | 177, 132, 158 | Execution-quality testing only; wrong approach for concept/structure questions |
+| 270g | Service Prototype | 270g-service-prototype.md | 4 | 177, 132, 113 | Tests cross-touchpoint seams; most failures happen between touchpoints |
+| 270h | Parallel Prototyping | 270h-parallel-prototyping.md | 4 | 177, 132 | Comparative data > optimization data; requires genuinely different directions |
+| 270i | Build to Think | 270i-build-to-think.md | 4 | 177, 132, 147 | Building as design method; disposable artifact → extracted decisions |
 
 ### New Tier 300 Arc (Phase 3)
 
@@ -435,17 +435,17 @@ These files live at the project root and are not part of the microlearning serie
 |---|---|
 | 177 (What a Prototype Is) | Concept rewrote: wrong model named (polish = useful feedback); mechanism of fidelity-as-commitment-signal |
 | 178 (Prototype vs. MVP) | Concept rewrote: "MVP" drift named; mechanism of the ship commitment explained |
-| 309 (Prototyping Arc) | Arc Goal elevated; all approach descriptions rewrote with mechanism (not just trigger); 6 new approaches added (309d-309i); Judgment Exercise made arc-specific with named failure case |
-| 309a (Paper/Sketch) | Prior Knowledge Hook, Why This Works, Watchout, Proof elevated to mechanism level with false-positive diagnostic |
-| 309b (Lo-fi Wireframe) | Prior Knowledge Hook, Why This Works, Watchout, Proof elevated; false-positive added (familiarity vs. structure) |
-| 309c (AI-Generated) | Prior Knowledge Hook, Why This Works, Watchout, Proof elevated; plausibility-anchoring mechanism named |
+| 309 (Prototyping Arc) | Arc Goal elevated; all approach descriptions rewrote with mechanism (not just trigger); 6 new approaches added (270d-270i); Judgment Exercise made arc-specific with named failure case |
+| 270a (Paper/Sketch) | Prior Knowledge Hook, Why This Works, Watchout, Proof elevated to mechanism level with false-positive diagnostic |
+| 270b (Lo-fi Wireframe) | Prior Knowledge Hook, Why This Works, Watchout, Proof elevated; false-positive added (familiarity vs. structure) |
+| 270c (AI-Generated) | Prior Knowledge Hook, Why This Works, Watchout, Proof elevated; plausibility-anchoring mechanism named |
 
 ### Updated Summary Counts (2026-08-10)
 
 | Category | Count |
 |---|---|
 | Tier 100 atoms | 92 (69 prior + 23 Phase 3: 179-199, 200a-200b) |
-| Tier 200 methods | 44 (37 prior + 7 Phase 3: 221, 309d-309i) |
+| Tier 200 methods | 44 (37 prior + 7 Phase 3: 221, 270d-270i) |
 | Tier 300 arcs | 11 files (10 prior + 310) |
 | Standalone | 4 |
 | **Total files** | **~76 new files (since 2026-08-05)** |

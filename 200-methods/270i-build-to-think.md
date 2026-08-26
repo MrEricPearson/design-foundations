@@ -26,7 +26,7 @@ Donald Schön (1983) spent his career studying how professionals generate knowle
 
 Software teams figured this out independently. Kent Beck introduced spike solutions in Extreme Programming, time-boxed experiments aimed at learning one specific thing. Ron Jeffries, one of Beck's collaborators on the C3 project, described it plainly: a spike is concluded when you learn what you needed to learn. Not when the code is clean. Not when the feature works. When the question is answered.
 
-Kery and Myers (2017) at Carnegie Mellon confirmed what practitioners already suspected: that "writing code to prototype or experiment" while "allowing the end goal to evolve throughout the process" is a distinct, legitimate mode of inquiry.
+Kery and Myers (2017) at Carnegie Mellon confirmed what practitioners already suspected: that writing code to prototype or experiment with different ideas — while letting the goal evolve through the process of programming — is a distinct, legitimate mode of inquiry.
 
 Build to Think is a spike with explicit design intent.
 
@@ -64,7 +64,7 @@ You'll know it worked if you made at least one design decision after building th
 
 Over the next week, look at one feature your team shipped in the last quarter. Find the "we realized during development that..." moments. Each one is a question that Build to Think would have answered earlier, at lower cost, before the design direction was locked. Write one sentence: what would you have named as the question, and when in the project would you have run the spike?
 
-If you share it in [the relevant channel], you'll see what others caught too.
+If you share it in a team channel, you'll see what others caught too.
 
 ---
 
@@ -80,8 +80,8 @@ If you're deciding between approaches (paper sketch, AI-generated prototype, or 
 
 Schön, D. A. (1983). *The Reflective Practitioner: How Professionals Think in Action.* Basic Books. Professional understanding emerges through action — experiments in practice "generate both a new understanding of the phenomenon and a change in the situation."
 
-Beck, K. (1999). *Extreme Programming Explained.* Addison-Wesley. / Jeffries, R. (XP spike documentation). Spike solutions as time-boxed learning experiments: "The spike is concluded when you learn what you needed to learn." Code is expected to be discarded; the learning is what carries forward.
+Beck, K. (1999). *Extreme Programming Explained.* Addison-Wesley. / Jeffries, R. (XP spike documentation). Spike solutions as time-boxed learning experiments: "The spike is concluded when you learn what you needed to learn." Code is expected to be discarded. The learning is what carries forward.
 
-Kery, M. B. & Myers, B. A. (2017). *Exploring Exploratory Programming.* Carnegie Mellon HCI Institute. Exploratory programming defined by two essential features: "writing code to prototype or experiment" and "allowing the end goal to evolve throughout the process."
+Kery, M. B., & Myers, B. A. (2017). Exploring exploratory programming. *2017 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)*, 25–29. https://doi.org/10.1109/VLHCC.2017.8103446 Exploratory programming defined by two essential properties: the programmer writes code as a medium to prototype or experiment with different ideas, and the goal is open-ended, evolving through the process of programming.
 
 Arkes, H. R. & Blumer, C. (1985). The psychology of sunk cost. *Organizational Behavior and Human Decision Processes, 35*(1), 124–140. Once invested in a direction, people continue even when the original objective has been met or abandoned — continuation feels less wasteful than stopping.

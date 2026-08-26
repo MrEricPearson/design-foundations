@@ -1,4 +1,4 @@
-# 309f — When Visual Design Is the Question
+# 270f — When Visual Design Is the Question
 **Tier:** 200 — Practice | **Arc:** Prototyping | **Prereqs:** 177, 132, 158 | **Wave:** 4
 
 **Goal:** Build a high-fidelity prototype purposefully — scoped to the questions only visual quality can answer — and read the findings accurately so you can separate visual feedback from structural feedback that arrived too late.
@@ -61,16 +61,16 @@ After you've run this yourself: AI tools now generate high-fidelity visuals quic
 
 ---
 
-If the visual questions are answered and the remaining question is whether the experience holds across touchpoints or cross-channel moments, read 309g (Service Prototype). If you're ready to run a structured testing session, read 215a (Moderated Usability Session). If hi-fi testing surfaced structural feedback you didn't expect, back up to 309b (Lo-fi Wireframe Prototype).
+If the visual questions are answered and the remaining question is whether the experience holds across touchpoints or cross-channel moments, read 270g (Service Prototype). If you're ready to run a structured testing session, read 215a (Moderated Usability Session). If hi-fi testing surfaced structural feedback you didn't expect, back up to 270b (Lo-fi Wireframe Prototype).
 
 ---
 
 **Sources**
 
-Kurosu, M., & Kashimura, K. (1995). Apparent usability vs. inherent usability: Experimental analysis on the determinants of the apparent usability. *CHI '95 Extended Abstracts on Human Factors in Computing Systems*. ACM.
+Kurosu, M., & Kashimura, K. (1995). Apparent usability vs. inherent usability: Experimental analysis on the determinants of the apparent usability. *CHI '95 Extended Abstracts on Human Factors in Computing Systems*. ACM. Ran a 252-participant study across 26 ATM interface variations and found the correlation between aesthetics and perceived ease of use was stronger than the correlation with actual ease of use — the mechanism this piece uses to explain why hi-fi feedback skews toward execution rather than direction.
 
-Tractinsky, N. (1997). Aesthetics and apparent usability: Empirically assessing cultural and methodological issues. In *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems* (pp. 115–122). ACM.
+Tractinsky, N. (1997). Aesthetics and apparent usability: Empirically assessing cultural and methodological issues. In *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems* (pp. 115–122). ACM. Replicated Kurosu and Kashimura's finding with a different population, confirming the aesthetics-usability halo effect wasn't a one-off cultural artifact.
 
-Walker, M., Takayama, L., & Landay, J. A. (2002). High-fidelity or low-fidelity, paper or computer? Choosing attributes when testing web prototypes. *Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46*(5), 661–665.
+Walker, M., Takayama, L., & Landay, J. A. (2002). High-fidelity or low-fidelity, paper or computer? Choosing attributes when testing web prototypes. *Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46*(5), 661–665. Found that high- and low-fidelity prototypes surface the same structural usability issues — cited here to argue that structural feedback in a hi-fi session was available earlier and cheaper, and shouldn't have waited for hi-fi to surface.
 
-Nielsen Norman Group. (n.d.). UX prototypes: Low fidelity vs. high fidelity. Retrieved from nngroup.com/articles/ux-prototype-hi-lo-fidelity/
+Nielsen Norman Group. (n.d.). UX prototypes: Low fidelity vs. high fidelity. Retrieved from nngroup.com/articles/ux-prototype-hi-lo-fidelity/ General reference distinguishing what each fidelity level is suited to test, supporting this piece's framing of hi-fi as purpose-built for visual and execution questions rather than structural ones.

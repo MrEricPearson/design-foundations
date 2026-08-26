@@ -1,4 +1,4 @@
-# 309a — Paper / Sketch Prototype
+# 270a — Paper / Sketch Prototype
 
 **Tier:** 200 — Practice | **Arc:** Prototyping (see 309-prototyping-arc.md for approach selection) | **Prereqs:** 177 (What a Prototype Is), 132 (Prototype Fidelity), 106 (Sketching / Quick Visualization), 113 (Defining Success Before You Start) | **Audience:** General | **Note:** Widest-reach approach — no tools required. Right starting point for any unvalidated concept.
 
@@ -14,6 +14,10 @@ This happens because of fidelity. Not fidelity as a quality measure: fidelity as
 
 ---
 
+Use this approach when the question is conceptual: "Does this direction make sense?" or "Is this flow logical?" If the question has moved past direction into navigation specifics or fine-grained interaction, see 270b (Lo-fi Wireframe). If you need something that functions rather than just looks like it functions, see 270c (AI-Generated). Paper is for the moment before those questions. Use it when you're still asking whether you're headed somewhere worth going.
+
+---
+
 Y.Y. Wong (1992) studied what happens when people evaluate design artifacts of different levels of finish. The finding was specific: polish signals finished. Rough signals open. When something looks refined, everyone in the room registers it as a decision — their cognitive mode shifts from "is this the right direction?" to "how do we improve this direction?" You can't turn that shift off. Nobody chooses it. It's how artifacts register.
 
 Bill Buxton (2007) makes the distinction this way: a sketch asks a question. A finished artifact answers one. The moment something looks polished enough to take seriously as an answer, you've lost the room's ability to give you directional feedback — even if the direction isn't decided yet. Walker, Takayama & Landay (2002) confirmed this: paper sketches and browser-rendered HTML prototypes on identical tasks produced the same usability findings. Finish level doesn't change what gets caught. It changes what gets said.
@@ -24,19 +28,15 @@ This is why a paper sketch works. Not because it's faster (it is), and not becau
 
 ---
 
-Use this approach when the question is conceptual: "Does this direction make sense?" or "Is this flow logical?" If the question has moved past direction into navigation specifics or fine-grained interaction, see 309b (Lo-fi Wireframe). If you need something that functions rather than just looks like it functions, see 309c (AI-Generated). Paper is for the moment before those questions. Use it when you're still asking whether you're headed somewhere worth going.
+Step 1: Write the question. At the top of a blank page, write the one question this prototype will answer. "Does this sequence make sense to someone who hasn't seen it before?" One question. If you have two, plan two separate tests — combining them into one prototype is how you end up with feedback that answers neither.
 
----
+Step 2: Sketch one state per page. One page equals one screen or one moment in the flow. Boxes for UI elements, text for controls, arrows for connections. No tools, no rulers. Stick figures are fine. Sketches should look like sketches. That's the point.
 
-**Step 1: Write the question.** At the top of a blank page, write the one question this prototype will answer. "Does this sequence make sense to someone who hasn't seen it before?" One question. If you have two, plan two separate tests — combining them into one prototype is how you end up with feedback that answers neither.
+Step 3: Leave visible gaps. If you don't know what a step looks like, write "?" or "unknown" and move on. Don't fill a gap with a guess you haven't labeled. Visible gaps tell your reviewer exactly where to focus.
 
-**Step 2: Sketch one state per page.** One page equals one screen or one moment in the flow. Boxes for UI elements, text for controls, arrows for connections. No tools, no rulers. Stick figures are fine. Sketches should look like sketches. That's the point.
+Step 4: Annotate every simulated interaction. For each tap target, button, or transition, write what happens. "Tapping this shows page 3." "This triggers a confirmation state." The annotation is the method. A sketch without annotation is just a drawing — the annotation tells your reviewer what to imagine.
 
-**Step 3: Leave visible gaps.** If you don't know what a step looks like, write "?" or "unknown" and move on. Don't fill a gap with a guess you haven't labeled. Visible gaps tell your reviewer exactly where to focus.
-
-**Step 4: Annotate every simulated interaction.** For each tap target, button, or transition, write what happens. "Tapping this shows page 3." "This triggers a confirmation state." The annotation is the method. A sketch without annotation is just a drawing — the annotation tells your reviewer what to imagine.
-
-**Step 5: Number the pages and draw the path.** Indicate which page follows which. Number them, draw connecting arrows, or write the destination page number next to each annotated interaction. The path is the prototype. The sketches are the pages in it.
+Step 5: Number the pages and draw the path. Indicate which page follows which. Number them, draw connecting arrows, or write the destination page number next to each annotated interaction. The path is the prototype. The sketches are the pages in it.
 
 ---
 
@@ -80,16 +80,16 @@ After you've run this yourself: describe the sketch to an AI tool in words — "
 
 ---
 
-Once the concept is validated, 309b (Lo-fi Wireframe) tests the navigational structure at higher fidelity. If you're ready for a structured session with a real participant, 215a (Moderated Usability Session) covers running it. If the sketch revealed assumptions about who the user is that haven't been tested, 301 (From a Vague Ask to a Real Persona) is the next move.
+Once the concept is validated, 270b (Lo-fi Wireframe) tests the navigational structure at higher fidelity. If you're ready for a structured session with a real participant, 215a (Moderated Usability Session) covers running it. If the sketch revealed assumptions about who the user is that haven't been tested, 301 (From a Vague Ask to a Real Persona) is the next move.
 
 ---
 
 **Sources**
 
-Wong, Y.Y. (1992). Rough and ready prototypes: Lessons from graphic design. *Short Papers Proceedings of ACM CHI '92*, 83–84.
+Wong, Y.Y. (1992). Rough and ready prototypes: Lessons from graphic design. *Short Papers Proceedings of ACM CHI '92*, 83–84. Found that finish level changes how people evaluate design artifacts: polish reads as a finished decision, roughness reads as an open question. Grounds this piece's central mechanism — fidelity as a signal, not a quality measure.
 
-Buxton, B. (2007). *Sketching user experiences: Getting the design right and the right design.* Morgan Kaufmann.
+Buxton, B. (2007). *Sketching user experiences: Getting the design right and the right design.* Morgan Kaufmann. Distinguished a sketch (which asks a question) from a finished artifact (which answers one) — the framing this piece uses to explain why paper prototypes preserve directional feedback.
 
-Virzi, R.A., Sokolov, J.L., & Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. *Proceedings of ACM CHI '96*, 236–243.
+Virzi, R.A., Sokolov, J.L., & Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. *Proceedings of ACM CHI '96*, 236–243. Found that paper prototypes catch the same usability problems as polished ones, including the most serious ones — the evidence this piece cites for why keeping a sketch rough doesn't sacrifice resolution.
 
-Walker, M., Takayama, L., & Landay, J.A. (2002). High-fidelity or low-fidelity, paper or computer? Choosing attributes when testing web prototypes. *Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46*(5), 661–665.
+Walker, M., Takayama, L., & Landay, J.A. (2002). High-fidelity or low-fidelity, paper or computer? Choosing attributes when testing web prototypes. *Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 46*(5), 661–665. Found that paper sketches and browser-rendered HTML prototypes on identical tasks produced the same usability findings — cited here to show finish level changes what gets said, not what gets caught.

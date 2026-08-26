@@ -45,9 +45,9 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 - [x] **Step 7** · ✅ T100 · `113-defining-success.md` — [100-foundations/113-defining-success.md](../100-foundations/113-defining-success.md)
 - [x] **Step 8** · ✅ T300 · `309-prototyping-arc.md` — [300-systems/309-prototyping-arc.md](../300-systems/309-prototyping-arc.md)
-- [x] **Step 9** · ✅ T200 · `309a-paper-sketch-prototype.md` — [200-methods/309a-paper-sketch-prototype.md](../200-methods/309a-paper-sketch-prototype.md)
+- [x] **Step 9** · ✅ T200 · `270a-paper-sketch-prototype.md` — [200-methods/270a-paper-sketch-prototype.md](../200-methods/270a-paper-sketch-prototype.md)
 - [x] **Step 10** · ✅ T100 · `158-task-statement-design.md` — [100-foundations/158-task-statement-design.md](../100-foundations/158-task-statement-design.md)
-- [x] **Step 11** · ✅ T200 · `309b-lofi-wireframe-prototype.md` — [200-methods/309b-lofi-wireframe-prototype.md](../200-methods/309b-lofi-wireframe-prototype.md)
+- [x] **Step 11** · ✅ T200 · `270b-lofi-wireframe-prototype.md` — [200-methods/270b-lofi-wireframe-prototype.md](../200-methods/270b-lofi-wireframe-prototype.md)
 - [x] **Step 12** · ✅ T100 · `147-ai-as-execution-partner.md` — [100-foundations/147-ai-as-execution-partner.md](../100-foundations/147-ai-as-execution-partner.md)
 
 ---
@@ -55,17 +55,17 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 ### Batch C — AI cluster + MVP close · 4 items
 
 - [x] **Step 13** · ✅ T200 · `219-ai-for-design-work.md` — [200-methods/219-ai-for-design-work.md](../200-methods/219-ai-for-design-work.md)
-- [x] **Step 14** · ✅ T200 · `309c-ai-generated-prototype.md` — [200-methods/309c-ai-generated-prototype.md](../200-methods/309c-ai-generated-prototype.md)
-- [x] **Step 15** · ✅ T200 · `309i-build-to-think.md` — [200-methods/309i-build-to-think.md](../200-methods/309i-build-to-think.md)
+- [x] **Step 14** · ✅ T200 · `270c-ai-generated-prototype.md` — [200-methods/270c-ai-generated-prototype.md](../200-methods/270c-ai-generated-prototype.md)
+- [x] **Step 15** · ✅ T200 · `270i-build-to-think.md` — [200-methods/270i-build-to-think.md](../200-methods/270i-build-to-think.md)
 
 ---
 
 ### Batch D — Complete arc · 4 items
 
-- [x] **Step 16** · ✅ T200 · `309d-wizard-of-oz-prototype.md` — [200-methods/309d-wizard-of-oz-prototype.md](../200-methods/309d-wizard-of-oz-prototype.md)
-- [x] **Step 17** · ✅ T200 · `309f-high-fidelity-prototype.md` — [200-methods/309f-high-fidelity-prototype.md](../200-methods/309f-high-fidelity-prototype.md)
-- [x] **Step 18** · ✅ T200 · `309g-service-prototype.md` — [200-methods/309g-service-prototype.md](../200-methods/309g-service-prototype.md)
-- [x] **Step 19** · ✅ T200 · `309h-parallel-prototyping.md` — [200-methods/309h-parallel-prototyping.md](../200-methods/309h-parallel-prototyping.md)
+- [x] **Step 16** · ✅ T200 · `270d-wizard-of-oz-prototype.md` — [200-methods/270d-wizard-of-oz-prototype.md](../200-methods/270d-wizard-of-oz-prototype.md)
+- [x] **Step 17** · ✅ T200 · `270f-high-fidelity-prototype.md` — [200-methods/270f-high-fidelity-prototype.md](../200-methods/270f-high-fidelity-prototype.md)
+- [x] **Step 18** · ✅ T200 · `270g-service-prototype.md` — [200-methods/270g-service-prototype.md](../200-methods/270g-service-prototype.md)
+- [x] **Step 19** · ✅ T200 · `270h-parallel-prototyping.md` — [200-methods/270h-parallel-prototyping.md](../200-methods/270h-parallel-prototyping.md)
 
 ---
 
@@ -82,9 +82,9 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 
 ### Batch F addition — gap piece + deferred step · 2 items
 
-- [x] **Gap** · ✅ T100 · `266-no-ui-as-design-goal.md` — [100-foundations/266-no-ui-as-design-goal.md](../100-foundations/266-no-ui-as-design-goal.md)
+- [x] **Gap** · ✅ T100 · `139-no-ui-as-design-goal.md` — [100-foundations/139-no-ui-as-design-goal.md](../100-foundations/139-no-ui-as-design-goal.md)
   - New draft completed 2026-08-24 with all deliverables (article + publish.md + QA report) in 01-drafts/100-foundations/
-- [x] **Step 26** · ✅ T200 · `309e-conversational-prototype.md` — [200-methods/309e-conversational-prototype.md](../200-methods/309e-conversational-prototype.md)
+- [x] **Step 26** · ✅ T200 · `270e-conversational-prototype.md` — [200-methods/270e-conversational-prototype.md](../200-methods/270e-conversational-prototype.md)
 
 ---
 
@@ -97,7 +97,7 @@ Run in order. Each item: invoke write-piece skill → confirm publish.md written
 | 3 | C | 3 | AI cluster — 147 is already satisfied entering this batch |
 | 4 | D | 4 | Four T200 approaches — all prereqs satisfied |
 | 5 | E | 6 | Testing branch — atoms then methods in strict order |
-| Gap sprint | — | 2 | 266 rough draft done · run skill on 266, then 309e |
+| Gap sprint | — | 2 | 139 rough draft done · run skill on 139, then 270e |
 
 ---
 

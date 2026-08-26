@@ -13,6 +13,10 @@ You already know AI generates faster than you do. What's less obvious is where i
 
 ---
 
+Use this when you're about to use an AI tool for a design task: interface copy, navigation labels, error message text, a flow structure, a set of options. You want the generation speed. You also want to know whether what comes back is usable.
+
+---
+
 Here's the mechanism. Nisbett and Wilson (1977) showed in one of the most-cited papers in psychology that people don't have direct introspective access to their own decision processes. When they make a choice, they construct an explanation afterward, based on what seems like a plausible reason, not on what drove the decision. They called this post-hoc rationalization. It's durable: people produce confident reasons for choices they made on entirely different grounds.
 
 This shows up immediately when AI output looks polished. The structure is right, the phrasing is professional, the length is appropriate. Your brain reads the form as a quality signal. And when someone asks why you used it, you generate reasons. It covered the main points. Nothing was wrong. It matched what I was going for.
@@ -22,10 +26,6 @@ Those aren't evaluations. They're rationalizations.
 The fix is simple, and the only requirement is that you do it first. Write down what good looks like before you generate anything. Criteria written before output exist outside the output. They can't be contaminated by it. When you check AI-generated work against criteria you set before seeing it, you're verifying, not rationalizing.
 
 Parasuraman and Manzey (2010) called the version of this that skips the check automation bias, the tendency to accept automated output without independent verification, even among expert users. The full picture is in 147. The relevant part here: polished output signals completion, and the verification step starts to feel redundant. Writing criteria first gives you something to check against before that feeling takes over.
-
----
-
-Use this when you're about to use an AI tool for a design task: interface copy, navigation labels, error message text, a flow structure, a set of options. You want the generation speed. You also want to know whether what comes back is usable.
 
 ---
 
@@ -77,8 +77,8 @@ For the foundational thinking behind why the judgment layer matters and can't be
 
 Nisbett, R. E., & Wilson, T. D. (1977). Telling more than we can know: Verbal reports on mental processes. *Psychological Review, 84*, 231–259. Finding: people lack direct introspective access to their own decision processes and construct post-hoc rationalizations — plausible explanations for choices made on other grounds.
 
-Parasuraman, R., & Manzey, D. H. (2010). Complacency and bias in human use of automation: An attentional integration. *Human Factors, 52*(3), 381–410. Finding: automation bias, the tendency to accept output without independent verification, occurs in expert users; polished-looking output signals completion and suppresses the impulse to verify.
+Parasuraman, R., & Manzey, D. H. (2010). Complacency and bias in human use of automation: An attentional integration. *Human Factors, 52*(3), 381–410. Finding: automation bias, the tendency to accept output without independent verification, occurs in expert users. Polished-looking output signals completion and suppresses the impulse to verify.
 
-Moran, K., & Rosala, M. (2024, September 27). Accelerating research with AI. Nielsen Norman Group. https://www.nngroup.com/articles/research-with-ai/ Finding: "Never rely on AI tools to perform all your analysis for you" — AI produces a first pass; human oversight and review are required at every stage.
+Moran, K., & Rosala, M. (2024, September 27). Accelerating research with AI. Nielsen Norman Group. https://www.nngroup.com/articles/research-with-ai/ Finding: "Never rely on AI tools to perform all your analysis for you" — AI produces a first pass. Human oversight and review are required at every stage.
 
-Kupfer, C., Prassl, R., Fleiß, J., Malin, C., Thalmann, S., & Kubicek, B. (2023). Check the box! How to deal with automation bias in AI-based personnel selection. *Frontiers in Psychology*. https://doi.org/10.3389/fpsyg.2023.1118723 Finding: verification intensity — time spent reviewing, pages examined — directly correlates with decision quality; lower verification produced measurably worse outcomes.
+Kupfer, C., Prassl, R., Fleiß, J., Malin, C., Thalmann, S., & Kubicek, B. (2023). Check the box! How to deal with automation bias in AI-based personnel selection. *Frontiers in Psychology*. https://doi.org/10.3389/fpsyg.2023.1118723 Finding: verification intensity — time spent reviewing, pages examined — directly correlates with decision quality. Lower verification produced measurably worse outcomes.

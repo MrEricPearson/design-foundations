@@ -1,5 +1,7 @@
 # Conversational Prototype
-**Tier:** 200 — Practice | **Part of:** 309 Prototyping Arc (Part 5 of 9) | **Prereqs:** 177, 132, 147, 266 | **Supports:** 308
+**Tier:** 200 — Practice | **Part of:** 309 Prototyping Arc (Part 5 of 9) | **Prereqs:** 177, 132, 147, 139 | **Supports:** 308
+
+**Goal:** Script and simulate a conversational flow before writing any code, so dialogue breakdowns surface in a session instead of in production.
 
 ---
 
@@ -8,6 +10,8 @@ Test dialogue logic before building the system — script the paths a conversati
 ---
 
 When interaction happens through language rather than visible controls, the interface disappears. No button to click wrong. No dropdown listing the options. What the system says, and how it says it, is the whole product.
+
+You already know what it feels like when a real conversation breaks down — someone answers a question you didn't ask, or says something you didn't expect, and the exchange stalls until one of you repairs it.
 
 If you're building something where the primary interaction is language: a chatbot, a voice assistant, an AI agent interpreting instructions. The team is almost certainly writing conversation flows in code. Questions keep surfacing that nobody can answer without seeing it work. What happens when someone asks two things at once? What does the system say when it doesn't understand? What does confirmation sound like when there's no UI to display it? Building first means discovering these problems after the dialogue logic is locked in.
 
@@ -61,7 +65,7 @@ After scripting and simulating manually, give an AI agent the user's task goal a
 
 ---
 
-Conversational prototypes test dialogue structure. They don't test whether automated conversation is valuable to users in the first place. For that, 309d (Wizard of Oz Prototype) tests system behavior before building automation. If the interface needs no visible UI, 266 (No UI as Design Goal) covers when invisible interfaces are a design decision, not a missing piece. Once the system is built, 308 (Designing for AI Trust) covers calibrating trust when users can't see system state.
+Conversational prototypes test dialogue structure. They don't test whether automated conversation is valuable to users in the first place. For that, 270d (Wizard of Oz Prototype) tests system behavior before building automation. If the interface needs no visible UI, 139 (No UI as Design Goal) covers when invisible interfaces are a design decision, not a missing piece. Once the system is built, 308 (Designing for AI Trust) covers calibrating trust when users can't see system state.
 
 ---
 
@@ -71,6 +75,6 @@ Clark, H. H. (1996). *Using Language*. Cambridge University Press. Grounding the
 
 Grice, H. P. (1975). Logic and conversation. In P. Cole & J. Morgan (Eds.), *Syntax and Semantics 3: Speech Acts* (pp. 41–58). Academic Press. The cooperative principle and conversational maxims, including the maxim of quality (make contributions you have evidence for), which grounds confirmation patterns in conversational design.
 
-Nielsen Norman Group. Budiu, R. (2018, November 25). The user experience of chatbots. nngroup.com. Usability research on chatbot interaction patterns; key finding: users tolerated chatbot failures to understand input but grew annoyed when responses were flat and repetitive, underscoring that language quality is a usability concern, not a polish concern.
+Nielsen Norman Group. Budiu, R. (2018, November 25). The user experience of chatbots. nngroup.com. Usability research on chatbot interaction patterns. Key finding: users tolerated chatbot failures to understand input but grew annoyed when responses were flat and repetitive, underscoring that language quality is a usability concern, not a polish concern.
 
 Sacks, H., Schegloff, E. A., & Jefferson, G. (1974). A simplest systematics for the organization of turn-taking for conversation. *Language*, *50*(4), 696–735. Foundational conversation analysis demonstrating that turn-taking follows systematic rules — speakers signal completion, transitions occur at defined points, and violations feel like interruptions even without literal overlap.

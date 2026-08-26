@@ -509,11 +509,11 @@
 | Q1: Approach count | 3 distinct approaches |
 | Q1: Decision | Arc — approaches differ in required tools, question type, and fidelity level |
 | Q2: Assumptions | Full: practitioner has the right tool for the chosen approach; concept is ready to prototype |
-| Q2: Constraint-degraded path | Exists — 309a is the minimum-viable approach (no tools); 309c includes degraded path (fall back to 309b if AI generation fails); 309 arc header includes vendor software constraint path |
-| Q3: Scale sensitivity | Section added in each approach piece — multi-stakeholder review context, regulated environments (309c), video walk-through distribution (309b) |
+| Q2: Constraint-degraded path | Exists — 270a is the minimum-viable approach (no tools); 270c includes degraded path (fall back to 270b if AI generation fails); 309 arc header includes vendor software constraint path |
+| Q3: Scale sensitivity | Section added in each approach piece — multi-stakeholder review context, regulated environments (270c), video walk-through distribution (270b) |
 | Q4: Missing atom prereqs | 177 (What a Prototype Is) — drafted; 178 (Prototype vs. MVP) — drafted. Both are now in library. |
-| Q5: Tool classification | 309a: Agnostic; 309b: Agnostic (any connected-page tool); 309c: AI-assisted (tool-agnostic prompt approach) |
-| Q5: AI path verdict | 309a: Preserved — AI annotates after sketch; practitioner creates and evaluates. 309b: Preserved — AI simulates first-time user; practitioner builds and interprets. 309c: Preserved — AI generates production artifact; practitioner defines question/scope (before generating) and evaluates output (after generating). The judgment layer is explicit in both step 1 (question definition) and step 4 (output evaluation). |
+| Q5: Tool classification | 270a: Agnostic; 270b: Agnostic (any connected-page tool); 270c: AI-assisted (tool-agnostic prompt approach) |
+| Q5: AI path verdict | 270a: Preserved — AI annotates after sketch; practitioner creates and evaluates. 270b: Preserved — AI simulates first-time user; practitioner builds and interprets. 270c: Preserved — AI generates production artifact; practitioner defines question/scope (before generating) and evaluates output (after generating). The judgment layer is explicit in both step 1 (question definition) and step 4 (output evaluation). |
 | Q6: Restructuring decision | Arc structure with three approach pieces and arc-level Try This + Take This Further + Judgment Exercise. All files drafted. |
 | Priority | A — foundational to prototype-as-learning-tool behavior; Judgment Exercise addresses the approval-culture failure mode (approval-culture prototyping is the dominant enterprise failure for this method) |
 

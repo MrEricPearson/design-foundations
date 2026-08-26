@@ -1,5 +1,7 @@
 # Unmoderated Usability Testing
 
+**Tier:** 200 — Practice | **Prereqs:** 123 (What Usability Testing Is), 159 (Observation Effect) | **Companion:** 215a (Moderated Usability Session)
+
 **Goal:** Run unmoderated usability testing to find out where people get stuck without watching them in real time.
 
 ---
@@ -64,10 +66,10 @@ If people completed the tasks without major friction, run the test with a bigger
 
 ## Sources
 
-Krug, S. (2010). *Rocket surgery made easy: The do-it-yourself guide to finding and fixing usability problems.* New Riders.
+Krug, S. (2010). *Rocket surgery made easy: The do-it-yourself guide to finding and fixing usability problems.* New Riders. Source for the task-writing standard this piece applies throughout: a task should describe what someone would actually try to accomplish, not the steps to get there.
 
-Nielsen, J. (1993). *Usability engineering.* Academic Press.
+Nielsen, J. (1993). *Usability engineering.* Academic Press. Foundational grounding for observing behavior under realistic, unmoderated conditions — the basis for this piece's claim that recordings reveal where a participant's mental model diverges from the interface without anyone narrating politely for an observer.
 
-Nielsen, J. (2000). Why you only need to test with 5 users. *Nielsen Norman Group.* https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/
+Nielsen, J. (2000). Why you only need to test with 5 users. *Nielsen Norman Group.* https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/ Established that a small number of participants is enough to catch the majority of usability problems before findings start repeating — the basis for this piece's recommendation that around ten unmoderated sessions is usually sufficient.
 
-Sauro, J., & Lewis, J. R. (2016). *Quantifying the user experience: Practical statistics for user research* (2nd ed.). Morgan Kaufmann.
+Sauro, J., & Lewis, J. R. (2016). *Quantifying the user experience: Practical statistics for user research* (2nd ed.). Morgan Kaufmann. Supports this piece's use of a screener question to filter for participants who genuinely match the intended user profile, rather than testing with people who have no stake in whether the thing works.

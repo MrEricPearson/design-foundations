@@ -24,13 +24,15 @@ Jakob Nielsen spent decades documenting what this looks like in practice. In one
 
 The information you get from observation is fundamentally different from the information you get from opinion. Opinion tells you what someone thinks would be easier, faster, or clearer. Observation shows you what actually stopped them. Those aren't the same thing, and they don't produce the same fixes.
 
+(Everyone says they use the search bar. The click data says they navigate through six levels of menu first. Both are true in the way that matters most to each person.)
+
 ---
 
 You'll see usability testing when someone is trying to complete a real task using the thing you built — and you're not helping them do it.
 
 That's the shift. The person isn't there to give you their thoughts on your approach. They're there to accomplish something specific: book an appointment, submit a form, find a document, configure a setting. You've given them the task. You're watching what they do. You're not explaining, not clarifying, not jumping in when they pause. If they get stuck, you're learning where the friction is. If they succeed, you're learning what worked.
 
-This feels uncomfortable the first time you do it. Someone's struggling, and you know exactly what they need to click. The instinct is to help. The discipline is to stay quiet and take notes on what confused them, because that confusion is the data. Jared Spool (2001) calls this "the hardest part of usability testing" — watching someone struggle with something you could fix with one sentence, and not saying it. If you jump in, you've solved their problem. You haven't learned why the interface didn't.
+This feels uncomfortable the first time you do it. Someone's struggling, and you know exactly what they need to click. The instinct is to help. The discipline is to stay quiet and take notes on what confused them, because that confusion is the data. Watching someone struggle with something you could fix in one sentence — and not saying it — is genuinely hard. But if you jump in, you've solved their problem. You haven't learned why the interface didn't.
 
 The signal that you're doing this: the person testing says "I'm not sure what to do here" or "where would I find that?" and you write it down instead of answering. That moment of uncertainty — where they pause, look around, hesitate — is exactly what usability testing is designed to catch. If you answer the question, you've turned observation into a guided demo.
 
@@ -58,14 +60,12 @@ That's the recognition moment. Not when you're sure it's usable. When you're not
 
 ---
 
-If you want a method for running usability tests with a working interface, read 215a (Moderated Usability Testing with a Working Build). If you want to test before you've built it, read 215b (Paper Prototype Testing). If you're wondering why you're not allowed to help during the test, read 157 (Why You Don't Help During Testing). If you're trying to write better task statements, read 158 (Task Statement Design).
+If you want a method for running usability tests with a working interface, read 215a (Moderated Usability Session). If you want to test before you've built it, read 270a (Paper / Sketch Prototype). If you're wondering why you're not allowed to help during the test, read 157 (Why You Don't Help During Testing). If you're trying to write better task statements, read 158 (Task Statement Design).
 
 ---
 
 **Sources**
 
-Krug, S. (2010). *Rocket Surgery Made Easy: The Do-It-Yourself Guide to Finding and Fixing Usability Problems.* New Riders. — "If you want a great site, you've got to test"; after working on something for even a few weeks, fresh perspective is impossible without observation; testing means watching people use it, not surveying opinions.
+Krug, S. (2010). *Rocket Surgery Made Easy: The Do-It-Yourself Guide to Finding and Fixing Usability Problems.* New Riders. — "If you want a great site, you've got to test." After working on something for even a few weeks, fresh perspective is impossible without observation. Testing means watching people use it, not surveying opinions.
 
-Nielsen, J. (1993). Iterative user interface design. *Computer, 26*(11), 32–41. — Teams using observational usability testing (task-based observation, not opinion gathering) achieved median 165% improvement across iterations; observation reveals specific friction points that opinion-based feedback misses.
-
-Spool, J. M. (2001). The magic behind Amazon's 2.7 billion dollar question. *User Interface Engineering.* — The hardest part of usability testing is not helping when someone struggles; jumping in to assist solves their immediate problem but eliminates the data showing why the interface failed to communicate; uncertainty and hesitation are the signal, not the obstacle.
+Nielsen, J. (1993). Iterative user interface design. *IEEE Software, 10*(6), 32–41. — Teams using observational usability testing (task-based observation, not opinion gathering) achieved median 165% improvement across iterations. Observation reveals specific friction points that opinion-based feedback misses.

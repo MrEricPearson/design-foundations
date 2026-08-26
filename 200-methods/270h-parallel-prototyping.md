@@ -1,4 +1,4 @@
-# 309h — Parallel Prototyping
+# 270h — Parallel Prototyping
 
 **Tier:** 200 — Practice | **Arc:** Prototyping (see 309-prototyping-arc.md for approach selection) | **Prereqs:** 177 (What a Prototype Is), 132 (Prototype Fidelity) | **Audience:** General | **Note:** Use when you need comparative data across directions, not optimization data within one direction.
 
@@ -14,6 +14,10 @@ The problem wasn't the testing. It was the question. You asked "does this work?"
 
 ---
 
+Use this approach when you have genuinely divergent directions — not variations on the same idea. "Button on the left versus button on the right" isn't parallel prototyping. That's A/B testing. Use parallel when your team has real disagreements about approach: a conversational interface versus a form-based one, a wizard versus a dashboard, a task-first flow versus a browse-first one. If the directions differ only in aesthetics or minor sequencing, you don't need this method.
+
+---
+
 Steven Dow ran an experiment at Stanford (2010) with two groups building social networking features. One group built a single prototype and refined it across iterations. The other built three distinct prototypes in parallel and tested all three before choosing one to refine. Same total time. Same tools. Same task complexity.
 
 The parallel group produced designs that independent evaluators rated significantly higher in quality. Their final designs showed more divergent thinking. And crucially, the designers themselves reported higher confidence in their final solution — not because they'd done more work, but because they'd seen evidence of what worked better.
@@ -26,13 +30,9 @@ Testing one prototype asks: does this work? Testing multiple asks: which works b
 
 ---
 
-Use this approach when you have genuinely divergent directions — not variations on the same idea. "Button on the left versus button on the right" isn't parallel prototyping; that's A/B testing. Use parallel when your team has real disagreements about approach: a conversational interface versus a form-based one, a wizard versus a dashboard, a task-first flow versus a browse-first one. If the directions differ only in aesthetics or minor sequencing, you don't need this method.
-
----
-
 1. Define the question all prototypes answer. Write it in one sentence: what do you need to know that these prototypes will test? "Which flow gets users to their first success fastest?" is testable. "Which one is best?" isn't. The question must be the same across all prototypes — otherwise comparison is meaningless.
 
-2. Build two to three distinct prototypes. Each one represents a genuinely different approach to the same problem, built to the same fidelity level. If one is higher fidelity than the others, reviewers will favor it for polish, not structure. Keep them equally rough. Paper and sketch (309a) works well here — building multiple directions at high fidelity burns time before you know which direction deserves it.
+2. Build two to three distinct prototypes. Each one represents a genuinely different approach to the same problem, built to the same fidelity level. If one is higher fidelity than the others, reviewers will favor it for polish, not structure. Keep them equally rough. Paper and sketch (270a) works well here — building multiple directions at high fidelity burns time before you know which direction deserves it.
 
 3. Test all prototypes with the same participants. Each participant sees all directions in randomized order. Same task for each. Same success criteria. Don't ask which one they prefer — preference is the weakest signal. Watch which one they complete fastest, with the fewest errors, and the least confusion. Behavior tells you what works. Preference tells you what feels familiar.
 
@@ -48,7 +48,7 @@ When you're done, you have three things: a comparative performance table showing
 
 The failure mode that catches even experienced teams: testing prototypes sequentially instead of simultaneously. You test prototype A, iterate based on feedback, then test prototype B. By the time you reach B, A has been refined through two rounds and the comparison isn't fair. Or worse — you've already committed resources to A, and testing B now feels like a formality to confirm a decision already made.
 
-Dennis, Bruza, and Kamalzadeh (2023) documented this: sequential testing creates sunk cost bias. Teams interpret feedback on later prototypes through the lens of work already invested in earlier ones. They're not comparing directions anymore — they're defending investments.
+Sequential testing converts an open question into a sunk cost argument. Teams interpret feedback on later prototypes through the lens of work already invested in earlier ones. They're not comparing directions anymore — they're defending investments.
 
 The fix: all prototypes tested in the same sessions, with the same participants, before any refinement begins. No iteration until you've chosen the direction. It feels inefficient to build multiple things knowing you'll discard most of them. It's more efficient than refining the wrong one.
 
@@ -76,7 +76,7 @@ After you've run this yourself: describe both prototypes to an AI tool and ask i
 
 ---
 
-Once you've chosen the direction, 309b (Lo-fi Wireframe) or 309f (High-Fidelity Prototype) refines it to the next fidelity level. If the principle you extracted reveals an unstated assumption about who the user is, 301 (From a Vague Ask to a Real Persona) is the next step. When you're ready for a full usability session, 215a (Moderated Usability Session) covers the process.
+Once you've chosen the direction, 270b (Lo-fi Wireframe) or 270f (High-Fidelity Prototype) refines it to the next fidelity level. If the principle you extracted reveals an unstated assumption about who the user is, 301 (From a Vague Ask to a Real Persona) is the next step. When you're ready for a full usability session, 215a (Moderated Usability Session) covers the process.
 
 ---
 
@@ -84,8 +84,7 @@ Once you've chosen the direction, 309b (Lo-fi Wireframe) or 309f (High-Fidelity 
 
 Dow, S. P., Heddleston, K., & Klemmer, S. R. (2010). The efficacy of prototyping under time constraints. *Proceedings of the Seventh ACM Conference on Creativity and Cognition*, 165–174. https://doi.org/10.1145/1640233.1640260 Finding: Teams building and testing multiple prototypes in parallel produced higher-quality designs, more divergent solutions, and reported greater self-efficacy than teams iteratively refining a single prototype. The mechanism was comparative data — teams learned which design worked better, not just whether one could be made to work.
 
-Tohidi, M., Buxton, W., Baecker, R., & Sellen, A. (2006). Getting the right design and the design right: Testing many is better than one. *Proceedings of CHI '06*, 1243–1252. https://doi.org/10.1145/1124772.1124960 Finding: Parallel prototyping generated more diverse ideas and better final solutions than serial refinement. Designers testing multiple directions simultaneously remained more open to evidence; those refining a single prototype became attached to it even when data suggested problems.
+Tohidi, M., Buxton, W., Baecker, R., & Sellen, A. (2006). Getting the right design and the design right: Testing many is better than one. *Proceedings of CHI '06*, 1243–1252. https://doi.org/10.1145/1124772.1124960 Finding: Parallel prototyping generated more diverse ideas and better final solutions than serial refinement. Designers testing multiple directions simultaneously remained more open to evidence. Those refining a single prototype became attached to it even when data suggested problems.
 
-Dennis, A. R., Bruza, P., & Kamalzadeh, H. (2023). The impact of sunk costs on design decisions. *Design Studies*, 84, 101153. Finding: Sequential prototype testing creates sunk cost bias. Teams interpret feedback on later prototypes through the lens of work already invested in earlier ones, defending prior investments rather than evaluating directions neutrally.
 
 Nielsen, J. (2011). Parallel and iterative design + competitive testing. *Nielsen Norman Group*. https://www.nngroup.com/articles/parallel-and-iterative-design/ Finding: Parallel design followed by competitive testing outperformed purely iterative approaches. The comparative method revealed which design principles transferred across contexts — learning that single-prototype iteration could not produce.

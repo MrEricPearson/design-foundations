@@ -164,7 +164,7 @@ Consistent with the library's philosophy: this is a recommended path, not a mand
 | Piece | File | Wave | Hard prereqs |
 |---|---|---|---|
 | The Cost of Novelty | 265-cost-of-novelty.md | 3 | 255, 126 |
-| No UI as Design Goal | 266-no-ui-as-design-goal.md | 3 | 169, 147, 238 |
+| No UI as Design Goal | 139-no-ui-as-design-goal.md | 3 | 169, 147, 238 |
 | The Serendipity Problem | 267-serendipity-problem.md | 3 | 172, 147 |
 | Skeuomorphism vs. Abstraction | 268-skeuomorphism-vs-abstraction.md | 3 | 169, 126 |
 | The Design Style Spectrum | 269-design-style-spectrum.md | 3 | 268, 126 |
@@ -207,15 +207,15 @@ Consistent with the library's philosophy: this is a recommended path, not a mand
 | Assumption-First Proto-Persona | 301c-assumption-first-proto-persona.md | 3 | 173, 151, 152 | — |
 | Content Modeling | 221-content-modeling.md | 3 | 179, 180, 181, 183 | 182 (Bolt-On Cost) |
 | Prototyping — Arc header | 309-prototyping-arc.md (300-systems/) | 4 | 177, 132, 113 | Judgment Exercise: approval-culture trap |
-| Paper/Sketch Prototype | 309a-paper-sketch-prototype.md | 4 | 177, 132, 106, 113 | 159 (Observation Effect) |
-| Lo-fi Wireframe Prototype | 309b-lofi-wireframe-prototype.md | 4 | 177, 132, 158, 113 | — |
-| AI-Generated Prototype | 309c-ai-generated-prototype.md | 4 | 177, 132, 147, 219, 113 | — |
-| Wizard of Oz Prototype | 309d-wizard-of-oz-prototype.md | 4 | 177, 132 | 147 |
-| Conversational Prototype | 309e-conversational-prototype.md | 4 | 177, 132, 147 | — |
-| High-Fidelity Prototype | 309f-high-fidelity-prototype.md | 4 | 177, 132, 158 | — |
-| Service Prototype | 309g-service-prototype.md | 4 | 177, 132, 113 | 306 (Service Blueprint) |
-| Parallel Prototyping | 309h-parallel-prototyping.md | 4 | 177, 132 | — |
-| Build to Think | 309i-build-to-think.md | 4 | 177, 132, 147 | — |
+| Paper/Sketch Prototype | 270a-paper-sketch-prototype.md | 4 | 177, 132, 106, 113 | 159 (Observation Effect) |
+| Lo-fi Wireframe Prototype | 270b-lofi-wireframe-prototype.md | 4 | 177, 132, 158, 113 | — |
+| AI-Generated Prototype | 270c-ai-generated-prototype.md | 4 | 177, 132, 147, 219, 113 | — |
+| Wizard of Oz Prototype | 270d-wizard-of-oz-prototype.md | 4 | 177, 132 | 147 |
+| Conversational Prototype | 270e-conversational-prototype.md | 4 | 177, 132, 147 | — |
+| High-Fidelity Prototype | 270f-high-fidelity-prototype.md | 4 | 177, 132, 158 | — |
+| Service Prototype | 270g-service-prototype.md | 4 | 177, 132, 113 | 306 (Service Blueprint) |
+| Parallel Prototyping | 270h-parallel-prototyping.md | 4 | 177, 132 | — |
+| Build to Think | 270i-build-to-think.md | 4 | 177, 132, 147 | — |
 
 ---
 
@@ -318,7 +318,7 @@ Tier 200 pieces may publish after their prerequisite atoms are live. Recommended
    JIT rule: each prereq atom publishes immediately before its first consumer. Once introduced, it's not re-listed.
 
    **Phase 1 — Concepts and Framing**
-   1. 106-sketching.md — prereq for 132 and 309a; must lead the sequence
+   1. 106-sketching.md — prereq for 132 and 270a; must lead the sequence
    2. 132-prototype-fidelity.md — first use: 106; prereq for 177 and all 309x approaches
    3. 103-attachment-is-the-real-risk.md — prereq for 177
    4. 177-what-a-prototype-is.md — first use: 103, 132
@@ -326,23 +326,23 @@ Tier 200 pieces may publish after their prerequisite atoms are live. Recommended
    6. 178-prototype-vs-mvp.md — first use: 177, 105
 
    **Phase 2 — Arc Entry**
-   7. 113-defining-success-before-you-start.md — prereq for 309 arc, 309a/b/c/g, 215a
+   7. 113-defining-success-before-you-start.md — prereq for 309 arc, 270a/b/c/g, 215a
    8. 309-prototyping-arc.md (300-systems/) — first use: 113; arc header and decision framework
 
    **Phase 3 — MVP Core (steps 9–15; delivers Q3 goal)**
-   9. 309a-paper-sketch-prototype.md — MVP; prereqs 106 · 132 · 113 all satisfied
-   10. 158-task-statement-design.md — prereq for 309b, 309f, 215a, 215b
-   11. 309b-lofi-wireframe-prototype.md — MVP; first use: 158
-   12. 147-ai-as-execution-partner.md — prereq for 219, 309c, 309e, 309i
-   13. 219-ai-for-design-work.md — T200 method prereq for 309c; first use: 147
-   14. 309c-ai-generated-prototype.md — MVP; first use: 219
-   15. 309i-build-to-think.md — MVP; prereqs 147 · 132 · 177 all satisfied; dev-audience priority
+   9. 270a-paper-sketch-prototype.md — MVP; prereqs 106 · 132 · 113 all satisfied
+   10. 158-task-statement-design.md — prereq for 270b, 270f, 215a, 215b
+   11. 270b-lofi-wireframe-prototype.md — MVP; first use: 158
+   12. 147-ai-as-execution-partner.md — prereq for 219, 270c, 270e, 270i
+   13. 219-ai-for-design-work.md — T200 method prereq for 270c; first use: 147
+   14. 270c-ai-generated-prototype.md — MVP; first use: 219
+   15. 270i-build-to-think.md — MVP; prereqs 147 · 132 · 177 all satisfied; dev-audience priority
 
-   **Phase 4 — Complete Arc (steps 16–19; 309e deferred — see below)**
-   16. 309d-wizard-of-oz-prototype.md — prereqs 177 · 132 satisfied
-   17. 309f-high-fidelity-prototype.md — prereqs 158 · 177 · 132 satisfied
-   18. 309g-service-prototype.md — prereqs 113 · 177 · 132 satisfied
-   19. 309h-parallel-prototyping.md — prereqs 177 · 132 satisfied
+   **Phase 4 — Complete Arc (steps 16–19; 270e deferred — see below)**
+   16. 270d-wizard-of-oz-prototype.md — prereqs 177 · 132 satisfied
+   17. 270f-high-fidelity-prototype.md — prereqs 158 · 177 · 132 satisfied
+   18. 270g-service-prototype.md — prereqs 113 · 177 · 132 satisfied
+   19. 270h-parallel-prototyping.md — prereqs 177 · 132 satisfied
 
    **Phase 5 — Testing Branch (steps 20–25; 113 and 158 already satisfied above)**
    20. 123-what-usability-testing-is.md — prereq for 174, 215a, 215b
@@ -352,7 +352,7 @@ Tier 200 pieces may publish after their prerequisite atoms are live. Recommended
    24. 215a-moderated-usability-session.md — first use: 123, 157, 159, 174 (113 · 158 already satisfied)
    25. 215b-unmoderated-usability-testing.md — all prereqs satisfied (123 · 157 · 158)
 
-   **⚠ BLOCKED — Step 26:** 309e-conversational-prototype.md requires gap piece **266-no-ui-as-design-goal.md** (not yet drafted). Draft 266 before publishing 309e. All other prereqs (147 · 177 · 132) are already satisfied by step 12.
+   **⚠ BLOCKED — Step 26:** 270e-conversational-prototype.md requires gap piece **139-no-ui-as-design-goal.md** (not yet drafted). Draft 139 before publishing 270e. All other prereqs (147 · 177 · 132) are already satisfied by step 12.
 
 ### Wave 4 — Tier 300 arcs (after Wave 3 dependencies are live)
 

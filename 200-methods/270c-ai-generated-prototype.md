@@ -13,7 +13,7 @@ What nobody confirmed: whether the prototype was testing the question you actual
 
 If you've used AI for drafts, outlines, or code scaffolding, you know the generate-then-evaluate approach: generate first, then refine. That works in most contexts. The instinct to apply it to prototyping is right. What it produces there is a specific, predictable failure mode. Knowing it in advance is what keeps the method from inverting on you.
 
-Use this approach when the question requires interaction behavior to test: something that responds, not just something that looks like it responds. A paper sketch (309a) handles conceptual direction. A lo-fi wireframe (309b) handles navigational structure. Come here when you need real interaction: a filter that updates, a form that validates, a modal that fires.
+Use this approach when the question requires interaction behavior to test: something that responds, not just something that looks like it responds. A paper sketch (270a) handles conceptual direction. A lo-fi wireframe (270b) handles navigational structure. Come here when you need real interaction: a filter that updates, a form that validates, a modal that fires.
 
 ---
 
@@ -25,15 +25,15 @@ The discipline that protects against it is one sentence, written before you open
 
 ---
 
-**Step 1: Write the question.** On paper — not in the prompt window. "This prototype will test [specific question]." One sentence. Two sentences means two questions. Plan two tests. AI fills a vague scope with what's typical. What's typical isn't always what you're testing.
+Step 1: Write the question. On paper — not in the prompt window. "This prototype will test [specific question]." One sentence. Two sentences means two questions. Plan two tests. AI fills a vague scope with what's typical. What's typical isn't always what you're testing.
 
-**Step 2: Define the scope.** List: one user goal, the minimum screens required to test it, and what you'll explicitly exclude. Without clear scope, AI generates comprehensive rather than targeted: a full product when you needed one flow.
+Step 2: Define the scope. List: one user goal, the minimum screens required to test it, and what you'll explicitly exclude. Without clear scope, AI generates comprehensive rather than targeted: a full product when you needed one flow.
 
-**Step 3: Prompt for function, not aesthetics.** Describe what the interaction needs to do: "A prototype that lets a user [goal] across: [list each screen and what happens]." Huei-Hsin Wang (2025) found that vague prompts reliably produce poor layouts: excessive elements, poor visual hierarchy. Describe the function, not the appearance.
+Step 3: Prompt for function, not aesthetics. Describe what the interaction needs to do: "A prototype that lets a user [goal] across: [list each screen and what happens]." Huei-Hsin Wang (2025) found that vague prompts reliably produce poor layouts: excessive elements, poor visual hierarchy. Describe the function, not the appearance.
 
-**Step 4: Evaluate against the question.** Before doing anything else: does what was generated test what you wrote in step 1? If the flow routes users somewhere you didn't intend, revise the prompt — not the question. The question is the specification. The prompt is your attempt to communicate it.
+Step 4: Evaluate against the question. Before doing anything else: does what was generated test what you wrote in step 1? If the flow routes users somewhere you didn't intend, revise the prompt — not the question. The question is the specification. The prompt is your attempt to communicate it.
 
-**Step 5: Label every screen.** At the top of each generated screen: "Prototype — not final design." Visible, not small. AI-generated UI looks finished enough that stakeholders who weren't present during generation may treat it as a product preview. The label keeps the session in learning mode.
+Step 5: Label every screen. At the top of each generated screen: "Prototype — not final design." Visible, not small. AI-generated UI looks finished enough that stakeholders who weren't present during generation may treat it as a product preview. The label keeps the session in learning mode.
 
 ---
 
@@ -75,8 +75,8 @@ When you're ready to test with a real participant, read 215a (Moderated Usabilit
 
 Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. *Science, 185*(4157), 1124–1131. Finding: people estimate uncertain quantities by starting from an initial value and adjusting — but the adjustment is systematically insufficient. The anchor dominates even when the estimator knows it's arbitrary and is motivated to set it aside.
 
-Wang, H-H., & Brown, M. (2025, October 24). Good from afar, but far from good: AI prototyping in real design contexts. Nielsen Norman Group. https://www.nngroup.com/articles/ai-prototyping/ Finding: showing polished AI-generated prototypes without proper framing "may sabotage stakeholder communication"; AI tools lack the judgment and nuance of an experienced practitioner; the approach works best with people who already understand the craft.
+Wang, H-H., & Brown, M. (2025, October 24). Good from afar, but far from good: AI prototyping in real design contexts. Nielsen Norman Group. https://www.nngroup.com/articles/ai-prototyping/ Finding: showing polished AI-generated prototypes without proper framing "may sabotage stakeholder communication." AI tools lack the judgment and nuance of an experienced practitioner. The approach works best with people who already understand the craft.
 
-Moran, K. (2026, March 27). GenUI vs. vibe coding: Who's designing? Nielsen Norman Group. https://www.nngroup.com/articles/genui-vs-vibe/ Finding: when practitioners specify what to build, AI is responsible for execution quality; the distinct failure modes are poor execution (vibe coding) vs. poor judgment (genUI); design decision authority determines which failure mode applies.
+Moran, K. (2026, March 27). GenUI vs. vibe coding: Who's designing? Nielsen Norman Group. https://www.nngroup.com/articles/genui-vs-vibe/ Finding: when practitioners specify what to build, AI is responsible for execution quality. The distinct failure modes are poor execution (vibe coding) vs. poor judgment (genUI). Design decision authority determines which failure mode applies.
 
-Wang, H-H. (2025, December 5). Prompt to design interfaces: Why vague prompts fail and how to fix them. Nielsen Norman Group. https://www.nngroup.com/articles/vague-prototyping/ Finding: vague prompts produce "Frankenstein layouts" — excessive elements, poor hierarchy, redundant components, counterintuitive information flows; "good design decisions can't be automated" and AI remains a tool requiring human judgment and expertise.
+Wang, H-H. (2025, December 5). Prompt to design interfaces: Why vague prompts fail and how to fix them. Nielsen Norman Group. https://www.nngroup.com/articles/vague-prototyping/ Finding: vague prompts produce "Frankenstein layouts" — excessive elements, poor hierarchy, redundant components, counterintuitive information flows. "Good design decisions can't be automated," and AI remains a tool requiring human judgment and expertise.

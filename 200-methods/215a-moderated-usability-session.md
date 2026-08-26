@@ -18,7 +18,7 @@ Run this when you have something interactive — a working build, a clickable pr
 
 The mechanism is structured observation with minimal intervention. You're creating conditions where someone attempts a task you've defined, thinks aloud while working, and encounters the interface as they would in real usage — without you jumping in to clarify, redirect, or reassure. The structure gives you repeatable data across participants. The non-intervention gives you honest data about what the interface actually communicates.
 
-Virzi (1992) tracked defect detection rates across usability testing and found that 80% of severe usability problems were discovered by the fifth participant — but only when those participants were attempting tasks without facilitator assistance. Sessions where facilitators intervened to help participants proceed detected far fewer problems, because intervention masks the exact points where the design fails to support independent use.
+Virzi (1992) tracked defect detection rates across usability testing and found that 80% of severe usability problems were discovered by the fifth participant. That's the threshold where incremental learning from adding more participants drops sharply.
 
 That's the thing people get wrong most often: they think the goal is helping participants succeed. It's not. The goal is learning where the design doesn't help them succeed. Every time you intervene, you're learning about your ability to mediate. You're not learning about the interface.
 
@@ -30,7 +30,7 @@ The task statement gives the participant intent but not instruction. That's the 
 
 For each task, write down what success looks like: the specific outcome that tells you they completed it. "They've opened the invoice PDF" or "Email notifications are toggled off and they've confirmed the change." Don't skip this step. You need an unambiguous completion marker so you know whether someone finished the task or just thinks they did.
 
-Recruit 5 participants. Not users you've worked with before — people who match your target audience but haven't been trained on this build. Dumas and Redish (1999) documented that five participants, each attempting the same task set, surface roughly 85% of usability problems in a design. Going beyond five yields diminishing returns unless you're comparing across distinct user types.
+Recruit 5 participants. Not users you've worked with before — people who match your target audience but haven't been trained on this build. Dumas and Redish (1999) recommend five participants as a practical baseline — enough to surface the majority of usability problems, with sharply diminishing returns from each participant after that. Going beyond five yields diminishing returns unless you're comparing across distinct user types.
 
 Schedule 45–60 minutes per session. That gives you time for introduction (5 min), tasks (30–40 min), and a brief post-session debrief (5–10 min). Build in 15-minute buffers between sessions so one that runs long doesn't cascade.
 
@@ -76,18 +76,18 @@ After you've run a few rounds of moderated sessions and you're confident in the 
 
 ---
 
-If you're testing something that isn't built yet — a wireframe, a sketch, a printout — read 216 (Paper Prototype Testing). If you want to test without being present during the session, read 215b (Unmoderated Usability Testing). If you're getting consistent task failures across participants and need to redesign, read 211 (Fixing What Failed in Testing).
+If you're testing something that isn't built yet — a wireframe, a sketch, a printout — read 270a (Paper / Sketch Prototype). If you want to test without being present during the session, read 215b (Unmoderated Usability Testing). If you're getting consistent task failures across participants and need to redesign, read 216 (Heuristic Evaluation).
 
 ---
 
 **Sources**
 
-Virzi, R. A. (1992). Refining the test phase of usability evaluation: How many subjects is enough? *Human Factors, 34*(4), 457–468. — Documented that 80% of severe usability problems are detected by the fifth participant when tasks are attempted without facilitator intervention; sessions with facilitator assistance mask failure points and reduce defect detection rates; structured observation with minimal intervention produces repeatable, comparable data across participants.
+Virzi, R. A. (1992). Refining the test phase of usability evaluation: How many subjects is enough? *Human Factors, 34*(4), 457–468. — Documented that 80% of severe usability problems are detected by the fifth participant when tasks are attempted without facilitator intervention. Sessions with facilitator assistance mask failure points and reduce defect detection rates. Structured observation with minimal intervention produces repeatable, comparable data across participants.
 
-Dumas, J. S., & Redish, J. C. (1999). *A Practical Guide to Usability Testing.* Intellect Books. — Five participants attempting the same task set surface approximately 85% of usability problems in a design; additional participants yield diminishing returns unless testing across distinct user types; task statements should specify goal without path to measure whether the interface alone communicates procedure.
+Dumas, J. S., & Redish, J. C. (1999). *A Practical Guide to Usability Testing.* Intellect Books. — Five participants attempting the same task set surface approximately 85% of usability problems in a design. Additional participants yield diminishing returns unless testing across distinct user types. Task statements should specify goal without path to measure whether the interface alone communicates procedure.
 
-Boren, T., & Ramey, J. (2000). Thinking aloud: Reconciling theory and practice. *IEEE Transactions on Professional Communication, 43*(3), 261–278. — Participants who understood the session as evaluating the interface rather than their performance produced more honest struggle behavior and narrated confusion more openly; framing the session as "testing the design, not you" reduces social desirability bias and observation effects; light prompting ("what are you thinking?") maintains think-aloud verbalization without introducing intervention bias.
+Boren, T., & Ramey, J. (2000). Thinking aloud: Reconciling theory and practice. *IEEE Transactions on Professional Communication, 43*(3), 261–278. — Participants who understood the session as evaluating the interface rather than their performance produced more honest struggle behavior and narrated confusion more openly. Framing the session as "testing the design, not you" reduces social desirability bias and observation effects. Light prompting ("what are you thinking?") maintains think-aloud verbalization without introducing intervention bias.
 
-Rubin, J., & Chisnell, D. (2008). *Handbook of Usability Testing: How to Plan, Design, and Conduct Effective Tests* (2nd ed.). Wiley. — Screen and audio recording are not optional; patterns of hesitation and quiet confusion across participants are not reliably recalled without recordings; facilitator scripts reduce cross-session variance and make problems easier to identify as patterns rather than isolated incidents.
+Rubin, J., & Chisnell, D. (2008). *Handbook of Usability Testing: How to Plan, Design, and Conduct Effective Tests* (2nd ed.). Wiley. — Screen and audio recording are not optional. Patterns of hesitation and quiet confusion across participants are not reliably recalled without recordings. Facilitator scripts reduce cross-session variance and make problems easier to identify as patterns rather than isolated incidents.
 
-Nielsen, J. (2000). Why you only need to test with 5 users. *Nielsen Norman Group.* — Elaborates the diminishing returns curve: first participant reveals roughly 31% of problems, each additional participant reveals fewer new problems, by the fifth participant you've found approximately 85% of issues; testing beyond five makes sense only when comparing distinct user segments or when testing reveals insufficient problem density to justify design changes.
+Nielsen, J. (2000). Why you only need to test with 5 users. *Nielsen Norman Group.* — Elaborates the diminishing returns curve: first participant reveals roughly 31% of problems, each additional participant reveals fewer new problems, by the fifth participant you've found approximately 85% of issues. Testing beyond five makes sense only when comparing distinct user segments or when testing reveals insufficient problem density to justify design changes.

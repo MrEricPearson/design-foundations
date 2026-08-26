@@ -97,15 +97,15 @@ All approach pieces live in `200-methods/`. Arc overview and selection guide in 
 
 | File | Approach | Best for |
 |---|---|---|
-| [309a](309a-paper-sketch-prototype.md) | Paper / sketch prototype | Rapid divergence; testing at the concept level |
-| [309b](309b-lofi-wireframe-prototype.md) | Lo-fi wireframe prototype | Flow and structure; before visual design |
-| [309c](309c-ai-generated-prototype.md) | AI-generated prototype | Speed when fidelity is needed but time isn't available |
-| [309d](309d-wizard-of-oz-prototype.md) | Wizard of Oz prototype | Testing system behavior value before it's built |
-| [309e](309e-conversational-prototype.md) | Conversational prototype | Testing dialogue logic in AI/chatbot features |
-| [309f](309f-high-fidelity-prototype.md) | High-fidelity prototype | Execution-quality testing after direction is decided |
-| [309g](309g-service-prototype.md) | Service prototype | Cross-touchpoint seams involving people and systems |
-| [309h](309h-parallel-prototyping.md) | Parallel prototyping | Comparative data when you need to choose between directions |
-| [309i](309i-build-to-think.md) | Build to think | Using code or generation as a design method, not just implementation |
+| [270a](270a-paper-sketch-prototype.md) | Paper / sketch prototype | Rapid divergence; testing at the concept level |
+| [270b](270b-lofi-wireframe-prototype.md) | Lo-fi wireframe prototype | Flow and structure; before visual design |
+| [270c](270c-ai-generated-prototype.md) | AI-generated prototype | Speed when fidelity is needed but time isn't available |
+| [270d](270d-wizard-of-oz-prototype.md) | Wizard of Oz prototype | Testing system behavior value before it's built |
+| [270e](270e-conversational-prototype.md) | Conversational prototype | Testing dialogue logic in AI/chatbot features |
+| [270f](270f-high-fidelity-prototype.md) | High-fidelity prototype | Execution-quality testing after direction is decided |
+| [270g](270g-service-prototype.md) | Service prototype | Cross-touchpoint seams involving people and systems |
+| [270h](270h-parallel-prototyping.md) | Parallel prototyping | Comparative data when you need to choose between directions |
+| [270i](270i-build-to-think.md) | Build to think | Using code or generation as a design method, not just implementation |
 
 ---
 

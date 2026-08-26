@@ -1,7 +1,11 @@
 # Master Outline — Design Foundations Manual
 Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown explicitly.
 [DRAFTED] = content exists. [GAP] = identified, not yet written.
-**Last updated:** 2026-08-20 (v12) — Atom 269 (Design Style Spectrum) added to Cluster L; separate from 268 to avoid complexity overload. Second-pass gap analysis arcs 317-334 added (PM arcs 317-321, Custom Dev arcs 322-325, Non-Custom Dev arcs 326-329, Cross-audience arcs 330-334 including new Arc 334 Solution-First Rapid Ideation). v9 note preserved below.
+
+## Numbering Rule (enforced 2026-08-26)
+**Article IDs must correspond to tier.** T100 atoms: 100–199. T200 methods: 200–299. T300 arcs: 300–399. Overflow when a tier's primary range is exhausted: T100 → 1100–1199 (then 2100–2199); T200 → 1200–1299; T300 → 1300–1399. The hundreds digit always identifies the tier. Arc sub-methods use alphabetical suffixes on a 200s base (e.g., 270a–270i for the prototyping method cluster). **Known pre-rule violations requiring future cleanup:** 200a, 200b, 225–264 (all T100 atoms with 200s IDs, predating this rule). These are not yet renamed; the rule applies immediately to all new articles and to any article being actively revised.
+
+**Last updated:** 2026-08-26 (v13) — Numbering rule established; 266 (T100) renumbered to 139; 309a–309i (T200) renumbered to 270a–270i. See v12 for prior update. — Atom 269 (Design Style Spectrum) added to Cluster L; separate from 268 to avoid complexity overload. Second-pass gap analysis arcs 317-334 added (PM arcs 317-321, Custom Dev arcs 322-325, Non-Custom Dev arcs 326-329, Cross-audience arcs 330-334 including new Arc 334 Solution-First Rapid Ideation). v9 note preserved below.
 **v9 note:** 2026-08-10 (v9) — Audience-specialized arcs 311-316 added (3 audience-specific + 3 cross-audience). New Cluster J (Cognitive Science / Behavioral Economics, atoms 247-260) and Cluster K (Data Literacy, atoms 261-264). Audience start-here meta files (16-18) updated with arc references. v8 note preserved below.
 **v8 note:** 2026-08-10 (v8) — World-class quality elevation: all atoms 100–148 fully rewritten to T100/Practice Atom standard (prior knowledge hook, causal mechanism, observational Try Noticing, false-positive diagnostics). 22 new T100 atoms added (225–246: bias cluster, ethics/dark patterns, cognitive interface, quant/qual methods). 2 new T200 methods added (222 reward loop design, 223 form design method). 116/117/119 superseded: redirects to canonical 242/241/238. Phase 2 atoms (148–200b) confirmed at world-class standard. v7 (same date): Phase 3 depth pass — see v7 note.
 
@@ -166,7 +170,7 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 
 **Cluster L — Interface Cognition & AI Shifts (gaps identified 2026-08-20)** [all GAP — not yet drafted]
 136. The Cost of Novelty [GAP — 100-foundations/265-cost-of-novelty.md — prereqs: 255, 126; when breaking convention earns its learning cost; flip side of Jakob's Law; blocks 312, 313, 323]
-137. No UI as Design Goal [DRAFTED — 100-foundations/266-no-ui-as-design-goal.md — prereqs: 169, 147, 238; invisible design, ambient computing, intent-based interfaces; blocks 308, 309e]
+137. No UI as Design Goal [DRAFTED — 100-foundations/139-no-ui-as-design-goal.md — ID: 139 (renumbered from 266) — prereqs: 169, 147, 238; invisible design, ambient computing, intent-based interfaces; blocks 308, 270e]
 138. The Serendipity Problem [GAP — 100-foundations/267-serendipity-problem.md — prereqs: 172, 147; you can't discover what you don't know to search for in AI-curated interfaces; blocks 308, 313]
 139. Skeuomorphism vs. Abstraction [GAP — 100-foundations/268-skeuomorphism-vs-abstraction.md — prereqs: 169, 126; when physical metaphor helps vs. constrains; blocks 312, 313]
 140. The Design Style Spectrum [GAP — 100-foundations/269-design-style-spectrum.md — prereqs: 268, 126; what each major style (skeuomorphic, flat, layered/elevation, neumorphic, brutalist) signals to users and when style-function mismatch creates friction; blocks 312, 313]
@@ -215,15 +219,15 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 26a. Reward Loop Design [DRAFTED — 200-methods/222-reward-loop-design.md — prereqs: 234, 235, 236; Episode 4; 5-step method for designing ethical engagement loops]
 26b. Form Design Method [DRAFTED — 200-methods/223-form-design-method.md — prereqs: 237, 238, 240, 242; Episode 9; 7-step method for sequencing forms by user willingness curve]
 27. Prototyping (arc) — all approaches [DRAFTED — approach files in 200-methods/; arc header in 300-systems/; all elevated to world-class depth 2026-08-10]
-   - 27a. Paper/Sketch Prototype [DRAFTED — 200-methods/309a-paper-sketch-prototype.md — prereqs: 177, 132, 106, 113]
-   - 27b. Lo-fi Wireframe Prototype [DRAFTED — 200-methods/309b-lofi-wireframe-prototype.md — prereqs: 177, 132, 158, 113]
-   - 27c. AI-Generated Prototype [DRAFTED — 200-methods/309c-ai-generated-prototype.md — prereqs: 177, 132, 147, 219, 113]
-   - 27d. Wizard of Oz Prototype [DRAFTED — 200-methods/309d-wizard-of-oz-prototype.md — prereqs: 177, 132; tests system behavior value before automation]
-   - 27e. Conversational Prototype [DRAFTED — 200-methods/309e-conversational-prototype.md — prereqs: 177, 132, 147; dialogue logic testing]
-   - 27f. High-Fidelity Prototype [DRAFTED — 200-methods/309f-high-fidelity-prototype.md — prereqs: 177, 132, 158; execution-quality testing only]
-   - 27g. Service Prototype [DRAFTED — 200-methods/309g-service-prototype.md — prereqs: 177, 132, 113; tests cross-touchpoint seams]
-   - 27h. Parallel Prototyping [DRAFTED — 200-methods/309h-parallel-prototyping.md — prereqs: 177, 132; comparative data vs. optimization data]
-   - 27i. Build to Think [DRAFTED — 200-methods/309i-build-to-think.md — prereqs: 177, 132, 147; building as design method]
+   - 27a. Paper/Sketch Prototype [DRAFTED — 200-methods/270a-paper-sketch-prototype.md — prereqs: 177, 132, 106, 113]
+   - 27b. Lo-fi Wireframe Prototype [DRAFTED — 200-methods/270b-lofi-wireframe-prototype.md — prereqs: 177, 132, 158, 113]
+   - 27c. AI-Generated Prototype [DRAFTED — 200-methods/270c-ai-generated-prototype.md — prereqs: 177, 132, 147, 219, 113]
+   - 27d. Wizard of Oz Prototype [DRAFTED — 200-methods/270d-wizard-of-oz-prototype.md — prereqs: 177, 132; tests system behavior value before automation]
+   - 27e. Conversational Prototype [DRAFTED — 200-methods/270e-conversational-prototype.md — prereqs: 177, 132, 147; dialogue logic testing]
+   - 27f. High-Fidelity Prototype [DRAFTED — 200-methods/270f-high-fidelity-prototype.md — prereqs: 177, 132, 158; execution-quality testing only]
+   - 27g. Service Prototype [DRAFTED — 200-methods/270g-service-prototype.md — prereqs: 177, 132, 113; tests cross-touchpoint seams]
+   - 27h. Parallel Prototyping [DRAFTED — 200-methods/270h-parallel-prototyping.md — prereqs: 177, 132; comparative data vs. optimization data]
+   - 27i. Build to Think [DRAFTED — 200-methods/270i-build-to-think.md — prereqs: 177, 132, 147; building as design method]
 
 ---
 
@@ -240,7 +244,7 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 8. Service Blueprint / Dependency Map [DRAFTED — 300-systems/306-service-blueprint.md]
 9. Manipulative/Dark-Pattern Awareness (practitioner-level, non-advocacy) [DRAFTED — 300-systems/307-dark-pattern-awareness.md]
 10. Designing for AI Trust — Agentic Experience (AX) [DRAFTED — 300-systems/308-designing-for-ai-trust.md — prereqs: 302 arc, 116, 103]
-11. Prototyping Arc — Arc Overview and Approach Selection [DRAFTED — 300-systems/309-prototyping-arc.md — prereqs: 177, 132, 113; approach pieces: 309a-309i (9 approaches); Judgment Exercise: approval-culture failure mode; arc elevated to world-class depth 2026-08-10]
+11. Prototyping Arc — Arc Overview and Approach Selection [DRAFTED — 300-systems/309-prototyping-arc.md — prereqs: 177, 132, 113; approach pieces: 270a-270i (9 approaches); Judgment Exercise: approval-culture failure mode; arc elevated to world-class depth 2026-08-10]
 12. Strategic Design Judgment [DRAFTED — 300-systems/310-strategic-design-judgment.md — prereqs: 194, 197, 198, 199; 4-part arc: Diagnose / Find Concept / Design Transformation / Calibrate Threshold]
 
 **Audience-Specialized Arcs (311-313)** — Each applies Cluster J atoms through the lens of a specific practitioner audience's real problems.

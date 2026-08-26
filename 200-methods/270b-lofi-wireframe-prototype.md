@@ -1,4 +1,4 @@
-# 309b — Lo-fi Wireframe Prototype
+# 270b — Lo-fi Wireframe Prototype
 **Tier:** 200 — Practice | **Arc:** Prototyping | **Prereqs:** 177, 132, 158, 113
 
 **Goal:** After this piece, you can build a navigable wireframe prototype that tests whether a user can reach their goal — without visual design choices obscuring whether the structure itself works.
@@ -7,15 +7,17 @@
 
 You already know that different fidelity levels serve different questions. That's the problem. What's easy to miss is that visual design doesn't just change how a prototype looks — it changes what the test can actually measure.
 
+---
+
+Use this when the question is navigational: can someone get from where they start to what they need? The concept direction is already validated. What's still open is whether the path through it is clear. If the concept is still uncertain, you're not ready for this yet. If the question requires working interaction behavior — data loading, conditional states, error handling — you need something functional. This sits between those two: a connected structure, testable today, before any visual work has happened.
+
+---
+
 When visual hierarchy is present, participants use it. A primary button, a bold heading, a highlighted path — these guide users through an interface even when the navigation structure underneath is ambiguous or wrong. Kurosu and Kashimura (1995) established this directly: the correlation between aesthetics and *perceived* ease of use is stronger than the correlation between aesthetics and *actual* ease of use. Users experience an attractive interface as more usable than it is. In a test, that means a participant can navigate successfully because a visual cue pointed them forward — not because your structure worked.
 
 Strip the visual design, and you remove that compensation. The structure has to carry the full cognitive load. (If you've ever polished a prototype to have it ready for a stakeholder review, then watched users completely miss the main action — you've seen this exact dynamic.) Virzi, Sokolov, and Karis (1996) compared paper prototypes and high-fidelity versions of the same products and found substantially the same usability problems in both conditions. Lo-fi testing doesn't produce weaker findings. It surfaces structural failures without visual design covering them first.
 
 **Strip the visual design and you find out if the structure works.**
-
----
-
-Use this when the question is navigational: can someone get from where they start to what they need? The concept direction is already validated. What's still open is whether the path through it is clear. If the concept is still uncertain, you're not ready for this yet. If the question requires working interaction behavior — data loading, conditional states, error handling — you need something functional. This sits between those two: a connected structure, testable today, before any visual work has happened.
 
 ---
 
@@ -57,16 +59,16 @@ After you've run this yourself: describe the task path to an AI tool and ask it 
 
 ---
 
-When the structure is validated and the question shifts to interaction behavior — what happens when states change, data loads, or conditions aren't met — move to 309c. If you're ready to run a structured session with a participant, read 215a (Moderated Usability Session) or 215b (Unmoderated Usability Testing). If the wireframe surfaces confusion at a specific handoff between roles or systems, read 303 (One Feature, Three Handoffs).
+When the structure is validated and the question shifts to interaction behavior — what happens when states change, data loads, or conditions aren't met — move to 270c. If you're ready to run a structured session with a participant, read 215a (Moderated Usability Session) or 215b (Unmoderated Usability Testing). If the wireframe surfaces confusion at a specific handoff between roles or systems, read 303 (One Feature, Three Handoffs).
 
 ---
 
 **Sources**
 
-Kurosu, M., & Kashimura, K. (1995). Apparent usability vs. inherent usability: Experimental analysis on the determinants of the apparent usability. *CHI '95 Extended Abstracts on Human Factors in Computing Systems*. ACM.
+Kurosu, M., & Kashimura, K. (1995). Apparent usability vs. inherent usability: Experimental analysis on the determinants of the apparent usability. *CHI '95 Extended Abstracts on Human Factors in Computing Systems*. ACM. Found the correlation between aesthetics and perceived ease of use is stronger than the correlation between aesthetics and actual ease of use — the finding this piece uses to explain why visual hierarchy can mask a broken structure during testing.
 
-Virzi, R. A., Sokolov, J. L., & Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. *Proceedings of the CHI Conference on Human Factors in Computing Systems*. ACM.
+Virzi, R. A., Sokolov, J. L., & Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. *Proceedings of the CHI Conference on Human Factors in Computing Systems*. ACM. Compared paper prototypes and high-fidelity versions of the same products and found substantially the same usability problems in both — cited here as evidence that stripping visual design doesn't weaken what a wireframe test can catch.
 
-Wiklund, M. E., Thurrott, C., & Dumas, J. S. (1992). Does the fidelity of software prototypes affect the perception of usability? *Proceedings of the Human Factors Society 36th Annual Meeting*.
+Wiklund, M. E., Thurrott, C., & Dumas, J. S. (1992). Does the fidelity of software prototypes affect the perception of usability? *Proceedings of the Human Factors Society 36th Annual Meeting*. Found no meaningful difference in error rates across prototypes of varying fidelity compared to the actual product — supports this piece's claim that the tool or fidelity level used to build a wireframe doesn't change what it reveals.
 
-Sefelin, R., Tscheligi, M., & Giller, V. (2003). Paper prototyping — what is it good for? A comparison of paper- and computer-based low-fidelity prototyping. *CHI '03 Extended Abstracts on Human Factors in Computing Systems*. ACM.
+Sefelin, R., Tscheligi, M., & Giller, V. (2003). Paper prototyping — what is it good for? A comparison of paper- and computer-based low-fidelity prototyping. *CHI '03 Extended Abstracts on Human Factors in Computing Systems*. ACM. Found that both paper and computer-based lo-fi prototypes surface all major issue categories — cited alongside Wiklund et al. to show the connected structure, not the tool, is what makes a wireframe the right artifact.

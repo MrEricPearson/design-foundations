@@ -47,4 +47,4 @@ Four extended arcs address the full custom dev workflow from spec-reading to pro
 
 ## Next steps
 
-See meta/15-capability-calibration.md Section B for the full custom dev reading path. For AI-specific work, the arc sequence is 147 → 302 → 308 (AX trust design). For the cross-audience arcs with high custom dev relevance: 334 (Solution-First Rapid Ideation) pairs well with the build-to-think prototyping approach (309i).
+See meta/15-capability-calibration.md Section B for the full custom dev reading path. For AI-specific work, the arc sequence is 147 → 302 → 308 (AX trust design). For the cross-audience arcs with high custom dev relevance: 334 (Solution-First Rapid Ideation) pairs well with the build-to-think prototyping approach (270i).
