@@ -1,5 +1,5 @@
 # UX in a Product You Didn't Build
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / 3rd-Party / Configuration | **Prereqs:** 126 (Mental Models), 255 (Jakob's Law), 249 (Loss Aversion), 250 (Status Quo Bias), 124 (Nielsen's Heuristics), 110 (Constraints as Design Input), 130 (Scenario Writing)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / 3rd-Party / Configuration | **Prereqs:** 126 (Mental Models), 1132 (Jakob's Law), 1126 (Loss Aversion), 1127 (Status Quo Bias), 124 (Nielsen's Heuristics), 110 (Constraints as Design Input), 130 (Scenario Writing)
 
 **Goal:** Apply design judgment to the decisions you control in a vendor or SaaS implementation — configuration, onboarding design, adoption strategy, and documentation — in the absence of access to the source code.
 
@@ -9,7 +9,7 @@
 
 ## Part 1 — What Users Bring to Your Implementation
 
-**Concept:** Users of a vendor platform you're implementing arrive with mental models built from the software they use most — not from yours (255, 126). When your configuration choices produce navigation in unexpected places, terminology that doesn't match their vocabulary, or interaction patterns that conflict with what they know, confusion is automatic. It is not addressable with training, because the mental model that produces the confusion was built over years and fires faster than training recall.
+**Concept:** Users of a vendor platform you're implementing arrive with mental models built from the software they use most — not from yours (1132, 126). When your configuration choices produce navigation in unexpected places, terminology that doesn't match their vocabulary, or interaction patterns that conflict with what they know, confusion is automatic. It is not addressable with training, because the mental model that produces the confusion was built over years and fires faster than training recall.
 
 The configuration lever you have here is not absolute. You can't change where the vendor put the navigation or rename core system objects. But you can choose between configuration options based on which one aligns more closely with users' existing models — and where no option aligns, you can design the scaffolding (labels, navigation aids, contextual help) that bridges the gap.
 
@@ -76,7 +76,7 @@ For each significant configuration decision:
 
 ## Part 4 — Adoption as a Design Problem
 
-**Concept:** User resistance to a new tool is not fixed by training. It's driven by cognitive mechanisms that training doesn't address. Status Quo Bias (250) makes the current state feel "free" — the existing workflow requires no evaluation cost, no transition cost, and no uncertainty. Loss Aversion (249) makes the switch feel costly regardless of objective improvement — the new thing has to overcome not just evaluation, but the emotional weight of leaving what is familiar and known.
+**Concept:** User resistance to a new tool is not fixed by training. It's driven by cognitive mechanisms that training doesn't address. Status Quo Bias (1127) makes the current state feel "free" — the existing workflow requires no evaluation cost, no transition cost, and no uncertainty. Loss Aversion (1126) makes the switch feel costly regardless of objective improvement — the new thing has to overcome not just evaluation, but the emotional weight of leaving what is familiar and known.
 
 Users who had no input into the tool selection have no ownership stake in its success. Training-first adoption strategies address the cognitive layer (users learn how to use the tool) while leaving the motivational layer unaddressed (users don't feel invested in it working). The result: users who know how to use the tool and choose not to.
 

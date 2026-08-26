@@ -77,4 +77,12 @@ And if you're curious how this connects to the assumptions you didn't know you w
 
 ---
 
-*Sources: Staw, B.M. (1976). Knee deep in the big muddy. Organizational Behavior and Human Performance — personal ownership of decisions dramatically increases commitment to failing courses of action; mechanism is self-justification. Norton, M.I., Mochon, D., & Ariely, D. (2012). The IKEA Effect: When labor leads to love. Journal of Consumer Psychology — effort increases perceived value of self-made work independent of objective quality. Ross, L., Lepper, M.R., & Hubbard, M. (1975). Perseverance in self-perception and social perception. Journal of Personality and Social Psychology — beliefs persist even after the original evidence behind them is fully discredited. Kahneman, D. & Tversky, A. (1979). Prospect theory. Econometrica — loss aversion makes continuation feel preferable to abandonment even when it isn't.*
+**Sources**
+
+Staw, B.M. (1976). Knee deep in the big muddy. *Organizational Behavior and Human Performance.* Personal ownership of decisions dramatically increases commitment to failing courses of action. Mechanism is self-justification.
+
+Norton, M.I., Mochon, D., & Ariely, D. (2012). The IKEA effect: When labor leads to love. *Journal of Consumer Psychology.* Effort increases perceived value of self-made work independent of objective quality.
+
+Ross, L., Lepper, M.R., & Hubbard, M. (1975). Perseverance in self-perception and social perception. *Journal of Personality and Social Psychology.* Beliefs persist even after the original evidence behind them is fully discredited.
+
+Kahneman, D., & Tversky, A. (1979). Prospect theory. *Econometrica.* Loss aversion makes continuation feel preferable to abandonment even when it isn't.

@@ -133,89 +133,89 @@ How naming, structure, and systems decisions compound.
 | [197](197-naming-as-model-design.md) | Naming as model design |
 | [198](198-pattern-vs-model-problem.md) | Pattern vs. model problem |
 | [199](199-transformation-within-constraints.md) | Transformation within constraints |
-| [200a](200a-ab-testing-basics.md) | A/B testing basics |
-| [200b](200b-iteration-rhythm.md) | Iteration rhythm |
+| [1100](1100-ab-testing-basics.md) | A/B testing basics |
+| [1101](1101-iteration-rhythm.md) | Iteration rhythm |
 
 ---
 
-### Psychology and bias — Cluster F (225–232)
+### Psychology and bias — Cluster F (1102–1109)
 
 | File | Concept |
 |---|---|
-| [225](225-self-report-vs-observed-behavior.md) | Self-report vs. observed behavior (bias cluster) |
-| [226](226-confirmation-bias.md) | Confirmation bias |
-| [227](227-availability-heuristic.md) | Availability heuristic |
-| [228](228-anchoring-effect.md) | Anchoring effect |
-| [229](229-loss-aversion.md) | Loss aversion |
-| [230](230-social-proof.md) | Social proof |
-| [231](231-status-quo-bias.md) | Status quo bias |
-| [232](232-cognitive-dissonance.md) | Cognitive dissonance |
+| [225](1102-self-report-vs-observed-behavior.md) | Self-report vs. observed behavior (bias cluster) |
+| [226](1103-confirmation-bias.md) | Confirmation bias |
+| [227](1104-availability-heuristic.md) | Availability heuristic |
+| [228](1105-anchoring-effect.md) | Anchoring effect |
+| [229](1106-loss-aversion.md) | Loss aversion |
+| [230](1107-social-proof.md) | Social proof |
+| [231](1108-status-quo-bias.md) | Status quo bias |
+| [232](1109-cognitive-dissonance.md) | Cognitive dissonance |
 
 ---
 
-### Ethics and persuasion — Cluster G (233–236)
+### Ethics and persuasion — Cluster G (1110–1113)
 
 | File | Concept |
 |---|---|
-| [233](233-dark-patterns.md) | Dark patterns |
-| [234](234-persuasion-vs-manipulation.md) | Persuasion vs. manipulation |
-| [235](235-gamification-principles.md) | Gamification principles |
-| [236](236-intrinsic-vs-extrinsic-motivation.md) | Intrinsic vs. extrinsic motivation |
+| [233](1110-dark-patterns.md) | Dark patterns |
+| [234](1111-persuasion-vs-manipulation.md) | Persuasion vs. manipulation |
+| [235](1112-gamification-principles.md) | Gamification principles |
+| [236](1113-intrinsic-vs-extrinsic-motivation.md) | Intrinsic vs. extrinsic motivation |
 
 ---
 
-### Cognitive interface — Cluster H (237–243)
+### Cognitive interface — Cluster H (1114–1120)
 
 | File | Concept |
 |---|---|
-| [237](237-cognitive-overload.md) | Cognitive overload |
-| [238](238-progressive-disclosure.md) | Progressive disclosure (canonical) |
-| [239](239-accessibility-as-design-principle.md) | Accessibility as design principle |
-| [240](240-form-design-principles.md) | Form design principles |
-| [241](241-empty-states.md) | Empty states (canonical) |
-| [242](242-error-states.md) | Error states and messages (canonical) |
-| [243](243-onboarding-design-patterns.md) | Onboarding design patterns |
+| [237](1114-cognitive-overload.md) | Cognitive overload |
+| [238](1115-progressive-disclosure.md) | Progressive disclosure (canonical) |
+| [239](1116-accessibility-as-design-principle.md) | Accessibility as design principle |
+| [240](1117-form-design-principles.md) | Form design principles |
+| [241](1118-empty-states.md) | Empty states (canonical) |
+| [242](1119-error-states.md) | Error states and messages (canonical) |
+| [243](1120-onboarding-design-patterns.md) | Onboarding design patterns |
 
 ---
 
-### Research methods — Cluster I (244–246)
+### Research methods — Cluster I (1121–1123)
 
 | File | Concept |
 |---|---|
-| [244](244-qualitative-vs-quantitative-research.md) | Qualitative vs. quantitative research |
-| [245](245-mixed-methods.md) | Mixed methods |
-| [246](246-sample-size-and-what-it-means.md) | Sample size and what it means |
+| [244](1121-qualitative-vs-quantitative-research.md) | Qualitative vs. quantitative research |
+| [245](1122-mixed-methods.md) | Mixed methods |
+| [246](1123-sample-size-and-what-it-means.md) | Sample size and what it means |
 
 ---
 
-### Cognitive science — Cluster J (247–260)
+### Cognitive science — Cluster J (1124–1137)
 Behavioral economics and decision-making. Foundation for audience-specialized arcs 311–315.
 
 | File | Concept |
 |---|---|
-| [247](247-dual-process-theory.md) | Dual process theory (System 1 / System 2) |
-| [248](248-framing-effect.md) | Framing effect |
-| [249](249-loss-aversion.md) | Loss aversion |
-| [250](250-status-quo-bias.md) | Status quo bias |
-| [251](251-social-proof.md) | Social proof |
-| [252](252-anchoring.md) | Anchoring |
-| [253](253-sunk-cost-fallacy.md) | Sunk cost fallacy |
-| [254](254-mode-errors.md) | Mode errors |
-| [255](255-jakobs-law.md) | Jakob's Law |
-| [256](256-hicks-law.md) | Hick's Law |
-| [257](257-authority-bias.md) | Authority bias |
-| [258](258-reciprocity.md) | Reciprocity |
-| [259](259-cognitive-dissonance.md) | Cognitive dissonance |
-| [260](260-decision-fatigue.md) | Decision fatigue |
+| [247](1124-dual-process-theory.md) | Dual process theory (System 1 / System 2) |
+| [248](1125-framing-effect.md) | Framing effect |
+| [249](1126-loss-aversion.md) | Loss aversion |
+| [250](1127-status-quo-bias.md) | Status quo bias |
+| [251](1128-social-proof.md) | Social proof |
+| [252](1129-anchoring.md) | Anchoring |
+| [253](1130-sunk-cost-fallacy.md) | Sunk cost fallacy |
+| [254](1131-mode-errors.md) | Mode errors |
+| [255](1132-jakobs-law.md) | Jakob's Law |
+| [256](1133-hicks-law.md) | Hick's Law |
+| [257](1134-authority-bias.md) | Authority bias |
+| [258](1135-reciprocity.md) | Reciprocity |
+| [259](1136-cognitive-dissonance.md) | Cognitive dissonance |
+| [260](1137-decision-fatigue.md) | Decision fatigue |
 
 ---
 
-### Data literacy — Cluster K (261–264)
+### Data literacy — Cluster K (1138–1141)
 Analytical skepticism for practitioners reading dashboards and research findings.
 
 | File | Concept |
 |---|---|
-| [261](261-correlation-vs-causation.md) | Correlation vs. causation |
-| [262](262-statistical-vs-practical-significance.md) | Statistical vs. practical significance |
-| [263](263-selection-bias.md) | Selection bias |
-| [264](264-survivorship-bias.md) | Survivorship bias |
+| [261](1138-correlation-vs-causation.md) | Correlation vs. causation |
+| [262](1139-statistical-vs-practical-significance.md) | Statistical vs. practical significance |
+| [263](1140-selection-bias.md) | Selection bias |
+| [264](1141-survivorship-bias.md) | Survivorship bias |

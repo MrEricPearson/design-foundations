@@ -1,5 +1,5 @@
 # Platform Migration as a UX Project
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / Platform / Configuration primary | **Prereqs:** 126 (Mental Models), 250 (Status Quo Bias), 249 (Loss Aversion), 253 (Sunk Cost Fallacy), 130 (Scenario Writing), 206 (Journey Mapping)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / Platform / Configuration primary | **Prereqs:** 126 (Mental Models), 1127 (Status Quo Bias), 1126 (Loss Aversion), 1130 (Sunk Cost Fallacy), 130 (Scenario Writing), 206 (Journey Mapping)
 
 **Goal:** Run a platform migration in a way that protects user productivity, manages cognitive load during transition, and builds trust in the new platform — by treating migration as a user experience project rather than a technical cutover.
 

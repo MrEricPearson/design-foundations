@@ -1,5 +1,5 @@
 # When Adoption Fails
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / Platform primary | **Prereqs:** 107 (Framing the Problem), 113 (Defining Success Before You Start), 138 (Delight as Behavioral Trust), 249 (Loss Aversion), 250 (Status Quo Bias), 251 (Social Proof), 253 (Sunk Cost Fallacy), 313 (UX in a Product You Didn't Build), 315 (Psychology of Resistance)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / Platform primary | **Prereqs:** 107 (Framing the Problem), 113 (Defining Success Before You Start), 138 (Delight as Behavioral Trust), 1126 (Loss Aversion), 1127 (Status Quo Bias), 1128 (Social Proof), 1130 (Sunk Cost Fallacy), 313 (UX in a Product You Didn't Build), 315 (Psychology of Resistance)
 
 **Goal:** Diagnose the root cause of low platform adoption and apply the response matched to that specific failure mode — not the one that's easiest to run.
 

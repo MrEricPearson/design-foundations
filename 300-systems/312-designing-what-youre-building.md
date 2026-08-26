@@ -1,5 +1,5 @@
 # Designing What You're Building
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Custom Dev primary | **Prereqs:** 103 (Attachment), 111 (Self-Critique), 123 (Usability Testing), 126 (Mental Models), 132 (Prototype Fidelity), 157 (Why You Don't Help During Testing), 158 (Task Statement Design), 241 (Empty States), 242 (Error States and Error Messages), 253 (Sunk Cost Fallacy), 254 (Mode Errors), 259 (Cognitive Dissonance)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Custom Dev primary | **Prereqs:** 103 (Attachment), 111 (Self-Critique), 123 (Usability Testing), 126 (Mental Models), 132 (Prototype Fidelity), 157 (Why You Don't Help During Testing), 158 (Task Statement Design), 1118 (Empty States), 1119 (Error States and Error Messages), 1130 (Sunk Cost Fallacy), 1131 (Mode Errors), 1136 (Cognitive Dissonance)
 
 **Goal:** Apply evaluative distance to work you built yourself — identifying the specific mechanisms that make builders poor evaluators of their own work, and the specific practices that partially restore that distance.
 
@@ -30,7 +30,7 @@ Before self-reviewing any user-facing feature:
 
 ## Part 2 — Your User's Mental Model of Your System
 
-**Concept:** Users approach custom software with mental models built from whatever software they use most — not from yours (126, 255). System behaviors that seem logical based on implementation often conflict with the model users bring from their prior tools. Where they diverge, the user experiences the discrepancy as a product failure — not as a gap in their own knowledge.
+**Concept:** Users approach custom software with mental models built from whatever software they use most — not from yours (126, 1132). System behaviors that seem logical based on implementation often conflict with the model users bring from their prior tools. Where they diverge, the user experiences the discrepancy as a product failure — not as a gap in their own knowledge.
 
 This is particularly acute in custom software, where the builder often designed the architecture and the interface simultaneously. The system's behavior feels natural because the architecture feels natural — but the user has no access to the architecture. They see the interface, which inherits decisions made at the model level, with no explanation of why.
 
@@ -76,7 +76,7 @@ Run exactly one unmoderated task before shipping any user-facing feature:
 
 **Concept:** For engineers, error states and edge cases are handled by exception handling — they're implementation details. For users, the way a system fails is when it reveals whether it can be trusted. The happy path is expected; everything is supposed to work. The edge case or error is unexpected — it's the moment of highest user attention, and what they see there determines whether they'll trust the product enough to continue using it.
 
-Mode errors (254) are a specific form of this: the system is in a state the user didn't register, and the behavior is unexpected as a result. Most edge states go undesigned not because developers are careless, but because the happy path is what's built to spec and edge states don't appear in requirements. Whatever the framework's default behavior is becomes the designed behavior, by default.
+Mode errors (1131) are a specific form of this: the system is in a state the user didn't register, and the behavior is unexpected as a result. Most edge states go undesigned not because developers are careless, but because the happy path is what's built to spec and edge states don't appear in requirements. Whatever the framework's default behavior is becomes the designed behavior, by default.
 
 **Method:**
 Before shipping any feature, for the feature as a unit:

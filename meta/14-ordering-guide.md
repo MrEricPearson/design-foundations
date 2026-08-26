@@ -107,29 +107,29 @@ Consistent with the library's philosophy: this is a recommended path, not a mand
 
 | Piece | File | Wave | Hard prereqs |
 |---|---|---|---|
-| Dual Process Theory | 247-dual-process-theory.md | 2 | 103, 126 |
-| Framing Effect | 248-framing-effect.md | 2 | 247, 131 |
-| Loss Aversion | 249-loss-aversion.md | 2 | 247, 103 |
-| Status Quo Bias | 250-status-quo-bias.md | 2 | 247, 249 |
-| Social Proof | 251-social-proof.md | 2 | 247 |
-| Anchoring | 252-anchoring.md | 2 | 247, 248 |
-| Sunk Cost Fallacy | 253-sunk-cost-fallacy.md | 2 | 103, 247 |
-| Mode Errors | 254-mode-errors.md | 2 | 126, 247 |
-| Jakob's Law | 255-jakobs-law.md | 2 | 126 |
-| Hick's Law | 256-hicks-law.md | 2 | 247, 133 |
-| Authority Bias | 257-authority-bias.md | 2 | 247, 149 |
-| Reciprocity | 258-reciprocity.md | 2 | 247, 129 |
-| Cognitive Dissonance | 259-cognitive-dissonance.md | 2 | 247, 103 |
-| Decision Fatigue | 260-decision-fatigue.md | 2 | 256, 247 |
+| Dual Process Theory | 1124-dual-process-theory.md | 2 | 103, 126 |
+| Framing Effect | 1125-framing-effect.md | 2 | 1124, 131 |
+| Loss Aversion | 1126-loss-aversion.md | 2 | 1124, 103 |
+| Status Quo Bias | 1127-status-quo-bias.md | 2 | 1124, 1126 |
+| Social Proof | 1128-social-proof.md | 2 | 1124 |
+| Anchoring | 1129-anchoring.md | 2 | 1124, 1125 |
+| Sunk Cost Fallacy | 1130-sunk-cost-fallacy.md | 2 | 103, 1124 |
+| Mode Errors | 1131-mode-errors.md | 2 | 126, 1124 |
+| Jakob's Law | 1132-jakobs-law.md | 2 | 126 |
+| Hick's Law | 1133-hicks-law.md | 2 | 1124, 133 |
+| Authority Bias | 1134-authority-bias.md | 2 | 1124, 149 |
+| Reciprocity | 1135-reciprocity.md | 2 | 1124, 129 |
+| Cognitive Dissonance | 1136-cognitive-dissonance.md | 2 | 1124, 103 |
+| Decision Fatigue | 1137-decision-fatigue.md | 2 | 1133, 1124 |
 
 **Cluster K atoms — Data Literacy (2026-08-10):**
 
 | Piece | File | Wave | Hard prereqs |
 |---|---|---|---|
-| Correlation vs. Causation | 261-correlation-vs-causation.md | 2 | 100, 135 |
-| Statistical vs. Practical Significance | 262-statistical-vs-practical-significance.md | 2 | 100, 261 |
-| Selection Bias | 263-selection-bias.md | 2 | 100, 261 |
-| Survivorship Bias | 264-survivorship-bias.md | 2 | 100, 263 |
+| Correlation vs. Causation | 1138-correlation-vs-causation.md | 2 | 100, 135 |
+| Statistical vs. Practical Significance | 1139-statistical-vs-practical-significance.md | 2 | 100, 1138 |
+| Selection Bias | 1140-selection-bias.md | 2 | 100, 1138 |
+| Survivorship Bias | 1141-survivorship-bias.md | 2 | 100, 1140 |
 
 **Phase 3 atoms (2026-08-10 — content architecture, visual craft, decision landscape, testing):**
 
@@ -156,15 +156,15 @@ Consistent with the library's philosophy: this is a recommended path, not a mand
 | Naming as Model Design | 197-naming-as-model-design.md | 2 | 183, 179 |
 | Pattern vs. Model Problem | 198-pattern-vs-model-problem.md | 2 | 197, 194 |
 | Transformation Within Constraints | 199-transformation-within-constraints.md | 2 | 194, 197, 198 |
-| A/B Testing Basics | 200a-ab-testing-basics.md | 2 | 103, 113 |
-| Iteration Rhythm | 200b-iteration-rhythm.md | 2 | 103, 105 |
+| A/B Testing Basics | 1100-ab-testing-basics.md | 2 | 103, 113 |
+| Iteration Rhythm | 1101-iteration-rhythm.md | 2 | 103, 105 |
 
 **Cluster L atoms — Interface Cognition & AI Shifts (gaps identified 2026-08-20):**
 
 | Piece | File | Wave | Hard prereqs |
 |---|---|---|---|
-| The Cost of Novelty | 265-cost-of-novelty.md | 3 | 255, 126 |
-| No UI as Design Goal | 139-no-ui-as-design-goal.md | 3 | 169, 147, 238 |
+| The Cost of Novelty | 265-cost-of-novelty.md | 3 | 1132, 126 |
+| No UI as Design Goal | 139-no-ui-as-design-goal.md | 3 | 169, 147, 1115 |
 | The Serendipity Problem | 267-serendipity-problem.md | 3 | 172, 147 |
 | Skeuomorphism vs. Abstraction | 268-skeuomorphism-vs-abstraction.md | 3 | 169, 126 |
 | The Design Style Spectrum | 269-design-style-spectrum.md | 3 | 268, 126 |
@@ -238,17 +238,17 @@ Consistent with the library's philosophy: this is a recommended path, not a mand
 
 | Piece | File | Wave | Hard prereqs | Chapter Talk link |
 |---|---|---|---|---|
-| Psychology of Stakeholder Decisions | 311-psychology-of-stakeholder-decisions.md | 4 | 247, 248, 249, 256, 257, 129 | PM Chapter Talk anchor |
-| Designing What You're Building | 312-designing-what-youre-building.md | 4 | 103, 111, 126, 123, 253, 254, 157, 158 | Custom Dev Chapter Talk anchor |
-| UX in a Product You Didn't Build | 313-ux-in-a-product-you-didnt-build.md | 4 | 126, 255, 250, 124, 110, 130 | Non-Custom Dev Chapter Talk anchor |
+| Psychology of Stakeholder Decisions | 311-psychology-of-stakeholder-decisions.md | 4 | 1124, 1125, 1126, 1133, 1134, 129 | PM Chapter Talk anchor |
+| Designing What You're Building | 312-designing-what-youre-building.md | 4 | 103, 111, 126, 123, 1130, 1131, 157, 158 | Custom Dev Chapter Talk anchor |
+| UX in a Product You Didn't Build | 313-ux-in-a-product-you-didnt-build.md | 4 | 126, 1132, 1127, 124, 110, 130 | Non-Custom Dev Chapter Talk anchor |
 
 **Cross-Audience Cognitive Science Arcs (Wave 4):**
 
 | Piece | File | Wave | Hard prereqs | Notes |
 |---|---|---|---|---|
-| How People Actually Decide | 314-how-people-actually-decide.md | 4 | 247, 248, 249, 250, 252, 256, 260 | Publish after all Cluster J prereqs |
-| The Psychology of Resistance | 315-psychology-of-resistance.md | 4 | 247, 249, 250, 251, 253, 257, 258 | Publish after all Cluster J prereqs |
-| Reading Data Without Getting Fooled | 316-reading-data-without-getting-fooled.md | 4 | 100, 135, 149, 261, 262, 263, 264 | Publish after all Cluster K prereqs |
+| How People Actually Decide | 314-how-people-actually-decide.md | 4 | 1124, 1125, 1126, 1127, 1129, 1133, 1137 | Publish after all Cluster J prereqs |
+| The Psychology of Resistance | 315-psychology-of-resistance.md | 4 | 1124, 1126, 1127, 1128, 1130, 1134, 1135 | Publish after all Cluster J prereqs |
+| Reading Data Without Getting Fooled | 316-reading-data-without-getting-fooled.md | 4 | 100, 135, 149, 1138, 1139, 1140, 1141 | Publish after all Cluster K prereqs |
 
 ---
 
@@ -265,7 +265,7 @@ All Tier 100 atoms currently in the 100-136 range. Priority within Wave 1:
 
 ### Wave 2 — Priority A and B atoms (publish before their dependent methods)
 
-All atoms in the 147-176 range now drafted. New atoms 179-199, 200a-200b also in Wave 2. Priority within Wave 2:
+All atoms in the 147-176 range now drafted. New atoms 179-199, 1100-1101 also in Wave 2. Priority within Wave 2:
 1. 175 (What a Journey Map Is) — unlocks all 206 approach pieces
 2. 153, 154 (Experience vs. Process; What a Pain Point Is) — required for 206 approach pieces
 3. 151, 152, 155, 156 (research and synthesis atoms) — required for 202 arc, 214
@@ -277,9 +277,9 @@ All atoms in the 147-176 range now drafted. New atoms 179-199, 200a-200b also in
 9. **Content architecture cluster (new — 179-186):** Publish as a set before Wave 3 content modeling method (221). Recommended order: 179 → 180 → 181 → 182 (these four are the hardest prereq chain; 183-186 can follow in any order).
 10. **Visual craft cluster (new — 187-192):** No hard downstream prereqs; publish any order. Recommended: 187 → 188 → 189 → 190 → 191 → 192 (natural progression from grouping to priority).
 11. **Decision landscape cluster (new — 193-199):** Publish before Strategic Design Judgment arc (310). Recommended order: 193 → 194 → 195 → 196 → 197 → 198 → 199 (strict dependency chain; each builds on previous).
-12. **Testing atoms (new — 200a-200b):** Publish close to prototyping arc; soft prereqs for 200a are 200a-ab-testing-basics.md and 200b-iteration-rhythm.md. No hard ordering constraint between them.
-13. **Cognitive science cluster — Cluster J (new — 247-260):** Publish as a set before audience-specialized arcs 311-315. Minimum viable sequence for first arc publication: 247 (Dual Process Theory, no prereqs) → 249, 250, 255, 256 (all have 247 as only hard prereq) → 248, 257 (also have 247 as hard prereq) → publish Arc 311 → 253, 254, 251, 258 → Arcs 312-313, then 314-315. Atoms 252, 259, 260 are soft prereqs for Arc 314 only; may publish close to Arc 314 rather than before Arc 311. No hard ordering required within the cluster beyond their individual prereq chains.
-14. **Data literacy cluster — Cluster K (new — 261-264):** Publish as a set before Arc 316. Recommended order: 261 → 263 → 264 (263 is prereq for 264); 262 can publish any time after 261. All four must exist before 316 publishes.
+12. **Testing atoms (new — 1100-1101):** Publish close to prototyping arc; soft prereqs for 1100 are 1100-ab-testing-basics.md and 1101-iteration-rhythm.md. No hard ordering constraint between them.
+13. **Cognitive science cluster — Cluster J (new — 1124-1137):** Publish as a set before audience-specialized arcs 311-315. Minimum viable sequence for first arc publication: 1124 (Dual Process Theory, no prereqs) → 1126, 1127, 1132, 1133 (all have 1124 as only hard prereq) → 1125, 1134 (also have 1124 as hard prereq) → publish Arc 311 → 1130, 1131, 1128, 1135 → Arcs 312-313, then 314-315. Atoms 1129, 1136, 1137 are soft prereqs for Arc 314 only; may publish close to Arc 314 rather than before Arc 311. No hard ordering required within the cluster beyond their individual prereq chains.
+14. **Data literacy cluster — Cluster K (new — 1138-1141):** Publish as a set before Arc 316. Recommended order: 1138 → 1140 → 1141 (1140 is prereq for 1141); 1139 can publish any time after 1138. All four must exist before 316 publishes.
 
 ### Wave 3 — Tier 200 methods
 
@@ -365,38 +365,38 @@ Tier 200 pieces may publish after their prerequisite atoms are live. Recommended
 7. **307 (Dark Patterns)** — no hard timing constraint
 8. **302 (AI Surprises arc)** and **308 (Designing for AI Trust)** — after atoms 167, 168, 169
 9. **310 (Strategic Design Judgment)** — after decision landscape cluster (193-199) is live; no method prereqs, only atom prereqs
-10. **311 (Stakeholder Decisions)** — after Cluster J atoms 247, 248, 249, 256, 257 are live; PM Chapter Talk anchor piece
-11. **312 (Designing What You're Building)** — after Cluster J atoms 253, 254 are live (plus Wave 1 atoms 103, 111, 126, 123, 157, 158); Custom Dev Chapter Talk anchor piece
-12. **313 (UX in a Product You Didn't Build)** — after Cluster J atom 255 is live; plus 250 (both in same cluster); Non-Custom Dev Chapter Talk anchor piece
-13. **314 (How People Actually Decide)** — after all of: 247, 248, 249, 250, 252, 256, 260 (all Cluster J); publish after 311 to leverage shared prerequisites
-14. **315 (Psychology of Resistance)** — after all of: 247, 249, 250, 251, 253, 257, 258 (all Cluster J); publish after 311 and 314
-15. **316 (Reading Data Without Getting Fooled)** — after Cluster K atoms 261, 262, 263, 264 are live; plus Wave 1 atoms 100, 135, 149
+10. **311 (Stakeholder Decisions)** — after Cluster J atoms 1124, 1125, 1126, 1133, 1134 are live; PM Chapter Talk anchor piece
+11. **312 (Designing What You're Building)** — after Cluster J atoms 1130, 1131 are live (plus Wave 1 atoms 103, 111, 126, 123, 157, 158); Custom Dev Chapter Talk anchor piece
+12. **313 (UX in a Product You Didn't Build)** — after Cluster J atom 1132 is live; plus 1127 (both in same cluster); Non-Custom Dev Chapter Talk anchor piece
+13. **314 (How People Actually Decide)** — after all of: 1124, 1125, 1126, 1127, 1129, 1133, 1137 (all Cluster J); publish after 311 to leverage shared prerequisites
+14. **315 (Psychology of Resistance)** — after all of: 1124, 1126, 1127, 1128, 1130, 1134, 1135 (all Cluster J); publish after 311 and 314
+15. **316 (Reading Data Without Getting Fooled)** — after Cluster K atoms 1138, 1139, 1140, 1141 are live; plus Wave 1 atoms 100, 135, 149
 
 **PM-Specialized Arcs (317-321) — Wave 4:**
 16. **317 (From a Vague Ask to a Solvable Problem)** — prereqs all Wave 1 (107, 122, 125, 100, 101); can publish early in Wave 4; pairs with 311 as PM entry sequence
 17. **318 (Writing Requirements That Survive the Build)** — prereqs: 317 (hard) plus Wave 1 atoms 130, 107, 113, 100; publish after 317
 18. **319 (Lightweight Validation Without a Research Team)** — prereqs: 123, 208, 100, 101, 149 (all Wave 1-2); can publish independently of 317/318; highest cross-audience applicability of the PM arcs
-19. **320 (Prioritizing Without False Precision)** — prereqs: 100, 101, 109 (Wave 1) plus 247, 249 (Cluster J); publish after Cluster J atoms are live; sequentially after 317/318 recommended but not required
-20. **321 (Managing the Design Feedback Loop)** — prereqs: 311 (hard), 247, 249, 129, 163; publish after 311; closes the PM arc sequence
+19. **320 (Prioritizing Without False Precision)** — prereqs: 100, 101, 109 (Wave 1) plus 1124, 1126 (Cluster J); publish after Cluster J atoms are live; sequentially after 317/318 recommended but not required
+20. **321 (Managing the Design Feedback Loop)** — prereqs: 311 (hard), 1124, 1126, 129, 163; publish after 311; closes the PM arc sequence
 
 **Custom Dev Arcs (322-325) — Wave 4:**
 21. **322 (What's Missing From Your Spec)** — prereqs: 100, 107, 110, 113, 130 (Wave 1) plus 318 (soft; PM-facing complement); can publish independently; pairs with 312
-22. **323 (Technical Decisions as UX Decisions)** — prereqs: 126, 100, 107, 110 (Wave 1) plus 254, 255 (Cluster J); publish after Cluster J atoms 254, 255 are live; most novel arc in the Custom Dev set
-23. **324 (Ship / Patch / Hold Decision)** — prereqs: 100, 101, 109, 110, 113 (Wave 1) plus 249 (Cluster J); can publish after Cluster J atoms; pairs with 312
-24. **325 (When Things Break in Production)** — prereqs: 100, 113 (Wave 1) plus 249, 253, 259 (Cluster J); publish after Cluster J atoms are live; sequentially after 324 recommended
+22. **323 (Technical Decisions as UX Decisions)** — prereqs: 126, 100, 107, 110 (Wave 1) plus 1131, 1132 (Cluster J); publish after Cluster J atoms 1131, 1132 are live; most novel arc in the Custom Dev set
+23. **324 (Ship / Patch / Hold Decision)** — prereqs: 100, 101, 109, 110, 113 (Wave 1) plus 1126 (Cluster J); can publish after Cluster J atoms; pairs with 312
+24. **325 (When Things Break in Production)** — prereqs: 100, 113 (Wave 1) plus 1126, 1130, 1136 (Cluster J); publish after Cluster J atoms are live; sequentially after 324 recommended
 
 **Non-Custom Dev Arcs (326-329) — Wave 4:**
-25. **326 (Evaluating Vendor Products Before You're Locked In)** — prereqs: 124, 126, 110, 100, 101 (Wave 1) plus 255, 250 (Cluster J); pairs with 313; most impactful pre-adoption decision support
-26. **327 (Documentation as Experience Design)** — prereqs: 126, 130, 107, 113 (Wave 1) plus 255 (Cluster J); can publish independently; high standalone value
-27. **328 (Running the Platform Like a Product)** — prereqs: 100, 113, 135, 149, 125 (Wave 1) plus 250 (Cluster J); can publish independently; pairs with 313
-28. **329 (Platform Migration as a UX Project)** — prereqs: 126, 130 (Wave 1) plus 250, 249, 253 (Cluster J) plus 206 arc (Wave 3); publish after 206 arc and Cluster J atoms; lowest immediate priority in Non-Custom Dev set
+25. **326 (Evaluating Vendor Products Before You're Locked In)** — prereqs: 124, 126, 110, 100, 101 (Wave 1) plus 1132, 1127 (Cluster J); pairs with 313; most impactful pre-adoption decision support
+26. **327 (Documentation as Experience Design)** — prereqs: 126, 130, 107, 113 (Wave 1) plus 1132 (Cluster J); can publish independently; high standalone value
+27. **328 (Running the Platform Like a Product)** — prereqs: 100, 113, 135, 149, 125 (Wave 1) plus 1127 (Cluster J); can publish independently; pairs with 313
+28. **329 (Platform Migration as a UX Project)** — prereqs: 126, 130 (Wave 1) plus 1127, 1126, 1130 (Cluster J) plus 206 arc (Wave 3); publish after 206 arc and Cluster J atoms; lowest immediate priority in Non-Custom Dev set
 
 **Cross-Audience Arcs (330-334) — Wave 4:**
-29. **330 (From Findings to Decisions)** — prereqs: 100, 101, 149, 244 (Wave 1-2) plus 316 (soft; complements data literacy arc); can publish independently; highest cross-audience value in this set
-30. **331 (The Good-Enough Evidence Problem)** — prereqs: 100, 101, 103, 149 (Wave 1) plus 247, 253 (Cluster J) plus 330 (hard); publish after 330
-31. **332 (Scope as a Design Decision)** — prereqs: 100, 107, 109, 110, 113 (Wave 1) plus 249, 253 (Cluster J); can publish independently; pairs with 317 (PM) and 322 (Custom Dev)
+29. **330 (From Findings to Decisions)** — prereqs: 100, 101, 149, 1121 (Wave 1-2) plus 316 (soft; complements data literacy arc); can publish independently; highest cross-audience value in this set
+30. **331 (The Good-Enough Evidence Problem)** — prereqs: 100, 101, 103, 149 (Wave 1) plus 1124, 1130 (Cluster J) plus 330 (hard); publish after 330
+31. **332 (Scope as a Design Decision)** — prereqs: 100, 107, 109, 110, 113 (Wave 1) plus 1126, 1130 (Cluster J); can publish independently; pairs with 317 (PM) and 322 (Custom Dev)
 32. **333 (Designing Handoffs That Don't Lose Information)** — prereqs: 100, 107, 113, 130 (Wave 1) plus 209 (Wave 3); publish after 209 is live; lowest immediate priority in cross-audience set
-33. **334 (Solution-First Rapid Ideation)** — prereqs: 100, 101, 103, 113, 147 (Wave 1) plus 247, 249 (Cluster J); publish after Cluster J atoms are live; publish alongside or after 309 arc (prototyping) for maximum conceptual contrast
+33. **334 (Solution-First Rapid Ideation)** — prereqs: 100, 101, 103, 113, 147 (Wave 1) plus 1124, 1126 (Cluster J); publish after Cluster J atoms are live; publish alongside or after 309 arc (prototyping) for maximum conceptual contrast
 
 ---
 
@@ -419,21 +419,21 @@ A sequencing error occurs when a piece publishes in a wave earlier than any of i
 ## Sequencing Checks — Audience-Specialized Arcs
 
 **Critical checks before publishing arcs 311-316:**
-- Does 311 appear before 247, 248, 249, 256, 257? → Sequencing error
-- Does 312 appear before 253, 254? → Sequencing error (also requires 103, 111, 126, 123, 157, 158 — all Wave 1)
-- Does 313 appear before 255, 250? → Sequencing error (also requires 124, 126, 110, 130 — all Wave 1)
-- Does 314 appear before 247, 248, 249, 250, 252, 256, 260? → Sequencing error
-- Does 315 appear before 247, 249, 250, 251, 253, 257, 258? → Sequencing error
-- Does 316 appear before 261, 262, 263, 264? → Sequencing error
+- Does 311 appear before 1124, 1125, 1126, 1133, 1134? → Sequencing error
+- Does 312 appear before 1130, 1131? → Sequencing error (also requires 103, 111, 126, 123, 157, 158 — all Wave 1)
+- Does 313 appear before 1132, 1127? → Sequencing error (also requires 124, 126, 110, 130 — all Wave 1)
+- Does 314 appear before 1124, 1125, 1126, 1127, 1129, 1133, 1137? → Sequencing error
+- Does 315 appear before 1124, 1126, 1127, 1128, 1130, 1134, 1135? → Sequencing error
+- Does 316 appear before 1138, 1139, 1140, 1141? → Sequencing error
 - Does 317 appear without 107, 122, 100, 101? → Sequencing error (all Wave 1, but verify)
 - Does 318 appear before 317? → Sequencing error
 - Does 321 appear before 311? → Sequencing error
-- Does 323 appear before 254, 255 (Cluster J)? → Sequencing error
-- Does 326 appear before 255, 250 (Cluster J)? → Sequencing error
+- Does 323 appear before 1131, 1132 (Cluster J)? → Sequencing error
+- Does 326 appear before 1132, 1127 (Cluster J)? → Sequencing error
 - Does 329 appear before the 206 arc? → Sequencing error
-- Does 330 appear before 244? → Sequencing error
+- Does 330 appear before 1121? → Sequencing error
 - Does 331 appear before 330? → Sequencing error
-- Does 334 appear before 247, 249 (Cluster J)? → Sequencing error
+- Does 334 appear before 1124, 1126 (Cluster J)? → Sequencing error
 
 ## Chapter Talk Cross-Reference
 

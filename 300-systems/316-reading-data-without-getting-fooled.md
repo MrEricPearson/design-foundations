@@ -1,5 +1,5 @@
 # Reading Data Without Getting Fooled
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience (PM primary; applicable to all practitioners encountering analytics or research data) | **Prereqs:** 100 (Assumption vs. Fact), 135 (Leading vs. Lagging Indicators), 149 (Research vs. Anecdote), 261 (Correlation vs. Causation), 262 (Statistical vs. Practical Significance), 263 (Selection Bias), 264 (Survivorship Bias)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience (PM primary; applicable to all practitioners encountering analytics or research data) | **Prereqs:** 100 (Assumption vs. Fact), 135 (Leading vs. Lagging Indicators), 149 (Research vs. Anecdote), 1138 (Correlation vs. Causation), 1139 (Statistical vs. Practical Significance), 1140 (Selection Bias), 1141 (Survivorship Bias)
 
 **Goal:** Evaluate a data finding at the level of a skeptical practitioner — not a statistician — so that you can identify what a number actually proves, what it doesn't, and what question to ask before it drives a decision.
 
@@ -9,7 +9,7 @@
 
 ## Part 1 — What Your Dashboard Doesn't Know
 
-**Concept:** Dashboards show co-movement between metrics. They do not show which metric caused which, or whether either was caused by what you think. System 1 produces causal stories automatically when it observes co-occurrence (261): feature X launched, retention went up, therefore feature X caused the retention increase. The dashboard confirms the timing. It cannot confirm the mechanism. And without a mechanism, the causal claim is an assumption that looks like a finding.
+**Concept:** Dashboards show co-movement between metrics. They do not show which metric caused which, or whether either was caused by what you think. System 1 produces causal stories automatically when it observes co-occurrence (1138): feature X launched, retention went up, therefore feature X caused the retention increase. The dashboard confirms the timing. It cannot confirm the mechanism. And without a mechanism, the causal claim is an assumption that looks like a finding.
 
 The additional complication: the most recent action is almost always available as a causal story, because it's the most salient event in S1's pattern-completion. A seasonal traffic increase, an unrelated behavior change in a different team's product, a change in the user population entering the funnel — any of these could produce the same metric movement and is invisible in a dashboard that only shows your product's metrics.
 
@@ -30,7 +30,7 @@ When a metric moves, before attributing it to your most recent action:
 
 ## Part 2 — Who's Missing From Your Data
 
-**Concept:** Users who appear in your analytics are the users who stayed. Users who left before the analytics window are invisible. Power users who interact daily are overrepresented; first-time users who tried the product once and never returned are either absent or present as a single session. The data is real — it accurately describes the users it contains. The question is whether the users it contains are the users you want to know about (263, 264).
+**Concept:** Users who appear in your analytics are the users who stayed. Users who left before the analytics window are invisible. Power users who interact daily are overrepresented; first-time users who tried the product once and never returned are either absent or present as a single session. The data is real — it accurately describes the users it contains. The question is whether the users it contains are the users you want to know about (1140, 1141).
 
 Survivorship bias is particularly persistent in product analytics because the filter operates silently: analytics tools don't label the users who aren't there. A 90-day active user retention report describes users who were active for 90 days. It tells you nothing about the users who left at day 15 — which may be exactly the population whose behavior you most need to understand to improve your product.
 
@@ -52,7 +52,7 @@ If the missing population would behave differently on the dimension being studie
 
 ## Part 3 — What Test Results Actually Prove
 
-**Concept:** "Statistically significant" is the most commonly misread phrase in product analytics (262). It means the observed difference is unlikely to be explained by random chance at the sample size tested. It says nothing about whether the difference is large enough to matter, nothing about whether the measurement instrument captured the right behavior, and nothing about causation. A large-enough sample will detect any nonzero difference as statistically significant — including effects so small they are irrelevant to user behavior or business outcomes.
+**Concept:** "Statistically significant" is the most commonly misread phrase in product analytics (1139). It means the observed difference is unlikely to be explained by random chance at the sample size tested. It says nothing about whether the difference is large enough to matter, nothing about whether the measurement instrument captured the right behavior, and nothing about causation. A large-enough sample will detect any nonzero difference as statistically significant — including effects so small they are irrelevant to user behavior or business outcomes.
 
 Practical significance is the separate question: if this effect is real, does it matter? Does a 0.3% improvement in conversion change anything the product team should care about? Does a 2-second reduction in task completion time affect any user outcome you actually value? These are judgment calls, not statistical computations — and they require knowing what effect size would be meaningful in your context before you run the test.
 

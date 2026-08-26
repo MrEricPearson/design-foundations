@@ -1,5 +1,5 @@
 # No UI as Design Goal
-**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 169 (Affordance), 147 (AI as Execution Partner), 238 (Progressive Disclosure) | **Blocks:** 308, 270e
+**Tier:** 100 — Recognize | **Arc:** Standalone | **Prereqs:** 169 (Affordance), 147 (AI as Execution Partner), 1115 (Progressive Disclosure) | **Blocks:** 308, 270e
 
 **Goal:** Recognize when the absence of a visible interface is a deliberate design decision — not a missing piece — so you can evaluate conversational, voice, and AI-driven experiences on their own terms.
 

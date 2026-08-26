@@ -1,5 +1,5 @@
 # Scope as a Design Decision
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 100 (Assumption vs. Fact), 107 (Framing the Problem), 109 (Weighing Tradeoffs), 110 (Constraints as Design Input), 113 (Defining Success Before You Start), 249 (Loss Aversion), 253 (Sunk Cost Fallacy)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 100 (Assumption vs. Fact), 107 (Framing the Problem), 109 (Weighing Tradeoffs), 110 (Constraints as Design Input), 113 (Defining Success Before You Start), 1126 (Loss Aversion), 1130 (Sunk Cost Fallacy)
 
 **Goal:** Make scope decisions with the same rigor as design decisions — by recognizing scope as the primary lever for shipping something that works for users, evaluating cuts against user impact rather than feature completeness, negotiating scope changes with explicit evidence, and documenting scope boundaries so they can be revisited when conditions change.
 

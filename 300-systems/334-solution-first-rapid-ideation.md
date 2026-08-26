@@ -1,5 +1,5 @@
 # Solution-First Rapid Ideation
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience (all practitioners) | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 103 (Attachment), 113 (Defining Success Before You Start), 147 (AI as Execution Partner), 247 (Dual Process Theory), 249 (Loss Aversion)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience (all practitioners) | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 103 (Attachment), 113 (Defining Success Before You Start), 147 (AI as Execution Partner), 1124 (Dual Process Theory), 1126 (Loss Aversion)
 
 **Goal:** Use creation as a discovery tool — by writing an explicit hypothesis before building, using the built artifact to surface what you didn't know to ask, running a structured learning loop within 48 hours, and knowing the three conditions under which the flipped process is appropriate.
 

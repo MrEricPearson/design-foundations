@@ -1,5 +1,5 @@
 # Documentation as Experience Design
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / 3rd-Party / Configuration primary | **Prereqs:** 126 (Mental Models), 130 (Scenario Writing), 107 (Framing the Problem), 113 (Defining Success Before You Start), 255 (Jakob's Law)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / 3rd-Party / Configuration primary | **Prereqs:** 126 (Mental Models), 130 (Scenario Writing), 107 (Framing the Problem), 113 (Defining Success Before You Start), 1132 (Jakob's Law)
 
 **Goal:** Write documentation that people actually use — by designing it for the situation where it's needed (not the moment it's written), structuring it around user goals rather than product features, testing whether it closes the task loop, and maintaining it so it doesn't become a trap.
 

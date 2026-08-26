@@ -3,6 +3,8 @@
 
 **Goal:** Recognize when helping a participant changes the evidence you're collecting — so you can spot the moment your instinct to help starts producing false confidence instead of real findings.
 
+*The participant is going in circles and you know exactly what to tell them. You can't.*
+
 ---
 
 You're watching someone use the thing you built. They pause. They squint at the screen. They hover the cursor over three different buttons without clicking any of them.
@@ -55,7 +57,7 @@ If you're getting ready to run a live session, 215a (Moderated Usability Session
 
 ---
 
-**Sources:**
+**Sources**
 
 Bronfenbrenner, U. (1977). Toward an experimental ecology of human development. *American Psychologist*, 32(7), 513–531. Introduced ecological validity as the degree to which research environments approximate real-world conditions — foundational to understanding why artificially assisted test conditions undermine the generalizability of findings.
 

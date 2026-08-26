@@ -1,5 +1,5 @@
 # Form Design Method
-**Tier:** 200 — Practice | **Arc:** Standalone | **Prereqs:** 237, 238, 240, 242 | **Episode:** 9
+**Tier:** 200 — Practice | **Arc:** Standalone | **Prereqs:** 1114, 1115, 1117, 1119 | **Episode:** 9
 
 **Goal:** Design a form that minimizes perceived effort by sequencing questions for cognitive ease and staging commitment to match user readiness — rather than organizing fields by data model or technical convenience.
 
@@ -39,4 +39,4 @@ Afterward, write one sentence: What did the abandonment data reveal about where 
 
 **After you've run this yourself:** Share the form map with the person who defined the field requirements and walk through the willingness curve together. Fields that score high on sensitivity almost always have a reason they're positioned early — usually a system requirement, not a user one. Identifying those system requirements surfaces negotiable constraints.
 
-**What Next:** Read 238 (Progressive Disclosure) for the structural principle behind step 7 of this method — conditional field display is a direct application of progressive disclosure to form design. Read 242 (Error States) for how to design recovery messages that return users to completion rather than producing abandonment.
+**What Next:** Read 1115 (Progressive Disclosure) for the structural principle behind step 7 of this method — conditional field display is a direct application of progressive disclosure to form design. Read 1119 (Error States) for how to design recovery messages that return users to completion rather than producing abandonment.

@@ -4,6 +4,8 @@
 
 **Goal:** Recognize when participant behavior in a session is being shaped by the observer's presence — so you can read what you're seeing accurately, not just literally.
 
+*Someone behaves differently when they know they're being watched. So do you.*
+
 ---
 
 The participant pauses at a navigation label for five full seconds. They hover their cursor, click something wrong, backtrack, and try again. Then they look up at you and say: "Sorry, I'm not usually this slow."
@@ -40,6 +42,8 @@ The ratio matters: participant statements directed at the task versus statements
 
 None of this means sessions are unreliable. It means they're calibrated.
 
+Don't confuse this with demand characteristics — where participants try to give you what they think you want, guessing at the study's purpose and shaping their behavior to match it. Observation effect doesn't depend on intent or a guess about your hypothesis. The presence alone is enough. A participant with no theory at all about what you're testing still performs differently than they would alone.
+
 Observation effect doesn't produce false positives. It suppresses them. When someone who knows they're being evaluated still can't complete a task after genuine effort, that's a strong finding, probably understated relative to what happens in production. When someone struggles visibly while calling it "not a big deal," weight the behavior over the words. The observation effect bends self-report toward positive. It doesn't bend behavior by anywhere near as much.
 
 What changes is how you read the evidence. Observed struggle is real struggle, likely more common outside the session than what you saw. High session completion rates may be slightly inflated by the extra effort participants put in when someone's watching. Verbal reports in debriefs pull toward positive. None of this invalidates the session. It tells you which signals to weight and in which direction.
@@ -50,16 +54,16 @@ In the next session you observe, track the self-commentary. Count statements dir
 
 ---
 
-**What Next:** For the facilitation techniques that reduce observation effect in moderated sessions, read 215a (Moderated Usability Session). For how think-aloud protocol changes the nature of self-commentary and what to do with it during interpretation, read 174 (Think-Aloud Protocol). For the broader distinction between what people say and what they actually do, read 151 (Self-Report vs. Observed Behavior).
+For the facilitation techniques that reduce observation effect in moderated sessions, read 215a (Moderated Usability Session). For how think-aloud protocol changes the nature of self-commentary and what to do with it during interpretation, read 174 (Think-Aloud Protocol). For the broader distinction between what people say and what they actually do, read 151 (Self-Report vs. Observed Behavior).
 
 ---
 
-**Sources:**
+**Sources**
 
-Berkhout, C., De Maeseneer, J., Morreel, S., & Remmen, R. (2022). Defining and evaluating the Hawthorne effect in primary care, a systematic review and meta-analysis. *Frontiers in Medicine, 9*, 977677. Meta-analysis of 15 quantified studies; odds ratio of 1.41 for behavior modification from observation; the effect involves social desirability, conformity, and observation bias, and diminishes in rigorously designed studies.
+Berkhout, C., De Maeseneer, J., Morreel, S., & Remmen, R. (2022). Defining and evaluating the Hawthorne effect in primary care, a systematic review and meta-analysis. *Frontiers in Medicine, 9*, 977677. Meta-analysis of 15 quantified studies. Odds ratio of 1.41 for behavior modification from observation. The effect involves social desirability, conformity, and observation bias, and diminishes in rigorously designed studies.
 
-Bispo Júnior, J.P. (2022). Social desirability bias in qualitative health research. *Revista de Saúde Pública, 56*, 107. Identifies two overlapping mechanisms of behavior modification when observed: deliberate impression management and unconscious self-deception; identifies bystander presence as a primary determinant of bias magnitude.
+Bispo Júnior, J.P. (2022). Social desirability bias in qualitative health research. *Revista de Saúde Pública, 56*, 107. Identifies two overlapping mechanisms of behavior modification when observed: deliberate impression management and unconscious self-deception. Identifies bystander presence as a primary determinant of bias magnitude.
 
-Goffman, E. (1959). *The presentation of self in everyday life.* Doubleday. Foundational dramaturgical model of social behavior; distinguishes frontstage (observed, performance-modified) behavior from backstage (unobserved, natural) behavior; establishes impression management as a core structural feature of social interaction.
+Goffman, E. (1959). *The presentation of self in everyday life.* Doubleday. Foundational dramaturgical model of social behavior. Distinguishes frontstage (observed, performance-modified) behavior from backstage (unobserved, natural) behavior. Establishes impression management as a core structural feature of social interaction.
 
 Sauro, J. (2017, November 15). *Do observers affect usability test results?* MeasuringU. Reviews usability-specific research including Sonderegger & Sauer (2009), who found that additional observer presence during mobile prototype testing produced lower task completion rates, longer task times, and measurable physiological stress compared to less-observed conditions.

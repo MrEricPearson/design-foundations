@@ -1,5 +1,5 @@
 # Designing a Reward Loop
-**Tier:** 200 — Practice | **Arc:** Standalone | **Prereqs:** 234, 235, 236 | **Episode:** 4
+**Tier:** 200 — Practice | **Arc:** Standalone | **Prereqs:** 1111, 1112, 1113 | **Episode:** 4
 
 **Goal:** Design a reward structure that creates genuine engagement in service of users' actual goals — rather than compulsive usage that serves platform metrics at users' expense.
 
@@ -37,4 +37,4 @@ Afterward, write one sentence: What does the behavior look like when it's runnin
 
 **After you've run this yourself:** Share the reward structure document with the three-test check completed with a team member who wasn't involved in its design. Ask them to apply the tests independently. Divergences in how you scored the tests reveal where the ethical risk is ambiguous.
 
-**What Next:** Read 234 (Persuasion vs. Manipulation) if you haven't yet — the three tests are defined there and form the backbone of this method's ethical check. Read 235 (Gamification Principles) for how different reward schedules interact with compulsion risk.
+**What Next:** Read 1111 (Persuasion vs. Manipulation) if you haven't yet — the three tests are defined there and form the backbone of this method's ethical check. Read 1112 (Gamification Principles) for how different reward schedules interact with compulsion risk.

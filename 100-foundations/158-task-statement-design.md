@@ -25,11 +25,13 @@ The same problem appears in softer forms: naming a section, a workflow stage, a 
 
 (If you've written task scripts that look more like step-by-step tutorials than situations, you've done this. Most people do, the first few times. The tasks feel specific and helpful, which is the exact property that makes them less useful.)
 
+(A task statement that names specific UI elements has stopped being a task. At that point you're testing whether the participant can follow instructions — which is useful, just not usability testing.)
+
 ---
 
 The signal is one question. Read the task. Does any word in it appear as a visible label somewhere in the interface? Button text, menu item, section heading, feature name, status badge, tab label. Every match is doing the participant's work. The test is measuring label-matching, not discoverability. That's the sentence to hold onto.
 
-Marieke McCloskey (2014) at NNGroup frames the standard directly: effective tasks specify "what to accomplish and why, but never how." The "how" lives in the interface labels, the navigation structure, the button text. The goal lives in what the participant cared about before they opened the screen.
+Marieke McCloskey (2014) at NNGroup frames the standard directly: effective tasks describe what the participant wants to accomplish and why they want it — never the interface path they should take. The "how" lives in the interface labels, the navigation structure, the button text. The goal lives in what the participant cared about before they opened the screen.
 
 ---
 
@@ -55,8 +57,8 @@ When you're ready to run a live session, 215a (Moderated Usability Testing) cove
 
 **Sources**
 
-Budiu, R. (2016). Priming and User Interfaces. Nielsen Norman Group. https://www.nngroup.com/articles/priming/
+Budiu, R. (2016). Priming and User Interfaces. Nielsen Norman Group. https://www.nngroup.com/articles/priming/ Found that participants asked to find an "iPad keypad" typed "keypad" into search even though the interface used "keyboard" — showing that a task's wording sticks, and participants navigate toward the task's own language rather than the interface's actual labels.
 
-McCloskey, M. (2014). Turn User Goals into Task Scenarios for Usability Testing. Nielsen Norman Group. https://www.nngroup.com/articles/task-scenarios-usability-testing/
+McCloskey, M. (2014). Turn User Goals into Task Scenarios for Usability Testing. Nielsen Norman Group. https://www.nngroup.com/articles/task-scenarios-usability-testing/ Established the standard this piece uses directly: effective tasks specify what to accomplish and why, but never how — the "how" belongs to the interface, not the task statement.
 
-Schade, A. (2017). Write Better Qualitative Usability Tasks. Nielsen Norman Group. https://www.nngroup.com/articles/better-usability-tasks/
+Schade, A. (2017). Write Better Qualitative Usability Tasks. Nielsen Norman Group. https://www.nngroup.com/articles/better-usability-tasks/ Named the failure mode this piece is built around: tasks containing interface terminology test reading comprehension and word-matching rather than whether the interface's own labels and navigation are discoverable.

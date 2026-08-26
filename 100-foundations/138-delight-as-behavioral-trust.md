@@ -5,7 +5,7 @@ piece: 138
 title: Delight as Behavioral Trust
 goal: Recognize why trusted is the target quality level — and what distinguishes a trusted product from a merely usable one.
 prereqs: [137]
-pairs_with: [116, 224, 236]
+pairs_with: [116, 224, 1113]
 episode: 2
 status: drafted
 ---
@@ -41,4 +41,4 @@ Think about a recent piece of user feedback — a complaint, a request, or a sur
 - To place a specific product on the ladder and name the one action that moves it up → **224 Quality audit**
 - To see the full threshold map → **137 The quality ladder**
 - To understand how individual states cross the trust threshold → **116 Error states as a trust system**
-- To understand what sustains engagement once trust is established → **236 Intrinsic vs. extrinsic motivation**
+- To understand what sustains engagement once trust is established → **1113 Intrinsic vs. extrinsic motivation**

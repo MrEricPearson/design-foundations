@@ -1,5 +1,5 @@
 # Technical Decisions as UX Decisions
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Custom Dev primary | **Prereqs:** 126 (Mental Models), 100 (Assumption vs. Fact), 107 (Framing the Problem), 110 (Constraints as Design Input), 242 (Error States and Error Messages), 254 (Mode Errors), 255 (Jakob's Law)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Custom Dev primary | **Prereqs:** 126 (Mental Models), 100 (Assumption vs. Fact), 107 (Framing the Problem), 110 (Constraints as Design Input), 1119 (Error States and Error Messages), 1131 (Mode Errors), 1132 (Jakob's Law)
 
 **Goal:** Recognize when an architectural or implementation decision has user experience consequences — data model choices that become vocabulary, async patterns that become wait states, error handling that becomes trust signals — and make those decisions with the user in front of mind, not only the implementation.
 

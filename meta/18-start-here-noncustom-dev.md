@@ -29,7 +29,7 @@ Non-custom dev typically enters at **Tier 100** for conceptual frames and moves 
 
 ## Audience-specific T300 arcs
 
-**313 — UX in a Product You Didn't Build** is the primary T300 arc for this audience. It applies design judgment to the decisions you actually control in a vendor or SaaS implementation: configuration choices grounded in user mental models, pre-implementation heuristic evaluation, scenario-driven configuration rationale, and adoption strategy based on Status Quo Bias and Loss Aversion rather than training. Builds directly on pieces 4 and 5 in the starter sequence above (206 Journey Mapping, 209 Design Decision Records). Prereqs: 126, 255, 250, 124, 110, 130 — all T100/T200 pieces.
+**313 — UX in a Product You Didn't Build** is the primary T300 arc for this audience. It applies design judgment to the decisions you actually control in a vendor or SaaS implementation: configuration choices grounded in user mental models, pre-implementation heuristic evaluation, scenario-driven configuration rationale, and adoption strategy based on Status Quo Bias and Loss Aversion rather than training. Builds directly on pieces 4 and 5 in the starter sequence above (206 Journey Mapping, 209 Design Decision Records). Prereqs: 126, 1132, 1127, 124, 110, 130 — all T100/T200 pieces.
 
 Four extended arcs address the full non-custom dev workflow from pre-adoption evaluation to ongoing platform management and migration:
 

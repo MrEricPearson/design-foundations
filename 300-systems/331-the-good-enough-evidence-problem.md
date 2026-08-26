@@ -1,5 +1,5 @@
 # The Good-Enough Evidence Problem
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 103 (Attachment), 149 (Research vs. Anecdote), 247 (Dual Process Theory), 253 (Sunk Cost Fallacy), 330 (From Findings to Decisions)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 103 (Attachment), 149 (Research vs. Anecdote), 1124 (Dual Process Theory), 1130 (Sunk Cost Fallacy), 330 (From Findings to Decisions)
 
 **Goal:** Make decisions confidently from partial evidence — by recognizing when more evidence wouldn't change a decision, identifying when it would, distinguishing productive uncertainty from avoidance, and acting decisively on the evidence that exists while naming what remains open.
 

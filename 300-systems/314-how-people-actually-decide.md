@@ -1,5 +1,5 @@
 # How People Actually Decide
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 247 (Dual Process Theory), 248 (Framing Effect), 249 (Loss Aversion), 250 (Status Quo Bias), 252 (Anchoring), 256 (Hick's Law), 260 (Decision Fatigue)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 1124 (Dual Process Theory), 1125 (Framing Effect), 1126 (Loss Aversion), 1127 (Status Quo Bias), 1129 (Anchoring), 1133 (Hick's Law), 1137 (Decision Fatigue)
 
 **Goal:** Identify which cognitive mechanism is shaping a decision that keeps getting deferred, reversed, or made differently than expected — and design the decision context, not just the options, to support the quality of thinking the decision deserves.
 
@@ -9,7 +9,7 @@
 
 ## Part 1 — The Two-System Problem in Decision Meetings
 
-**Concept:** Most decisions in product and organizational contexts are made by System 1, not System 2 — even when the people involved believe they're deliberating (247). S1 is faster than deliberation and almost always presents its conclusions to S2 as pre-formed opinions. S2 then often rationalizes those conclusions rather than evaluating them independently. Designing a decision context only for S2 — providing data, logic, structured arguments — assumes S2 is already engaged before S1 has produced a verdict. In most meetings, that assumption is wrong.
+**Concept:** Most decisions in product and organizational contexts are made by System 1, not System 2 — even when the people involved believe they're deliberating (1124). S1 is faster than deliberation and almost always presents its conclusions to S2 as pre-formed opinions. S2 then often rationalizes those conclusions rather than evaluating them independently. Designing a decision context only for S2 — providing data, logic, structured arguments — assumes S2 is already engaged before S1 has produced a verdict. In most meetings, that assumption is wrong.
 
 The question to ask before designing any decision context is: what will S1 already think about this before any deliberation starts? What patterns will S1 match it to? What will feel like a threat, a risk, or an imposition before anyone has read the supporting material? A decision context designed only for S2 will fail when S1 has already produced a verdict and S2 is performing rather than evaluating.
 
@@ -30,9 +30,9 @@ Before bringing any significant decision to a group:
 
 ## Part 2 — Anchoring and Framing the Decision Space
 
-**Concept:** The first option, number, or frame introduced in a decision context becomes the reference point S1 uses to evaluate everything that follows — regardless of whether the first element was intended as a reference point (252, 248). In a planning meeting, the first estimate mentioned is the gravity field for all subsequent estimates. In a design review, the first option shown is the implicit baseline. In a stakeholder presentation, "our recommendation is X" anchors the room to defending or attacking X before alternatives are considered. This happens even when the first element is explicitly labeled as preliminary.
+**Concept:** The first option, number, or frame introduced in a decision context becomes the reference point S1 uses to evaluate everything that follows — regardless of whether the first element was intended as a reference point (1129, 1125). In a planning meeting, the first estimate mentioned is the gravity field for all subsequent estimates. In a design review, the first option shown is the implicit baseline. In a stakeholder presentation, "our recommendation is X" anchors the room to defending or attacking X before alternatives are considered. This happens even when the first element is explicitly labeled as preliminary.
 
-The additional mechanism: S1 treats the current state — whatever exists today — as the baseline against which everything else is measured. The status quo is not one option among several; it is the zero point (250). Any option presented without also naming the status quo as an explicit alternative becomes a comparison to an invisible, zero-cost baseline that's already in S1's favor.
+The additional mechanism: S1 treats the current state — whatever exists today — as the baseline against which everything else is measured. The status quo is not one option among several; it is the zero point (1127). Any option presented without also naming the status quo as an explicit alternative becomes a comparison to an invisible, zero-cost baseline that's already in S1's favor.
 
 **Method:**
 Before any decision presentation:
@@ -51,7 +51,7 @@ Before any decision presentation:
 
 ## Part 3 — The Effort Cost of Deciding
 
-**Concept:** Decision-making is cognitively expensive, and S2 resources deplete across a session (260). More options extend decision time exponentially rather than linearly — halving options nearly eliminates decision time, not just reduces it (256). Together, these two mechanisms mean that important decisions made at the end of a long meeting, or decisions that follow too many other decisions, are made by a depleted S2 under greater S1 influence. The room that made thoughtful early decisions is not the same room making late ones — not because the people changed, but because the resource they used for deliberation has been spent.
+**Concept:** Decision-making is cognitively expensive, and S2 resources deplete across a session (1137). More options extend decision time exponentially rather than linearly — halving options nearly eliminates decision time, not just reduces it (1133). Together, these two mechanisms mean that important decisions made at the end of a long meeting, or decisions that follow too many other decisions, are made by a depleted S2 under greater S1 influence. The room that made thoughtful early decisions is not the same room making late ones — not because the people changed, but because the resource they used for deliberation has been spent.
 
 Post-depletion decisions have a predictable pattern: they default either toward the most salient option (impulsive resolution) or toward the status quo (conservative avoidance of additional cost). Both can look like agreement. Neither is deliberation.
 
@@ -72,7 +72,7 @@ For any decision meeting:
 
 ## Part 4 — Why Loss Looms Larger Than Gain
 
-**Concept:** Any proposal that involves removing, changing, or sunsetting something will face stronger resistance than an equivalent proposal for adding something new — regardless of the objective improvement involved (249, 250). This is structural, not personal: losses register approximately twice as strongly as equivalent gains in S1 processing, and the current state is treated as a free baseline that any change must overcome. A proposal to add a feature and a proposal to replace a feature with a better version are not equivalent psychologically, even if the outcome is identical.
+**Concept:** Any proposal that involves removing, changing, or sunsetting something will face stronger resistance than an equivalent proposal for adding something new — regardless of the objective improvement involved (1126, 1127). This is structural, not personal: losses register approximately twice as strongly as equivalent gains in S1 processing, and the current state is treated as a free baseline that any change must overcome. A proposal to add a feature and a proposal to replace a feature with a better version are not equivalent psychologically, even if the outcome is identical.
 
 The practical implication: presentations that lead with what's lost produce more resistance than presentations that lead with what's preserved. This is not spin — both descriptions can be equally accurate. The choice of which accurate description to lead with is a design decision about which S1 reaction to invoke first.
 

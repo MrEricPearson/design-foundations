@@ -5,7 +5,7 @@
 
 ---
 
-You describe an idea in a meeting. A feature, a flow, a handoff between two systems. You're clear. People follow along. Someone asks a question; you answer it. More nodding. The meeting ends.
+You describe an idea in a meeting. A feature, a flow, a handoff between two systems. You're clear. People follow along. Someone asks a question. You answer it. More nodding. The meeting ends.
 
 Nothing got pushed back on.
 
@@ -41,6 +41,8 @@ Here's where people get tripped up: a clean, organized diagram signals the oppos
 
 Rough invites disagreement. Polished discourages it. The rougher the sketch, the more clearly it communicates: this is still open, come at the idea itself.
 
+(The instinct to clean up a sketch before you show it is almost universal. It's also the exact moment the sketch stops doing its job.)
+
 A polished diagram can move through a meeting unchallenged not because it was right, but because it looked decided.
 
 ---
@@ -59,4 +61,10 @@ If you want to turn a sketch into a sequence that shows how something unfolds ov
 
 ---
 
-*Sources: Schön, D. (1983). The Reflective Practitioner: How Professionals Think in Action. Basic Books — when designers draw rather than describe, the drawing "talks back"; sketching generates implications and gaps that verbal description conceals; the sketch is a medium for discovery, not just communication. Suwa, M., & Tversky, B. (1997). What do architects and students perceive in their design sketches? Design Studies, 18(4), 385–403 — experienced designers discover functional relationships through sketching that weren't apparent before drawing; externalization makes thinking checkable in ways description doesn't. Buxton, B. (2007). Sketching User Experiences: Getting the Design Right and the Right Design. Morgan Kaufmann — rough and polished are communication signals, not just aesthetic ones; polish implies completion and shifts feedback from direction to execution; roughness signals openness.*
+**Sources**
+
+Schön, D. (1983). *The Reflective Practitioner: How Professionals Think in Action.* Basic Books. When designers draw rather than describe, the drawing "talks back." Sketching generates implications and gaps that verbal description conceals. The sketch is a medium for discovery, not just communication.
+
+Suwa, M., & Tversky, B. (1997). What do architects and students perceive in their design sketches? *Design Studies, 18*(4), 385–403. Experienced designers discover functional relationships through sketching that weren't apparent before drawing. Externalization makes thinking checkable in ways description doesn't.
+
+Buxton, B. (2007). *Sketching User Experiences: Getting the Design Right and the Right Design.* Morgan Kaufmann. Rough and polished are communication signals, not just aesthetic ones. Polish implies completion and shifts feedback from direction to execution. Roughness signals openness.

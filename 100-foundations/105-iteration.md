@@ -56,10 +56,8 @@ If iteration is surfacing assumptions faster than you expected, 101 (Not All Ass
 
 **Sources**
 
-Jansson, D. G., & Smith, S. M. (1991). Design fixation. *Design Studies, 12*(1), 3–11.
+Jansson, D. G., & Smith, S. M. (1991). Design fixation. *Design Studies, 12*(1), 3–11. Found that designers anchored to a first concept produced later solutions that were more inflexible and less original than unanchored designers, even when the later versions looked very different — the basis for this piece's warning that visual change doesn't guarantee directional change.
 
-Nielsen, J. (1993). Iterative design of user interfaces. *IEEE Software, 10*(6), 32–41. [Also available at nngroup.com]
+Nielsen, J. (1993). Iterative design of user interfaces. *IEEE Software, 10*(6), 32–41. [Also available at nngroup.com] Tracked four case studies where teams redesigned based on what user testing revealed, finding a median 165% improvement from first to last version (38% per iteration) — the evidence this piece cites for what genuine iteration produces over refinement alone.
 
-Schön, D. A. (1983). *The Reflective Practitioner: How Professionals Think in Action.* Basic Books.
-
-Dow, S., Glassco, A., Kass, J., Schwarz, M., Schwartz, D. L., & Klemmer, S. R. (2010). Parallel prototyping leads to better design results, more divergence, and increased self-efficacy. *ACM Transactions on Computer-Human Interaction, 17*(4), Article 18.
+Schön, D. A. (1983). *The Reflective Practitioner: How Professionals Think in Action.* Basic Books. Described reflection-in-action, where a practitioner's experiment generates new understanding and changes the situation itself — the mechanism this piece uses to define iteration as learning-driven change, not just another pass.

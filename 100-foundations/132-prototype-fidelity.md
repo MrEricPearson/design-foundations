@@ -59,4 +59,10 @@ This piece is part of the Prototyping cluster in the Design Foundations Library.
 
 ---
 
-*Sources: Sauer, J., & Sonderegger, A. (2009). The influence of prototype fidelity and aesthetics of design in usability tests. Applied Ergonomics, 40(3) — increased visual polish led participants to rate products as significantly more usable even with identical functionality; the effect changes what reviewers feel safe saying. Virzi, R.A., Sokolov, J.L., & Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. CHI Conference Proceedings — low- and high-fidelity prototypes surface substantially the same usability problems; polish is not required for most testing questions.*
+**Sources**
+
+Sauer, J., & Sonderegger, A. (2009). The influence of prototype fidelity and aesthetics of design in usability tests. *Applied Ergonomics, 40*(3). Increased visual polish led participants to rate products as significantly more usable even with identical functionality. The effect changes what reviewers feel safe saying.
+
+Virzi, R.A., Sokolov, J.L., & Karis, D. (1996). Usability problem identification using both low- and high-fidelity prototypes. *CHI Conference Proceedings.* Low- and high-fidelity prototypes surface substantially the same usability problems. Polish is not required for most testing questions.
+
+Buxton, B. (2007). *Sketching User Experiences: Getting the Design Right and the Right Design.* Morgan Kaufmann. Rough artifacts signal that a direction is still open for questioning. Polished artifacts shift reviewers into refinement mode before direction is confirmed. The choice of fidelity is a deliberate signal about what kind of feedback is welcome.

@@ -11,4 +11,4 @@
 
 **Try Noticing:** Walk through a flow you're currently working on. At each step, ask: what happens if the user provides nothing, provides the maximum possible input, or does something unexpected? Is each of those behaviors defined somewhere, or is it whatever the code defaults to?
 
-**What Next:** If an edge case produces an error state, read 242 (Error States) for how to design the recovery message. If you want to test whether real users encounter these edge cases naturally, add them as secondary tasks in a 215a (Moderated Usability Session).
+**What Next:** If an edge case produces an error state, read 1119 (Error States) for how to design the recovery message. If you want to test whether real users encounter these edge cases naturally, add them as secondary tasks in a 215a (Moderated Usability Session).

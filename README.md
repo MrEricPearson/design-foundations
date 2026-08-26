@@ -86,11 +86,11 @@ Clusters within `100-foundations/`:
 - **Research and evidence** (148–176): Primary vs. secondary, behavior vs. attitude, synthesis, task statement design, journey maps, prototypes
 - **Content architecture** (179–199): Content models, labeling, taxonomy, naming, design systems
 - **Visual craft** (187–192): Layout, gestalt, whitespace, reading patterns, typography, color
-- **Psychology and bias** (225–232): Self-report bias, confirmation bias, anchoring, loss aversion, social proof, status quo bias
-- **Ethics and persuasion** (233–236): Dark patterns, persuasion vs. manipulation, gamification
-- **Cognitive interface** (237–243): Cognitive overload, progressive disclosure, accessibility, empty states, error states, onboarding
-- **Research methods** (244–246): Qualitative vs. quantitative, mixed methods, sample size
-- **Cognitive science** (247–264): Dual process theory, framing effect, loss aversion, sunk cost, Jakob's Law, Hick's Law, correlation vs. causation, survivorship bias
+- **Psychology and bias** (1102–1109): Self-report bias, confirmation bias, anchoring, loss aversion, social proof, status quo bias
+- **Ethics and persuasion** (1110–1113): Dark patterns, persuasion vs. manipulation, gamification
+- **Cognitive interface** (1114–1120): Cognitive overload, progressive disclosure, accessibility, empty states, error states, onboarding
+- **Research methods** (1121–1123): Qualitative vs. quantitative, mixed methods, sample size
+- **Cognitive science** (1124–1141): Dual process theory, framing effect, loss aversion, sunk cost, Jakob's Law, Hick's Law, correlation vs. causation, survivorship bias
 - **Interface cognition & AI shifts** (265–269, upcoming): Cost of novelty, no-UI design goal, serendipity problem in AI-curated interfaces, skeuomorphism vs. abstraction, design style spectrum
 
 ### Tier 200 — Methods you can run

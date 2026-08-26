@@ -39,7 +39,7 @@ Eight arcs deliver systems-level judgment specifically for PM contexts. Three ar
 | 314 — How People Actually Decide | Design decision contexts — not just decision options — to support the quality of deliberation consequential decisions deserve |
 | 316 — Reading Data Without Getting Fooled | Evaluate analytics findings at a skeptical practitioner level: identify what a metric actually proves, who's missing from the data, and what the test result doesn't claim |
 
-311 builds most directly on the starter sequence above. 314 and 316 can be read in any order after the starter. Prereqs for 311: 247 (Dual Process Theory), 248 (Framing Effect), 249 (Loss Aversion) — all T100 and readable in under 5 minutes each.
+311 builds most directly on the starter sequence above. 314 and 316 can be read in any order after the starter. Prereqs for 311: 1124 (Dual Process Theory), 1125 (Framing Effect), 1126 (Loss Aversion) — all T100 and readable in under 5 minutes each.
 
 **Extended PM arcs — for the full PM practice:**
 

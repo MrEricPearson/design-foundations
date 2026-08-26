@@ -1,5 +1,5 @@
 # The Ship / Patch / Hold Decision
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Custom Dev primary | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 109 (Weighing Tradeoffs), 110 (Constraints as Design Input), 113 (Defining Success Before You Start), 137 (The Quality Ladder), 249 (Loss Aversion)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Custom Dev primary | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 109 (Weighing Tradeoffs), 110 (Constraints as Design Input), 113 (Defining Success Before You Start), 137 (The Quality Ladder), 1126 (Loss Aversion)
 
 **Goal:** Make confident ship / patch / hold decisions by defining the right criteria before a feature is ready to test, evaluating launch risks against those criteria, and choosing a launch path that protects users without defaulting to either "always ship" or "never ship with known issues."
 

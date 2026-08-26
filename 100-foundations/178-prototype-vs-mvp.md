@@ -37,7 +37,7 @@ Eric Ries (2011) defined the MVP in the Lean Startup as "the smallest version of
 
 Don't confuse this with a pilot. A pilot is a real, working version of something deployed to a limited audience to validate behavior at scale. It has real users, real data, real obligations, the same as an MVP. The difference between a pilot and an MVP is the scope of the audience, not the level of commitment. A prototype is the only one of these three designed to be thrown away.
 
-(Teams sometimes discover they've been running a "pilot" for eighteen months with no handoff plan. Different problem. Different piece.)
+(You might discover you've been running a "pilot" for eighteen months with no handoff plan. Different problem. Different piece.)
 
 ---
 
@@ -55,18 +55,18 @@ The next time someone proposes "building something small to test this," notice t
 
 ---
 
-**What Next:** When the decision is to build a prototype, the 309 prototyping arc covers nine approaches and how to choose among them. When the decision is to build an MVP instead, read 113 (Defining Success Before You Start) to establish what the MVP needs to prove before the build begins.
+When the decision is to build a prototype, the 309 prototyping arc covers nine approaches and how to choose among them. When the decision is to build an MVP instead, read 113 (Defining Success Before You Start) to establish what the MVP needs to prove before the build begins.
 
 ---
 
 **Sources**
 
-Klein, L. (2026, May 22). The case for design disposables. *Nielsen Norman Group.* https://www.nngroup.com/articles/design-disposables/
+Klein, L. (2026, May 22). The case for design disposables. *Nielsen Norman Group.* https://www.nngroup.com/articles/design-disposables/ Named the practice of building "design disposables" — artifacts made to help yourself think, not to deliver — and argued that throwing them away once they've done that job isn't failure. Grounds this piece's claim that a prototype has no real users by definition.
 
-Paul, S. (2026, March 27). Minimum viable product (MVP): Definition. *Nielsen Norman Group.* https://www.nngroup.com/articles/mvp-definition/
+Paul, S. (2026, March 27). Minimum viable product (MVP): Definition. *Nielsen Norman Group.* https://www.nngroup.com/articles/mvp-definition/ Drew the line this piece uses directly: a prototype tests whether an idea has value, while an MVP tests whether a specific implementation succeeds by measuring real behavior.
 
-Ries, E. (2011). *The Lean Startup.* Crown Business.
+Ries, E. (2011). *The Lean Startup.* Crown Business. Defined the MVP as the smallest version of a product usable to start learning from customers — cited here to show that "minimum" in MVP describes the smallest real commitment, not a disposable draft.
 
-Staw, B. M. (1976). Knee-deep in the big muddy: A study of escalating commitment to a chosen course of action. *Organizational Behavior and Human Performance, 16*(1), 27–44.
+Staw, B. M. (1976). Knee-deep in the big muddy: A study of escalating commitment to a chosen course of action. *Organizational Behavior and Human Performance, 16*(1), 27–44. Found that people invest more in a failing course of action when they were personally responsible for starting it — the mechanism this piece uses to explain why a prototype quietly turns into a product nobody decided to ship.
 
-Fowler, M. (n.d.). Technical debt. *MartinFowler.com.* https://martinfowler.com/bliki/TechnicalDebt.html [cites Ward Cunningham, OOPSLA 1992]
+Fowler, M. (n.d.). Technical debt. *MartinFowler.com.* https://martinfowler.com/bliki/TechnicalDebt.html [cites Ward Cunningham, OOPSLA 1992] Shows that teams who ship below a quality threshold deliver later, not sooner, as accumulating cruft slows every subsequent change — used here to explain the real obligations that start the moment a prototype reaches real users.

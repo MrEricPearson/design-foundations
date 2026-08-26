@@ -1,5 +1,5 @@
 # The Psychology of Stakeholder Decisions
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** PM-primary; broadly applicable | **Prereqs:** 247 (Dual Process Theory), 248 (Framing Effect), 249 (Loss Aversion), 252 (Anchoring), 256 (Hick's Law), 257 (Authority Bias), 129 (Stakeholder Mapping)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** PM-primary; broadly applicable | **Prereqs:** 1124 (Dual Process Theory), 1125 (Framing Effect), 1126 (Loss Aversion), 1129 (Anchoring), 1133 (Hick's Law), 1134 (Authority Bias), 129 (Stakeholder Mapping)
 
 **Goal:** Recognize which cognitive mechanism is driving stakeholder resistance and adapt your approach to address the mechanism, not the surface objection — so you spend less effort arguing and more time moving decisions forward.
 

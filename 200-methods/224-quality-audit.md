@@ -67,6 +67,6 @@ After you've run the audit yourself: paste your placement statement into a conve
 ## What Next
 
 - At **functional** → focus on error and edge state design: **116, 117, 118**
-- At **usable** → reduce cognitive overhead: **237 Cognitive overload**, **238 Progressive disclosure**
+- At **usable** → reduce cognitive overhead: **1114 Cognitive overload**, **1115 Progressive disclosure**
 - At **efficient** → address the trust gap: **Testing What You Built (Ep22)**
 - At **trusted** → focus on maintenance: **134 Design debt**, **135 Leading vs. lagging indicators**

@@ -1,5 +1,5 @@
 # Content Status Tracker
-**Last updated:** 2026-08-10 (v6 — world-class quality elevation pass: all atoms 100–148 fully rewritten to T100/Practice Atom world-class standard; 22 new T100 atoms added 225–246; 2 new T200 methods added 222–223; atoms 116/117/119 superseded by 241/242/238 and now redirect to canonical versions; Phase 2 atoms 148–200b confirmed at standard; 17-episode arc deliverable published)
+**Last updated:** 2026-08-10 (v6 — world-class quality elevation pass: all atoms 100–148 fully rewritten to T100/Practice Atom world-class standard; 22 new T100 atoms added 1102–1123; 2 new T200 methods added 222–223; atoms 116/117/119 superseded by 1118/1119/1115 and now redirect to canonical versions; Phase 2 atoms 148–1101 confirmed at standard; 17-episode arc deliverable published)
 
 ## Format Status
 
@@ -7,14 +7,14 @@
 - **Standard T100:** `Goal → Concept (names wrong model + mechanism) → You'll see it when → The signal → Don't confuse this with (+ false positive) → Try Noticing (observational) → What Next`
 - **Practice Atom subtype:** `Goal → Concept (wrong model + mechanism) → The move (single step) → Don't confuse this with (+ false positive) → Try Noticing (observational) → What Next`
 
-**Quality elevation status (2026-08-10):** Atoms 100–148 ✅ fully rewritten to world-class standard. Prior Knowledge Hook (wrong model named), mechanism at causal level, observational Try Noticing, and false-positive in Don't Confuse This With are now present in all atoms 100–148. Phase 2 atoms (149–200b, 225–246) confirmed at standard — spot-checked 149, 154, 244, 245, 246.
+**Quality elevation status (2026-08-10):** Atoms 100–148 ✅ fully rewritten to world-class standard. Prior Knowledge Hook (wrong model named), mechanism at causal level, observational Try Noticing, and false-positive in Don't Confuse This With are now present in all atoms 100–148. Phase 2 atoms (149–1101, 1102–1123) confirmed at standard — spot-checked 149, 154, 1121, 1122, 1123.
 
 **Supersession:**
-- 116 (error states) → redirects to 242
-- 117 (empty states) → redirects to 241
-- 119 (progressive disclosure) → redirects to 238
+- 116 (error states) → redirects to 1119
+- 117 (empty states) → redirects to 1118
+- 119 (progressive disclosure) → redirects to 1115
 
-**Note:** STATUS.md Format column uses legacy notation (T✓ M✓ A✓ P✓ W✓ etc.) for pieces 100–147 — these predated the v6 standard. All atoms in that range have been elevated. New atoms (148+) and new pieces (225–246, 222–223) are at world-class standard.
+**Note:** STATUS.md Format column uses legacy notation (T✓ M✓ A✓ P✓ W✓ etc.) for pieces 100–147 — these predated the v6 standard. All atoms in that range have been elevated. New atoms (148+) and new pieces (1102–1123, 222–223) are at world-class standard.
 
 ---
 
@@ -74,7 +74,7 @@
 | 148 | Primary vs. Secondary Research | [148-primary-vs-secondary-research.md](100-foundations/148-primary-vs-secondary-research.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; pairs with 149, 150 |
 | 149 | Research vs. Anecdote | [149-research-vs-anecdote.md](100-foundations/149-research-vs-anecdote.md) | Standalone | Drafted | ✅ v6 | ✅ | Pairs with 148, 150 |
 | 150 | Pattern vs. Data Point | [150-pattern-vs-data-point.md](100-foundations/150-pattern-vs-data-point.md) | Standalone | Drafted | ✅ v6 | ✅ | Pairs with 149 |
-| 151 | Self-Report vs. Observed Behavior | [151-self-report-vs-observed-behavior.md](100-foundations/151-self-report-vs-observed-behavior.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereqs: 148; pairs with 152, 225 |
+| 151 | Self-Report vs. Observed Behavior | [151-self-report-vs-observed-behavior.md](100-foundations/151-self-report-vs-observed-behavior.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereqs: 148; pairs with 152, 1102 |
 | 152 | Behavior vs. Attitude | [152-behavior-vs-attitude.md](100-foundations/152-behavior-vs-attitude.md) | Standalone | Drafted | ✅ v6 | ✅ | Pairs with 151 |
 | 153 | Experience vs. Process | [153-experience-vs-process.md](100-foundations/153-experience-vs-process.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq for journey mapping |
 | 154 | What a Pain Point Is | [154-what-a-pain-point-is.md](100-foundations/154-what-a-pain-point-is.md) | Standalone | Drafted | ✅ v6 | ✅ | Foundational for 206 arc |
@@ -123,31 +123,31 @@
 | 197 | Naming as Model Design | [197-naming-as-model-design.md](100-foundations/197-naming-as-model-design.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 6 |
 | 198 | Pattern vs. Model Problem | [198-pattern-vs-model-problem.md](100-foundations/198-pattern-vs-model-problem.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 5 |
 | 199 | Transformation Within Constraints | [199-transformation-within-constraints.md](100-foundations/199-transformation-within-constraints.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 5 |
-| 200a | A/B Testing Basics | [200a-ab-testing-basics.md](100-foundations/200a-ab-testing-basics.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 12 |
-| 200b | Iteration Rhythm | [200b-iteration-rhythm.md](100-foundations/200b-iteration-rhythm.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 1 |
-| 225 | Self-Report vs. Observed Behavior (bias cluster) | [225-self-report-vs-observed-behavior.md](100-foundations/225-self-report-vs-observed-behavior.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereqs: 101, 103; pairs with 151 |
-| 226 | Confirmation Bias | [226-confirmation-bias.md](100-foundations/226-confirmation-bias.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 225 |
-| 227 | Availability Heuristic | [227-availability-heuristic.md](100-foundations/227-availability-heuristic.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 226 |
-| 228 | Anchoring Effect | [228-anchoring-effect.md](100-foundations/228-anchoring-effect.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 227 |
-| 229 | Loss Aversion | [229-loss-aversion.md](100-foundations/229-loss-aversion.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 228 |
-| 230 | Social Proof | [230-social-proof.md](100-foundations/230-social-proof.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 229 |
-| 231 | Status Quo Bias | [231-status-quo-bias.md](100-foundations/231-status-quo-bias.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 229 |
-| 232 | Cognitive Dissonance | [232-cognitive-dissonance.md](100-foundations/232-cognitive-dissonance.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 231 |
-| 233 | Dark Patterns | [233-dark-patterns.md](100-foundations/233-dark-patterns.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereqs: 229, 230, 231 |
-| 234 | Persuasion vs. Manipulation | [234-persuasion-vs-manipulation.md](100-foundations/234-persuasion-vs-manipulation.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereq: 233 |
-| 235 | Gamification Principles | [235-gamification-principles.md](100-foundations/235-gamification-principles.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereqs: 234, 236 |
-| 236 | Intrinsic vs. Extrinsic Motivation | [236-intrinsic-vs-extrinsic-motivation.md](100-foundations/236-intrinsic-vs-extrinsic-motivation.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereqs: 101, 125 |
-| 237 | Cognitive Overload | [237-cognitive-overload.md](100-foundations/237-cognitive-overload.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 8; prereq: 188 |
-| 238 | Progressive Disclosure | [238-progressive-disclosure.md](100-foundations/238-progressive-disclosure.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 8; prereq: 237; **canonical version — 119 redirects here** |
-| 239 | Accessibility as Design Principle | [239-accessibility-as-design-principle.md](100-foundations/239-accessibility-as-design-principle.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 8; prereqs: 237, 238 |
-| 240 | Form Design Principles | [240-form-design-principles.md](100-foundations/240-form-design-principles.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereqs: 237, 238, 239 |
-| 241 | Empty States | [241-empty-states.md](100-foundations/241-empty-states.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereq: 238; **canonical version — 117 redirects here** |
-| 242 | Error States and Error Messages | [242-error-states.md](100-foundations/242-error-states.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereqs: 238, 240; **canonical version — 116 redirects here** |
-| 243 | Onboarding Design Patterns | [243-onboarding-design-patterns.md](100-foundations/243-onboarding-design-patterns.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereqs: 238, 241 |
-| 244 | Qualitative vs. Quantitative Research | [244-qualitative-vs-quantitative-research.md](100-foundations/244-qualitative-vs-quantitative-research.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereqs: 103, 225 |
-| 245 | Mixed Methods | [245-mixed-methods.md](100-foundations/245-mixed-methods.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereq: 244 |
-| 246 | Sample Size and What It Means | [246-sample-size-and-what-it-means.md](100-foundations/246-sample-size-and-what-it-means.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereqs: 244, 245 |
-| 265 | The Cost of Novelty | [265-cost-of-novelty.md](01-drafts/100-foundations/265-cost-of-novelty.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 255, 126 |
+| 1100 | A/B Testing Basics | [1100-ab-testing-basics.md](100-foundations/1100-ab-testing-basics.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 12 |
+| 1101 | Iteration Rhythm | [1101-iteration-rhythm.md](100-foundations/1101-iteration-rhythm.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 1 |
+| 1102 | Self-Report vs. Observed Behavior (bias cluster) | [1102-self-report-vs-observed-behavior.md](100-foundations/1102-self-report-vs-observed-behavior.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereqs: 101, 103; pairs with 151 |
+| 1103 | Confirmation Bias | [1103-confirmation-bias.md](100-foundations/1103-confirmation-bias.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 1102 |
+| 1104 | Availability Heuristic | [1104-availability-heuristic.md](100-foundations/1104-availability-heuristic.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 1103 |
+| 1105 | Anchoring Effect | [1105-anchoring-effect.md](100-foundations/1105-anchoring-effect.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 1104 |
+| 1106 | Loss Aversion | [1106-loss-aversion.md](100-foundations/1106-loss-aversion.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 1105 |
+| 1107 | Social Proof | [1107-social-proof.md](100-foundations/1107-social-proof.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 1106 |
+| 1108 | Status Quo Bias | [1108-status-quo-bias.md](100-foundations/1108-status-quo-bias.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 1106 |
+| 1109 | Cognitive Dissonance | [1109-cognitive-dissonance.md](100-foundations/1109-cognitive-dissonance.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 3; prereq: 1108 |
+| 1110 | Dark Patterns | [1110-dark-patterns.md](100-foundations/1110-dark-patterns.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereqs: 1106, 1107, 1108 |
+| 1111 | Persuasion vs. Manipulation | [1111-persuasion-vs-manipulation.md](100-foundations/1111-persuasion-vs-manipulation.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereq: 1110 |
+| 1112 | Gamification Principles | [1112-gamification-principles.md](100-foundations/1112-gamification-principles.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereqs: 1111, 1113 |
+| 1113 | Intrinsic vs. Extrinsic Motivation | [1113-intrinsic-vs-extrinsic-motivation.md](100-foundations/1113-intrinsic-vs-extrinsic-motivation.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereqs: 101, 125 |
+| 1114 | Cognitive Overload | [1114-cognitive-overload.md](100-foundations/1114-cognitive-overload.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 8; prereq: 188 |
+| 1115 | Progressive Disclosure | [1115-progressive-disclosure.md](100-foundations/1115-progressive-disclosure.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 8; prereq: 1114; **canonical version — 119 redirects here** |
+| 1116 | Accessibility as Design Principle | [1116-accessibility-as-design-principle.md](100-foundations/1116-accessibility-as-design-principle.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 8; prereqs: 1114, 1115 |
+| 1117 | Form Design Principles | [1117-form-design-principles.md](100-foundations/1117-form-design-principles.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereqs: 1114, 1115, 1116 |
+| 1118 | Empty States | [1118-empty-states.md](100-foundations/1118-empty-states.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereq: 1115; **canonical version — 117 redirects here** |
+| 1119 | Error States and Error Messages | [1119-error-states.md](100-foundations/1119-error-states.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereqs: 1115, 1117; **canonical version — 116 redirects here** |
+| 1120 | Onboarding Design Patterns | [1120-onboarding-design-patterns.md](100-foundations/1120-onboarding-design-patterns.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereqs: 1115, 1118 |
+| 1121 | Qualitative vs. Quantitative Research | [1121-qualitative-vs-quantitative-research.md](100-foundations/1121-qualitative-vs-quantitative-research.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereqs: 103, 1102 |
+| 1122 | Mixed Methods | [1122-mixed-methods.md](100-foundations/1122-mixed-methods.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereq: 1121 |
+| 1123 | Sample Size and What It Means | [1123-sample-size-and-what-it-means.md](100-foundations/1123-sample-size-and-what-it-means.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; prereqs: 1121, 1122 |
+| 265 | The Cost of Novelty | [265-cost-of-novelty.md](01-drafts/100-foundations/265-cost-of-novelty.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 1132, 126 |
 | 267 | The Serendipity Problem | [267-serendipity-problem.md](01-drafts/100-foundations/267-serendipity-problem.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 172, 147 |
 | 268 | Skeuomorphism vs. Abstraction | [268-skeuomorphism-vs-abstraction.md](01-drafts/100-foundations/268-skeuomorphism-vs-abstraction.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 169, 126 |
 | 269 | The Design Style Spectrum | [269-design-style-spectrum.md](01-drafts/100-foundations/269-design-style-spectrum.md) | Cluster L | Drafted | ✅ v6 | ✅ | 2026-08-24; prereqs: 268, 126 |
@@ -183,8 +183,8 @@
 | 219 | AI for Design Work | [219-ai-for-design-work.md](200-methods/219-ai-for-design-work.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 16 |
 | 220 | Working in Vendor Software | [220-working-in-vendor-software.md](200-methods/220-working-in-vendor-software.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 17 |
 | 221 | Content Modeling | [221-content-modeling.md](200-methods/221-content-modeling.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 6; prereq: 179 |
-| 222 | Reward Loop Design | [222-reward-loop-design.md](200-methods/222-reward-loop-design.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereqs: 234, 235, 236 |
-| 223 | Form Design Method | [223-form-design-method.md](200-methods/223-form-design-method.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereqs: 237, 238, 240, 242 |
+| 222 | Reward Loop Design | [222-reward-loop-design.md](200-methods/222-reward-loop-design.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 4; prereqs: 1111, 1112, 1113 |
+| 223 | Form Design Method | [223-form-design-method.md](200-methods/223-form-design-method.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 9; prereqs: 1114, 1115, 1117, 1119 |
 
 ---
 
@@ -408,8 +408,8 @@ These files live at the project root and are not part of the microlearning serie
 
 | # | Piece | File | Wave | Prereqs | Notes |
 |---|---|---|---|---|---|
-| 200a | A/B Testing Basics | 200a-ab-testing-basics.md | 2 | 103, 113 | Statistical significance ≠ certainty; metric vs. real question |
-| 200b | Iteration Rhythm | 200b-iteration-rhythm.md | 2 | 103, 105 | Iterate vs. ship vs. pivot; modification vs. learning |
+| 1100 | A/B Testing Basics | 1100-ab-testing-basics.md | 2 | 103, 113 | Statistical significance ≠ certainty; metric vs. real question |
+| 1101 | Iteration Rhythm | 1101-iteration-rhythm.md | 2 | 103, 105 | Iterate vs. ship vs. pivot; modification vs. learning |
 
 ### New Tier 200 Methods (Phase 3)
 
@@ -444,7 +444,7 @@ These files live at the project root and are not part of the microlearning serie
 
 | Category | Count |
 |---|---|
-| Tier 100 atoms | 92 (69 prior + 23 Phase 3: 179-199, 200a-200b) |
+| Tier 100 atoms | 92 (69 prior + 23 Phase 3: 179-199, 1100-1101) |
 | Tier 200 methods | 44 (37 prior + 7 Phase 3: 221, 270d-270i) |
 | Tier 300 arcs | 11 files (10 prior + 310) |
 | Standalone | 4 |

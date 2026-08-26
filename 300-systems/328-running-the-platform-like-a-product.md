@@ -1,5 +1,5 @@
 # Running the Platform Like a Product
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / Platform / Configuration primary | **Prereqs:** 100 (Assumption vs. Fact), 113 (Defining Success Before You Start), 135 (Leading vs. Lagging Indicators), 149 (Research vs. Anecdote), 125 (Jobs-to-Be-Done), 250 (Status Quo Bias), 313 (UX in a Product You Didn't Build)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / Platform / Configuration primary | **Prereqs:** 100 (Assumption vs. Fact), 113 (Defining Success Before You Start), 135 (Leading vs. Lagging Indicators), 149 (Research vs. Anecdote), 125 (Jobs-to-Be-Done), 1127 (Status Quo Bias), 313 (UX in a Product You Didn't Build)
 
 **Goal:** Apply product thinking to platform management — by treating users of the platform as customers with real needs, defining success metrics that track outcomes not activity, gathering signal systematically rather than reactively, and making configuration and change decisions with the same rigor as product decisions.
 

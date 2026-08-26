@@ -3,6 +3,8 @@
 
 **Goal:** Recognize when someone is narrating their thought process out loud during a session — and when they've stopped — so you know what you're actually learning about their decision-making.
 
+*You ask someone to think aloud and they go quiet at exactly the moment you most want to know what's happening.*
+
 ---
 
 The room is quiet except for the keyboard. For the first few minutes, it was going well: "Okay, I'm looking for where to start... this button seems like it might... wait, no, that's not it..." You were hearing what they were thinking. Now they've gone silent. Their eyes move across the screen. They click something. You have no idea why.
@@ -57,4 +59,4 @@ Nielsen, J. (2012). Thinking aloud: The #1 usability tool. *Nielsen Norman Group
 
 van Someren, M. W., Barnard, Y. F., & Sandberg, J. A. C. (1994). *The Think Aloud Method: A Practical Guide to Modelling Cognitive Processes*. Academic Press. Describes the cognitive mechanisms underlying think-aloud, including the acknowledged trade-off of increased cognitive load with concurrent verbalization versus the reconstruction bias in retrospective reporting.
 
-Boren, T., & Ramey, J. (2000). Thinking aloud: Reconciling theory and practice. *IEEE Transactions on Professional Communication, 43*(3), 261–278. Addresses the divergence between classical think-aloud protocol (no facilitator intervention) and actual usability practice, showing that careful prompting maintains verbalization without introducing meaningful bias when facilitators avoid leading questions.
+Boren, T., & Ramey, J. (2000). Thinking aloud: Reconciling theory and practice. *IEEE Transactions on Professional Communication, 43*(3), 1138–278. Addresses the divergence between classical think-aloud protocol (no facilitator intervention) and actual usability practice, showing that careful prompting maintains verbalization without introducing meaningful bias when facilitators avoid leading questions.

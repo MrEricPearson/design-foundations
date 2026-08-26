@@ -3,11 +3,11 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 [DRAFTED] = content exists. [GAP] = identified, not yet written.
 
 ## Numbering Rule (enforced 2026-08-26)
-**Article IDs must correspond to tier.** T100 atoms: 100–199. T200 methods: 200–299. T300 arcs: 300–399. Overflow when a tier's primary range is exhausted: T100 → 1100–1199 (then 2100–2199); T200 → 1200–1299; T300 → 1300–1399. The hundreds digit always identifies the tier. Arc sub-methods use alphabetical suffixes on a 200s base (e.g., 270a–270i for the prototyping method cluster). **Known pre-rule violations requiring future cleanup:** 200a, 200b, 225–264 (all T100 atoms with 200s IDs, predating this rule). These are not yet renamed; the rule applies immediately to all new articles and to any article being actively revised.
+**Article IDs must correspond to tier.** T100 atoms: 100–199. T200 methods: 200–299. T300 arcs: 300–399. Overflow when a tier's primary range is exhausted: T100 → 1100–1199 (then 2100–2199); T200 → 1200–1299; T300 → 1300–1399. The hundreds digit always identifies the tier. Arc sub-methods use alphabetical suffixes on a 200s base (e.g., 270a–270i for the prototyping method cluster). **Known pre-rule violations requiring future cleanup:** 1100, 1101, 1102–1141 (all T100 atoms with 200s IDs, predating this rule). These are not yet renamed; the rule applies immediately to all new articles and to any article being actively revised.
 
-**Last updated:** 2026-08-26 (v13) — Numbering rule established; 266 (T100) renumbered to 139; 309a–309i (T200) renumbered to 270a–270i. See v12 for prior update. — Atom 269 (Design Style Spectrum) added to Cluster L; separate from 268 to avoid complexity overload. Second-pass gap analysis arcs 317-334 added (PM arcs 317-321, Custom Dev arcs 322-325, Non-Custom Dev arcs 326-329, Cross-audience arcs 330-334 including new Arc 334 Solution-First Rapid Ideation). v9 note preserved below.
-**v9 note:** 2026-08-10 (v9) — Audience-specialized arcs 311-316 added (3 audience-specific + 3 cross-audience). New Cluster J (Cognitive Science / Behavioral Economics, atoms 247-260) and Cluster K (Data Literacy, atoms 261-264). Audience start-here meta files (16-18) updated with arc references. v8 note preserved below.
-**v8 note:** 2026-08-10 (v8) — World-class quality elevation: all atoms 100–148 fully rewritten to T100/Practice Atom standard (prior knowledge hook, causal mechanism, observational Try Noticing, false-positive diagnostics). 22 new T100 atoms added (225–246: bias cluster, ethics/dark patterns, cognitive interface, quant/qual methods). 2 new T200 methods added (222 reward loop design, 223 form design method). 116/117/119 superseded: redirects to canonical 242/241/238. Phase 2 atoms (148–200b) confirmed at world-class standard. v7 (same date): Phase 3 depth pass — see v7 note.
+**Last updated:** 2026-08-26 (v14) — Full numbering cleanup complete. 266→139, 309a–309i→270a–270i, 200a→1100, 200b→1101, 225–264→1102–1141. All refs updated.
+**v9 note:** 2026-08-10 (v9) — Audience-specialized arcs 311-316 added (3 audience-specific + 3 cross-audience). New Cluster J (Cognitive Science / Behavioral Economics, atoms 1124-1137) and Cluster K (Data Literacy, atoms 1138-1141). Audience start-here meta files (16-18) updated with arc references. v8 note preserved below.
+**v8 note:** 2026-08-10 (v8) — World-class quality elevation: all atoms 100–148 fully rewritten to T100/Practice Atom standard (prior knowledge hook, causal mechanism, observational Try Noticing, false-positive diagnostics). 22 new T100 atoms added (1102–1123: bias cluster, ethics/dark patterns, cognitive interface, quant/qual methods). 2 new T200 methods added (222 reward loop design, 223 form design method). 116/117/119 superseded: redirects to canonical 1119/1118/1115. Phase 2 atoms (148–1101) confirmed at world-class standard. v7 (same date): Phase 3 depth pass — see v7 note.
 
 **v5 note:** 2026-08-06 — comprehensive expansion: 15 new Tier 100 atoms (123–136, 147), 5 new Tier 200 methods (214–218), 1 new Tier 300 arc (308), 3 audience orientation meta-pieces (16–18), 3 Deep Context pieces. Format spec amended to Goal + Try This + [AI path] + What Next. Learner maturity labels added: Recognize (Tier 100) / Practice (Tier 200) / Orchestrate (Tier 300).
 
@@ -111,66 +111,66 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 91. Naming as Model Design [DRAFTED — 100-foundations/197-naming-as-model-design.md — prereqs: 183, 179; names create concepts, concepts enable architectures]
 92. Pattern vs. Model Problem [DRAFTED — 100-foundations/198-pattern-vs-model-problem.md — prereqs: 197, 194; four diagnostic signals; most expensive misdiagnosis]
 93. Transformation Within Constraints [DRAFTED — 100-foundations/199-transformation-within-constraints.md — prereqs: 194, 197, 198; tight constraints as forcing function]
-94. A/B Testing Basics [DRAFTED — 100-foundations/200a-ab-testing-basics.md — prereqs: 103, 113; statistical significance ≠ certainty]
-95. Iteration Rhythm [DRAFTED — 100-foundations/200b-iteration-rhythm.md — prereqs: 103, 105; iterate vs. ship vs. pivot]
+94. A/B Testing Basics [DRAFTED — 100-foundations/1100-ab-testing-basics.md — prereqs: 103, 113; statistical significance ≠ certainty]
+95. Iteration Rhythm [DRAFTED — 100-foundations/1101-iteration-rhythm.md — prereqs: 103, 105; iterate vs. ship vs. pivot]
 
 **Cluster F — Psychology and Bias (Episode 3-4)** [DRAFTED 2026-08-10, Episode 3-4]
-96. Self-Report vs. Observed Behavior (bias cluster) [DRAFTED — 100-foundations/225-self-report-vs-observed-behavior.md — prereqs: 101, 103; pairs with 151]
-97. Confirmation Bias [DRAFTED — 100-foundations/226-confirmation-bias.md — prereq: 225]
-98. Availability Heuristic [DRAFTED — 100-foundations/227-availability-heuristic.md — prereq: 226]
-99. Anchoring Effect [DRAFTED — 100-foundations/228-anchoring-effect.md — prereq: 227]
-100. Loss Aversion [DRAFTED — 100-foundations/229-loss-aversion.md — prereq: 228]
-101. Social Proof [DRAFTED — 100-foundations/230-social-proof.md — prereq: 229]
-102. Status Quo Bias [DRAFTED — 100-foundations/231-status-quo-bias.md — prereq: 229]
-103. Cognitive Dissonance [DRAFTED — 100-foundations/232-cognitive-dissonance.md — prereq: 231]
+96. Self-Report vs. Observed Behavior (bias cluster) [DRAFTED — 100-foundations/1102-self-report-vs-observed-behavior.md — prereqs: 101, 103; pairs with 151]
+97. Confirmation Bias [DRAFTED — 100-foundations/1103-confirmation-bias.md — prereq: 1102]
+98. Availability Heuristic [DRAFTED — 100-foundations/1104-availability-heuristic.md — prereq: 1103]
+99. Anchoring Effect [DRAFTED — 100-foundations/1105-anchoring-effect.md — prereq: 1104]
+100. Loss Aversion [DRAFTED — 100-foundations/1106-loss-aversion.md — prereq: 1105]
+101. Social Proof [DRAFTED — 100-foundations/1107-social-proof.md — prereq: 1106]
+102. Status Quo Bias [DRAFTED — 100-foundations/1108-status-quo-bias.md — prereq: 1106]
+103. Cognitive Dissonance [DRAFTED — 100-foundations/1109-cognitive-dissonance.md — prereq: 1108]
 
 **Cluster G — Ethics and Persuasion (Episode 4)** [DRAFTED 2026-08-10]
-104. Dark Patterns [DRAFTED — 100-foundations/233-dark-patterns.md — prereqs: 229, 230, 231]
-105. Persuasion vs. Manipulation [DRAFTED — 100-foundations/234-persuasion-vs-manipulation.md — prereq: 233]
-106. Intrinsic vs. Extrinsic Motivation [DRAFTED — 100-foundations/236-intrinsic-vs-extrinsic-motivation.md — prereqs: 101, 125]
-107. Gamification Principles [DRAFTED — 100-foundations/235-gamification-principles.md — prereqs: 234, 236]
+104. Dark Patterns [DRAFTED — 100-foundations/1110-dark-patterns.md — prereqs: 1106, 1107, 1108]
+105. Persuasion vs. Manipulation [DRAFTED — 100-foundations/1111-persuasion-vs-manipulation.md — prereq: 1110]
+106. Intrinsic vs. Extrinsic Motivation [DRAFTED — 100-foundations/1113-intrinsic-vs-extrinsic-motivation.md — prereqs: 101, 125]
+107. Gamification Principles [DRAFTED — 100-foundations/1112-gamification-principles.md — prereqs: 1111, 1113]
 
 **Cluster H — Cognitive Interface (Episode 8-9)** [DRAFTED 2026-08-10]
-108. Cognitive Overload [DRAFTED — 100-foundations/237-cognitive-overload.md — prereq: 188]
-109. Progressive Disclosure (canonical) [DRAFTED — 100-foundations/238-progressive-disclosure.md — prereq: 237; 119 redirects here]
-110. Accessibility as Design Principle [DRAFTED — 100-foundations/239-accessibility-as-design-principle.md — prereqs: 237, 238]
-111. Form Design Principles [DRAFTED — 100-foundations/240-form-design-principles.md — prereqs: 237, 238, 239]
-112. Empty States (canonical) [DRAFTED — 100-foundations/241-empty-states.md — prereq: 238; 117 redirects here]
-113. Error States and Error Messages (canonical) [DRAFTED — 100-foundations/242-error-states.md — prereqs: 238, 240; 116 redirects here]
-114. Onboarding Design Patterns [DRAFTED — 100-foundations/243-onboarding-design-patterns.md — prereqs: 238, 241]
+108. Cognitive Overload [DRAFTED — 100-foundations/1114-cognitive-overload.md — prereq: 188]
+109. Progressive Disclosure (canonical) [DRAFTED — 100-foundations/1115-progressive-disclosure.md — prereq: 1114; 119 redirects here]
+110. Accessibility as Design Principle [DRAFTED — 100-foundations/1116-accessibility-as-design-principle.md — prereqs: 1114, 1115]
+111. Form Design Principles [DRAFTED — 100-foundations/1117-form-design-principles.md — prereqs: 1114, 1115, 1116]
+112. Empty States (canonical) [DRAFTED — 100-foundations/1118-empty-states.md — prereq: 1115; 117 redirects here]
+113. Error States and Error Messages (canonical) [DRAFTED — 100-foundations/1119-error-states.md — prereqs: 1115, 1117; 116 redirects here]
+114. Onboarding Design Patterns [DRAFTED — 100-foundations/1120-onboarding-design-patterns.md — prereqs: 1115, 1118]
 
 **Cluster I — Quant/Qual Research Methods (Episode 11)** [DRAFTED 2026-08-10]
-115. Qualitative vs. Quantitative Research [DRAFTED — 100-foundations/244-qualitative-vs-quantitative-research.md — prereqs: 103, 225]
-116. Mixed Methods [DRAFTED — 100-foundations/245-mixed-methods.md — prereq: 244]
-117. Sample Size and What It Means [DRAFTED — 100-foundations/246-sample-size-and-what-it-means.md — prereqs: 244, 245]
+115. Qualitative vs. Quantitative Research [DRAFTED — 100-foundations/1121-qualitative-vs-quantitative-research.md — prereqs: 103, 1102]
+116. Mixed Methods [DRAFTED — 100-foundations/1122-mixed-methods.md — prereq: 1121]
+117. Sample Size and What It Means [DRAFTED — 100-foundations/1123-sample-size-and-what-it-means.md — prereqs: 1121, 1122]
 
 **Cluster J — Cognitive Science & Behavioral Economics** [DRAFTED 2026-08-10]
 *All atoms in this cluster: prior knowledge hook naming the wrong model, causal mechanism at S1/S2 level, observational Try Noticing, false-positive diagnostic in Don't Confuse. Foundation for audience-specialized arcs 311-315.*
-118. Dual Process Theory [DRAFTED — 100-foundations/247-dual-process-theory.md — prereqs: 103, 126; foundational for all Cluster J atoms and arcs 311-315]
-119. Framing Effect [DRAFTED — 100-foundations/248-framing-effect.md — Practice Atom subtype — prereqs: 247, 131; blocks 311, 314, 315]
-120. Loss Aversion [DRAFTED — 100-foundations/249-loss-aversion.md — prereqs: 247, 103; blocks 311, 313, 314, 315]
-121. Status Quo Bias [DRAFTED — 100-foundations/250-status-quo-bias.md — prereqs: 247, 249; blocks 312, 313, 314, 315]
-122. Social Proof [DRAFTED — 100-foundations/251-social-proof.md — prereq: 247; blocks 314, 315]
-123. Anchoring [DRAFTED — 100-foundations/252-anchoring.md — prereqs: 247, 248; blocks 314]
-124. Sunk Cost Fallacy [DRAFTED — 100-foundations/253-sunk-cost-fallacy.md — prereqs: 103, 247; blocks 312, 315]
-125. Mode Errors [DRAFTED — 100-foundations/254-mode-errors.md — prereqs: 126, 247; blocks 312]
-126. Jakob's Law [DRAFTED — 100-foundations/255-jakobs-law.md — prereq: 126; blocks 313]
-127. Hick's Law [DRAFTED — 100-foundations/256-hicks-law.md — prereqs: 247, 133; blocks 311, 314]
-128. Authority Bias [DRAFTED — 100-foundations/257-authority-bias.md — prereqs: 247, 149; blocks 311, 315]
-129. Reciprocity [DRAFTED — 100-foundations/258-reciprocity.md — prereqs: 247, 129; blocks 315]
-130. Cognitive Dissonance [DRAFTED — 100-foundations/259-cognitive-dissonance.md — prereqs: 247, 103; blocks 314, 315]
-131. Decision Fatigue [DRAFTED — 100-foundations/260-decision-fatigue.md — prereqs: 256, 247; blocks 314]
+118. Dual Process Theory [DRAFTED — 100-foundations/1124-dual-process-theory.md — prereqs: 103, 126; foundational for all Cluster J atoms and arcs 311-315]
+119. Framing Effect [DRAFTED — 100-foundations/1125-framing-effect.md — Practice Atom subtype — prereqs: 1124, 131; blocks 311, 314, 315]
+120. Loss Aversion [DRAFTED — 100-foundations/1126-loss-aversion.md — prereqs: 1124, 103; blocks 311, 313, 314, 315]
+121. Status Quo Bias [DRAFTED — 100-foundations/1127-status-quo-bias.md — prereqs: 1124, 1126; blocks 312, 313, 314, 315]
+122. Social Proof [DRAFTED — 100-foundations/1128-social-proof.md — prereq: 1124; blocks 314, 315]
+123. Anchoring [DRAFTED — 100-foundations/1129-anchoring.md — prereqs: 1124, 1125; blocks 314]
+124. Sunk Cost Fallacy [DRAFTED — 100-foundations/1130-sunk-cost-fallacy.md — prereqs: 103, 1124; blocks 312, 315]
+125. Mode Errors [DRAFTED — 100-foundations/1131-mode-errors.md — prereqs: 126, 1124; blocks 312]
+126. Jakob's Law [DRAFTED — 100-foundations/1132-jakobs-law.md — prereq: 126; blocks 313]
+127. Hick's Law [DRAFTED — 100-foundations/1133-hicks-law.md — prereqs: 1124, 133; blocks 311, 314]
+128. Authority Bias [DRAFTED — 100-foundations/1134-authority-bias.md — prereqs: 1124, 149; blocks 311, 315]
+129. Reciprocity [DRAFTED — 100-foundations/1135-reciprocity.md — prereqs: 1124, 129; blocks 315]
+130. Cognitive Dissonance [DRAFTED — 100-foundations/1136-cognitive-dissonance.md — prereqs: 1124, 103; blocks 314, 315]
+131. Decision Fatigue [DRAFTED — 100-foundations/1137-decision-fatigue.md — prereqs: 1133, 1124; blocks 314]
 
 **Cluster K — Data Literacy** [DRAFTED 2026-08-10]
 *Foundation for Arc 316; complements Cluster I (research methods) with analytical skepticism for practitioners reading analytics dashboards.*
-132. Correlation vs. Causation [DRAFTED — 100-foundations/261-correlation-vs-causation.md — prereqs: 100, 135; blocks 316]
-133. Statistical vs. Practical Significance [DRAFTED — 100-foundations/262-statistical-vs-practical-significance.md — prereqs: 100, 261; blocks 316]
-134. Selection Bias [DRAFTED — 100-foundations/263-selection-bias.md — prereqs: 100, 261; blocks 316]
-135. Survivorship Bias [DRAFTED — 100-foundations/264-survivorship-bias.md — prereqs: 100, 263; blocks 316]
+132. Correlation vs. Causation [DRAFTED — 100-foundations/1138-correlation-vs-causation.md — prereqs: 100, 135; blocks 316]
+133. Statistical vs. Practical Significance [DRAFTED — 100-foundations/1139-statistical-vs-practical-significance.md — prereqs: 100, 1138; blocks 316]
+134. Selection Bias [DRAFTED — 100-foundations/1140-selection-bias.md — prereqs: 100, 1138; blocks 316]
+135. Survivorship Bias [DRAFTED — 100-foundations/1141-survivorship-bias.md — prereqs: 100, 1140; blocks 316]
 
 **Cluster L — Interface Cognition & AI Shifts (gaps identified 2026-08-20)** [all GAP — not yet drafted]
-136. The Cost of Novelty [GAP — 100-foundations/265-cost-of-novelty.md — prereqs: 255, 126; when breaking convention earns its learning cost; flip side of Jakob's Law; blocks 312, 313, 323]
-137. No UI as Design Goal [DRAFTED — 100-foundations/139-no-ui-as-design-goal.md — ID: 139 (renumbered from 266) — prereqs: 169, 147, 238; invisible design, ambient computing, intent-based interfaces; blocks 308, 270e]
+136. The Cost of Novelty [GAP — 100-foundations/265-cost-of-novelty.md — prereqs: 1132, 126; when breaking convention earns its learning cost; flip side of Jakob's Law; blocks 312, 313, 323]
+137. No UI as Design Goal [DRAFTED — 100-foundations/139-no-ui-as-design-goal.md — ID: 139 (renumbered from 266) — prereqs: 169, 147, 1115; invisible design, ambient computing, intent-based interfaces; blocks 308, 270e]
 138. The Serendipity Problem [GAP — 100-foundations/267-serendipity-problem.md — prereqs: 172, 147; you can't discover what you don't know to search for in AI-curated interfaces; blocks 308, 313]
 139. Skeuomorphism vs. Abstraction [GAP — 100-foundations/268-skeuomorphism-vs-abstraction.md — prereqs: 169, 126; when physical metaphor helps vs. constrains; blocks 312, 313]
 140. The Design Style Spectrum [GAP — 100-foundations/269-design-style-spectrum.md — prereqs: 268, 126; what each major style (skeuomorphic, flat, layered/elevation, neumorphic, brutalist) signals to users and when style-function mismatch creates friction; blocks 312, 313]
@@ -216,8 +216,8 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 24. Mocking and Testing an Agent Handoff [DRAFTED — 300-systems/302-spotting-ai-surprises-and-agent-handoff.md, Parts 3-5]
 25. Spotting Where AI Surprises People [DRAFTED — 300-systems/302-spotting-ai-surprises-and-agent-handoff.md, Parts 1-2]
 26. Content Modeling [DRAFTED — 200-methods/221-content-modeling.md — prereqs: 179, 180, 181, 183; 5-step method for defining content types/attributes/relationships]
-26a. Reward Loop Design [DRAFTED — 200-methods/222-reward-loop-design.md — prereqs: 234, 235, 236; Episode 4; 5-step method for designing ethical engagement loops]
-26b. Form Design Method [DRAFTED — 200-methods/223-form-design-method.md — prereqs: 237, 238, 240, 242; Episode 9; 7-step method for sequencing forms by user willingness curve]
+26a. Reward Loop Design [DRAFTED — 200-methods/222-reward-loop-design.md — prereqs: 1111, 1112, 1113; Episode 4; 5-step method for designing ethical engagement loops]
+26b. Form Design Method [DRAFTED — 200-methods/223-form-design-method.md — prereqs: 1114, 1115, 1117, 1119; Episode 9; 7-step method for sequencing forms by user willingness curve]
 27. Prototyping (arc) — all approaches [DRAFTED — approach files in 200-methods/; arc header in 300-systems/; all elevated to world-class depth 2026-08-10]
    - 27a. Paper/Sketch Prototype [DRAFTED — 200-methods/270a-paper-sketch-prototype.md — prereqs: 177, 132, 106, 113]
    - 27b. Lo-fi Wireframe Prototype [DRAFTED — 200-methods/270b-lofi-wireframe-prototype.md — prereqs: 177, 132, 158, 113]
@@ -248,43 +248,43 @@ Tiered 100 (atomic) / 200 (methods) / 300 (systems), with dependencies shown exp
 12. Strategic Design Judgment [DRAFTED — 300-systems/310-strategic-design-judgment.md — prereqs: 194, 197, 198, 199; 4-part arc: Diagnose / Find Concept / Design Transformation / Calibrate Threshold]
 
 **Audience-Specialized Arcs (311-313)** — Each applies Cluster J atoms through the lens of a specific practitioner audience's real problems.
-13. Psychology of Stakeholder Decisions [DRAFTED — 300-systems/311-psychology-of-stakeholder-decisions.md — Audience: PM-primary — prereqs: 247, 248, 249, 256, 257, 129 — 4 parts: Why Late Feedback Is Always the Wrong Kind / Framing Decisions for Alignment Not Approval / The Demo Problem / Reading Resistance Accurately — Chapter Talk: PM track anchor piece]
-14. Designing What You're Building [DRAFTED — 300-systems/312-designing-what-youre-building.md — Audience: Custom Dev primary — prereqs: 103, 111, 126, 132, 123, 253, 254, 157, 158 — 4 parts: Expertise Trap / User's Mental Model / Testing Without Coaching It / Edge States and Error Design — Chapter Talk: Custom Dev track anchor piece]
-15. UX in a Product You Didn't Build [DRAFTED — 300-systems/313-ux-in-a-product-you-didnt-build.md — Audience: Non-Custom Dev / 3rd-Party / Configuration — prereqs: 126, 255, 250, 124, 110, 130 — 4 parts: What Users Bring / Evaluating What the Vendor Built / Configuration as Design / Adoption as Design Problem — Chapter Talk: Non-Custom Dev track anchor piece]
+13. Psychology of Stakeholder Decisions [DRAFTED — 300-systems/311-psychology-of-stakeholder-decisions.md — Audience: PM-primary — prereqs: 1124, 1125, 1126, 1133, 1134, 129 — 4 parts: Why Late Feedback Is Always the Wrong Kind / Framing Decisions for Alignment Not Approval / The Demo Problem / Reading Resistance Accurately — Chapter Talk: PM track anchor piece]
+14. Designing What You're Building [DRAFTED — 300-systems/312-designing-what-youre-building.md — Audience: Custom Dev primary — prereqs: 103, 111, 126, 132, 123, 1130, 1131, 157, 158 — 4 parts: Expertise Trap / User's Mental Model / Testing Without Coaching It / Edge States and Error Design — Chapter Talk: Custom Dev track anchor piece]
+15. UX in a Product You Didn't Build [DRAFTED — 300-systems/313-ux-in-a-product-you-didnt-build.md — Audience: Non-Custom Dev / 3rd-Party / Configuration — prereqs: 126, 1132, 1127, 124, 110, 130 — 4 parts: What Users Bring / Evaluating What the Vendor Built / Configuration as Design / Adoption as Design Problem — Chapter Talk: Non-Custom Dev track anchor piece]
 
 **Cross-Audience Cognitive Science Arcs (314-316)** — Universal systems applicable to all practitioner audiences.
-16. How People Actually Decide [DRAFTED — 300-systems/314-how-people-actually-decide.md — Audience: Cross-audience — prereqs: 247, 248, 249, 250, 252, 256, 260 — 4 parts: The Two-System Problem / Anchoring and Framing the Decision Space / The Effort Cost of Deciding / Why Loss Looms Larger Than Gain]
-17. The Psychology of Resistance [DRAFTED — 300-systems/315-psychology-of-resistance.md — Audience: Cross-audience — prereqs: 247, 249, 250, 251, 253, 257, 258 — 4 parts: What Resistance Is and Isn't / The Sunk Cost Compound / Building Instead of Fighting / Making Change Feel Like Gain]
-18. Reading Data Without Getting Fooled [DRAFTED — 300-systems/316-reading-data-without-getting-fooled.md — Audience: Cross-audience (PM primary) — prereqs: 100, 135, 149, 261, 262, 263, 264 — 4 parts: What Your Dashboard Doesn't Know / Who's Missing From Your Data / What Test Results Actually Prove / Better Questions for Your Analytics Tool]
+16. How People Actually Decide [DRAFTED — 300-systems/314-how-people-actually-decide.md — Audience: Cross-audience — prereqs: 1124, 1125, 1126, 1127, 1129, 1133, 1137 — 4 parts: The Two-System Problem / Anchoring and Framing the Decision Space / The Effort Cost of Deciding / Why Loss Looms Larger Than Gain]
+17. The Psychology of Resistance [DRAFTED — 300-systems/315-psychology-of-resistance.md — Audience: Cross-audience — prereqs: 1124, 1126, 1127, 1128, 1130, 1134, 1135 — 4 parts: What Resistance Is and Isn't / The Sunk Cost Compound / Building Instead of Fighting / Making Change Feel Like Gain]
+18. Reading Data Without Getting Fooled [DRAFTED — 300-systems/316-reading-data-without-getting-fooled.md — Audience: Cross-audience (PM primary) — prereqs: 100, 135, 149, 1138, 1139, 1140, 1141 — 4 parts: What Your Dashboard Doesn't Know / Who's Missing From Your Data / What Test Results Actually Prove / Better Questions for Your Analytics Tool]
 
 **PM-Specialized Arcs (317-321)** — Audience: Product Managers and anyone managing product decisions, requirements, validation, prioritization, and stakeholder review.
 19. From a Vague Ask to a Solvable Problem [DRAFTED — 300-systems/317-from-vague-ask-to-solvable-problem.md — Audience: PM-primary — prereqs: 107, 122, 125, 100, 101 — 4 parts: Interrogating the Ask / Testing the Problem Statement / Finding the Constraint / The Brief]
 20. Writing Requirements That Survive the Build [DRAFTED — 300-systems/318-writing-requirements-that-survive-the-build.md — Audience: PM-primary — prereqs: 130, 107, 113, 100, 317 — 4 parts: What Requirements Actually Need to Say / Identifying Hidden UX Decisions / Acceptance Criteria That Are Testable / The Spec Review]
 21. Lightweight Validation Without a Research Team [DRAFTED — 300-systems/319-lightweight-validation-without-a-research-team.md — Audience: PM-primary; cross-audience applicable — prereqs: 123, 208, 100, 101, 149 — 4 parts: Calibrating Whether to Validate / Choosing the Right Method / Running the Session Yourself / Making the Call]
-22. Prioritizing Without False Precision [DRAFTED — 300-systems/320-prioritizing-without-false-precision.md — Audience: PM-primary — prereqs: 100, 101, 109, 247, 249 — 4 parts: What Frameworks Actually Measure / Making Uncertainty Explicit / Communicating the Decision / When and How to Reprioritize]
-23. Managing the Design Feedback Loop [DRAFTED — 300-systems/321-managing-the-design-feedback-loop.md — Audience: PM-primary — prereqs: 311, 247, 249, 129, 163 — 4 parts: Defining the Goal Before the Meeting / Classifying Feedback in Real Time / Closing on Decisions / Protecting Decisions Without Dismissing New Input]
+22. Prioritizing Without False Precision [DRAFTED — 300-systems/320-prioritizing-without-false-precision.md — Audience: PM-primary — prereqs: 100, 101, 109, 1124, 1126 — 4 parts: What Frameworks Actually Measure / Making Uncertainty Explicit / Communicating the Decision / When and How to Reprioritize]
+23. Managing the Design Feedback Loop [DRAFTED — 300-systems/321-managing-the-design-feedback-loop.md — Audience: PM-primary — prereqs: 311, 1124, 1126, 129, 163 — 4 parts: Defining the Goal Before the Meeting / Classifying Feedback in Real Time / Closing on Decisions / Protecting Decisions Without Dismissing New Input]
 24. Evaluating a Design You Didn't Create [DRAFTED — 300-systems/335-evaluating-a-design-you-didnt-create.md — Audience: PM-primary — prereqs: 107, 113, 136, 115, 317, 318 — 4 parts: What You're Actually Evaluating / Structure Before Style / The Problem Statement Check / Naming the Concern Not the Fix — Gap identified 2026-08-12: PMs review designs at high frequency; the library had no PM-specific arc for design review as a distinct cognitive task from aesthetic or technical evaluation]
 
 **Custom Dev Arcs (322-325, 336)** — Audience: Development teams building custom software.
 24. What's Missing From Your Spec [DRAFTED — 300-systems/322-whats-missing-from-your-spec.md — Audience: Custom Dev primary — prereqs: 100, 107, 110, 113, 130, 318 — 4 parts: What Specs Routinely Leave Out / Reading for Unstated Assumptions / Translating Spec Language to User Reality / Surfacing Gaps Without Blocking Progress]
-25. Technical Decisions as UX Decisions [DRAFTED — 300-systems/323-technical-decisions-as-ux-decisions.md — Audience: Custom Dev primary — prereqs: 126, 100, 107, 110, 254, 255 — 4 parts: Data Models Become Vocabulary / Async Patterns Become Wait States / Error Handling Is Experience Design / Architecture Decisions That Lock In UX]
-26. The Ship / Patch / Hold Decision [DRAFTED — 300-systems/324-ship-patch-hold-decision.md — Audience: Custom Dev primary — prereqs: 100, 101, 109, 110, 113, 249 — 4 parts: Defining Good Enough Before You Can Evaluate It / Evaluating Known Issues Against the Threshold / The Three Launch Paths / Documenting the Decision and Its Conditions]
-27. When Things Break in Production [DRAFTED — 300-systems/325-when-things-break-in-production.md — Audience: Custom Dev primary — prereqs: 100, 113, 249, 253, 259 — 4 parts: The Incident Response: Users First / Restoring Service Without Creating New Risks / Post-Incident Communication / The Post-Mortem: Learning Not Blame]
+25. Technical Decisions as UX Decisions [DRAFTED — 300-systems/323-technical-decisions-as-ux-decisions.md — Audience: Custom Dev primary — prereqs: 126, 100, 107, 110, 1131, 1132 — 4 parts: Data Models Become Vocabulary / Async Patterns Become Wait States / Error Handling Is Experience Design / Architecture Decisions That Lock In UX]
+26. The Ship / Patch / Hold Decision [DRAFTED — 300-systems/324-ship-patch-hold-decision.md — Audience: Custom Dev primary — prereqs: 100, 101, 109, 110, 113, 1126 — 4 parts: Defining Good Enough Before You Can Evaluate It / Evaluating Known Issues Against the Threshold / The Three Launch Paths / Documenting the Decision and Its Conditions]
+27. When Things Break in Production [DRAFTED — 300-systems/325-when-things-break-in-production.md — Audience: Custom Dev primary — prereqs: 100, 113, 1126, 1130, 1136 — 4 parts: The Incident Response: Users First / Restoring Service Without Creating New Risks / Post-Incident Communication / The Post-Mortem: Learning Not Blame]
 28. Code Review as UX Review [DRAFTED — 300-systems/336-code-review-as-ux-review.md — Audience: Custom Dev primary — prereqs: 323, 100, 107, 113, 116, 117, 118, 137, 138 — 4 parts: What Code Review Typically Misses / Four Questions for Any PR / Naming Experience Concerns Without Redesigning / When to Flag vs. When to Ship — Gap identified 2026-08-12: 323 covers making implementation decisions; nothing addressed evaluating someone else's implementation for experience implications in PR review]
 
 **Non-Custom Dev Arcs (326-329, 337)** — Audience: Teams implementing, configuring, or managing vendor/SaaS platforms.
-28. Evaluating Vendor Products Before You're Locked In [DRAFTED — 300-systems/326-evaluating-vendor-products-before-youre-locked-in.md — Audience: Non-Custom Dev primary — prereqs: 124, 126, 110, 100, 101, 255, 250 — 4 parts: What You Can and Can't Evaluate / Heuristic Review of the Primary Flow / Mental Model Fit Assessment / Documenting the Evaluation and Its Assumptions]
-29. Documentation as Experience Design [DRAFTED — 300-systems/327-documentation-as-experience-design.md — Audience: Non-Custom Dev primary — prereqs: 126, 130, 107, 113, 255 — 4 parts: When Documentation Is Needed and What It Should Do / Structuring for the Task Not the Feature / Testing Whether Documentation Closes the Loop / Maintaining Documentation That Doesn't Become a Trap]
-30. Running the Platform Like a Product [DRAFTED — 300-systems/328-running-the-platform-like-a-product.md — Audience: Non-Custom Dev / Platform primary — prereqs: 100, 113, 135, 149, 125, 250 — 4 parts: Defining Success for a Platform / Gathering Signal Systematically / Making Configuration Decisions Like Product Decisions / Proactive Platform Improvement]
-31. Platform Migration as a UX Project [DRAFTED — 300-systems/329-platform-migration-as-a-ux-project.md — Audience: Non-Custom Dev / Platform primary — prereqs: 126, 250, 249, 253, 130, 206 — 4 parts: Mapping What Users Are Actually Losing / Designing the Transition Period / Communication That Builds Trust Not Anxiety / Post-Migration: Closing the Loop]
-32. When Adoption Fails [DRAFTED — 300-systems/337-when-adoption-fails.md — Audience: Non-Custom Dev / Platform primary — prereqs: 315, 250, 249, 253, 107, 113, 313 — 4 parts: What Your Data Can and Can't Tell You / The Four Failure Modes — Diagnosing Which One / The Response Matched to the Failure Mode / Trust Recovery When Things Already Went Wrong — Gap identified 2026-08-12: the most common failure mode for this audience (low adoption after deployment) had no diagnostic arc; 315 covers behavioral economics of resistance generally but not the specific four-failure-mode diagnostic protocol]
+28. Evaluating Vendor Products Before You're Locked In [DRAFTED — 300-systems/326-evaluating-vendor-products-before-youre-locked-in.md — Audience: Non-Custom Dev primary — prereqs: 124, 126, 110, 100, 101, 1132, 1127 — 4 parts: What You Can and Can't Evaluate / Heuristic Review of the Primary Flow / Mental Model Fit Assessment / Documenting the Evaluation and Its Assumptions]
+29. Documentation as Experience Design [DRAFTED — 300-systems/327-documentation-as-experience-design.md — Audience: Non-Custom Dev primary — prereqs: 126, 130, 107, 113, 1132 — 4 parts: When Documentation Is Needed and What It Should Do / Structuring for the Task Not the Feature / Testing Whether Documentation Closes the Loop / Maintaining Documentation That Doesn't Become a Trap]
+30. Running the Platform Like a Product [DRAFTED — 300-systems/328-running-the-platform-like-a-product.md — Audience: Non-Custom Dev / Platform primary — prereqs: 100, 113, 135, 149, 125, 1127 — 4 parts: Defining Success for a Platform / Gathering Signal Systematically / Making Configuration Decisions Like Product Decisions / Proactive Platform Improvement]
+31. Platform Migration as a UX Project [DRAFTED — 300-systems/329-platform-migration-as-a-ux-project.md — Audience: Non-Custom Dev / Platform primary — prereqs: 126, 1127, 1126, 1130, 130, 206 — 4 parts: Mapping What Users Are Actually Losing / Designing the Transition Period / Communication That Builds Trust Not Anxiety / Post-Migration: Closing the Loop]
+32. When Adoption Fails [DRAFTED — 300-systems/337-when-adoption-fails.md — Audience: Non-Custom Dev / Platform primary — prereqs: 315, 1127, 1126, 1130, 107, 113, 313 — 4 parts: What Your Data Can and Can't Tell You / The Four Failure Modes — Diagnosing Which One / The Response Matched to the Failure Mode / Trust Recovery When Things Already Went Wrong — Gap identified 2026-08-12: the most common failure mode for this audience (low adoption after deployment) had no diagnostic arc; 315 covers behavioral economics of resistance generally but not the specific four-failure-mode diagnostic protocol]
 
 **Cross-Audience Arcs (330-334)** — Universal systems applicable to all practitioner audiences.
-32. From Findings to Decisions [DRAFTED — 300-systems/330-from-findings-to-decisions.md — Audience: Cross-audience — prereqs: 100, 101, 149, 244, 316 — 4 parts: Separating Observation From Interpretation / Evaluating Evidence Against Decision Stakes / Building a Recommendation Stakeholders Can Act On / Documenting the Decision and What Remains Unknown]
-33. The Good-Enough Evidence Problem [DRAFTED — 300-systems/331-the-good-enough-evidence-problem.md — Audience: Cross-audience — prereqs: 100, 101, 103, 149, 247, 253, 330 — 4 parts: When More Evidence Would Change the Decision / Recognizing Evidence-Avoidance / Acting Decisively on Partial Evidence / Calibrating Evidence Investment to Decision Type]
-34. Scope as a Design Decision [DRAFTED — 300-systems/332-scope-as-a-design-decision.md — Audience: Cross-audience — prereqs: 100, 107, 109, 110, 113, 249, 253 — 4 parts: What Scope Actually Controls / Evaluating Scope Cuts by User Impact / Negotiating Scope With Evidence / Documenting Scope Boundaries and Their Rationale]
+32. From Findings to Decisions [DRAFTED — 300-systems/330-from-findings-to-decisions.md — Audience: Cross-audience — prereqs: 100, 101, 149, 1121, 316 — 4 parts: Separating Observation From Interpretation / Evaluating Evidence Against Decision Stakes / Building a Recommendation Stakeholders Can Act On / Documenting the Decision and What Remains Unknown]
+33. The Good-Enough Evidence Problem [DRAFTED — 300-systems/331-the-good-enough-evidence-problem.md — Audience: Cross-audience — prereqs: 100, 101, 103, 149, 1124, 1130, 330 — 4 parts: When More Evidence Would Change the Decision / Recognizing Evidence-Avoidance / Acting Decisively on Partial Evidence / Calibrating Evidence Investment to Decision Type]
+34. Scope as a Design Decision [DRAFTED — 300-systems/332-scope-as-a-design-decision.md — Audience: Cross-audience — prereqs: 100, 107, 109, 110, 113, 1126, 1130 — 4 parts: What Scope Actually Controls / Evaluating Scope Cuts by User Impact / Negotiating Scope With Evidence / Documenting Scope Boundaries and Their Rationale]
 35. Designing Handoffs That Don't Lose Information [DRAFTED — 300-systems/333-designing-handoffs-that-dont-lose-information.md — Audience: Cross-audience — prereqs: 100, 107, 113, 130, 209 — 4 parts: What Gets Lost at Handoffs / The Minimum Viable Handoff / Designing the Handoff Artifact / Handoff Verification and Closing the Loop]
-36. Solution-First Rapid Ideation [DRAFTED — 300-systems/334-solution-first-rapid-ideation.md — Audience: Cross-audience (all practitioners) — prereqs: 100, 101, 103, 113, 147, 247, 249 — 4 parts: Why the Sequence Can Flip / Creating With Learning Intent / The Learning Loop / When This Process Fails]
+36. Solution-First Rapid Ideation [DRAFTED — 300-systems/334-solution-first-rapid-ideation.md — Audience: Cross-audience (all practitioners) — prereqs: 100, 101, 103, 113, 147, 1124, 1126 — 4 parts: Why the Sequence Can Flip / Creating With Learning Intent / The Learning Loop / When This Process Fails]
 
 ---
 

@@ -3,6 +3,8 @@
 
 **Goal:** Recognize when success is undefined before work begins — and write the one sentence that makes it checkable rather than retroactively adjusted.
 
+*You shipped on time, the demo went well, and nobody can agree on whether it worked.*
+
 ---
 
 The problem with "I'll know it when I see it" is that you always do.
@@ -47,22 +49,22 @@ Look at something you're currently working on. Not something finished. Something
 
 Can you complete "I'll know this worked if ___" in a way that could be checked, and be found false? That last part matters. Run the blank test: if what fills it is a feeling, a feature, or a milestone, write it again. Falsifiability is what you're after. A success definition that can't be wrong isn't a definition. It's just documentation of what you're hoping for.
 
-This doesn't have to be precise. "Improves" is vague; "improves by 10%" is checkable. But even a rough observable standard, something tied to behavior rather than delivery, is more honest than nothing. You're not designing a measurement system. You're writing one sentence that makes the retrospective a real evaluation rather than a reconstruction.
+This doesn't have to be precise. "Improves" is vague. "Improves by 10%" is checkable. But even a rough observable standard, something tied to behavior rather than delivery, is more honest than nothing. You're not designing a measurement system. You're writing one sentence that makes the retrospective a real evaluation rather than a reconstruction.
 
 One pass is enough. Do it before the next phase starts.
 
 ---
 
-**What Next:** If your success definition points to something checkable during the work rather than only after it ships, read 135 (Leading vs. Lagging Indicators). If you want to connect it to a metric tracked over time, read 217 (UX Metrics).
+If your success definition points to something checkable during the work rather than only after it ships, read 135 (Leading vs. Lagging Indicators). If you want to connect it to a metric tracked over time, read 217 (UX Metrics).
 
 ---
 
 **Sources**
 
-Fischhoff, B. (1975). Hindsight is not equal to foresight: The effect of outcome knowledge on judgment under uncertainty. *Journal of Experimental Psychology: Human Perception and Performance, 1*(3), 288–299.
+Fischhoff, B. (1975). Hindsight is not equal to foresight: The effect of outcome knowledge on judgment under uncertainty. *Journal of Experimental Psychology: Human Perception and Performance, 1*(3), 288–299. First documented "creeping determinism" — participants who knew an outcome believed they would have predicted it, at far higher rates than participants who didn't. Grounds this piece's claim that a success definition written after the fact can't be trusted.
 
-Klein, G. (2007, September). Performing a project premortem. *Harvard Business Review.*
+Klein, G. (2007, September). Performing a project premortem. *Harvard Business Review.* Formalized the pre-mortem, asking "what would failure look like?" before work starts — the mirror-image discipline this piece uses to justify writing a success definition before the outcome is visible.
 
-Locke, E. A., & Latham, G. P. (2002). Building a practically useful theory of goal setting and task motivation: A 35-year odyssey. *American Psychologist, 57*(9), 705–717.
+Locke, E. A., & Latham, G. P. (2002). Building a practically useful theory of goal setting and task motivation: A 35-year odyssey. *American Psychologist, 57*(9), 705–717. A review of roughly 400 studies finding that specific, observable goals outperformed "do your best" targets about 90% of the time — the evidence this piece cites for why a checkable success definition beats a vague one.
 
-Mitchell, D. J., Russo, J. E., & Pennington, N. (1989). Back to the future: Temporal perspective in the explanation of events. *Journal of Behavioral Decision Making, 2*(1), 25–38.
+Mitchell, D. J., Russo, J. E., & Pennington, N. (1989). Back to the future: Temporal perspective in the explanation of events. *Journal of Behavioral Decision Making, 2*(1), 25–38. Found that prospective hindsight — placing yourself mentally in the future and looking back — increases the accuracy of identifying what will matter by 30%. Grounds the pre-mortem research this piece connects to writing a success sentence up front.

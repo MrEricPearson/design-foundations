@@ -21,4 +21,4 @@
 
 **Take this further:** in the next week, run the same tab test on a form in a product you use regularly, not one you built. Write one sentence: what fails that you'd never have noticed without the test?
 
-**What Next:** If the error announcement fails the check, read 116 (Error States) for how to write accessible error messages. If the form handles high-stakes or sensitive data, read 237 (Cognitive Overload) to reduce cognitive load at moments of peak user anxiety, and 240 (Form Design Principles) for sequencing and label clarity under pressure.
+**What Next:** If the error announcement fails the check, read 116 (Error States) for how to write accessible error messages. If the form handles high-stakes or sensitive data, read 1114 (Cognitive Overload) to reduce cognitive load at moments of peak user anxiety, and 1117 (Form Design Principles) for sequencing and label clarity under pressure.

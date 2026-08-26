@@ -1,5 +1,5 @@
 # From Findings to Decisions
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 149 (Research vs. Anecdote), 244 (Qualitative vs. Quantitative Research), 316 (Reading Data Without Getting Fooled)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 149 (Research vs. Anecdote), 1121 (Qualitative vs. Quantitative Research), 316 (Reading Data Without Getting Fooled)
 
 **Goal:** Convert research findings, user feedback, and data into actionable decisions — by distinguishing observation from interpretation, evaluating evidence strength against decision stakes, building a recommendation stakeholders can act on, and documenting what you decided and what you still don't know.
 

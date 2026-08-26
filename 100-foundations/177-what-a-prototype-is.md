@@ -3,6 +3,8 @@
 
 **Goal:** Recognize a prototype by its purpose — answering a named question cheaply before committing — rather than by its form, fidelity, or tool.
 
+*You've spent a week on something and the first question back is whether this is even the right approach.*
+
 ---
 
 Someone says "let's build something to show people." The room nods. Work starts. Nobody asks what question it's going to answer. That's the moment where what gets built either becomes a prototype or doesn't — and in most rooms, it quietly doesn't.
@@ -41,10 +43,10 @@ When you're ready to choose the form your prototype takes, 132 (Prototype Fideli
 
 **Sources**
 
-Houde, S., & Hill, C. (1997). What do prototypes prototype? In M. Helander, T. K. Landauer, & P. Prabhu (Eds.), *Handbook of Human-Computer Interaction* (2nd ed., pp. 367–381). Elsevier.
+Houde, S., & Hill, C. (1997). What do prototypes prototype? In M. Helander, T. K. Landauer, & P. Prabhu (Eds.), *Handbook of Human-Computer Interaction* (2nd ed., pp. 367–381). Elsevier. Established that a prototype is defined by what it's built to explore, not by its representation or form — the argument this piece uses to separate a prototype's purpose from its fidelity or tool.
 
-Lim, Y. K., Stolterman, E., & Tenenberg, J. (2008). The anatomy of prototypes: Prototypes as filters, prototypes as manifestations of design ideas. *ACM Transactions on Computer-Human Interaction, 15*(2), Article 7. https://doi.org/10.1145/1375761.1375762
+Lim, Y. K., Stolterman, E., & Tenenberg, J. (2008). The anatomy of prototypes: Prototypes as filters, prototypes as manifestations of design ideas. *ACM Transactions on Computer-Human Interaction, 15*(2), Article 7. https://doi.org/10.1145/1375761.1375762 Defines the "economic principle of prototyping": the best prototype is one that, in the simplest and most efficient way, makes the possibilities and limitations of a design idea visible and measurable — the basis for this piece's claim that a named question determines what to leave out.
 
-Buxton, B. (2007). *Sketching User Experiences: Getting the Design Right and the Right Design.* Morgan Kaufmann.
+Buxton, B. (2007). *Sketching User Experiences: Getting the Design Right and the Right Design.* Morgan Kaufmann. Describes prototyping's purpose as experiencing a system before it's real, and distinguishes the cost of finding out from the cost of building — used here to explain why cheap fidelity should come before commitment.
 
-Sauer, J., & Sonderegger, A. (2009). The influence of prototype fidelity and aesthetics of design in usability tests: Effects on user behaviour, subjective evaluation and emotion. *Applied Ergonomics, 40*(6), 926–933.
+Sauer, J., & Sonderegger, A. (2009). The influence of prototype fidelity and aesthetics of design in usability tests: Effects on user behaviour, subjective evaluation and emotion. *Applied Ergonomics, 40*(6), 926–933. Found that fidelity changes what people feel safe saying about an artifact — higher polish shifts feedback from questioning the direction to optimizing within it, which is what happens when a prototype gets treated as a demo.

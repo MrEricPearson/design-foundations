@@ -1,5 +1,5 @@
 # Managing the Design Feedback Loop
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** PM-primary | **Prereqs:** 311 (Psychology of Stakeholder Decisions), 247 (Dual Process Theory), 249 (Loss Aversion), 129 (Stakeholder Mapping), 163 (Alignment vs. Consensus)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** PM-primary | **Prereqs:** 311 (Psychology of Stakeholder Decisions), 1124 (Dual Process Theory), 1126 (Loss Aversion), 129 (Stakeholder Mapping), 163 (Alignment vs. Consensus)
 
 **Goal:** Run design reviews that produce decisions — by defining the right goal for each type of review session, classifying feedback in real time, closing on named decisions, and protecting approved work from erosion without dismissing legitimate new input.
 

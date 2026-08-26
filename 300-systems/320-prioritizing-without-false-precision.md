@@ -1,5 +1,5 @@
 # Prioritizing Without False Precision
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** PM-primary | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 109 (Weighing Tradeoffs), 247 (Dual Process Theory), 249 (Loss Aversion)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** PM-primary | **Prereqs:** 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 109 (Weighing Tradeoffs), 1124 (Dual Process Theory), 1126 (Loss Aversion)
 
 **Goal:** Make prioritization decisions that the team can execute confidently, that stakeholders can understand, and that can be revised without political cost — by separating the inputs that are evidence from the inputs that are assumptions, communicating uncertainty honestly, and creating the conditions for productive reprioritization when reality changes.
 

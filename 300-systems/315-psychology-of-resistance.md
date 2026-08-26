@@ -1,5 +1,5 @@
 # The Psychology of Resistance
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 247 (Dual Process Theory), 248 (Framing Effect), 249 (Loss Aversion), 250 (Status Quo Bias), 251 (Social Proof), 253 (Sunk Cost Fallacy), 257 (Authority Bias), 258 (Reciprocity)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Cross-audience | **Prereqs:** 1124 (Dual Process Theory), 1125 (Framing Effect), 1126 (Loss Aversion), 1127 (Status Quo Bias), 1128 (Social Proof), 1130 (Sunk Cost Fallacy), 1134 (Authority Bias), 1135 (Reciprocity)
 
 **Goal:** Identify the source of resistance to a change accurately, and choose a strategy matched to its mechanism — not its surface expression — so you're addressing what's actually in the way rather than what appears to be.
 
@@ -15,9 +15,9 @@ The four mechanisms:
 
 **Reactance** — automatic push-back against perceived restriction of autonomy; the change was presented as a done deal, or the person had no say; resistance here is to the lack of choice, not the content of the change
 
-**Status Quo Bias** (250) — S1 treats the current state as free; the change requires three costs (evaluation, switching, uncertainty) that staying doesn't; resistance is to the effort cost of change, not a judgment about the destination
+**Status Quo Bias** (1127) — S1 treats the current state as free; the change requires three costs (evaluation, switching, uncertainty) that staying doesn't; resistance is to the effort cost of change, not a judgment about the destination
 
-**Loss Aversion** (249) — the change involves giving up something the person values or is familiar with; resistance is to what's being left behind, not to what's being introduced
+**Loss Aversion** (1126) — the change involves giving up something the person values or is familiar with; resistance is to what's being left behind, not to what's being introduced
 
 **Genuine Concern** — the resistance reflects a real problem with the change that should be addressed; this is not a cognitive mechanism, it's feedback
 
@@ -37,7 +37,7 @@ Before responding to resistance, run three diagnostic questions:
 
 ## Part 2 — The Sunk Cost Compound
 
-**Concept:** When someone has invested significantly in the current approach — time, effort, credibility, or identity — abandoning it triggers both Sunk Cost Fallacy (253) and Loss Aversion (249) simultaneously. Sunk Cost produces reasoning like "we've come too far to change now" — S1 interprets the past investment as evidence that the path was chosen for good reasons, and abandoning it means declaring those reasons wrong. Loss Aversion adds the emotional weight: changing direction means giving up what was built, what was believed, what was publicly defended.
+**Concept:** When someone has invested significantly in the current approach — time, effort, credibility, or identity — abandoning it triggers both Sunk Cost Fallacy (1130) and Loss Aversion (1126) simultaneously. Sunk Cost produces reasoning like "we've come too far to change now" — S1 interprets the past investment as evidence that the path was chosen for good reasons, and abandoning it means declaring those reasons wrong. Loss Aversion adds the emotional weight: changing direction means giving up what was built, what was believed, what was publicly defended.
 
 Together, they're nearly immune to rational counter-argument, because rational counter-argument addresses the merits of the change — which isn't what's actually in the way. The compound resistance isn't about the merits. It's about the cost of admission that the path was wrong.
 
@@ -60,9 +60,9 @@ When you identify Sunk Cost + Loss Aversion compound resistance:
 
 **Concept:** Three mechanisms can convert resistors without requiring argument — without the person having to be persuaded out of their position. Each operates through S1, which means they work even when S2 is actively generating counter-arguments.
 
-**Social Proof** (251): under uncertainty, S1 uses others' behavior as a proxy for correct action. A change that looks untested and risky when no one is using it looks normal and acceptable when someone-like-me is using it without apparent disaster. Early adopters are not just users — they're social proof nodes. Their visible usage changes the S1 signal that all potential resistors receive.
+**Social Proof** (1128): under uncertainty, S1 uses others' behavior as a proxy for correct action. A change that looks untested and risky when no one is using it looks normal and acceptable when someone-like-me is using it without apparent disaster. Early adopters are not just users — they're social proof nodes. Their visible usage changes the S1 signal that all potential resistors receive.
 
-**Reciprocity** (258): receiving something of genuine value produces automatic obligation to reciprocate. A resistor who received something useful from you before the change was announced is in a different relational position than one who only hears from you when you need their adoption. The sequencing matters: value before request, not value conditional on compliance.
+**Reciprocity** (1135): receiving something of genuine value produces automatic obligation to reciprocate. A resistor who received something useful from you before the change was announced is in a different relational position than one who only hears from you when you need their adoption. The sequencing matters: value before request, not value conditional on compliance.
 
 **IKEA Effect** (involvement in building produces ownership): people value things they helped create more than equivalent things they received. A resistor who contributes a decision that shapes the implementation becomes a defender of the outcome. Ownership changes the direction of the S1 reaction.
 
@@ -83,7 +83,7 @@ For a change with identified resistors:
 
 ## Part 4 — Making Change Feel Like Gain
 
-**Concept:** The same change feels different depending on which accurate description of it arrives first (248, 249). A framing that leads with what's lost triggers S1's Loss Aversion before any other evaluation occurs. A framing that leads with what's preserved and what becomes possible doesn't eliminate Loss Aversion — the losses are real and S1 will find them — but it allows S2 to engage first. The first frame shapes the anchor S1 uses for all subsequent evaluation.
+**Concept:** The same change feels different depending on which accurate description of it arrives first (1125, 1126). A framing that leads with what's lost triggers S1's Loss Aversion before any other evaluation occurs. A framing that leads with what's preserved and what becomes possible doesn't eliminate Loss Aversion — the losses are real and S1 will find them — but it allows S2 to engage first. The first frame shapes the anchor S1 uses for all subsequent evaluation.
 
 This is not spin. The goal is not to disguise a loss as a gain. It's to choose which accurate description of the change leads — and the choice of which true thing to say first is always available.
 

@@ -1,5 +1,5 @@
 # Evaluating Vendor Products Before You're Locked In
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / 3rd-Party / Configuration primary | **Prereqs:** 124 (Nielsen's Heuristics), 216 (Heuristic Evaluation), 126 (Mental Models), 110 (Constraints as Design Input), 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 255 (Jakob's Law), 250 (Status Quo Bias)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Non-Custom Dev / 3rd-Party / Configuration primary | **Prereqs:** 124 (Nielsen's Heuristics), 216 (Heuristic Evaluation), 126 (Mental Models), 110 (Constraints as Design Input), 100 (Assumption vs. Fact), 101 (Not All Assumptions Are Equal), 1132 (Jakob's Law), 1127 (Status Quo Bias)
 
 **Goal:** Evaluate a vendor or SaaS product for adoption before significant configuration investment — by applying a structured heuristic review, auditing the fit between the vendor's model and your users' mental models, identifying non-configurable UX risks, and documenting the evaluation so the decision is defensible and the risks are pre-visible.
 

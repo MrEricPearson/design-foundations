@@ -75,7 +75,7 @@ For the foundational thinking behind why the judgment layer matters and can't be
 
 **Sources**
 
-Nisbett, R. E., & Wilson, T. D. (1977). Telling more than we can know: Verbal reports on mental processes. *Psychological Review, 84*, 231–259. Finding: people lack direct introspective access to their own decision processes and construct post-hoc rationalizations — plausible explanations for choices made on other grounds.
+Nisbett, R. E., & Wilson, T. D. (1977). Telling more than we can know: Verbal reports on mental processes. *Psychological Review, 84*, 1108–1136. Finding: people lack direct introspective access to their own decision processes and construct post-hoc rationalizations — plausible explanations for choices made on other grounds.
 
 Parasuraman, R., & Manzey, D. H. (2010). Complacency and bias in human use of automation: An attentional integration. *Human Factors, 52*(3), 381–410. Finding: automation bias, the tendency to accept output without independent verification, occurs in expert users. Polished-looking output signals completion and suppresses the impulse to verify.
 

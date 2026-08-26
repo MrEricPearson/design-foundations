@@ -1,5 +1,5 @@
 # When Things Break in Production
-**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Custom Dev primary | **Prereqs:** 100 (Assumption vs. Fact), 113 (Defining Success Before You Start), 126 (Mental Models), 249 (Loss Aversion), 253 (Sunk Cost Fallacy), 259 (Cognitive Dissonance)
+**Tier:** 300 — Orchestrate | **Arc:** Full arc (4 parts) | **Audience:** Custom Dev primary | **Prereqs:** 100 (Assumption vs. Fact), 113 (Defining Success Before You Start), 126 (Mental Models), 1126 (Loss Aversion), 1130 (Sunk Cost Fallacy), 1136 (Cognitive Dissonance)
 
 **Goal:** Respond to production failures in a way that protects users, supports the team, and produces learning — by separating the incident response from the post-incident analysis, communicating with appropriate transparency, and generating findings that prevent recurrence rather than assigning blame.
 
