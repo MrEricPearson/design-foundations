@@ -36,6 +36,8 @@ SharePoint List (Library Review Tracker)
 - **✓ Verify** = checkpoint — confirm this before proceeding to the next step
 - **⚠ Gotcha** = known failure mode confirmed in M365 documentation
 
+**Power Automate action naming rule:** rename every action immediately after adding it. Power Automate auto-generates names like `Get_items`, `Get_items_2`, `Get_items_3` — and expressions in later actions reference these names exactly. If you add a second "Get items" action before renaming the first, the internal names shift and every downstream expression silently breaks. Rename on add, not later. Suggested names used in this guide: `Get_Feedback_Response`, `Get_Article_Item`, `Update_ReviewCount`, `Get_Updated_Item`.
+
 ---
 
 ## Phase 1 — Preparation (30 minutes)
@@ -81,7 +83,8 @@ Use names without spaces — this avoids the `_x0020_` encoding problem in Power
 |---|---|---|
 | ArticleID | Number | Required. No decimal places. |
 | Tier | Choice | T100 / T200 / T300. Required. |
-| TopicTag | Choice | Your confirmed taxonomy. Required. Single value only. |
+| TopicTag | Choice | Your confirmed taxonomy. Required. Single value only. Drives the display tag on Gallery cards and Adaptive Cards. |
+| NotificationTags | Choice | Same taxonomy. Multi-select allowed. Used for reviewer notification matching only — not displayed on cards. Add secondary tags here when an article spans categories (e.g., a prototyping method that's specifically about AI features). |
 | GoalLine | Single line of text | The subtitle — appears on Gallery cards and in Adaptive Cards. Must be single line; multi-line text columns do not display in Gallery view. |
 | MinReviews | Number | Required. Default: 1. |
 | Ceiling | Number | Required. Default: 2. |
@@ -310,7 +313,7 @@ Add action: **"Get items"** (SharePoint). Site: [SP Site]. List: Library Review 
 ArticleID eq [number extracted from the article dropdown answer]
 ```
 
-The dropdown answer returns a string like "103 — Attachment Is the Real Risk." Extract just the number with the expression: `int(first(split(body('Get_response_details')?['r[question_id]'], ' ')))` — find the question ID by running the flow once and inspecting Get response details output. Alternatively, add ArticleID as a hidden question and use its value directly — simpler and more reliable.
+The dropdown answer returns a string like "103 — Attachment Is the Real Risk." Extract just the number with the expression: `int(first(split(body('Get_Feedback_Response')?['r[question_id]'], ' ')))` — find the question ID by running the flow once and inspecting the Get_Feedback_Response output. Alternatively, add ArticleID as a hidden question and use its value directly — simpler and more reliable.
 
 Top Count: 1.
 
@@ -319,7 +322,7 @@ Top Count: 1.
 Add action: **"Update item"** (SharePoint). Site: [SP Site]. List: Library Review Tracker. ID: the item ID from Get items. Set ReviewCount to:
 
 ```
-add(first(outputs('Get_items')?['body/value'])?['ReviewCount'], 1)
+add(first(outputs('Get_Article_Item')?['body/value'])?['ReviewCount'], 1)
 ```
 
 This reads the current ReviewCount from the item and adds 1. SharePoint recalculates the Status column automatically when the item is saved.
@@ -452,7 +455,7 @@ This list is populated by the Feedback Flow (Phase 6, Step 6.7) when reviewers s
 Inside the Apply to each loop (Phase 7, Step 7.5), after posting the Adaptive Card, add:
 
 1. **"Get items"** from Reviewer Interests — retrieve all rows (no OData filter — see gotcha below)
-2. **"Filter array"** (Data Operations) — filter where the Topics field contains the current article's TopicTag value
+2. **"Filter array"** (Data Operations) — filter where the reviewer's Topics field contains any value that appears in the current article's NotificationTags column (check TopicTag as well as any secondary NotificationTags values)
 3. **"Apply to each"** on the filtered array — send each matching reviewer a Teams direct message or email with article title, goal line, and article page URL
 
 ⚠ **Gotcha — multi-select OData filter not supported:** you cannot filter a multi-value choice column server-side via OData in SharePoint. Retrieve all rows and filter client-side with Power Automate's "Filter array" action. At 100-person scale this is well within processing limits.
