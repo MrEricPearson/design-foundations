@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Every published piece in the library is reviewed by practitioners before publication. Reviews serve two goals: catching content problems before they reach the full audience, and building confidence that the library teaches what it claims to teach. This policy defines who reviews what, how many reviews are required, and how the system closes slots to distribute coverage fairly.
+Every published piece in the library is reviewed by practitioners before publication. Reviews serve two goals: catching content problems before they reach the full audience, and building confidence that the library teaches what it claims to teach. This policy defines who reviews what, how many reviews are required, and how the system distributes coverage fairly across the full article inventory.
 
 ---
 
@@ -14,7 +14,7 @@ Every published piece in the library is reviewed by practitioners before publica
 | T200 — Practice | 2 reviews | 3 reviews | Two reviewers needed before publication — one may miss what another catches at the method level. Closes at 3. |
 | T300 — Orchestrate | 3 reviews | 4 reviews | Full panel before publication. Arc-level judgment errors require multiple perspectives to surface. Closes at 4. |
 
-**Ceiling rule:** once a piece reaches its ceiling, the claim slot locks permanently. No additional reviews are accepted. This prevents popular topics from absorbing disproportionate reviewer capacity while lower-profile pieces sit uncovered.
+**Ceiling rule:** once a piece reaches its ceiling, it is marked Closed and removed from the review gallery. No additional reviews are accepted. This prevents popular topics from absorbing disproportionate reviewer capacity while lower-profile pieces sit uncovered.
 
 **Publish gate:** a piece may publish as soon as it hits its minimum threshold — it does not need to reach the ceiling first. A T100 piece with 1 review is ready to publish. A T200 piece with 2 reviews is ready to publish.
 
@@ -52,43 +52,40 @@ Question 5 is the most diagnostic. A wrong answer means the concept didn't trans
 
 ---
 
-## Slot mechanics
+## Review flow
 
-**Claiming a slot:**
-Reviewers claim a slot before submitting feedback. Claiming is a separate step — it makes coverage visible to others and prevents five people from reviewing the same piece while three others sit at zero. The claim button appears on the article page and in the weekly Teams digest. Once claimed, the reviewer's name appears in the slot widget on the article page.
+Reviews are **first-come-first-served** up to the ceiling. There is no claiming step — submit the form and you've reviewed the piece. The system tracks how many reviews each piece has received and closes it automatically once the ceiling is hit.
 
-**Slot states:**
-- **Open** — slot available, claim button visible
-- **Claimed** — reviewer name shown, awaiting submission
-- **Submitted** — review received, slot filled
-- **Locked** — ceiling reached, no further claims accepted
+The gallery page shows every piece still accepting reviews, with a live slot count. When a piece closes, it disappears from the gallery. This is the primary coverage signal: once the gallery is empty, review is complete across the library.
 
-**Social proof:** claimed slots display reviewer first names and avatars. Seeing that one person has already claimed makes it easier to be the second. Seeing two claimed creates urgency to be the third. An empty slot panel is a harder ask than a partially filled one.
+**Status definitions:**
 
----
-
-## Status definitions
-
-| Status | Meaning | Action |
-|--------|---------|--------|
-| Needs Review | Below publish gate | Active in weekly Teams digest |
-| Ready to Publish | At or above publish gate, below ceiling | Can publish; additional slot(s) still open |
-| Closed | At ceiling | Slot locked; removed from digest |
-| Published | Live on SharePoint | Review complete |
+| Status | Meaning | Shown in gallery |
+|--------|---------|-----------------|
+| Needs Review | Below publish gate | Yes |
+| Ready to Publish | At or above gate, below ceiling | Yes — still accepting reviews |
+| Closed | At ceiling | No — removed from gallery |
+| Published | Live on SharePoint | No |
 
 ---
 
-## Funneling and recruitment
+## Phased recruitment
 
-**Weekly Adaptive Card digest (automated):** Power Automate posts one Adaptive Card per article needing reviewers to relevant Teams communities each week. Cards show title, goal line, topic tag, slots remaining, and existing reviewer names. Includes a one-click claim button. Runs automatically — no manual action required from the library owner. Posts only pieces below ceiling; stops posting a piece once it closes.
+The 8-week review window calls for different tactics at different inventory levels. Broadcasting every article from week one produces noise. Concentrating at the end produces urgency. The approach shifts in three phases:
 
-**In-article widget:** Every article page embeds a slot count widget and claim button. Captures reviewers at the highest-intent moment — when they're already reading and already have opinions.
+**Phase 1 — Weeks 1–4 (high inventory, 20+ pieces open)**
 
-**Topic subscriptions:** Reviewers can subscribe to SharePoint List alerts for specific topic tags. They're notified automatically when new pieces in their area need reviewers. Set once, runs indefinitely.
+The single kickoff message goes out once to each relevant Teams community. It explains the library, links to the review gallery, and describes the one-step review process. No per-article posts. Organic traffic to article pages — from the kickoff link, from shares, from Teams conversations — is the primary driver. The gallery captures reviewers at their highest-intent moment: when they've just finished reading.
 
-**Direct outreach:** After two weeks, any piece with zero claims receives a short personalized email to 2–3 practitioners whose role matches the topic. Targeted, not broadcast. Used as a fallback only.
+**Phase 2 — Weeks 5–6 (mid inventory, 10–15 pieces open)**
 
-**Kickoff message:** One post to each relevant Teams community at library launch. Announces the library, explains the review program in two sentences, links to the review dashboard, explains how to subscribe to topic alerts. Never repeated.
+The weekly Teams digest becomes useful. At this inventory level, the list is short enough to scan, and visible progress (pieces closing) creates momentum. The digest posts an Adaptive Card for every open piece once per week. Reviewers can see the list shrinking. This is when passive interest becomes active participation.
+
+**Phase 3 — Weeks 7–8 (tail, fewer than 10 pieces open)**
+
+The digest switches to highlighting the remaining pieces specifically — a card that names all remaining open pieces in one view rather than per-article cards. Direct outreach to 2–3 named practitioners per remaining piece, matched by topic. At this stage, the ask is concrete: "this is the last piece in your area that needs one more reviewer."
+
+**Direct outreach** (fallback, any phase): any piece with zero reviews after two weeks receives a short personalized message to 2–3 practitioners whose role matches the topic. Targeted, not broadcast.
 
 ---
 
