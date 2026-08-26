@@ -85,7 +85,8 @@ Use names without spaces — this avoids the `_x0020_` encoding problem in Power
 | Tier | Choice | T100 / T200 / T300. Required. |
 | TopicTag | Choice | Your confirmed taxonomy. Required. Single value only. Drives the display tag on Gallery cards and Adaptive Cards. |
 | NotificationTags | Choice | Same taxonomy. Multi-select allowed. Used for reviewer notification matching only — not displayed on cards. Add secondary tags here when an article spans categories (e.g., a prototyping method that's specifically about AI features). |
-| GoalLine | Single line of text | The subtitle — appears on Gallery cards and in Adaptive Cards. Must be single line; multi-line text columns do not display in Gallery view. |
+| Subtitle | Single line of text | The hook that appears on Gallery cards and in Adaptive Cards. Must be single line; multi-line text columns do not display in Gallery view. |
+| LearningGoal | Multiple lines of text | What the reader gains after completing this piece — the answer key for the comprehension check question. Eric's use only; does not appear on Gallery cards. |
 | MinReviews | Number | Required. Default: 1. |
 | Ceiling | Number | Required. Default: 2. |
 | ReviewCount | Number | Default: 0. Updated by Power Automate Feedback Flow on each submission. |
@@ -96,11 +97,11 @@ Use names without spaces — this avoids the `_x0020_` encoding problem in Power
 
 ⚠ **Gotcha — calculated column internal names:** SharePoint uses internal names in formulas. If you named columns without spaces, the formula uses the name directly (e.g., `ReviewCount`). If you used spaces, the internal name encodes them. Using no-space column names from the start avoids this entirely.
 
-⚠ **Gotcha — GoalLine must be single line:** SharePoint Gallery view does not display multi-line text columns on cards — they are invisible regardless of configuration. Keep GoalLine as single line of text and write short subtitles (under 120 characters).
+⚠ **Gotcha — Subtitle must be single line:** SharePoint Gallery view does not display multi-line text columns on cards — they are invisible regardless of configuration. Keep Subtitle as single line of text and write short subtitles (under 120 characters).
 
 ### Step 2.4 — Populate the List with all articles
 
-Add one row per article. Fill ArticleID, Article Title, Tier, TopicTag, GoalLine, MinReviews, Ceiling. Leave ReviewCount at 0. Leave URL columns blank.
+Add one row per article. Fill ArticleID, Article Title, Tier, TopicTag, Subtitle, MinReviews, Ceiling. Leave ReviewCount at 0. Leave URL columns blank.
 
 **✓ Verify:** Status calculated column shows "Needs Review" for every row. ReviewCount shows 0. If Status shows an error, the formula references a wrong internal column name — inspect the column's internal name under List Settings → column → URL, and fix the formula.
 
@@ -196,7 +197,7 @@ Paste this JSON into the Advanced mode panel. It renders each card with a color-
               "overflow": "hidden",
               "text-overflow": "ellipsis"
             },
-            "txtContent": "[$GoalLine]"
+            "txtContent": "[$Subtitle]"
           },
           {
             "elmType": "div",
@@ -400,7 +401,7 @@ Inside the Apply to each on the Get items output, add: **"Post your own adaptive
     },
     {
       "type": "TextBlock",
-      "text": "@{items('Apply_to_each')?['GoalLine']}",
+      "text": "@{items('Apply_to_each')?['Subtitle']}",
       "wrap": true,
       "spacing": "Small"
     },
