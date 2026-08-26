@@ -194,11 +194,15 @@ When a precise term is needed, drop it into context so the context defines it �
 ### Opening lines
 Open in the moment — no warmup, no announcement. Goal section: declarative, no announcement. Concept: open with the situation that makes it visible, not a formal definition. Method: start the process imperatively. Watchout: name the failure mode directly without softening first.
 
+Piece identity: the opening paragraph must be distinctive enough that a reader encountering it without the title would know which piece this is. Generic openings that could belong to any piece in the library fail this test.
+
 ### Goal lines and subtitles — name the experience, not the concept
 The subtitle and goal line's job is recognition, not description. If the reader thinks "yes, that's me" — it worked. If they think "okay, so this article is about X" — it didn't. Name the feeling or the moment, not the mechanism. "Honest feedback on it starts to feel personal" works because it names an experience. "It gets harder to be honest about whether it's working" describes a concept. The concept is what the piece teaches. The subtitle is what makes someone decide to read it. Test every goal line: does it name something the reader has felt, or something the author wants to explain?
 
 ### Sourcing mechanic
 Sources use APA inline citation format: name in the sentence + year in parentheses. "Barry Staw (1976) showed this..." or "(Kahneman & Tversky, 1979)" when name isn't in the sentence. This is the format used by Coursera, edX, and LinkedIn Learning — signals verifiability without feeling academic. Every piece needs at least 3 real sources woven into the content. Each source should appear where it earns the most trust — not batched at the end. Full citation details go in the Sources block at the end.
+
+Source placement test: for each citation, remove it from its sentence. Does the sentence lose credibility without it? If not, move the citation to the sentence where its removal would matter. A citation in the wrong sentence is invisible; placed at the right moment, it lands as proof exactly when the reader needs it.
 
 ### Fluidity — the read-aloud test
 Read the piece aloud before returning it. If the narrator stumbles, something's wrong. Fluidity means:
@@ -217,6 +221,12 @@ Every piece gets one genuine moment of humor or levity unless the subject is too
 - Try This: names a specific artifact the reader already has. Never: "try this with something you're working on" — name the thing
 - Take This Further reflection prompt must match learning type: application → "what would you do differently?"; schema-update → "what didn't fit?"; synthesis → "what would you tell someone doing this for the first time?"
 - Judgment Exercise (T300 only): arc-specific. Tests the arc's key assumption failing. Must be unanswerable by a different arc.
+- Proof is two-state: names what success looks like AND what failure looks like, each with a next step. A Proof that only validates success leaves the reader stranded when it doesn't work.
+- Take This Further is distinct from Try This: extended scope, a new context, or the reflection component Try This omitted. Asking the reader to repeat Try This with a different artifact is not Take This Further.
+- AI path names the handoff: "after you've run this yourself, give the AI [specific input] and ask it for [specific output]." Describing the input and the ask is the minimum — "use AI to help" is not actionable.
 
 ### The cut test
 Remove this sentence: does the piece lose something that can't be recovered from context? If no — cut it. Restatement of previous sentence → cut. Transition without new content → cut.
+
+### Bloom's alignment by tier
+T100 targets Remember/Understand — after reading, the reader can name and recognize this concept in real situations. T200 targets Apply — after reading, the reader can execute this method with no additional instruction. T300 targets Analyze/Evaluate/Create — the reader makes judgment calls at the seams, not just follows steps. A piece that requires judgment at T100, or only recognition at T200, is misfiled regardless of goal verb.

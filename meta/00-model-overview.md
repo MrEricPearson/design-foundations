@@ -19,8 +19,14 @@
 - Few teams stay engaged post-MVP; work moves into Hypercare, often run by a 3rd party.
 - Core perception problem: design is seen as a barrier/weight — "by the time I onboard them I could've done it myself."
 
-## Content format (locked)
-Every piece follows: **Trigger** (when to use it) → **Method** (exact steps) → **Artifact** (tangible output) → **Proof** (that it works, without a narrative anecdote) → **Watchout** (one line — this pattern's honest failure mode).
+## Content format (tiered — see CLAUDE.md for full template specs)
+Content is organized into three tiers with distinct templates:
+
+- **Tier 100 (Recognize):** Goal → Concept → You'll See It When → The Signal → Don't Confuse This With → Try Noticing → What Next. No method, no artifact, no Watchout. Targets Remember/Understand (Bloom's).
+- **Tier 200 (Practice):** Goal → Prior Knowledge Hook → Trigger → Concept → Method → Artifact → Watchout → Try This → Proof → Take This Further → AI path → What Next. Targets Apply (Bloom's).
+- **Tier 300 (Orchestrate):** Arc header + per-part format (Concept → Method → What you end up with → Proof → Watchout) + arc footer (Try This → Take This Further → Judgment Exercise → What Next). Targets Analyze/Evaluate/Create (Bloom's).
+
+Quality benchmarks for all tiers live in `.claude/agents/eval-and-repair.md` (9 dimensions, 81 benchmarks). The eval-and-repair agent runs full evaluation and repair cycles against published pieces.
 
 ## Sequencing philosophy
 No single correct order. Discovery-to-solution, delivery-to-discovery-to-solution, and everything in between are valid. Arcs are a **pattern library** — tools to reach for based on the risk in front of you — not a mandated pipeline.

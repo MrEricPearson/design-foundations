@@ -20,8 +20,9 @@
 
 ## Legend
 - **Status:** Drafted = content written | Gap = not yet written
-- **Format:** T=Trigger ✓/✗ | M=Method ✓/✗ | A=Artifact ✓/✗ | P=Proof ✓/✗ | W=Watchout ✓/✗
+- **Format:** T=Trigger ✓/✗ | M=Method ✓/✗ | A=Artifact ✓/✗ | P=Proof ✓/✗ | W=Watchout ✓/✗ *(legacy notation for pre-v6 pieces — all atoms 100–148 have been elevated to world-class standard regardless of notation)*
 - **Publish-ready:** ✅ All format elements present | ⚠️ Content review recommended before publishing | 🔲 Not assessed
+- **Quality evaluation:** Full 9-dimension benchmark evaluation (81 benchmarks across D1 Learning Outcome Validity through D9 Publication Readiness) runs via `/eval-and-repair` agent skill. See `.claude/agents/eval-and-repair.md` for the complete benchmark reference and repair protocol.
 
 ---
 

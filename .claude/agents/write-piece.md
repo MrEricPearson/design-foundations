@@ -303,6 +303,26 @@ Locate the opening scenario, the Try Noticing prompt, and the Try This artifact 
 - General: is it broad enough to land across all three without being so generic it's vague?
 If any element reads as "sort of applicable" — make it more specific. Approximate recognition is no recognition.
 
+### Test M — Bloom's alignment check
+State the tier. Then confirm the cognitive demand matches:
+- T100 (Remember/Understand): after reading, can the reader name and recognize this concept in real situations — without being asked to produce anything? If the piece requires judgment or production, re-tier.
+- T200 (Apply): after reading, can the reader execute this method independently, right now, with no additional instruction? If the piece only asks for recognition, or requires judgment at the seams without guidance, re-tier.
+- T300 (Analyze/Evaluate/Create): does the reader make real judgment calls at the seams between parts — not just follow steps? Is the Judgment Exercise unanswerable by pattern-matching alone?
+If the cognitive demand doesn't match the tier, resolve the mismatch before Phase 6.
+
+### Test N — Try This specificity check
+Read the Try This (or Try Noticing for T100) in isolation. Does it name a specific artifact this audience already has in front of them? Failing patterns:
+- "Try this with something you're working on" → generic, fail
+- "Find a project where you've noticed X" → too vague, fail
+- "Take your current sprint backlog and..." → specific, pass
+A passing Try This names the thing. If it doesn't name the thing, rewrite it to name the thing.
+
+### Test O — Proof two-state check
+Read the Proof section. Does it name what success looks like AND what partial/failure looks like, each with a next step? A Proof that only validates the success case leaves the reader stranded when it doesn't work cleanly. Confirm:
+- Success signal: one observable thing that tells the reader the method worked
+- Failure/partial signal: one observable thing that tells the reader it didn't, plus what to do next (adjust, revisit, not "try again")
+If either state is missing, add it.
+
 ---
 
 ## PHASE 6 — Quality Gate
@@ -354,9 +374,9 @@ Self-evaluate. Report pass/fail per item. Fix every failure before returning the
 - [ ] Method (T200): imperative, each step is exactly one action
 - [ ] Watchout: names failure mode first, personal register, specific to this method
 - [ ] Try This: specific artifact named, achievable in same sitting, time estimate present
-- [ ] Proof: one observable signal, one sentence — appears AFTER Try This
-- [ ] AI Path (if present): framed post-attempt — "after you've run this yourself…"
-- [ ] Take This Further: reflection prompt matches the learning type
+- [ ] Proof: one observable signal, one sentence — appears AFTER Try This — two-state: names success AND failure, each with a next step (Test O)
+- [ ] AI Path (if present): framed post-attempt — "after you've run this yourself…" — names the specific input and the specific output, not just "use AI to help"
+- [ ] Take This Further: reflection prompt matches the learning type — distinct from Try This (extended scope, new context, or reflection Try This omitted — not just repeating Try This with a different artifact)
 - [ ] Judgment Exercise (T300): arc-specific, tests the arc's key assumption failing
 - [ ] What Next: conditional routing, no recap, 1–3 links
 
@@ -372,6 +392,8 @@ Self-evaluate. Report pass/fail per item. Fix every failure before returning the
 - [ ] "Applicable today" test passed — named what the reader does next (Test G)
 - [ ] "Teaches them to do it themselves" test passed (Test F)
 - [ ] Forwarding scenario named (Test H)
+- [ ] Bloom's alignment confirmed: cognitive demand matches the tier (Test M)
+- [ ] Goal line names an experience the reader has felt, not a mechanism the author wants to explain
 
 **Virality**
 - [ ] Title names the recognizable situation, not the technique
@@ -419,6 +441,8 @@ For every source cited in the draft, do all of the following:
 - Verified: confidence level of the draft matches the source ✓
 
 Any source that cannot be fully verified across all four steps is removed from the draft before the prose passes begin. The piece ships with fewer sources and accurate claims — not more sources and a hallucinated one.
+
+**Step 6 — Source placement test.** For each citation, mentally remove it from its sentence. Does the sentence lose credibility without it? If not, find the sentence in the draft where the citation's removal would matter most — the claim that needs the authority — and move the citation there. A citation in the wrong sentence is invisible. Placed at the exact moment the reader might doubt the claim, it lands as proof.
 
 ---
 
@@ -501,6 +525,13 @@ Read the full piece aloud, sentence by sentence, at normal speaking pace. This i
 - **Stumble on a quote or citation:** the attribution isn't smoothly introduced. Rewrite the lead-in.
 - **Rhythm feels flat across a whole paragraph:** all sentences are the same weight. Break the pattern with a short sentence.
 - **The piece doesn't build:** identify where the energy drops and why. Usually a section is too explanatory when it should be energizing (Try Noticing), or too personal when it should be precise (Method).
+
+**Cut test sweep:** after the read-aloud, go back through the draft sentence by sentence and apply the cut test: remove the sentence — does the piece lose something that can't be recovered from context? Systematic targets:
+- Restatement of the previous sentence → cut
+- Transition without new content → cut ("This is why..." / "That's because..." with no new information)
+- Dangling analysis (", which highlights the importance of...") → cut the tail
+
+**Piece identity check:** read the opening paragraph in isolation, without the title. Is it distinctive enough that a reader who knows this library would know which piece this is? Generic openings that could belong to any piece fail. If the opening could be any T100 piece, or any T200 method piece — rewrite the first two sentences to name something specific to this concept.
 
 After Pass 6, the piece is ready for layout. If Pass 6 surfaces issues that require returning to an earlier pass — return. Do not skip the earlier pass re-check.
 
