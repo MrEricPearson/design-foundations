@@ -1,5 +1,31 @@
 # Content Status Tracker
-**Last updated:** 2026-08-10 (v6 — world-class quality elevation pass: all atoms 100–148 fully rewritten to T100/Practice Atom world-class standard; 22 new T100 atoms added 1102–1123; 2 new T200 methods added 222–223; atoms 116/117/119 superseded by 1118/1119/1115 and now redirect to canonical versions; Phase 2 atoms 148–1101 confirmed at standard; 17-episode arc deliverable published)
+**Last updated:** 2026-09-22
+
+---
+
+## Current snapshot (2026-09-22)
+
+Peer-review survey batch (Library Review Feedback IDs 1–13) is logged in `meta/piece-feedback/`. Craft signals that are not yet spec-worthy live in `meta/craft-learnings-pending.md`.
+
+**Revisions applied this session**
+- 147, 157, 177: revised from expert review, then run through eval-and-repair (`meta/eval-report-20260922.md`). Ready for re-review.
+- 106: two publish-as-is reviews. No craft revision. Contributors block added.
+
+**Library-wide publishing mechanics**
+- Forwarding scenario is now a required publish-doc field. All 27 existing `.publish.md` files have one. Template: `meta/layout-system.md` + write-piece Step 12.
+- Contributors (P13): heading **Contributors**, names only, after Sources. On every piece with a named review: 103, 105, 106, 123, 147, 157, 177, 219, 270h, 270i. Unreviewed pieces stay without a placeholder.
+
+**Ready-to-publish set (expert-review queue)**
+- 106 — publish as-is (Carolina Louro, Dr. Dybas-Stronkowska)
+- 147, 157, 177 — revised; waiting on re-review
+
+**Next**
+- Revise remaining reviewed pieces that still have open synthesis items (123 Magda; 105 / 219 / 270h / 270i Alberto, as prioritized).
+- Add a Contributors block when a new review lands. Do not backfill empty placeholders.
+- Public reader site and 2-user test: `meta/user-testing-and-public-site-plan.md`. Review site (`DesignatBayer`) stays separate.
+- Repo home is `bayer-int/design-foundations` (internal). No BEAT ID: topic `beat-not-applicable`.
+
+---
 
 ## Format Status
 
@@ -33,10 +59,10 @@
 | 100 | Assumption vs. Fact | [100-assumption-vs-fact.md](100-foundations/100-assumption-vs-fact.md) | Foundational Arc Pt 1 | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | No Trigger or Proof headers |
 | 101 | Not All Assumptions Are Equal | [101-not-all-assumptions-equal.md](100-foundations/101-not-all-assumptions-equal.md) | Foundational Arc Pt 2 | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | No Trigger or Proof headers |
 | 102 | Bias Is Just an Assumption | [102-bias-as-assumption.md](100-foundations/102-bias-as-assumption.md) | Foundational Arc Pt 3 | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | No Trigger or Proof headers |
-| 103 | Attachment Is the Real Risk | [103-attachment-is-the-real-risk.md](100-foundations/103-attachment-is-the-real-risk.md) | Foundational Arc Pt 4 | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | No Trigger or Proof headers |
+| 103 | Attachment Is the Real Risk | [103-attachment-is-the-real-risk.md](100-foundations/103-attachment-is-the-real-risk.md) | Foundational Arc Pt 4 | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Revised 2026-09-02 from Carolina Louro / Dr. Dybas-Stronkowska review; Contributors block added 2026-09-22 |
 | 104 | Your Derisking Toolkit | [104-derisking-toolkit.md](100-foundations/104-derisking-toolkit.md) | Foundational Arc Pt 5 / Tier 300 synthesis | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Also listed as Tier 300 #6 |
-| 105 | Iteration | [105-iteration.md](100-foundations/105-iteration.md) | Standalone (elevated) | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Missing Proof only |
-| 106 | Sketching / Quick Visualization | [106-sketching-visualization.md](100-foundations/106-sketching-visualization.md) | Standalone | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Missing Proof only; high-leverage prereq |
+| 105 | Iteration | [105-iteration.md](100-foundations/105-iteration.md) | Standalone (elevated) | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Alberto Zamarron review logged; Contributors block added 2026-09-22; open synthesis items still in `meta/piece-feedback/105.feedback.md` |
+| 106 | Sketching / Quick Visualization | [106-sketching-visualization.md](100-foundations/106-sketching-visualization.md) | Standalone | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Missing Proof only; high-leverage prereq; contributor thanks added 2026-09-22 (Carolina Louro, Dr. Dybas-Stronkowska) |
 | 107 | Framing the Problem | [107-framing-the-problem.md](100-foundations/107-framing-the-problem.md) | Standalone | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Missing Proof only |
 | 108 | Five Whys | [108-five-whys.md](100-foundations/108-five-whys.md) | Standalone | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Missing Proof only |
 | 109 | Weighing Trade-offs Generally | [109-weighing-tradeoffs.md](100-foundations/109-weighing-tradeoffs.md) | Standalone | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Missing Proof only |
@@ -56,7 +82,7 @@
 | — | A Role Is Not a Persona (Tier 100 atom) | → 300-systems/301-from-vague-ask-to-real-persona.md Pt 2 | Persona arc (single source) | Drafted | — | — | See 301 row |
 | — | Vocabulary / Shared-Definition Checks (Tier 100 atom) | → 300-systems/303-one-feature-three-handoffs.md Pt 1 | One Feature arc (single source) | Drafted | — | — | See 303 row |
 | 122 | Starting Questions | [122-starting-questions.md](100-foundations/122-starting-questions.md) | Standalone | Drafted | T✓ M✓ A✓ P✓ W✓ | ✅ | Pairs with 107, 109, 110, 113, 303 Pt 1; no prereqs |
-| 123 | What Usability Testing Is | [123-what-usability-testing-is.md](100-foundations/123-what-usability-testing-is.md) | Standalone | Drafted | G✓ T✓ M✓ A✓ P✓ W✓ Try✓ WN✓ | ✅ | Foundation for 215; pairs with 124; no prereqs |
+| 123 | What Usability Testing Is | [123-what-usability-testing-is.md](100-foundations/123-what-usability-testing-is.md) | Standalone | Drafted | G✓ T✓ M✓ A✓ P✓ W✓ Try✓ WN✓ | ✅ | Foundation for 215; pairs with 124; Michael Calvillo + Magda reviews logged; Magda revision items still open in `meta/piece-feedback/123.feedback.md` |
 | 124 | Nielsen's 10 Heuristics | [124-nielsens-heuristics.md](100-foundations/124-nielsens-heuristics.md) | Standalone | Drafted | G✓ T✓ M✓ A✓ P✓ W✓ Try✓ AI✓ WN✓ | ✅ | Foundation for 216; no prereqs |
 | 125 | Jobs-to-Be-Done | [125-jobs-to-be-done.md](100-foundations/125-jobs-to-be-done.md) | Standalone | Drafted | G✓ T✓ M✓ A✓ P✓ W✓ Try✓ AI✓ WN✓ | ✅ | Pairs with 107, 122, 301 arc; no prereqs |
 | 126 | Mental Models | [126-mental-models.md](100-foundations/126-mental-models.md) | Standalone | Drafted | G✓ T✓ M✓ A✓ P✓ W✓ Try✓ AI✓ WN✓ | ✅ | Pairs with 107, 204; no prereqs |
@@ -70,7 +96,7 @@
 | 134 | Design Debt (the Concept) | [134-design-debt-concept.md](100-foundations/134-design-debt-concept.md) | Standalone | Drafted | G✓ T✓ M✓ A✓ P✓ W✓ Try✓ — WN✓ | ✅ | Precedes 300 arc; pairs with 103; no prereqs |
 | 135 | Leading vs. Lagging Indicators | [135-leading-lagging-indicators.md](100-foundations/135-leading-lagging-indicators.md) | Standalone | Drafted | G✓ T✓ M✓ A✓ P✓ W✓ Try✓ — WN✓ | ✅ | Prereq: 113; precedes 217 |
 | 136 | Critique vs. Feedback | [136-critique-vs-feedback.md](100-foundations/136-critique-vs-feedback.md) | Standalone | Drafted | G✓ T✓ M✓ A✓ P✓ W✓ Try✓ — WN✓ | ✅ | Pairs with 115; no prereqs |
-| 147 | AI as Execution Partner | [147-ai-as-execution-partner.md](100-foundations/147-ai-as-execution-partner.md) | Standalone | Drafted | ✅ v6 | ✅ | Elevated 2026-08-10; Episode 16 |
+| 147 | AI as Execution Partner | [147-ai-as-execution-partner.md](100-foundations/147-ai-as-execution-partner.md) | Standalone | Drafted | ✅ v6 | ✅ | Elevated 2026-08-10; Episode 16; revised 2026-09-22 per Alberto Zamarron peer review (judgment-layer heuristic added, cross-role example widened) + eval-and-repair pass (sourcing/craft fixes); contributor thanks added 2026-09-22; ready for re-review |
 | 148 | Primary vs. Secondary Research | [148-primary-vs-secondary-research.md](100-foundations/148-primary-vs-secondary-research.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 11; pairs with 149, 150 |
 | 149 | Research vs. Anecdote | [149-research-vs-anecdote.md](100-foundations/149-research-vs-anecdote.md) | Standalone | Drafted | ✅ v6 | ✅ | Pairs with 148, 150 |
 | 150 | Pattern vs. Data Point | [150-pattern-vs-data-point.md](100-foundations/150-pattern-vs-data-point.md) | Standalone | Drafted | ✅ v6 | ✅ | Pairs with 149 |
@@ -80,7 +106,7 @@
 | 154 | What a Pain Point Is | [154-what-a-pain-point-is.md](100-foundations/154-what-a-pain-point-is.md) | Standalone | Drafted | ✅ v6 | ✅ | Foundational for 206 arc |
 | 155 | Synthesis vs. Analysis | [155-synthesis-vs-analysis.md](100-foundations/155-synthesis-vs-analysis.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq for 214 |
 | 156 | Name What People Do | [156-name-what-people-do-not-what-they-think.md](100-foundations/156-name-what-people-do-not-what-they-think.md) | Standalone | Drafted | ✅ v6 | ✅ | Pairs with 151 |
-| 157 | Why You Don't Help During Testing | [157-why-you-dont-help-during-testing.md](100-foundations/157-why-you-dont-help-during-testing.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq: 123 |
+| 157 | Why You Don't Help During Testing | [157-why-you-dont-help-during-testing.md](100-foundations/157-why-you-dont-help-during-testing.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq: 123; revised 2026-09-22 per Dr. Dybas-Stronkowska peer review (softened ecological-validity framing, added shipping/false-confidence consequence) + eval-and-repair pass (em dash fix, 151 routing correction); contributor thanks added 2026-09-22; ready for re-review |
 | 158 | Task Statement Design | [158-task-statement-design.md](100-foundations/158-task-statement-design.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq: 130; prereq for 215 |
 | 159 | Observation Effect | [159-observation-effect.md](100-foundations/159-observation-effect.md) | Standalone | Drafted | ✅ v6 | ✅ | Pairs with 157 |
 | 160 | What a Baseline Is | [160-what-a-baseline-is.md](100-foundations/160-what-a-baseline-is.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq: 113 |
@@ -100,7 +126,7 @@
 | 174 | Think-Aloud Protocol | [174-think-aloud-protocol.md](100-foundations/174-think-aloud-protocol.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq: 123, 157 |
 | 175 | What a Journey Map Is | [175-what-a-journey-map-is.md](100-foundations/175-what-a-journey-map-is.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq for 206 arc |
 | 176 | Swimlanes as a Comparison Tool | [176-swimlanes-as-a-comparison-tool.md](100-foundations/176-swimlanes-as-a-comparison-tool.md) | Standalone | Drafted | ✅ v6 | ✅ | Prereq: 175 |
-| 177 | What a Prototype Is | [177-what-a-prototype-is.md](100-foundations/177-what-a-prototype-is.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 13; prereq for 309 arc |
+| 177 | What a Prototype Is | [177-what-a-prototype-is.md](100-foundations/177-what-a-prototype-is.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 13; prereq for 309 arc; revised 2026-09-22 per Alberto Zamarron peer review (question-first principle moved earlier, prototype-vs-demo distinction sharpened via click-through pattern description) + eval-and-repair pass (short-sentence gap, em dash, Try Noticing time estimate, stale publish-doc quote); contributor thanks added 2026-09-22; ready for re-review |
 | 178 | Prototype vs. MVP | [178-prototype-vs-mvp.md](100-foundations/178-prototype-vs-mvp.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 13; prereq: 177 |
 | 179 | What a Content Model Is | [179-what-a-content-model-is.md](100-foundations/179-what-a-content-model-is.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 6; prereq for 221 |
 | 180 | Content Types and Attributes | [180-content-types-and-attributes.md](100-foundations/180-content-types-and-attributes.md) | Standalone | Drafted | ✅ v6 | ✅ | Episode 6; prereq: 179 |
@@ -458,4 +484,5 @@ These files live at the project root and are not part of the microlearning serie
 2. **Atoms 148-150, 158-161:** Drafted 2026-08-07. Review for format consistency with existing Wave 2 atoms.
 3. **IA methodology arc (222):** Referenced in 184-labeling-systems.md and 186-taxonomy-design-basics.md; not yet drafted. Create as Tier 300 arc when content architecture cluster is ready to publish.
 4. **All Phase 3 atoms and methods:** Drafted 2026-08-10. Require practitioner pulse check (1 PM + 1 dev) before Wave 2/3/4 publish sequence begins.
-3. **`meta/10-master-outline.md`:** Version 5 (pre-audit). Updated separately to reflect Phase 1-2 additions — check for accuracy if used for dependency tracing.
+5. **`meta/10-master-outline.md`:** Version 5 (pre-audit). Updated separately to reflect Phase 1-2 additions — check for accuracy if used for dependency tracing.
+6. **Open peer-review revisions (2026-09-22):** 123 (Magda — opinion vs. behavior, oversimplifications); 105, 219, 270h, 270i (Alberto — see each `meta/piece-feedback/` file). 147/157/177 are revised and waiting on re-review, not a first-pass rewrite.

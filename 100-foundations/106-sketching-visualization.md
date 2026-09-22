@@ -68,3 +68,10 @@ Schön, D. (1983). *The Reflective Practitioner: How Professionals Think in Acti
 Suwa, M., & Tversky, B. (1997). What do architects and students perceive in their design sketches? *Design Studies, 18*(4), 385–403. Experienced designers discover functional relationships through sketching that weren't apparent before drawing. Externalization makes thinking checkable in ways description doesn't.
 
 Buxton, B. (2007). *Sketching User Experiences: Getting the Design Right and the Right Design.* Morgan Kaufmann. Rough and polished are communication signals, not just aesthetic ones. Polish implies completion and shifts feedback from direction to execution. Roughness signals openness.
+
+---
+
+**Contributors**
+
+Carolina Louro  
+Dr. Magdalena Dybas-Stronkowska

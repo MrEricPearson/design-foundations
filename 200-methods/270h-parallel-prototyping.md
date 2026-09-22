@@ -88,3 +88,9 @@ Tohidi, M., Buxton, W., Baecker, R., & Sellen, A. (2006). Getting the right desi
 
 
 Nielsen, J. (2011). Parallel and iterative design + competitive testing. *Nielsen Norman Group*. https://www.nngroup.com/articles/parallel-and-iterative-design/ Finding: Parallel design followed by competitive testing outperformed purely iterative approaches. The comparative method revealed which design principles transferred across contexts — learning that single-prototype iteration could not produce.
+
+---
+
+**Contributors**
+
+Alberto Zamarron

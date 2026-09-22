@@ -82,3 +82,9 @@ Parasuraman, R., & Manzey, D. H. (2010). Complacency and bias in human use of au
 Moran, K., & Rosala, M. (2024, September 27). Accelerating research with AI. Nielsen Norman Group. https://www.nngroup.com/articles/research-with-ai/ Finding: "Never rely on AI tools to perform all your analysis for you" — AI produces a first pass. Human oversight and review are required at every stage.
 
 Kupfer, C., Prassl, R., Fleiß, J., Malin, C., Thalmann, S., & Kubicek, B. (2023). Check the box! How to deal with automation bias in AI-based personnel selection. *Frontiers in Psychology*. https://doi.org/10.3389/fpsyg.2023.1118723 Finding: verification intensity — time spent reviewing, pages examined — directly correlates with decision quality. Lower verification produced measurably worse outcomes.
+
+---
+
+**Contributors**
+
+Alberto Zamarron

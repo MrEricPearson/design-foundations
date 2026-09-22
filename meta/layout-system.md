@@ -52,6 +52,7 @@ Full visual reference: [`meta/library-design-system.html`](library-design-system
 | Try This (P6) → Proof (P7) | 0px (Divider only) |
 | Proof (P7) → Take This Further | 24px |
 | Any section → Source Attribution (P8) | 32px |
+| Source Attribution (P8) → Contributors (P13) | 24px |
 | Any section → What Next (P10) | 40px |
 | Pull Quote (P11) → next section | 24px |
 
@@ -113,6 +114,18 @@ Never use template section names in published text — rename each heading to de
 **Contains:** "Sources" label + source items  
 **Rules:** Author + year + publication + specific finding (3 lines max per source). Minimum counts: T100 → 3, T200 → 4, T300 → 5 per arc.
 
+### P13 — Contributors
+**Maps to:** Text (compact, 14px, text-2) + Spacer (24px) + Divider above  
+**Contains:** "Contributors" label + names only  
+**Rules:**
+- Required whenever anyone besides the author materially contributed (expert reviewers at minimum)
+- Distinct from P8. Sources cite research. This names people.
+- Placement: immediately after Source Attribution (P8). Last block on the page.
+- Format in source markdown: `**Contributors**` then one name per line. No roles, no "reviewed this," no thank-you sentence.
+- Not an author byline. P1 still has no author and no date.
+- Excluded from body word count, same as Sources.
+- Omit the block only when nobody has reviewed the piece yet. Do not invent placeholders.
+
 ### P9 — Image Block
 **Maps to:** Image web part (Full-width setting)  
 **Contains:** Image + caption + alt text (required)  
@@ -164,6 +177,8 @@ Research basis: Interactive elements increase time-on-task ~36% over static text
 | Try Noticing | P6 (Try This Block) |
 | Proof/Signal | P7 (Proof Block) |
 | What Next | P10 (What Next) |
+| Source Attribution | P8 |
+| Contributors | P13 (after Sources, when anyone reviewed the piece) |
 
 ### T200 — Practice
 | Section | Pattern |
@@ -182,11 +197,12 @@ Research basis: Interactive elements increase time-on-task ~36% over static text
 | AI Path (optional) | P2 (secondary heading) |
 | Source Attribution | P8 |
 | What Next | P10 |
+| Contributors | P13 (after Sources, when anyone reviewed the piece) |
 
 ### T300 — Orchestrate
 Arc header: P1 (with arc position chip).  
 Each arc part: P2 (part heading, primary) → P3 (Concept Panel) → P4 (Step Sequence) → P2 (what you end up with) → P7 (Proof) → P5 (Watchout).  
-Arc footer: P6 (Try This) → P12 (Check-In) → P2 (Take This Further) → P2 (Judgment Exercise) → P10 (What Next).  
+Arc footer: P6 (Try This) → P12 (Check-In) → P2 (Take This Further) → P2 (Judgment Exercise) → P10 (What Next) → P8 (Source Attribution) → P13 (Contributors, when anyone reviewed the piece).  
 T300 pages: right column navigation listing all arc parts as Quick Links.
 
 ---
@@ -245,6 +261,12 @@ Every piece generates a `[piece-id].publish.md` at the same folder level as the 
 ## Check-In question
 [The exact question and three response options for P12]
 
+## Forwarding scenario
+[Required for every piece, all tiers. One sentence: who the reader would send this to, and what they'd say. Format: "I sent this to [role/person] because [reason]." This is the write-piece skill's Test H output — it must be written here, not just reported in the drafting session. This is the literal copy-pasteable line for a Teams or Slack share; write it so someone could paste it with zero editing.]
+
+## Contributors
+[Required once anyone besides the author has reviewed or otherwise shaped the piece. Heading: "Contributors." Then names only, one per line. No roles, no thank-you sentence. This is P13 — distinct from Sources. Omit only if nobody has reviewed it yet.]
+
 ## Publishing checklist
 - [ ] Column layout: Flexible Section with content column ~680px
 - [ ] Title in H1 — names situation, not technique
@@ -259,6 +281,8 @@ Every piece generates a `[piece-id].publish.md` at the same folder level as the 
 - [ ] All images uploaded at 1360x680px, alt text present, Full-width setting
 - [ ] What Next links verified and working, 40px Spacer before
 - [ ] Source attribution block present
+- [ ] Contributors present when anyone reviewed the piece (P13, after Sources — names only, not a substitute for APA Sources)
+- [ ] Forwarding scenario present and copy-pasteable (no placeholder brackets left unfilled)
 - [ ] All Spacer heights set per white space schedule
 - [ ] Page reviewed in SharePoint mobile app
 - [ ] Piece linked from LIBRARY-MAP and relevant Start Here docs

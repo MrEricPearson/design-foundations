@@ -553,7 +553,7 @@ Run every path before the kickoff message goes out.
 ## What this guide does not cover
 
 ### Article index / browse page
-A page listing all published library pieces for discovery beyond the review gallery. The review gallery only shows open pieces — it disappears once review is complete. Options: a SharePoint page with a filtered standard-layout List web part (all articles, all statuses), grouped by tier or topic. Build this separately once the article inventory is stable.
+A page listing all published library pieces for discovery beyond the review gallery. The review gallery only shows open pieces — it disappears once review is complete. This is now the Home page of the new public site — see `meta/user-testing-and-public-site-plan.md`, which reuses this same List (via a new `PublicPageURL` column) rather than building a second tracker.
 
 ### Power BI analytics dashboard
 For richer analytics — review velocity, topic coverage trends, reviewer participation rates, comprehension score patterns — connect Power BI to the SharePoint List as a data source. Build after 2–3 weeks of live data. A premature build on an empty dataset wastes setup time.
@@ -565,7 +565,7 @@ The Feedback Flow delivers submissions to Eric's inbox. What happens next — re
 Currently manual (Phase 11). Automating requires a Power Automate flow that edits a SharePoint page's web part content via the SharePoint REST API or Graph API — technically possible but requires app registration and admin consent. Not worth it at this scale.
 
 ### User testing phase infrastructure
-Peer review (expert feedback) and user testing (behavioral, with PMs and devs) are separate phases. This guide covers peer review only. The user testing protocol, participant recruitment, task design, and metrics are separate work, documented when that phase begins.
+Peer review (expert feedback) and user testing (behavioral, with PMs and devs) are separate phases. This guide covers peer review only. The user testing protocol, participant recruitment, task design, and metrics are documented in `meta/user-testing-and-public-site-plan.md`, which also covers the new public-facing site this phase runs on.
 
 ### Viva Engage integration
 If your company uses Viva Engage communities, the digest could post there too. Power Automate has a Viva Engage connector, but the format differs — Viva Engage doesn't support Adaptive Cards, so it's a plain post with a link. Add after Teams digest is proven.

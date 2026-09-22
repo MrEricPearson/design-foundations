@@ -560,6 +560,8 @@ Write the companion file to `[piece-folder]/[piece-id].publish.md` using the tem
 7. **Spacer schedule:** table of transitions and pixel heights between every section
 8. **Publishing checklist:** all layout, typography, web part, and pre-publish approval items
 9. **Source attribution section:** all sources in APA format, compact text styling
+10. **Forwarding scenario:** the one-sentence answer from Test H, written into the publish doc itself (not just reported in the session) — "I sent this to [role/person] because [reason]." This is the copy-pasteable line for a Teams/Slack share. Every piece requires this field; a publish doc without it is incomplete even if Test H passed during drafting.
+11. **Contributors:** if anyone besides the author reviewed or otherwise shaped the piece, write `**Contributors**` after the Sources block, then names only, one per line. No roles, no thank-you sentence. This is P13, not P8. Omit only when nobody has reviewed it yet. Excluded from body word count.
 
 ---
 
@@ -575,7 +577,7 @@ Return:
 5. The quotable line (named explicitly)
 6. The forwarding scenario (one sentence)
 7. Phase 7 prose review summary: what each pass (Pass 0 through Pass 6) found and what was changed — or "clean" for passes that found nothing
-8. Final word count (body text only, excluding sources block) — confirmed against Test C range
+8. Final word count (body text only, excluding sources block and Contributors) — confirmed against Test C range
 
 **If any checklist item failed and couldn't be fixed:** state it clearly. Do not silently return a draft with known failures.
 

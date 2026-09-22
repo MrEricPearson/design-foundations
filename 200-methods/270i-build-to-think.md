@@ -85,3 +85,9 @@ Beck, K. (1999). *Extreme Programming Explained.* Addison-Wesley. / Jeffries, R.
 Kery, M. B., & Myers, B. A. (2017). Exploring exploratory programming. *2017 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)*, 25–29. https://doi.org/10.1109/VLHCC.2017.8103446 Exploratory programming defined by two essential properties: the programmer writes code as a medium to prototype or experiment with different ideas, and the goal is open-ended, evolving through the process of programming.
 
 Arkes, H. R. & Blumer, C. (1985). The psychology of sunk cost. *Organizational Behavior and Human Decision Processes, 35*(1), 124–140. Once invested in a direction, people continue even when the original objective has been met or abandoned — continuation feels less wasteful than stopping.
+
+---
+
+**Contributors**
+
+Alberto Zamarron

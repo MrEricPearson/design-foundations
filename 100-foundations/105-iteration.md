@@ -18,6 +18,8 @@ Donald Schön spent years studying how professionals learn through their work. I
 
 That's the mechanism. Iteration isn't the same as doing it again. It's doing it again because you learned something specific enough to do it differently. The version isn't the unit of progress. The learning is.
 
+Think of each version as an experiment instead of a draft. An experiment has a result: something you expected to happen, or didn't, and either way you know more afterward than you did before. A draft doesn't ask anything of the world. It just gets closer to done.
+
 This is what distinguishes the two in practice. When you're genuinely iterating, the brief for v2 isn't "make this better." It's "address what this revealed." Those are different starting points, and they produce different work.
 
 Refinement keeps the direction and improves it. The second version is better in the same way: cleaner, faster, more consistent. Refinement is a legitimate activity. Sometimes a direction is right and the work genuinely needs another pass. The problem comes when a team believes they're iterating (responding to what they learned) when they're refining (executing the same direction more confidently). The difference is invisible from the outside. It shows up later, when the thing is polished and still wrong.
@@ -29,6 +31,8 @@ Jakob Nielsen tracked what happens when teams genuinely iterate — redesigning 
 ---
 
 Before starting a second version of anything, complete this sentence: "Version one taught me ___."
+
+The teaching part usually traces back to something specific: a test that stalled at a particular step, feedback that named a particular gap, watching someone use it and seeing exactly where they hesitated, or data that came back different from what you expected. Naming where the learning came from is how you check that it's real, and not just a feeling that something's off.
 
 If you can fill it in specifically, use that as the brief for v2. Something like: "the form felt long because users couldn't see where they were in the process," or "the integration point we assumed was simple turned out to require manual steps," or "the ask wasn't clear until the third paragraph." The specific thing v1 revealed is now the problem v2 is designed to address.
 
@@ -61,3 +65,9 @@ Jansson, D. G., & Smith, S. M. (1991). Design fixation. *Design Studies, 12*(1),
 Nielsen, J. (1993). Iterative design of user interfaces. *IEEE Software, 10*(6), 32–41. [Also available at nngroup.com] Tracked four case studies where teams redesigned based on what user testing revealed, finding a median 165% improvement from first to last version (38% per iteration) — the evidence this piece cites for what genuine iteration produces over refinement alone.
 
 Schön, D. A. (1983). *The Reflective Practitioner: How Professionals Think in Action.* Basic Books. Described reflection-in-action, where a practitioner's experiment generates new understanding and changes the situation itself — the mechanism this piece uses to define iteration as learning-driven change, not just another pass.
+
+---
+
+**Contributors**
+
+Alberto Zamarron

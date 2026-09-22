@@ -7,9 +7,11 @@
 
 ---
 
-Someone says "let's build something to show people." The room nods. Work starts. Nobody asks what question it's going to answer. That's the moment where what gets built either becomes a prototype or doesn't — and in most rooms, it quietly doesn't.
+Someone says "let's build something to show people." The room nods. Work starts. Nobody asks what question it's going to answer. That's the moment where what gets built either becomes a prototype or doesn't. And in most rooms, it quietly doesn't.
 
-A prototype isn't defined by how it looks, what tool made it, or how long it took. Houde and Hill (1997) put it precisely: the important thing about a prototype isn't the representation. It's what the prototype is intended to explore. A sketch on a whiteboard, a click-through, a piece of working code, a Wizard of Oz simulation where a person manually does what software would eventually do. Any of these can be a prototype. (That last one is a genuine prototyping technique, not a parlor trick: whether it's a prototype or a charade depends entirely on whether someone named a question first.) None of them automatically are.
+Here's the test: did anyone name a question before building started?
+
+A prototype isn't defined by how it looks, what tool made it, or how long it took. Houde and Hill (1997) put it precisely: the important thing about a prototype isn't the representation. It's what the prototype is intended to explore. A sketch on a whiteboard, a click-through, a piece of working code, a Wizard of Oz simulation where a person manually does what software would eventually do. Any of these can be one. (That last one is a genuine prototyping technique, not a parlor trick: whether it's a prototype or a charade depends entirely on whether someone named a question first.) None of them automatically are.
 
 What makes something a prototype is that a question was named before building started, and the artifact's only job is to answer that question as cheaply as possible before committing. Lim, Stolterman, and Tenenberg (2008) describe an effective prototype as one that "in the simplest and most efficient way, makes the possibilities and limitations of a design idea visible and measurable." That framing is worth sitting with. The question doesn't just determine what to build. It also determines what to leave out. A prototype that tries to be complete has stopped filtering and started producing. Once it includes everything, it isn't a prototype anymore. It's just a thing.
 
@@ -25,15 +27,17 @@ The checkable signal: the question was written down before building started. If 
 
 ---
 
-The demo confusion is the one worth getting right. A demo shows what has been decided. A prototype tests whether a decision is the right one. Those sound similar. They produce different rooms.
+The demo confusion is the one worth getting right. It's the mix-up I see most often, and it's an easy one to make, because a demo and a prototype can look identical on a screen share. A demo shows what has been decided. A prototype tests whether a decision is the right one. Those sound similar. They produce different rooms.
 
 Sauer and Sonderegger (2009) found that how polished an artifact looks changes what people feel safe saying about it. Higher fidelity signals that a direction has been settled, and feedback adjusts accordingly — people stop questioning whether the direction is right and start optimizing within it. This is exactly what happens when a prototype gets shown as a demo before it's been tested. The room registers a decision that hasn't been made. Feedback shifts from "is this the right direction?" to "how do we improve this direction?" The prototype communicates a commitment it wasn't supposed to communicate. It's done the opposite of its job.
 
 Same artifact. Different cognitive posture in the room. The only thing that changed was whether a question was named first, and whether the room was told "this is being tested" or "this is what we're building."
 
+Introduce that same click-through as "help us find out if this works," and you'll hear doubt: questions about whether the flow makes sense, whether someone would get stuck at that step. Introduce it as "here's what we're building," and you'll hear nods, followed by notes on color and spacing. Same screen. Different room.
+
 ---
 
-Try noticing: the next time someone says "let's build something to show people," ask what question this will answer. Not a general direction. The specific thing this artifact will confirm or contradict. If no one can name the question, what's being built is a demo. That's not necessarily wrong — demos have real uses, and showing something can build alignment or maintain confidence in a direction that's already been validated. But it is different. And the difference matters when someone in the room is going to treat what they see as a decision.
+Try noticing: the next time someone says "let's build something to show people," ask what question this will answer. Not a general direction. The specific thing this artifact will confirm or contradict. Takes about two minutes. If no one can name the question, what's being built is a demo. That's not necessarily wrong — demos have real uses, and showing something can build alignment or maintain confidence in a direction that's already been validated. But it is different. And the difference matters when someone in the room is going to treat what they see as a decision.
 
 ---
 
@@ -50,3 +54,9 @@ Lim, Y. K., Stolterman, E., & Tenenberg, J. (2008). The anatomy of prototypes: P
 Buxton, B. (2007). *Sketching User Experiences: Getting the Design Right and the Right Design.* Morgan Kaufmann. Describes prototyping's purpose as experiencing a system before it's real, and distinguishes the cost of finding out from the cost of building — used here to explain why cheap fidelity should come before commitment.
 
 Sauer, J., & Sonderegger, A. (2009). The influence of prototype fidelity and aesthetics of design in usability tests: Effects on user behaviour, subjective evaluation and emotion. *Applied Ergonomics, 40*(6), 926–933. Found that fidelity changes what people feel safe saying about an artifact — higher polish shifts feedback from questioning the direction to optimizing within it, which is what happens when a prototype gets treated as a demo.
+
+---
+
+**Contributors**
+
+Alberto Zamarron

@@ -13,13 +13,17 @@ You're not being stubborn. You probably don't even realize it's happening. But s
 
 That's the actual risk. Not the original call. Not where you started.
 
+Keep managing feedback like that and the cost shows up later. The wrong version ships anyway. Users feel unheard. The pivot that should've happened months ago happens now, more expensive and harder to explain.
+
 ---
 
-Barry Staw studied this in 1976. He put business students in a management simulation and made some of them personally responsible for the initial investment in a failing company. Others inherited the same bad situation. Both groups watched it deteriorate. Same information, same signals, same clear picture of something going sideways.
+A researcher named Barry Staw ran the study that first put a number on this, back in 1976. He put business students in a management simulation and made some of them personally responsible for the initial investment in a failing company. Others inherited the same bad situation, no history attached. Both groups watched it deteriorate. Same information, same signals, same clear picture of something going sideways.
 
 The students who made the original call kept doubling down. More resources, more time, more defending the direction. The students who inherited it cut their losses and moved on (basically the way any rational outside observer would).
 
 The only variable was ownership. Nothing else changed.
+
+You've never run a corporate simulation, but you've run this exact test on yourself. The project you inherited, you'll kill the moment the numbers turn. The project you started? You'll find one more reason to keep it alive.
 
 Then Norton, Mochon, and Ariely (2012) ran what might be the most relatable study in behavioral economics. They had people assemble IKEA furniture (flat-pack boxes, cryptic instruction diagrams, the whole ordeal) and then asked them to rate it against professionally made pieces. The people who built their own stuff valued it almost as highly as expert craftsmanship.
 
@@ -37,9 +41,9 @@ When someone does challenge it (and they will, that's just how this works), your
 
 Are you genuinely curious about what they're seeing? Or are you already looking for what's wrong with their argument?
 
-Ross, Lepper, and Hubbard (1975) found that people hold onto beliefs even after the original evidence behind them falls apart completely. Not out of stubbornness. Because they've built a whole reasoning structure around the belief, and that structure keeps standing after the foundation's been pulled out. You don't just hold a conclusion. You hold everything that got you there, and all of it still feels justified.
+Social psychologists Ross, Lepper, and Hubbard found in 1975 that people hold onto beliefs even after the original evidence behind them falls apart completely. Not out of stubbornness. Because they've built a whole reasoning structure around the belief, and that structure keeps standing after the foundation's been pulled out. You don't just hold a conclusion. You hold everything that got you there, and all of it still feels justified.
 
-Kahneman put the economic frame on it: walking away from something you've put work into feels like a guaranteed loss. Staying feels like there's still a chance. Your brain is going to recommend staying almost every time, because the math on a guaranteed loss versus a possible recovery always looks the same — even when the recovery isn't real (Kahneman & Tversky, 1979).
+Daniel Kahneman, the psychologist whose work on decision-making later won a Nobel Prize in economics, put the economic frame on it: walking away from something you've put work into feels like a guaranteed loss. Staying feels like there's still a chance. Your brain is going to recommend staying almost every time, because the math on a guaranteed loss versus a possible recovery always looks the same — even when the recovery isn't real (Kahneman & Tversky, 1979).
 
 ---
 
@@ -50,6 +54,8 @@ Ask yourself (or your team): what would have to happen for this direction to be 
 A team that's done real work has a specific answer. Something nameable. A condition that, if it showed up, would genuinely change the call. That's confidence. It knows its own limits.
 
 An attached team deflects. "I just don't think it is wrong" becomes the answer, instead of the conditions under which it would be. Or you get conditions, but they keep shifting — whatever evidence might show up, it probably wouldn't be enough. You might recognize that pattern from meetings you've sat through.
+
+That deflection isn't always attachment, either. Sometimes a team can't name the conditions because naming them out loud feels riskier than the vague answer: there's a leader attached to the direction, or admitting the wrong condition costs someone politically. The test surfaces something worth looking at. It doesn't diagnose why on its own.
 
 The frustrating part is that confidence and attachment look almost identical when things are going well. Both push back on challenges. Both hold the line firmly. You often can't tell them apart until something genuinely hard shows up — and then you can tell immediately.
 
@@ -86,3 +92,10 @@ Norton, M.I., Mochon, D., & Ariely, D. (2012). The IKEA effect: When labor leads
 Ross, L., Lepper, M.R., & Hubbard, M. (1975). Perseverance in self-perception and social perception. *Journal of Personality and Social Psychology.* Beliefs persist even after the original evidence behind them is fully discredited.
 
 Kahneman, D., & Tversky, A. (1979). Prospect theory. *Econometrica.* Loss aversion makes continuation feel preferable to abandonment even when it isn't.
+
+---
+
+**Contributors**
+
+Carolina Louro  
+Dr. Magdalena Dybas-Stronkowska

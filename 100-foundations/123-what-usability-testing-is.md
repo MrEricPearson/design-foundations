@@ -69,3 +69,10 @@ If you want a method for running usability tests with a working interface, read 
 Krug, S. (2010). *Rocket Surgery Made Easy: The Do-It-Yourself Guide to Finding and Fixing Usability Problems.* New Riders. — "If you want a great site, you've got to test." After working on something for even a few weeks, fresh perspective is impossible without observation. Testing means watching people use it, not surveying opinions.
 
 Nielsen, J. (1993). Iterative user interface design. *IEEE Software, 10*(6), 32–41. — Teams using observational usability testing (task-based observation, not opinion gathering) achieved median 165% improvement across iterations. Observation reveals specific friction points that opinion-based feedback misses.
+
+---
+
+**Contributors**
+
+Michael Calvillo  
+Dr. Magdalena Dybas-Stronkowska
